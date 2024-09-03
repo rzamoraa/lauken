@@ -57,6 +57,27 @@ function Navbar() {
             
             
             </Link>
+
+            <Link to="/#nosotros" >
+            
+            
+            <ScrollLink  className="text-white hover:text-gray-300 font-light"
+            to="nosotros" 
+            smooth={true} 
+            offset={-70} 
+            duration={500}
+            spy={true}
+            exact="true"
+            activeClass="active"
+          >
+            Nosotros
+          </ScrollLink>
+            
+            
+            
+            </Link>
+
+
           </div>
 
           {/* Menu Icon - Mobile */}

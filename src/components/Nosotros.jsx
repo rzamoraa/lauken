@@ -19,8 +19,7 @@ function Nosotros() {
 
       {/* Capa oscura sobre el video para mejorar la legibilidad */}
       <div className="absolute top-0 left-0 w-full h-full bg-black/70  "></div>
-      VENDENOS TU CAMPO
-      {/* SVG del logo centrado */}
+nosotros      {/* SVG del logo centrado */}
       <div>
       <div className="relative z-10  justify-center items-center opacity-50 ">
         <img src={logo} alt="Logo" className="w-48 h-48" />

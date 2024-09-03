@@ -11,6 +11,7 @@ import ProyectoUno from './pages/ProyectoUno';
 import ProyectoDos from './pages/ProyectoDos';
 import ProyectoTres from './pages/ProyectoTres';
 import Nosotros from './components/Nosotros';
+import Tucampo from './components/Tucampo';
 
 function App() {
 
@@ -45,7 +46,7 @@ function App() {
             <Hero />
             <Proyectos />
             <Nosotros />
-           
+            <Tucampo />
             <Contacto />
           </>
         } />
