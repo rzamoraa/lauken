@@ -30,7 +30,7 @@ function Gallery() {
 
 
    <div className="bg-white">
-      <div className="mx-auto max-w-2xl px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8">
+      <div className="mx-auto max-w-2xl px-4 py-12 sm:px-6 sm:py-0 lg:max-w-7xl lg:px-8">
         <div className="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2">
           <div>
             <div className="border-b border-gray-200 pb-10">
@@ -52,7 +52,7 @@ function Gallery() {
             <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-100">
               <img
                 alt="Black kettle with long pour spot and angled body on marble counter next to coffee mug and pour-over system."
-                src="https://tailwindui.com/img/ecommerce-images/product-feature-09-main-detail.jpg"
+                src="https://images.pexels.com/photos/974314/pexels-photo-974314.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 className="h-full w-full object-cover object-center"
               />
             </div>
@@ -60,14 +60,14 @@ function Gallery() {
               <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-100">
                 <img
                   alt="Detail of temperature setting button on kettle bass with digital degree readout."
-                  src="https://tailwindui.com/img/ecommerce-images/product-feature-09-detail-01.jpg"
+                  src="https://images.pexels.com/photos/1098423/pexels-photo-1098423.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                   className="h-full w-full object-cover object-center"
                 />
               </div>
               <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-100">
                 <img
                   alt="Kettle spout pouring boiling water into coffee grounds in pour-over mug."
-                  src="https://tailwindui.com/img/ecommerce-images/product-feature-09-detail-02.jpg"
+                  src="https://images.pexels.com/photos/981091/pexels-photo-981091.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                   className="h-full w-full object-cover object-center"
                 />
               </div>

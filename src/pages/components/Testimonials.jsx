@@ -14,7 +14,7 @@ function Testimonial() {
             <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
               <img
                 alt=""
-                src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80"
+                src="https://images.pexels.com/photos/19821191/pexels-photo-19821191/free-photo-of-ciudad-edificios-viaje-viajar.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl"
               />
             </div>

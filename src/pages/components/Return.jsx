@@ -11,7 +11,7 @@ function Return() {
     >
      <div>
 
-     <Link to="/"  aria-labelledby="features-heading" className="mt-6 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 ">
+     <Link to="/"  aria-labelledby="features-heading" className="mt-6 px-4 py-2 bg-gray-500/50  text-white rounded hover:bg-slate-400 ">
         Volver a la página principal
       </Link>
 

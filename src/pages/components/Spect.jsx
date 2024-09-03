@@ -14,7 +14,7 @@ const tabs = [
           name: 'Adaptive and modular',
           description:
             'The Organize base set allows you to configure and evolve your setup as your items and habits change. The included trays and optional add-ons are easily rearranged to achieve that perfect setup.',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-feature-06-detail-01.jpg',
+          imageSrc: 'https://images.pexels.com/photos/2132111/pexels-photo-2132111.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
           imageAlt: 'Maple organizer base with slots, supporting white polycarbonate trays of various sizes.',
         },
       ],
@@ -26,7 +26,7 @@ const tabs = [
           name: 'Natural wood options',
           description:
             'Organize has options for rich walnut and bright maple base materials. Accent your desk with a contrasting material, or match similar woods for a calm and cohesive look. Every base is hand sanded and finished.',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-feature-06-detail-02.jpg',
+          imageSrc: 'https://images.pexels.com/photos/6205031/pexels-photo-6205031.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
           imageAlt:
             'Walnut organizer base with pen, sticky note, phone, and bin trays, next to modular drink coaster attachment.',
         },
@@ -39,7 +39,7 @@ const tabs = [
           name: 'Helpful around the home',
           description:
             "Our customers use Organize throughout the house to bring efficiency to many daily routines. Enjoy Organize in your workspace, kitchen, living room, entry way, garage, and more. We can't wait to see how you'll use it!",
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-feature-06-detail-03.jpg',
+          imageSrc: 'https://images.pexels.com/photos/11620149/pexels-photo-11620149.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
           imageAlt: 'Walnut organizer base with white polycarbonate trays in the kitchen with various kitchen utensils.',
         },
       ],
@@ -51,7 +51,7 @@ const tabs = [
           name: "Everything you'll need",
           description:
             'The Organize base set includes the pen, phone, small, and large trays to help you group all your essential items. Expand your set with the drink coaster and headphone stand add-ons.',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-feature-06-detail-04.jpg',
+          imageSrc: 'https://images.pexels.com/photos/391831/pexels-photo-391831.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
           imageAlt: 'Walnut organizer system on black leather desk mat on top of white desk.',
         },
       ],
@@ -62,16 +62,16 @@ const tabs = [
 
 
 
-function Spect() {
+function Spect({ titulo, descripcion, imagen, url }) {
   return (
     <section 
       id="especificaciones" 
-      className="relative h-[75vh] flex justify-center items-center text-white"
+      className="relative flex justify-center items-center text-white "
     >
    
 
    <div>
-    <section aria-labelledby="features-heading" className="mx-auto max-w-7xl py-32 sm:px-2 lg:px-8">
+    <section aria-labelledby="features-heading" className="mx-auto max-w-7xl py-32 sm:px-2 lg:px-8 -my-18 ">
         <div className="mx-auto max-w-2xl px-4 lg:max-w-none lg:px-0">
           <div className="max-w-3xl">
             <h2 id="features-heading" className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">

@@ -20,9 +20,14 @@ function ProyectoUno() {
       <Header />
       
       <Title />
-      <Description />
+      <Description 
+     
+      
+      />
       <Gallery />
-      <Spect />
+      <Spect 
+      
+      />
       <Testimonial />
       <Mapa />
       <div>

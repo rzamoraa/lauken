@@ -39,6 +39,30 @@ function Navbar() {
           </ScrollLink>
             
             </Link>
+
+            
+            <Link to="/#nosotros" >
+            
+            
+            <ScrollLink  className="text-white hover:text-gray-300 font-light"
+            to="nosotros" 
+            smooth={true} 
+            offset={-70} 
+            duration={500}
+            spy={true}
+            exact="true"
+            activeClass="active"
+          >
+            Nosotros
+          </ScrollLink>
+            
+            
+            
+            </Link>
+
+
+
+
             <Link to="/#contacto" >
             
             
@@ -58,24 +82,6 @@ function Navbar() {
             
             </Link>
 
-            <Link to="/#nosotros" >
-            
-            
-            <ScrollLink  className="text-white hover:text-gray-300 font-light"
-            to="nosotros" 
-            smooth={true} 
-            offset={-70} 
-            duration={500}
-            spy={true}
-            exact="true"
-            activeClass="active"
-          >
-            Nosotros
-          </ScrollLink>
-            
-            
-            
-            </Link>
 
 
           </div>
@@ -109,6 +115,24 @@ function Navbar() {
             
           
           </Link>
+
+          <Link to="/#nosotros" >
+          
+          <ScrollLink  className="block text-white hover:bg-slate-300/10 px-3 py-2 rounded-md  font-light"
+            to="nosotros" 
+            smooth={true} 
+            offset={-70} 
+            duration={500}
+            spy={true}
+            exact="true"
+            activeClass="active"
+          >
+            Nosotros
+          </ScrollLink>
+          
+          </Link>
+
+
           <Link to="/#contacto" >
           
           <ScrollLink  className="block text-white hover:bg-slate-300/10 px-3 py-2 rounded-md  font-light"

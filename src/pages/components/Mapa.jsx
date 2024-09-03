@@ -5,12 +5,12 @@ function Mapa() {
   return (
     <section 
       id="mapa" 
-className="relative h-[40vh] flex justify-center items-center text-white"
+className=" h-[40vh] flex justify-center items-center text-white  my-12"
       style={{
-        backgroundImage: `url('https://media.istockphoto.com/id/1392356345/es/foto/mapa-de-calle-de-la-ciudad.webp?s=2048x2048&w=is&k=20&c=yrsijdb4SYCPDsYWH4OWlXhtap_9xU3Z3kWHLAvmRTM=')`, // Reemplaza con tu enlace de imagen
+        backgroundImage: `url('https://images.pexels.com/photos/14036102/pexels-photo-14036102.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')`, // Reemplaza con tu enlace de imagen
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
+      
       }}
     >
       <div className="relative z-10 p-8 text-center bg-black bg-opacity-50 rounded">

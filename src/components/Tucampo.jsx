@@ -5,10 +5,10 @@ function Tucampo() {
   return (
     <section 
       id="tucampo" 
-      className="relative h-[30vh] flex justify-center items-center text-white"
+      className="relative h-[30vh] flex justify-center items-center text-white my-12 "
     >
       {/* Capa oscura sobre el video para mejorar la legibilidad */}
-      <div className="absolute top-0 left-0 w-full h-full bg-black/70  "></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-black  "></div>
 
       {/* SVG del logo centrado */}
       <div>
