@@ -19,7 +19,7 @@ const navigation = [
 function Nosotros() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   return (
-    <section id="nosotros" className="-my-20 bg-white text-center">
+    <section id="nosotros" className=" bg-white text-center">
 
     
     <div className="bg-white">

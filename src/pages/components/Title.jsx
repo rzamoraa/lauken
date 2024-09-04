@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg'; // Asegúrate de que la ruta es correcta
 
+
+
 function Title({video}) {
   return (
     <section 

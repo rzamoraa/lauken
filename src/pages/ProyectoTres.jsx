@@ -16,7 +16,7 @@ import Atributos from "./components/Atributos";
 
 function ProyectoTres() {
   return (
-    <div className="bg-gray-300">
+    <div className="bg-white">
       <Header />
 
       <Title

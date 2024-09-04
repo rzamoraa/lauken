@@ -18,7 +18,9 @@ function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <img src={logo} alt="Logo" className="h-8" />
+          <Link to="/" className="text-white hover:text-gray-300 font-light">
+          <img src={logo} alt="Logo" className="h-8" />
+          </Link>
           </div>
 
           {/* Menu Links - Desktop */}

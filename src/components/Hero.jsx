@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../assets/lauken.svg'; // Asegúrate de que la ruta es correcta
+import logofull from '../assets/logofull.svg'; 
 
 function Hero() {
   return (
@@ -22,7 +23,7 @@ function Hero() {
 
       {/* SVG del logo centrado */}
       <div className="relative z-10 flex justify-center items-center ">
-        <img src={logo} alt="Logo" className="w-48 h-48" />
+        <img src={logofull} alt="Logo" className="w-200 h-48  fill-white" />
       </div>
     </section>
   );
