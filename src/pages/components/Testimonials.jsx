@@ -1,21 +1,21 @@
 import React from 'react';
 import logo from './lauken.svg'; // Asegúrate de que la ruta es correcta
 
-function Testimonial() {
+function Testimonial({image, texto, autor, cargo}) {
   return (
     <section 
       id="testimonios" 
-      className="relative h-[75vh] flex justify-center items-center text-white"
+      className="mx-auto max-w-7xl py-0 sm:px-6 sm:py-4 lg:px-8 "
     >
-<div className="bg-white pb-16 pt-24 sm:pb-24 sm:pt-32 xl:pb-32">
+ <div  className="overflow-hidden ">
       <div className="bg-gray-900 pb-20 sm:pb-24 xl:pb-0">
-        <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
-          <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
-            <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
+        <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch ">
+          <div className="-mt-8 w-full  xl:-mb-8 xl:w-96 xl:flex-none   ">
+            <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto  ">
               <img
                 alt=""
-                src="https://images.pexels.com/photos/19821191/pexels-photo-19821191/free-photo-of-ciudad-edificios-viaje-viajar.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl"
+                src={image}
+                className="absolute inset-0 h-full w-full  bg-gray-800 object-cover shadow-2xl"
               />
             </div>
           </div>
@@ -35,14 +35,12 @@ function Testimonial() {
               </svg>
               <blockquote className="text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
                 <p>
-                  Gravida quam mi erat tortor neque molestie. Auctor aliquet at porttitor a enim nunc suscipit tincidunt
-                  nunc. Et non lorem tortor posuere. Nunc eu scelerisque interdum eget tellus non nibh scelerisque
-                  bibendum.
+                 {texto}
                 </p>
               </blockquote>
               <figcaption className="mt-8 text-base">
-                <div className="font-semibold text-white">Judith Black</div>
-                <div className="mt-1 text-gray-400">CEO of Workcation</div>
+                <div className="font-semibold text-white">{autor}</div>
+                <div className="mt-1 text-gray-400">{cargo}</div>
               </figcaption>
             </figure>
           </div>

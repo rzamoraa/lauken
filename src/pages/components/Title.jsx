@@ -1,16 +1,16 @@
 import React from 'react';
 import logo from './logo.svg'; // Asegúrate de que la ruta es correcta
 
-function Title() {
+function Title({video}) {
   return (
     <section 
       id="title" 
-      className="relative h-[45vh] flex justify-center items-center text-white"
+      className="relative h-[45vh] flex justify-center items-center "
     >
       {/* Video de fondo */}
       <video 
         className="absolute top-0 left-0 w-full h-full object-cover blur-sm b"
-        src="https://videos.pexels.com/video-files/4934316/4934316-hd_1920_1080_30fps.mp4"
+        src={video}
         autoPlay
         loop
         muted

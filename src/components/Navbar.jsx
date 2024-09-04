@@ -24,21 +24,7 @@ function Navbar() {
           {/* Menu Links - Desktop */}
           <div className="hidden md:flex space-x-8">
             <Link to="/" className="text-white hover:text-gray-300 font-light">Inicio</Link>
-            <Link to="/#proyectos" >
             
-            <ScrollLink className="text-white hover:text-gray-300 font-light"
-            to="proyectos" 
-            smooth={true} 
-            offset={-70} 
-            duration={500}
-            spy={true}
-            exact="true"
-            activeClass="active"
-          >
-            Proyectos
-          </ScrollLink>
-            
-            </Link>
 
             
             <Link to="/#nosotros" >
@@ -60,7 +46,21 @@ function Navbar() {
             
             </Link>
 
-
+            <Link to="/#proyectos" >
+            
+            <ScrollLink className="text-white hover:text-gray-300 font-light"
+            to="proyectos" 
+            smooth={true} 
+            offset={-70} 
+            duration={500}
+            spy={true}
+            exact="true"
+            activeClass="active"
+          >
+            Proyectos
+          </ScrollLink>
+            
+            </Link>
 
 
             <Link to="/#contacto" >
@@ -99,22 +99,7 @@ function Navbar() {
       <div className={`md:hidden ${menuOpen ? 'block' : 'hidden'} bg-gradient`}>
         <div className="px-2 pt-2 pb-3 space-y-1">
           <Link to="/" className="block text-white hover:bg-slate-300/10 px-3 py-2 rounded-md  font-light">Inicio</Link>
-          <Link to="/#proyectos" >
-          
-          <ScrollLink  className="block text-white hover:bg-slate-300/10 px-3 py-2 rounded-md  font-light"
-            to="proyectos" 
-            smooth={true} 
-            offset={-70} 
-            duration={500}
-            spy={true}
-            exact="true"
-            activeClass="active"
-          >
-            Proyectos
-          </ScrollLink>
-            
-          
-          </Link>
+
 
           <Link to="/#nosotros" >
           
@@ -129,6 +114,23 @@ function Navbar() {
           >
             Nosotros
           </ScrollLink>
+          
+          </Link>
+
+          <Link to="/#proyectos" >
+          
+          <ScrollLink  className="block text-white hover:bg-slate-300/10 px-3 py-2 rounded-md  font-light"
+            to="proyectos" 
+            smooth={true} 
+            offset={-70} 
+            duration={500}
+            spy={true}
+            exact="true"
+            activeClass="active"
+          >
+            Proyectos
+          </ScrollLink>
+            
           
           </Link>
 

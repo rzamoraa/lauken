@@ -26,8 +26,8 @@ function Navbar() {
             <Link to="/" className="text-white hover:text-gray-300 font-light">Inicio</Link>
 
 
-            <Link to="/#descripción" >
-              <ScrollLink className="text-white hover:text-gray-300 font-light"
+           
+              <ScrollLink className="text-white hover:text-gray-300 font-light cursor-pointer"
             to="descripción" 
             smooth={true} 
             offset={-70} 
@@ -38,13 +38,18 @@ function Navbar() {
           >
             descripción
               </ScrollLink>
-            </Link>
+            
 
             
 
-            <Link to="/#galería" >
-            <ScrollLink  className="text-white hover:text-gray-300 font-light"
-            to="galería" 
+            
+            
+            
+          
+
+          
+            <ScrollLink  className="text-white hover:text-gray-300 font-light cursor-pointer"
+            to="atributos" 
             smooth={true} 
             offset={-70} 
             duration={500}
@@ -52,16 +57,14 @@ function Navbar() {
             exact="true"
             activeClass="active"
           >
-            galería
+            Atributos
           </ScrollLink>
             
             
             
-            </Link>
-
-
-            <Link to="/#especificaciones" >
-            <ScrollLink  className="text-white hover:text-gray-300 font-light"
+           
+          
+            <ScrollLink  className="text-white hover:text-gray-300 font-light  cursor-pointer"
             to="especificaciones" 
             smooth={true} 
             offset={-70} 
@@ -72,30 +75,10 @@ function Navbar() {
           >
             especificaciones
           </ScrollLink>           
-            </Link>
+           
 
-
-            <Link to="/#testimonios" >
-            <ScrollLink  className="text-white hover:text-gray-300 font-light"
-            to="testimonios" 
-            smooth={true} 
-            offset={-70} 
-            duration={500}
-            spy={true}
-            exact="true"
-            activeClass="active"
-          >
-            testimonios
-          </ScrollLink>
-            
-            
-            
-            </Link>
-
-          
-
-            <Link to="/#mapa" >
-            <ScrollLink  className="text-white hover:text-gray-300 font-light"
+         
+            <ScrollLink  className="text-white hover:text-gray-300 font-light cursor-pointer"
             to="mapa" 
             smooth={true} 
             offset={-70} 
@@ -107,13 +90,9 @@ function Navbar() {
             mapa
           </ScrollLink>
             
-            
-            
-            </Link>
+ 
           
-
-            <Link to="/#contacto" > 
-            <ScrollLink  className="text-white hover:text-gray-300 font-light"
+            <ScrollLink  className="text-white hover:text-gray-300 font-light cursor-pointer"
             to="contacto" 
             smooth={true} 
             offset={-70} 
@@ -125,10 +104,6 @@ function Navbar() {
             contacto
           </ScrollLink>
             
-            
-            
-            </Link>
-
 
           </div>
 
@@ -146,11 +121,10 @@ function Navbar() {
         <div className="px-2 pt-2 pb-3 space-y-1">
           <Link to="/" className="block text-white hover:bg-slate-300/10 px-3 py-2 rounded-md  font-light">Inicio</Link>
 
-          
-          
+        
 
-          <Link to="/#descripción" >
-              <ScrollLink className="block text-white hover:bg-slate-300/10 px-3 py-2 rounded-md  font-light"
+         
+              <ScrollLink className="block text-white hover:bg-slate-300/10 px-3 py-2 rounded-md  font-light cursor-pointer"
             to="descripción" 
             smooth={true} 
             offset={-70} 
@@ -161,13 +135,10 @@ function Navbar() {
           >
             descripción
               </ScrollLink>
-            </Link>
+           
 
-            
-
-            <Link to="/#galería" >
-            <ScrollLink  className="block text-white hover:bg-slate-300/10 px-3 py-2 rounded-md  font-light"
-            to="galería" 
+              <ScrollLink  className="block text-white hover:bg-slate-300/10 px-3 py-2 rounded-md  font-light cursor-pointer"
+            to="atributos" 
             smooth={true} 
             offset={-70} 
             duration={500}
@@ -175,16 +146,13 @@ function Navbar() {
             exact="true"
             activeClass="active"
           >
-            galería
-          </ScrollLink>
+            Atributos
+          </ScrollLink>           
+       
             
             
-            
-            </Link>
-
-
-            <Link to="/#especificaciones" >
-            <ScrollLink  className="block text-white hover:bg-slate-300/10 px-3 py-2 rounded-md  font-light"
+          
+            <ScrollLink  className="block text-white hover:bg-slate-300/10 px-3 py-2 rounded-md  font-light cursor-pointer"
             to="especificaciones" 
             smooth={true} 
             offset={-70} 
@@ -195,30 +163,9 @@ function Navbar() {
           >
             especificaciones
           </ScrollLink>           
-            </Link>
-
-
-            <Link to="/#testimonios" >
-            <ScrollLink  className="block text-white hover:bg-slate-300/10 px-3 py-2 rounded-md  font-light"
-            to="testimonios" 
-            smooth={true} 
-            offset={-70} 
-            duration={500}
-            spy={true}
-            exact="true"
-            activeClass="active"
-          >
-            testimonios
-          </ScrollLink>
-            
-            
-            
-            </Link>
-
+     
           
-
-            <Link to="/#mapa" >
-            <ScrollLink  className="block text-white hover:bg-slate-300/10 px-3 py-2 rounded-md  font-light"
+            <ScrollLink  className="block text-white hover:bg-slate-300/10 px-3 py-2 rounded-md  font-light cursor-pointer"
             to="mapa" 
             smooth={true} 
             offset={-70} 
@@ -232,11 +179,11 @@ function Navbar() {
             
             
             
-            </Link>
+          
           
 
-            <Link to="/#contacto" >
-            <ScrollLink  className="block text-white hover:bg-slate-300/10 px-3 py-2 rounded-md  font-light"
+        
+            <ScrollLink  className="block text-white hover:bg-slate-300/10 px-3 py-2 rounded-md  font-light cursor-pointer"
             to="contacto" 
             smooth={true} 
             offset={-70} 
@@ -249,8 +196,7 @@ function Navbar() {
           </ScrollLink>
             
             
-            
-            </Link>
+       
 
 
         </div>

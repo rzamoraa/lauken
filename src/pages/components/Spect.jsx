@@ -1,141 +1,156 @@
-import React from 'react';
-import logo from './lauken.svg'; // Asegúrate de que la ruta es correcta
+import React from "react";
+import logo from "./lauken.svg"; // Asegúrate de que la ruta es correcta
 
-import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
-import { Fragment } from 'react'
+import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
+import { Fragment } from "react";
 
-const tabs = [
-
-
-    {
-      name: 'Design',
-      features: [
-        {
-          name: 'Adaptive and modular',
-          description:
-            'The Organize base set allows you to configure and evolve your setup as your items and habits change. The included trays and optional add-ons are easily rearranged to achieve that perfect setup.',
-          imageSrc: 'https://images.pexels.com/photos/2132111/pexels-photo-2132111.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-          imageAlt: 'Maple organizer base with slots, supporting white polycarbonate trays of various sizes.',
-        },
-      ],
-    },
-    {
-      name: 'Material',
-      features: [
-        {
-          name: 'Natural wood options',
-          description:
-            'Organize has options for rich walnut and bright maple base materials. Accent your desk with a contrasting material, or match similar woods for a calm and cohesive look. Every base is hand sanded and finished.',
-          imageSrc: 'https://images.pexels.com/photos/6205031/pexels-photo-6205031.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-          imageAlt:
-            'Walnut organizer base with pen, sticky note, phone, and bin trays, next to modular drink coaster attachment.',
-        },
-      ],
-    },
-    {
-      name: 'Considerations',
-      features: [
-        {
-          name: 'Helpful around the home',
-          description:
-            "Our customers use Organize throughout the house to bring efficiency to many daily routines. Enjoy Organize in your workspace, kitchen, living room, entry way, garage, and more. We can't wait to see how you'll use it!",
-          imageSrc: 'https://images.pexels.com/photos/11620149/pexels-photo-11620149.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-          imageAlt: 'Walnut organizer base with white polycarbonate trays in the kitchen with various kitchen utensils.',
-        },
-      ],
-    },
-    {
-      name: 'Included',
-      features: [
-        {
-          name: "Everything you'll need",
-          description:
-            'The Organize base set includes the pen, phone, small, and large trays to help you group all your essential items. Expand your set with the drink coaster and headphone stand add-ons.',
-          imageSrc: 'https://images.pexels.com/photos/391831/pexels-photo-391831.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-          imageAlt: 'Walnut organizer system on black leather desk mat on top of white desk.',
-        },
-      ],
-    },
-  ]
-  
-
-
-
-
-function Spect({ titulo, descripcion, imagen, url }) {
+function Spect({
+  title,
+  descripcion,
+  box1,
+  box2,
+  box3,
+  box4,
+  title1,
+  text1,
+  image1,
+  title2,
+  text2,
+  image2,
+  title3,
+  text3,
+  image3,
+  title4,
+  text4,
+  image4,
+}) {
   return (
-    <section 
-      id="especificaciones" 
-      className="relative flex justify-center items-center text-white "
+    <section
+      id="especificaciones"
+      className="mx-auto max-w-7xl py-0 sm:px-6 sm:py-4 lg:px-8  "
     >
-   
-
-   <div>
-    <section aria-labelledby="features-heading" className="mx-auto max-w-7xl py-32 sm:px-2 lg:px-8 -my-18 ">
-        <div className="mx-auto max-w-2xl px-4 lg:max-w-none lg:px-0">
-          <div className="max-w-3xl">
-            <h2 id="features-heading" className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Technical Specifications
-            </h2>
-            <p className="mt-4 text-gray-500">
-              The Organize modular system offers endless options for arranging your favorite and most used items. Keep
-              everything at reach and in its place, while dressing up your workspace.
-            </p>
-          </div>
-
-          <TabGroup className="mt-4">
-            <div className="-mx-4 flex overflow-x-auto sm:mx-0">
-              <div className="flex-auto border-b border-gray-200 px-4 sm:px-0">
-                <TabList className="-mb-px flex space-x-10">
-                  {tabs.map((tab) => (
-                    <Tab
-                      key={tab.name}
-                      className="whitespace-nowrap border-b-2 border-transparent py-6 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700 data-[selected]:border-indigo-500 data-[selected]:text-indigo-600"
-                    >
-                      {tab.name}
-                    </Tab>
-                  ))}
-                </TabList>
-              </div>
+      <div  className="overflow-hidden  bg-container rounded-none  p-5 sm:rounded-xl">
+        <div
+          aria-labelledby="features-heading"
+         className="relative h-full "
+        >
+          <div className="mx-auto max-w-2xl px-4 lg:max-w-none lg:px-0">
+            <div className="max-w-3xl">
+              <h1 className="text-4xl font-light tracking-tight text-gray-900 sm:text-6xl "
+              >
+                {title}
+              </h1>
+              <p className="mt-4 text-gray-500">{descripcion}</p>
             </div>
 
-            <TabPanels as={Fragment}>
-              {tabs.map((tab) => (
-                <TabPanel key={tab.name} className="space-y-16 pt-10 lg:pt-16">
-                  {tab.features.map((feature) => (
-                    <div key={feature.name} className="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:gap-x-8">
-                      <div className="mt-6 lg:col-span-5 lg:mt-0">
-                        <h3 className="text-lg font-medium text-gray-900">{feature.name}</h3>
-                        <p className="mt-2 text-sm text-gray-500">{feature.description}</p>
-                      </div>
-                      <div className="lg:col-span-7">
-                        <div className="aspect-h-1 aspect-w-2 overflow-hidden rounded-lg bg-gray-100 sm:aspect-h-2 sm:aspect-w-5">
-                          <img alt={feature.imageAlt} src={feature.imageSrc} className="object-cover object-center" />
-                        </div>
+            <TabGroup className="mt-4"
+            
+            
+            >
+              <div className="-mx-4 flex overflow-x-auto sm:mx-0 bg ">
+                <div className="flex-auto border-b border-gray-200 px-4 sm:px-0">
+                  <TabList className="-mb-px flex space-x-10">
+                    <Tab className="whitespace-nowrap border-b-2 border-transparent py-6 text-sm font-medium text-gray-500 hover:border-[#263954] hover:text-[#263954] data-[selected]:border-[#BB8D42] data-[selected]:text-[#BB8D42]">
+                      {box1}
+                    </Tab>
+                    <Tab className="whitespace-nowrap border-b-2 border-transparent py-6 text-sm font-medium text-gray-500 hover:border-[#263954] hover:text-[#263954] data-[selected]:border-[#BB8D42] data-[selected]:text-[#BB8D42]">
+                      {box2}
+                    </Tab>
+                    <Tab className="whitespace-nowrap border-b-2 border-transparent py-6 text-sm font-medium text-gray-500 hover:border-[#263954] hover:text-[#263954] data-[selected]:border-[#BB8D42] data-[selected]:text-[#BB8D42]">
+                      {box3}
+                    </Tab>
+                    <Tab className="whitespace-nowrap border-b-2 border-transparent py-6 text-sm font-medium text-gray-500 hover:border-[#263954] hover:text-[#263954] data-[selected]:border-[#BB8D42] data-[selected]:text-[#BB8D42]">
+                      {box4}
+                    </Tab>
+                  </TabList>
+                </div>
+              </div>
+
+              <TabPanels as={Fragment}>
+                <TabPanel className="space-y-16 pt-10 lg:pt-16 ">
+                  <div className="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:gap-x-8">
+                    <div className="mt-6 lg:col-span-5 lg:mt-0">
+                    <h1 className="text-3xl font-light text-[#BB8D42] ">
+                        {title1}
+                      </h1>
+                      <p className="mt-2 text-sm text-gray-500">{text1}</p>
+                    </div>
+                    <div className="lg:col-span-7">
+                      <div className="aspect-h-1 aspect-w-2 overflow-hidden rounded-lg bg-gray-100 sm:aspect-h-2 sm:aspect-w-5">
+                        <img
+                          alt="Walnut."
+                          src={image1}
+                          className="object-cover object-center"
+                        />
                       </div>
                     </div>
-                  ))}
+                  </div>
                 </TabPanel>
-              ))}
-            </TabPanels>
-          </TabGroup>
+
+                <TabPanel className="space-y-16 pt-10 lg:pt-16 ">
+                  <div className="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:gap-x-8">
+                    <div className="mt-6 lg:col-span-5 lg:mt-0 ">
+                    <h1 className="text-3xl font-light text-[#BB8D42] ">
+                        {title2}
+                      </h1>
+                      <p className="mt-2 text-sm text-gray-500 ">{text2}</p>
+                    </div>
+                    <div className="lg:col-span-7">
+                      <div className="aspect-h-1 aspect-w-2 overflow-hidden rounded-lg bg-gray-100 sm:aspect-h-2 sm:aspect-w-5">
+                        <img
+                          alt="Walnut."
+                          src={image2}
+                          className="object-cover object-center"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </TabPanel>
+
+                <TabPanel className="space-y-16 pt-10 lg:pt-16">
+                  <div className="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:gap-x-8">
+                    <div className="mt-6 lg:col-span-5 lg:mt-0">
+                    <h1 className="text-3xl font-light text-[#BB8D42] ">
+                        {title3}
+                      </h1>
+                      <p className="mt-2 text-sm text-gray-500">{text3}</p>
+                    </div>
+                    <div className="lg:col-span-7">
+                      <div className="aspect-h-1 aspect-w-2 overflow-hidden rounded-lg bg-gray-100 sm:aspect-h-2 sm:aspect-w-5">
+                        <img
+                          alt="Walnut."
+                          src={image3}
+                          className="object-cover object-center"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </TabPanel>
+
+                <TabPanel className="space-y-16 pt-10 lg:pt-16">
+                  <div className="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:gap-x-8">
+                    <div className="mt-6 lg:col-span-5 lg:mt-0">
+                    <h1 className="text-3xl font-light text-[#BB8D42] ">
+                        {title4}
+                      </h1>
+                      <p className="mt-2 text-sm text-gray-500">{text4}</p>
+                    </div>
+                    <div className="lg:col-span-7">
+                      <div className="aspect-h-1 aspect-w-2 overflow-hidden rounded-lg bg-gray-100 sm:aspect-h-2 sm:aspect-w-5">
+                        <img
+                          alt="Walnut."
+                          src={image4}
+                          className="object-cover object-center"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </TabPanel>
+              </TabPanels>
+            </TabGroup>
+          </div>
         </div>
-      </section>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      </div>
     </section>
   );
 }
