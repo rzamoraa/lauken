@@ -35,10 +35,10 @@ function Proyectos() {
 <div className="mx-auto max-w-4xl px-6 lg:px-8">
          <div className="mx-auto max-w-2xl text-center">
          <h1 className="text-4xl font-light tracking-tight text-[#BB8D42] sm:text-6xl ">
-                  Nuestros Proyectos
+         Parcelaciones en áreas exclusivas de Chile
                   </h1>
           <p className="mt-2 text-lg leading-8 text-gray-600">
-          proyectos recientes.
+          En Lauken Inmobiliaria, nos especializamos en desarrollar proyectos en ubicaciones privilegiadas, pensados para aquellos que buscan un entorno único para construir su futuro hogar. A continuación, te presentamos nuestros proyectos más recientes, donde la exclusividad y la naturaleza se unen.
           </p>
         </div>
     

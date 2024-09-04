@@ -69,15 +69,13 @@ function Nosotros() {
                   <h1 className="text-4xl font-light tracking-tight text-[#BB8D42] sm:text-6xl ">
                   Somos Inmobiliaria Lauken
                   </h1>
-                  <p className="mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
-                    Cupidatat minim id magna ipsum sint dolor qui. Sunt sit in quis cupidatat mollit aute velit. Et
-                    labore commodo nulla aliqua proident mollit ullamco exercitation tempor. Sint aliqua anim nulla sunt
-                    mollit id pariatur in voluptate cillum.
+                  <p className="mt-6 text-lg leading-8 tracking-tight text-gray-600 sm:max-w-md lg:max-w-none">
+                    En Lauken, nuestra prioridad es ofrecer terrenos únicos en las áreas más privilegiadas de Chile, respaldados por un compromiso inquebrantable con la transparencia y la calidad. Desde el inicio de nuestras operaciones, hemos trabajado arduamente para construir relaciones sólidas con nuestros clientes, entregando proyectos exitosos que cumplen y superan las expectativas. Con un primer proyecto vendido en su totalidad, seguimos creciendo con confianza en nuestro segundo gran desarrollo. Nos enorgullece brindar una oportunidad segura y exclusiva para que puedas comenzar a construir el hogar de tus sueños.
                   </p>
                   <div className="mt-10 flex items-center gap-x-6">
                   
                     <a href="#" className="text-sm font-semibold leading-6  text-[#BB8D42] shadow-sm hover:text-[#ceb996]">
-                      Live demo <span aria-hidden="true">→</span>
+                      Hablemos! <span aria-hidden="true">→</span>
                     </a>
                   </div>
                 </div>

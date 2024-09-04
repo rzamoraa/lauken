@@ -7,21 +7,19 @@ function Tucampo() {
       <div className="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
           <div className="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
-          <h2 className="text-4xl font-light tracking-tight text-[#BB8D42] sm:text-6xl ">Vendenos tu campo</h2>
+          <h2 className="text-4xl font-light tracking-tight text-[#BB8D42] sm:text-6xl ">¿Tienes un terreno para vender?</h2>
             <p className="mt-6 text-xl leading-8 text-gray-600">
-              Quasi est quaerat. Sit molestiae et. Provident ad dolorem occaecati eos iste. Soluta rerum quidem minus ut
-              molestiae velit error quod. Excepturi quidem expedita molestias quas.
+            En Lauken Inmobiliaria, estamos siempre en busca de nuevas oportunidades para desarrollar proyectos exclusivos. Si posees un terreno en una zona privilegiada y deseas venderlo, estamos aquí para ofrecerte una solución rápida y transparente. Nuestro equipo de expertos te guiará en cada paso del proceso, asegurando una transacción justa y eficiente.
             </p>
             <p className="mt-6 text-base leading-7 text-gray-600">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-              fugiat veniam occaecat fugiat. Quasi aperiam sit non sit neque reprehenderit.
+            Confía en nuestra experiencia y profesionalismo para que juntos podamos crear un nuevo proyecto exitoso. ¡Hablemos y descubre cómo podemos ayudarte!
             </p>
             <div className="mt-10 flex">
               <a
                 href="#"
                 className="rounded-md  px-3.5 py-2.5 text-sm font-semibold text-[#BB8D42] shadow-sm hover:text-[#ceb996] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 "
               >
-                Join our team <span aria-hidden="true">&rarr;</span>
+               [Contáctanos hoy mismo] <span aria-hidden="true">&rarr;</span>
               </a>
             </div>
           </div>
