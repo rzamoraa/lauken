@@ -7,11 +7,17 @@ import Hero from './components/Hero';
 import Proyectos from './components/Proyectos';
 import Contacto from './components/Contacto';
 import Footer from './components/Footer';
-import ProyectoUno from './pages/ProyectoUno';
-import ProyectoDos from './pages/ProyectoDos';
-import ProyectoTres from './pages/ProyectoTres';
 import Nosotros from './components/Nosotros';
 import Tucampo from './components/Tucampo';
+
+
+import Entrevalles from './pages/Entrevalles';
+import Costapulin from './pages/Costapulin';
+import Sanrafael from './pages/Sanrafael';
+
+
+
+
 
 function App() {
 
@@ -30,9 +36,9 @@ function App() {
             <Contacto />
           </>
         } />
-        <Route path="/proyecto-uno" element={<ProyectoUno />} />
-        <Route path="/proyecto-dos" element={<ProyectoDos />} />
-        <Route path="/proyecto-tres" element={<ProyectoTres />} />
+        <Route path="/entre-valles" element={<Entrevalles />} />
+        <Route path="/costa-pulin" element={<Costapulin />} />
+        <Route path="/san-rafael" element={<Sanrafael />} />
       </Routes>
       <Footer />
       </div>

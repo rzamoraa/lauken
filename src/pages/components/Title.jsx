@@ -1,9 +1,9 @@
 import React from 'react';
 import logo from './logo.svg'; // Asegúrate de que la ruta es correcta
+import logopulin from '../../assets/logopulin.svg'
+import logovalles from '../../assets/logovalles.svg'
 
-
-
-function Title({video}) {
+function Title({video, logoproyecto}) {
   return (
     <section 
       id="title" 
@@ -25,14 +25,11 @@ function Title({video}) {
       {/* SVG del logo centrado */}
       <div>
       <div className="relative z-10  justify-center items-center opacity-50 ">
-        <img src={logo} alt="Logo" className="w-48 h-48" />
+        <img src={logoproyecto} alt="Logo" className="w-96 h-96" />
       </div>
 
-      <div className="relative z-10  justify-center items-center opacity-50 " >
-        
-           NOMBRE DEL PROYECTO
-       
-        </div>
+
+    
       </div>
       
     </section>

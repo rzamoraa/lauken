@@ -7,19 +7,21 @@ function Tucampo() {
       <div className="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
           <div className="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
-          <h2 className="text-4xl font-light tracking-tight text-[#BB8D42] sm:text-6xl ">¿Tienes un terreno para vender?</h2>
+          <h2 className="text-4xl font-light tracking-tight text-[#BB8D42] sm:text-6xl "><a className='font-medium '>¿Tienes un campo?
+            </a> ¡Hablemos!
+          </h2>
             <p className="mt-6 text-xl leading-8 text-gray-600">
-            En Lauken Inmobiliaria, estamos siempre en busca de nuevas oportunidades para desarrollar proyectos exclusivos. Si posees un terreno en una zona privilegiada y deseas venderlo, estamos aquí para ofrecerte una solución rápida y transparente. Nuestro equipo de expertos te guiará en cada paso del proceso, asegurando una transacción justa y eficiente.
+            En Lauken Inmobiliaria, estamos en constante búsqueda de nuevas oportunidades para desarrollar. Si posees un terreno y deseas venderlo, estamos aquí para ofrecerte una solución rápida y transparente. Nuestro equipo de expertos te guiará en cada paso del proceso, asegurando una transacción eficiente, justa y provechosa para todos.
             </p>
             <p className="mt-6 text-base leading-7 text-gray-600">
-            Confía en nuestra experiencia y profesionalismo para que juntos podamos crear un nuevo proyecto exitoso. ¡Hablemos y descubre cómo podemos ayudarte!
+            Confía en nuestra experiencia y profesionalismo para que juntos podamos crear un futuro mejor para todos. ¡Hablemos y descubre cómo podemos ayudarte!
             </p>
             <div className="mt-10 flex">
               <a
                 href="#"
                 className="rounded-md  px-3.5 py-2.5 text-sm font-semibold text-[#BB8D42] shadow-sm hover:text-[#ceb996] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 "
               >
-               [Contáctanos hoy mismo] <span aria-hidden="true">&rarr;</span>
+               [¡Hablemos!] <span aria-hidden="true">&rarr;</span>
               </a>
             </div>
           </div>
@@ -27,7 +29,7 @@ function Tucampo() {
             <div className="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
               <img
                 alt=""
-                src="https://images.unsplash.com/photo-1670272502246-768d249768ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&q=80"
+                src="https://plus.unsplash.com/premium_photo-1663952767325-6c318c960e1a?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 className="aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover"
               />
             </div>
@@ -42,7 +44,7 @@ function Tucampo() {
               <div className="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
                 <img
                   alt=""
-                  src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&h=842&q=80"
+                 src="https://images.pexels.com/photos/1227513/pexels-photo-1227513.jpeg?auto=compress&cs=tinysrgb&w=600"
                   className="aspect-[7/5] w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
                 />
               </div>

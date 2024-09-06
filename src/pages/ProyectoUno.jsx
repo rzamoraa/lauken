@@ -5,11 +5,15 @@ import Contactus from "./components/Contactus";
 import Description from "./components/Descripcion";
 import Gallery from "./components/Gallery";
 import Spect from "./components/Spect";
-import Testimonial from "./components/Testimonials";
+
 import Title from "./components/Title";
 import Return from "./components/Return";
 import Mapa from "./components/Mapa";
 import Atributos from "./components/Atributos";
+
+import logovalles from '../assets/logovalles.svg'
+
+
 
 function ProyectoUno() {
   return (
@@ -17,6 +21,7 @@ function ProyectoUno() {
       <Header />
 
       <Title
+      logoproyecto={logovalles}
         video={
           "https://videos.pexels.com/video-files/4934316/4934316-hd_1920_1080_30fps.mp4"
         }

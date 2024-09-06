@@ -10,23 +10,23 @@ import Title from "./components/Title";
 import Return from "./components/Return";
 import Mapa from "./components/Mapa";
 import Atributos from "./components/Atributos";
+import logopulin from '../assets/logopulin.svg'
 
 
-
-
-function ProyectoTres() {
+function Costapulin() {
   return (
     <div className="bg-white">
       <Header />
 
       <Title
+      logoproyecto={logopulin}
         video={
-          "https://videos.pexels.com/video-files/4934316/4934316-hd_1920_1080_30fps.mp4"
+          "https://storage.googleapis.com/bucket-launken/entrevalleVideo.mp4"
         }
       />
       <Description
         video={
-          "https://videos.pexels.com/video-files/4934316/4934316-hd_1920_1080_30fps.mp4"
+          "https://storage.googleapis.com/bucket-launken/entrevalleVideo.mp4"
         }
       />
 
@@ -78,4 +78,4 @@ function ProyectoTres() {
   );
 }
 
-export default ProyectoTres;
+export default Costapulin;

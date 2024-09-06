@@ -3,25 +3,25 @@ import Card from './Card';
 
 const proyectos = [
     {
-      nombreUnico: 'proyecto-uno',
-      titulo: 'Proyecto 1',
-      descripcion: 'Este es un breve resumen del Proyecto 1.',
-      imagen: 'https://images.pexels.com/photos/1165981/pexels-photo-1165981.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      url: '/proyecto-uno'
+      nombreUnico: 'entre-valles',
+      titulo: 'Entre Valles',
+      descripcion: ' Proyecto urbanizado, 5.000mts2 EXITO EN VENTAS  ',
+      imagen: "https://images.pexels.com/photos/974314/pexels-photo-974314.jpeg?auto=compress&cs=tinysrgb&w=600",
+      url: '/entre-valles'
     },
     {
-      nombreUnico: 'proyecto-dos',
-      titulo: 'Proyecto 2',
-      descripcion: 'Este es un breve resumen del Proyecto 2.',
+      nombreUnico: 'costa-pulin',
+      titulo: 'Costa Pulin',
+      descripcion: 'Proyecto con ubicación privilegiada, rodeada de valles',
       imagen: 'https://images.pexels.com/photos/1165981/pexels-photo-1165981.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      url: '/proyecto-dos'
+      url: '/costa-pulin'
     },
     {
-      nombreUnico: 'proyecto-tres',
-      titulo: 'Proyecto 3',
-      descripcion: 'Este es un breve resumen del Proyecto 3.',
-      imagen: 'https://images.pexels.com/photos/1165981/pexels-photo-1165981.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      url: '/proyecto-tres'
+      nombreUnico: 'San Rafael',
+      titulo: 'San Rafael',
+      descripcion: 'Trabajando para un nuevo proyecto que te sorprendera!',
+      imagen:  "https://images.pexels.com/photos/1287089/pexels-photo-1287089.jpeg?auto=compress&cs=tinysrgb&w=600",
+      url: '/San-rafael'
     },
   ];
 
@@ -35,10 +35,10 @@ function Proyectos() {
 <div className="mx-auto max-w-4xl px-6 lg:px-8">
          <div className="mx-auto max-w-2xl text-center">
          <h1 className="text-4xl font-light tracking-tight text-[#BB8D42] sm:text-6xl ">
-         Parcelaciones en áreas exclusivas de Chile
-                  </h1>
+        <a className='font-medium'>Proyectos únicos</a>  en lugares privilegiados
+         </h1>
           <p className="mt-2 text-lg leading-8 text-gray-600">
-          En Lauken Inmobiliaria, nos especializamos en desarrollar proyectos en ubicaciones privilegiadas, pensados para aquellos que buscan un entorno único para construir su futuro hogar. A continuación, te presentamos nuestros proyectos más recientes, donde la exclusividad y la naturaleza se unen.
+          Nos especializamos en desarrollar proyectos en ubicaciones privilegiadas, enfocados en aquellos que buscan un entorno único para construir su futuro hogar. Acá podrás encontrar nuestros proyectos más recientes, donde la exclusividad y la naturaleza se unen para generar una experiencia inigualable.
           </p>
         </div>
     

@@ -5,12 +5,12 @@ import Contactus from "./components/Contactus";
 import Description from "./components/Descripcion";
 import Gallery from "./components/Gallery";
 import Spect from "./components/Spect";
-import Testimonial from "./components/Testimonials";
+
 import Title from "./components/Title";
 import Return from "./components/Return";
 import Mapa from "./components/Mapa";
 import Atributos from "./components/Atributos";
-
+import logopulin from '../assets/logopulin.svg'
 
 
 function ProyectoDos() {
@@ -19,13 +19,14 @@ function ProyectoDos() {
       <Header />
 
       <Title
+      logoproyecto={logopulin}
         video={
-          "https://videos.pexels.com/video-files/4934316/4934316-hd_1920_1080_30fps.mp4"
+          "https://storage.googleapis.com/bucket-launken/entrevalleVideo.mp4"
         }
       />
       <Description
         video={
-          "https://videos.pexels.com/video-files/4934316/4934316-hd_1920_1080_30fps.mp4"
+          "https://storage.googleapis.com/bucket-launken/entrevalleVideo.mp4"
         }
       />
 
