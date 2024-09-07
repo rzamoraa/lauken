@@ -25,7 +25,7 @@ function Title({video, logoproyecto}) {
       {/* SVG del logo centrado */}
       <div>
       <div className="relative z-10  justify-center items-center opacity-50 ">
-        <img src={logoproyecto} alt="Logo" className="w-64 h-64" />
+        <img src={logoproyecto} alt="Logo" className="w-36  h-36  sm:w-64 sm:h-64 mt-10" />
       </div>
 
 
