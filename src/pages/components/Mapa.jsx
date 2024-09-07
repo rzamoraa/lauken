@@ -1,22 +1,77 @@
-import React from "react";
-import logo from "./lauken.svg"; // Asegúrate de que la ruta es correcta
+import React, { useState, useEffect } from "react";
+import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
 
-function Mapa() {
+const containerStyle = {
+  width: '100%',
+  height: '400px',
+};
+
+const mapStyle = [
+  {
+    "featureType": "all",
+    "elementType": "all",
+    "stylers": [
+      { "saturation": -100 },
+      { "lightness": 20 }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "geometry",
+    "stylers": [
+      { "visibility": "simplified" }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "geometry",
+    "stylers": [
+      { "color": "#e2cead" }
+    ]
+  }
+];
+
+const Mapa = ({center}) => {
+  const { isLoaded } = useLoadScript({
+    googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY, 
+  });
+
+  // Estado para almacenar el icono del marcador
+  const [icon, setIcon] = useState(null);
+
+  useEffect(() => {
+    if (isLoaded && window.google) {
+      // Solo asignar el icono cuando `window.google` esté disponible
+      setIcon({
+        url: "https://storage.googleapis.com/bucket-launken/Logos-iconos.png", 
+        scaledSize: new window.google.maps.Size(40, 40)
+      });
+    }
+  }, [isLoaded]);
+
+  if (!isLoaded) return <div>Loading...</div>;
+
   return (
-    <section
-      id="mapa"
-      className="mx-auto max-w-7xl py-0 sm:px-6 sm:py-4 lg:px-8 "
-    >
-      <div className="overflow-hidden  rounded-none sm:rounded-xl  ">
-        <div className="relative h-full md:h-[45vh]  ">
-          <img
-            className=""
-            src="https://plus.unsplash.com/premium_photo-1712281671133-dc5585d0f12f?q=80&w=2012&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    <div className="max-w-7xl mx-auto px-4">
+      <GoogleMap
+        mapContainerStyle={containerStyle}
+        center={center}
+        zoom={15}
+        options={{
+          styles: mapStyle,
+          disableDefaultUI: true,
+          zoomControl: false,
+        }}
+      >
+        {icon && (
+          <Marker 
+            position={center} 
+            icon={icon}  // Solo renderiza el marcador si el icono está definido
           />
-        </div>
-      </div>
-    </section>
+        )}
+      </GoogleMap>
+    </div>
   );
-}
+};
 
 export default Mapa;

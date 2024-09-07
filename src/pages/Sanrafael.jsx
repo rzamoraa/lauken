@@ -11,24 +11,34 @@ import Return from "./components/Return";
 import Mapa from "./components/Mapa";
 import Atributos from "./components/Atributos";
 
-import logovalles from '../assets/logovalles.svg'
+import logosanrafel from '../assets/logosanrafel.svg'
 
 
 
 function Sanrafael() {
+
+   
+  const point = {
+    lat: -34.187536,  // Reemplaza con la latitud de tu trabajo
+    lng: -71.490558,  // Reemplaza con la longitud de tu trabajo
+  };
+
+
+
+
   return (
     <div className="bg-white">
       <Header />
 
       <Title
-      logoproyecto={logovalles}
+      logoproyecto={logosanrafel}
         video={
-          "https://storage.googleapis.com/bucket-launken/entrevalleVideo.mp4"
+          "https://storage.googleapis.com/bucket-launken/sanrafael/sanrafael-homeonline.mp4"
         }
       />
       <Description
         video={
-          "https://storage.googleapis.com/bucket-launken/entrevalleVideo.mp4"
+          "https://storage.googleapis.com/bucket-launken/sanrafael/sanrafael-homeonline.mp4"
         }
       />
 
@@ -48,7 +58,28 @@ function Sanrafael() {
         image3="https://images.pexels.com/photos/1165981/pexels-photo-1165981.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       />
 
-      <Atributos />
+<Atributos
+      title1={"Nuestra Trayectoria"}
+      title2={"Confiado por decenas de familias que buscan &nbsp; calidad de vida"}
+      text={"En Lauken Inmobiliaria, estamos orgullosos de haber ayudado a numerosas familias a encontrar su hogar ideal. Nuestro proyecto en Costa Rapel combina exclusividad, naturaleza y una alta calidad de vida. Cada lote ha sido diseñado pensando en ti y en el futuro que mereces. ¡Únete a quienes ya están disfrutando de este increíble lugar y asegura tu espacio hoy mismo!"}
+      image={"https://plus.unsplash.com/premium_photo-1663952767325-6c318c960e1a?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
+
+      t1={"Matanza puertecillo"}
+      v1={"1HR"}
+      t2={"Litueche la estrella"}
+      v2={"20 MIN"}
+      t3={"Santacruz Ruta Colchagua Pichilemu"}
+      v3={"1,20 HR"}
+      t4={"Caminos estabilizados"}
+      v4={"100%" }
+      t5={"Acceso controlado"}
+      v5={"+Seguridad"}
+      t6={"Luz y agua subterranea"}
+      v6={"100%"}
+      
+      
+      
+      />
 
       <Spect
         title="Especificaciones"
@@ -71,7 +102,9 @@ function Sanrafael() {
         image4="https://images.pexels.com/photos/1165981/pexels-photo-1165981.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       />
 
-      <Mapa />
+      <Mapa 
+      center={point}
+      />
 
       <Contactus />
 

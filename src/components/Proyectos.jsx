@@ -5,21 +5,21 @@ const proyectos = [
     {
       nombreUnico: 'entre-valles',
       titulo: 'Entre Valles',
-      descripcion: ' Proyecto urbanizado, 5.000mts2 EXITO EN VENTAS  ',
+      descripcion: ' Pumanque ',
       imagen: "https://images.pexels.com/photos/974314/pexels-photo-974314.jpeg?auto=compress&cs=tinysrgb&w=600",
       url: '/entre-valles'
     },
     {
       nombreUnico: 'costa-pulin',
       titulo: 'Costa Pulin',
-      descripcion: 'Proyecto con ubicación privilegiada, rodeada de valles',
+      descripcion: 'Lago Rapel',
       imagen: 'https://images.pexels.com/photos/1165981/pexels-photo-1165981.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       url: '/costa-pulin'
     },
     {
       nombreUnico: 'San Rafael',
       titulo: 'San Rafael',
-      descripcion: 'Trabajando para un nuevo proyecto que te sorprendera!',
+      descripcion: 'Lago Rapel',
       imagen:  "https://images.pexels.com/photos/1287089/pexels-photo-1287089.jpeg?auto=compress&cs=tinysrgb&w=600",
       url: '/San-rafael'
     },

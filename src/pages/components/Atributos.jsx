@@ -1,38 +1,55 @@
-import React from "react";
-import logo from "./lauken.svg"; // Asegúrate de que la ruta es correcta
+import React, { useState } from "react";
+
 import { Link } from "react-router-dom";
 
-const stats = [
-  { id: 1, name: "Matanza puertecillo", value: "1HR" },
-  { id: 2, name: "Litueche la estrella", value: "20 MIN" },
-  { id: 3, name: "Santacruz Ruta Colchagua Pichilemu", value: "1,20 HR" },
-  { id: 4, name: "Caminos estabilizados", value: "100%" },
-  { id: 5, name: "Acceso controlado", value: "+Seguridad" },
-  { id: 6, name: "Luz y agua subterranea", value: "100%" },
+
+
+function Atributos({title1, title2, text, image, t1, v1, t2, v2, t3, v3, t4, v4, t5, v5, t6, v6 } ) {
+  const [idt1, setIdt1] = useState(t1);
+  const [idv1, setIdv1] = useState(v1);
+  const [idt2, setIdt2] = useState(t2);
+  const [idv2, setIdv2] = useState(v2);
+  const [idt3, setIdt3] = useState(t3);
+  const [idv3, setIdv3] = useState(v3);
+  const [idt4, setIdt4] = useState(t4);
+  const [idv4, setIdv4] = useState(v4);
+  const [idt5, setIdt5] = useState(t5);
+  const [idv5, setIdv5] = useState(v5);
+  const [idt6, setIdt6] = useState(t6);
+  const [idv6, setIdv6] = useState(v6);
+
+  const stats = [
+  { id: 1, name: idt1, value: idv1},
+  { id: 2, name: idt2, value: idv2},
+  { id: 3, name: idt3, value: idv3},
+  { id: 4, name: idt4, value: idv4},
+  { id: 5, name: idt5, value: idv5},
+  { id: 6, name: idt6, value: idv6},
  
 ];
 
-function Atributos() {
+
+
   return (
     <section id="atributos"  className="mx-auto max-w-7xl pb-0 sm:px-0 sm:pb-4 lg:px-8 ">
       <div  className="overflow-hidden  relative h-full rounded-b-xl  bg-container  ">
      
         <img
           alt=""
-          src="https://plus.unsplash.com/premium_photo-1663952767325-6c318c960e1a?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src={image}
           className="h-56 w-full  object-cover lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-1/2 "
         />
         <div className="mx-auto grid max-w-7xl lg:grid-cols-2 ">
           <div className="px-6 pb-24 pt-16 sm:pb-32 sm:pt-20 lg:col-start-2 lg:px-8 lg:pt-32 ">
             <div className="mx-auto max-w-2xl lg:mr-0 lg:max-w-lg">
               <h2 className="text-4xl font-light text-[#BB8D42] ">
-              Nuestra Trayectoria
+             {title1}
               </h2>
               <h1 className="text-4xl font-light tracking-tight text-gray-900 sm:text-6xl ">
-              Confiado por decenas de familias que buscan &nbsp; calidad de vida
+              {title2}
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-600">
-              En Lauken Inmobiliaria, estamos orgullosos de haber ayudado a numerosas familias a encontrar su hogar ideal. Nuestro proyecto en Costa Rapel combina exclusividad, naturaleza y una alta calidad de vida. Cada lote ha sido diseñado pensando en ti y en el futuro que mereces. ¡Únete a quienes ya están disfrutando de este increíble lugar y asegura tu espacio hoy mismo!
+                {text}
               </p>
               <dl className="mt-16 grid max-w-xl grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 xl:mt-16">
                 {stats.map((stat) => (
