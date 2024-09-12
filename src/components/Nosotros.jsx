@@ -5,7 +5,11 @@ import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link as ScrollLink } from 'react-scroll';
 import { Helmet } from 'react-helmet-async';
-
+import p1 from '../assets/img/p1.jpg';
+import p2 from '../assets/img/p2.jpg';
+import p3 from '../assets/img/p3.jpg';
+import p4 from '../assets/img/p4.jpg';
+import p5 from '../assets/img/p5.jpg';
 const navigation = [
 
 
@@ -115,7 +119,7 @@ function Nosotros() {
                     <div className="relative">
                       <img
                         alt=""
-                        src="https://images.pexels.com/photos/259280/pexels-photo-259280.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        src= {p4}
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                       />
                       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
@@ -125,7 +129,7 @@ function Nosotros() {
                     <div className="relative">
                       <img
                         alt=""
-                        src="https://images.pexels.com/photos/1227513/pexels-photo-1227513.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        src={p5}
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                       />
                       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
@@ -133,7 +137,7 @@ function Nosotros() {
                     <div className="relative">
                       <img
                         alt=""
-                        src="https://images.pexels.com/photos/974314/pexels-photo-974314.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        src={p2}
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                       />
                       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
@@ -143,7 +147,7 @@ function Nosotros() {
                     <div className="relative">
                       <img
                         alt=""
-                        src="https://images.pexels.com/photos/51947/tuscany-grape-field-nature-51947.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        src={p1}
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                       />
                       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
@@ -151,7 +155,7 @@ function Nosotros() {
                     <div className="relative">
                       <img
                         alt=""
-                        src="https://images.pexels.com/photos/1287089/pexels-photo-1287089.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        src={p3}
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                       />
                       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />

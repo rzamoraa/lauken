@@ -2,10 +2,10 @@ import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion"; // Importamos Framer Motion
+import { Link as ScrollLink } from 'react-scroll';
 
 
-
-function Atributos({title1, title2, text, image, t1, v1, t2, v2, t3, v3, t4, v4, t5, v5, t6, v6 } ) {
+function Atributos({title1, title2, text, image, t1, v1, t2, v2, t3, v3, t4, v4, t5, v5, t6, v6, t7, v7, t8, v8, t9, v9, t10, v10 } ) {
   const [idt1, setIdt1] = useState(t1);
   const [idv1, setIdv1] = useState(v1);
   const [idt2, setIdt2] = useState(t2);
@@ -19,6 +19,18 @@ function Atributos({title1, title2, text, image, t1, v1, t2, v2, t3, v3, t4, v4,
   const [idt6, setIdt6] = useState(t6);
   const [idv6, setIdv6] = useState(v6);
 
+  const [idt7, setIdt7] = useState(t7);
+  const [idv7, setIdv7] = useState(v7);
+  const [idt8, setIdt8] = useState(t8);
+  const [idv8, setIdv8] = useState(v8);
+  const [idt9, setIdt9] = useState(t9);
+  const [idv9, setIdv9] = useState(v9);
+  const [idt10, setIdt10] = useState(t10);
+  const [idv10, setIdv10] = useState(v10);
+
+
+
+
   const stats = [
   { id: 1, name: idt1, value: idv1},
   { id: 2, name: idt2, value: idv2},
@@ -26,6 +38,10 @@ function Atributos({title1, title2, text, image, t1, v1, t2, v2, t3, v3, t4, v4,
   { id: 4, name: idt4, value: idv4},
   { id: 5, name: idt5, value: idv5},
   { id: 6, name: idt6, value: idv6},
+  { id: 7, name: idt7, value: idv7},
+  { id: 8, name: idt8, value: idv8},
+  { id: 9, name: idt9, value: idv9},
+  { id: 10, name: idt10, value: idv10},
  
 ];
 
@@ -52,6 +68,28 @@ function Atributos({title1, title2, text, image, t1, v1, t2, v2, t3, v3, t4, v4,
               <p className="mt-6 text-lg leading-8 text-gray-600">
                 {text}
               </p>
+              <ScrollLink  className="text-white hover:text-gray-300  "
+            to="contacto" 
+            smooth={true} 
+            offset={-70} 
+            duration={500}
+            spy={true}
+            exact="true"
+            activeClass="active"
+          >
+
+
+                    <a href="#" className=" font-light text-2xl leading-6   text-[#BB8D42]  hover:text-[#ceb996]    p-3 ">
+                    Conoce nuestros proyectos <span aria-hidden="true">→</span>
+
+
+         
+           
+          
+
+
+                    </a>
+                    </ScrollLink>
               <dl className="mt-16 grid max-w-xl grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 xl:mt-16">
                
 
