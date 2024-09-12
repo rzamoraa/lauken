@@ -1,14 +1,17 @@
 import React from 'react';
 import logo from '../assets/lauken.svg'; // Asegúrate de que la ruta es correcta
+import { Link as ScrollLink } from 'react-scroll';
 
 function Tucampo() {
   return (
+    <section id="vendenos" >
     <div className="overflow-hidden bg-white py-32">
       <div className="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
           <div className="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
-          <h2 className="text-4xl font-light tracking-tight text-[#BB8D42] sm:text-6xl "><a className='font-medium '>¿Tienes un campo?
-            </a> ¡Hablemos!
+          <h2 className="text-4xl font-light tracking-tight text-[#BB8D42] sm:text-6xl "><a className='font-medium '>
+          ¿Vendes tu Campo? 
+            </a> ¡Contáctanos!
           </h2>
             <p className="mt-6 text-xl leading-8 text-gray-600">
             En Lauken Inmobiliaria, estamos en constante búsqueda de nuevas oportunidades para desarrollar. Si posees un terreno y deseas venderlo, estamos aquí para ofrecerte una solución rápida y transparente. Nuestro equipo de expertos te guiará en cada paso del proceso, asegurando una transacción eficiente, justa y provechosa para todos.
@@ -17,12 +20,27 @@ function Tucampo() {
             Confía en nuestra experiencia y profesionalismo para que juntos podamos crear un futuro mejor para todos. ¡Hablemos y descubre cómo podemos ayudarte!
             </p>
             <div className="mt-10 flex">
+            <ScrollLink  
+            to="contacto" 
+            smooth={true} 
+            offset={-70} 
+            duration={500}
+            spy={true}
+            exact="true"
+            activeClass="active"
+          >
+
+
               <a
                 href="#"
                 className="rounded-md  px-3.5 py-2.5 text-sm font-semibold text-[#BB8D42] shadow-sm hover:text-[#ceb996] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 "
               >
-               [¡Hablemos!] <span aria-hidden="true">&rarr;</span>
+               ¡Hablemos! <span aria-hidden="true">&rarr;</span>
               </a>
+                    </ScrollLink>
+
+
+            
             </div>
           </div>
           <div className="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
@@ -60,6 +78,7 @@ function Tucampo() {
         </div>
       </div>
     </div>
+    </section>
   )
 }
 

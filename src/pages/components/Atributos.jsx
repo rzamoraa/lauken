@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion"; // Importamos Framer Motion
 
 
 
@@ -52,7 +53,21 @@ function Atributos({title1, title2, text, image, t1, v1, t2, v2, t3, v3, t4, v4,
                 {text}
               </p>
               <dl className="mt-16 grid max-w-xl grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 xl:mt-16">
-                {stats.map((stat) => (
+               
+
+
+{stats.map((stat, index) => (
+
+  <motion.div
+  key={stat.id}
+  initial={{ opacity: 0, y: 50 }}  // Inicia invisible y desplazado hacia abajo
+  whileInView={{ opacity: 1, y: 0 }}  // Se anima a visible y en su posición
+  transition={{ duration: 0.6, delay: index * 0.2 }}  // Retraso basado en el índice
+  viewport={{ once: true, margin: '-50px' }}  // La animación ocurre una vez, cuando la tarjeta está visible
+>
+
+
+
                   <div
                     key={stat.id}
                     className="flex flex-col gap-y-3 border-l border-gray-900/10 pl-6"
@@ -60,10 +75,11 @@ function Atributos({title1, title2, text, image, t1, v1, t2, v2, t3, v3, t4, v4,
                     <dt className="text-2xl font-light text-[#BB8D42] ">
                       {stat.name}
                     </dt>
-                    <dd className="text-4xl font-black text-[#cfc8bd] ">
+                    <dd className="text-4xl font-black text-[#bdb6ac] ">
                       {stat.value}
                     </dd>
                   </div>
+                  </motion.div>
                 ))}
               </dl>
             </div>

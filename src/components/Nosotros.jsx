@@ -3,6 +3,7 @@ import logo from '../assets/lauken.svg'; // Asegúrate de que la ruta es correct
 import { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Link as ScrollLink } from 'react-scroll';
 
 const navigation = [
 
@@ -25,10 +26,10 @@ function Nosotros() {
     <div className="bg-white">
     
       <main>
-        <div className="relative isolate">
+        <div className="relative isolate m-auto">
           <svg
             aria-hidden="true"
-            className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-[#eeebdc] [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]"
+            className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-[#d6d3c5] [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]"
           >
             <defs>
               <pattern
@@ -73,10 +74,32 @@ function Nosotros() {
                   En Laukén, nuestra prioridad es desarrollar proyectos de parcelación únicos en las regiones más privilegiadas de Chile. Siempre con el compromiso intrínseco de respetar el entorno, sus comunidades  y con un enfoque inquebrantable hacia la transparencia con nuestros clientes. Desde el inicio de nuestras operaciones, hemos trabajado arduamente para construir relaciones sólidas con nuestros distintos clientes, entregando proyectos exitosos que cumplen y superan las expectativas, acompañándolos y brindándole apoyo en el proceso en todo momento. Nos enorgullece brindar una oportunidad segura y exclusiva para que puedas comenzar a construir y vivir en el hogar de tus sueños.
                   </p>
                   <div className="mt-10 flex items-center gap-x-6">
-                  
+
+
+
+                  <ScrollLink  className="text-white hover:text-gray-300 font-light"
+            to="contacto" 
+            smooth={true} 
+            offset={-70} 
+            duration={500}
+            spy={true}
+            exact="true"
+            activeClass="active"
+          >
+
+
                     <a href="#" className="text-sm font-semibold leading-6  text-[#BB8D42] shadow-sm hover:text-[#ceb996]">
                     ¡Hablemos! <span aria-hidden="true">→</span>
+
+
+         
+           
+          
+
+
                     </a>
+                    </ScrollLink>
+         
                   </div>
                 </div>
                 <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">

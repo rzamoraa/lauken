@@ -30,8 +30,8 @@ function App() {
           <>
             <Navbar />
             <Hero />
-            <Nosotros />
             <Proyectos />
+            <Nosotros />
             <Tucampo />
             <Contacto />
           </>

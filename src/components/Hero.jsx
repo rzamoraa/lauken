@@ -6,7 +6,7 @@ function Hero() {
   return (
     <section 
       id="hero" 
-      className="relative h-[75vh] flex justify-center items-center text-white"
+      className="relative h-[45vh] flex justify-center items-center text-white"
     >
       {/* Video de fondo */}
       <video 
