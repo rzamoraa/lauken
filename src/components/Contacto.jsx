@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaWhatsapp } from 'react-icons/fa'; // Importamos un icono de WhatsApp para el botón
+import { Helmet } from 'react-helmet-async';
 
 function Contacto() {
 
@@ -7,6 +8,10 @@ function Contacto() {
  
   return (
     <section id="contacto" className="py-1 bg-white text-center">
+        <Helmet>
+        <title>Contacto - Laukén Inmobiliaria</title>
+        <meta name="description" content="Contáctanos en Laukén Inmobiliaria para obtener más información sobre nuestros proyectos de parcelación en Chile." />
+      </Helmet>
       <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="relative isolate overflow-hidden bg-slate-800/90 px-6 py-24 shadow-2xl sm:rounded-3xl sm:px-24 xl:py-32 ">
           <h1 className="mx-auto max-w-2xl text-center text-4xl  tracking-tight text-white/80 sm:text-6xl font-light">

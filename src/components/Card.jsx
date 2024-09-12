@@ -48,8 +48,8 @@ function Card({ titulo, descripcion, imagen, url, logo, activo }) {
             {/* Marca de "Vendido" si no está activo */}
             {!activo && (
               <div className="absolute inset-0 -z-10 h-full m-auto w-full object-cover">
-                <div className="text-2xl  py-auto text-center text-slate-50/50   font-black backdrop-blur-sm my-3 bg-red-500/25">
-                  VENDIDO
+                <div className="text-2xl  py-auto text-center text-slate-50/50   font-black backdrop-blur-sm my-3 bg-red-500/50">
+                 100% VENDIDO
                 </div>
               </div>
             )}

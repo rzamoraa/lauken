@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link as ScrollLink } from 'react-scroll';
+import { Helmet } from 'react-helmet-async';
 
 const navigation = [
 
@@ -22,7 +23,14 @@ function Nosotros() {
   return (
     <section id="nosotros" className=" bg-white text-center">
 
-    
+<Helmet>
+        <title>Laukén Inmobiliaria - Parcelación de Terrenos en Chile</title>
+        <meta name="description" content="Desarrollamos proyectos de parcelación exclusivos en las regiones más privilegiadas de Chile, respetando el entorno y las comunidades locales." />
+        <meta name="keywords" content="Laukén, parcelación, terrenos, Chile, inmobiliaria, lujo, proyectos exclusivos" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://tusitio.com/nosotros" />
+      </Helmet>
+      
     <div className="bg-white">
     
       <main>

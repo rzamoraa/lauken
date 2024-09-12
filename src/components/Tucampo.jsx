@@ -1,10 +1,15 @@
 import React from 'react';
 import logo from '../assets/lauken.svg'; // Asegúrate de que la ruta es correcta
 import { Link as ScrollLink } from 'react-scroll';
+import { Helmet } from 'react-helmet-async';
 
 function Tucampo() {
   return (
     <section id="vendenos" >
+        <Helmet>
+        <title>Tu Campo - Proyecto Laukén</title>
+        <meta name="description" content="Proyecto Tu Campo de Laukén Inmobiliaria ofrece parcelas únicas para aquellos que buscan tranquilidad y naturaleza en Chile." />
+      </Helmet>
     <div className="overflow-hidden bg-white py-32">
       <div className="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">

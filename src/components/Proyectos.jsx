@@ -4,6 +4,8 @@ import logosanrafel from '../assets/logosanrafel.svg';
 import logopulin from '../assets/logopulin.svg'; 
 import logovalles from '../assets/logovalles.svg'; 
 import { motion } from "framer-motion"; // Importamos Framer Motion
+import { Helmet } from 'react-helmet-async';
+
 
 
 const proyectos = [
@@ -43,7 +45,10 @@ const proyectos = [
 function Proyectos() {
   return (
     <section id="proyectos" >
-
+<Helmet>
+        <title>Proyectos - Laukén Inmobiliaria</title>
+        <meta name="description" content="Descubre nuestros proyectos de parcelación exclusivos en Chile. Laukén Inmobiliaria te ofrece terrenos únicos en las mejores zonas." />
+      </Helmet>
 <div className=" ">
 <div className="mx-auto max-w-5xl px-6 lg:px-8 my-16  ">
          <div className="mx-auto max-w-2xl text-center ">

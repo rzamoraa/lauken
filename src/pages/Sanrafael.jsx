@@ -12,7 +12,7 @@ import Mapa from "./components/Mapa";
 import Atributos from "./components/Atributos";
 
 import logosanrafel from '../assets/logosanrafel.svg'
-
+import { Helmet } from 'react-helmet-async';
 
 
 function Sanrafael() {
@@ -28,6 +28,10 @@ function Sanrafael() {
 
   return (
     <div className="bg-white">
+       <Helmet>
+        <title>San Rafael - Proyecto Laukén</title>
+        <meta name="description" content="Proyecto San Rafael de Laukén Inmobiliaria, parcelas exclusivas con vistas a la naturaleza en una de las regiones más privilegiadas de Chile." />
+      </Helmet>
       <Header />
 
       <Title

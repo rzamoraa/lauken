@@ -11,7 +11,7 @@ import Return from "./components/Return";
 import Mapa from "./components/Mapa";
 import Atributos from "./components/Atributos";
 import logopulin from '../assets/logopulin.svg'
-
+import { Helmet } from 'react-helmet-async';
 
 function Costapulin() {
 
@@ -25,6 +25,10 @@ function Costapulin() {
 
   return (
     <div className="bg-white">
+       <Helmet>
+        <title>Costa Pulin - Proyecto</title>
+        <meta name="description" content="Proyecto Costa Pulin - Parcelación cerca del mar." />
+      </Helmet>
       <Header />
 
       <Title

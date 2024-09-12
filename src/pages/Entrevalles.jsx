@@ -13,7 +13,7 @@ import Atributos from "./components/Atributos";
 
 import logovalles from '../assets/logovalles.svg'
 
-
+import { Helmet } from 'react-helmet-async';
 
 
 function Entrevalles() {
@@ -28,6 +28,10 @@ function Entrevalles() {
 
   return (
     <div className="bg-white">
+       <Helmet>
+        <title>Entre Valles - Proyecto</title>
+        <meta name="description" content="Proyecto Entre Valles - Parcelación exclusiva en Chile." />
+      </Helmet>
       <Header />
 
       <Title
