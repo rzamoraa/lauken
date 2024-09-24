@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../components/Header";
 
 import Contactus from "./components/Contactus";
@@ -40,8 +40,11 @@ function Entrevalles() {
     lat: -34.625450416181025,  // Reemplaza con la latitud de tu trabajo
     lng: -71.59507535756717,  // Reemplaza con la longitud de tu trabajo
   };
-  
 
+  // Desplazarse al principio cuando el componente se monte
+  useEffect(() => {
+    window.scrollTo(0, 0); // Mueve el scroll a la parte superior
+  }, []); // Este efecto solo se ejecuta una vez, cuando el componente se monta
 
   return (
     <div className="bg-white">

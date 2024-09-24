@@ -13,6 +13,8 @@ import Entrevalles from './pages/Entrevalles';
 import Costapulin from './pages/Costapulin';
 import Sanrafael from './pages/Sanrafael';
 
+import Tucampopage from './pages/Tucampopage.jsx';
+
 function App() {
   return (
     <HelmetProvider> {/* Envuelve toda la aplicación */}
@@ -37,6 +39,7 @@ function App() {
             <Route path="/entre-valles" element={<Entrevalles />} />
             <Route path="/costa-pulin" element={<Costapulin />} />
             <Route path="/san-rafael" element={<Sanrafael />} />
+            <Route path="/vendenos-tu-campo" element={<Tucampopage />} />
           </Routes>
           <Footer />
         </div>

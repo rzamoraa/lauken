@@ -80,10 +80,10 @@ function Nosotros() {
               <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 <div className="relative w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
                   <h1 className="text-4xl font-light tracking-tight text-[#BB8D42] sm:text-6xl ">
-                 <a className='  font-semibold '>Somos </a> Laukén Inmobiliaria
+                 <a className='  font-semibold '>Nosotros </a>
                   </h1>
                   <p className="mt-6 text-lg leading-8 tracking-tight text-gray-600 sm:max-w-md lg:max-w-none">
-                  En Laukén, nuestra prioridad es desarrollar proyectos de parcelación únicos en las regiones más privilegiadas de Chile. Siempre con el compromiso intrínseco de respetar el entorno, sus comunidades  y con un enfoque inquebrantable hacia la transparencia con nuestros clientes. Desde el inicio de nuestras operaciones, hemos trabajado arduamente para construir relaciones sólidas con nuestros distintos clientes, entregando proyectos exitosos que cumplen y superan las expectativas, acompañándolos y brindándole apoyo en el proceso en todo momento. Nos enorgullece brindar una oportunidad segura y exclusiva para que puedas comenzar a construir y vivir en el hogar de tus sueños.
+                  En Laukén Inmobiliaria, trabajamos día a día en desarrollar proyectos de parcelación únicos en zonas exclusivas de Chile, teniendo como valores inquebrantables el respeto al entorno y la transparencia hacia nuestros clientes. Nos esforzamos por ofrecer proyectos que superen las expectativas de nuestros propios clientes, acompañándolos en todo el proceso de compra. Nuestro propósito es que encuentres a un socio confiable en la construcción de un futuro próspero y sostenible, tanto para ti como para las comunidades con las que convivimos. Confía en los que saben.
                   </p>
                   <div className="mt-10 flex items-center gap-x-6">
 

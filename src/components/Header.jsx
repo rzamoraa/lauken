@@ -38,7 +38,7 @@ function Navbar() {
             exact="true"
             activeClass="active"
           >
-            descripción
+            Descripción
               </ScrollLink>
             
 
@@ -75,7 +75,7 @@ function Navbar() {
             exact="true"
             activeClass="active"
           >
-            especificaciones
+            Galería
           </ScrollLink>           
            
 
@@ -89,7 +89,7 @@ function Navbar() {
             exact="true"
             activeClass="active"
           >
-            mapa
+            Ubicación
           </ScrollLink>
             
  
@@ -103,7 +103,7 @@ function Navbar() {
             exact="true"
             activeClass="active"
           >
-            contacto
+            Contacto
           </ScrollLink>
             
 
@@ -135,7 +135,7 @@ function Navbar() {
             exact="true"
             activeClass="active"
           >
-            descripción
+            Descripción
               </ScrollLink>
            
 
@@ -163,7 +163,7 @@ function Navbar() {
             exact="true"
             activeClass="active"
           >
-            especificaciones
+            Galería
           </ScrollLink>           
      
           
@@ -176,7 +176,7 @@ function Navbar() {
             exact="true"
             activeClass="active"
           >
-            mapa
+            Ubicación
           </ScrollLink>
             
             
@@ -194,7 +194,7 @@ function Navbar() {
             exact="true"
             activeClass="active"
           >
-            contacto
+            Contacto
           </ScrollLink>
             
             

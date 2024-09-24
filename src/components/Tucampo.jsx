@@ -2,7 +2,8 @@ import React from 'react';
 import logo from '../assets/lauken.svg'; // Asegúrate de que la ruta es correcta
 import { Link as ScrollLink } from 'react-scroll';
 import { Helmet } from 'react-helmet-async';
-
+import { Link } from "react-router-dom";
+///https://plus.unsplash.com/premium_photo-1663952767325-6c318c960e1a?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D///
 function Tucampo() {
   return (
     <section id="vendenos" >
@@ -25,34 +26,34 @@ function Tucampo() {
             Confía en nuestra experiencia y profesionalismo para que juntos podamos crear un futuro mejor para todos. ¡Hablemos y descubre cómo podemos ayudarte!
             </p>
             <div className="mt-10 flex">
-            <ScrollLink  
-            to="contacto" 
-            smooth={true} 
-            offset={-70} 
-            duration={500}
-            spy={true}
-            exact="true"
-            activeClass="active"
-          >
+
+
+            <Link
+              to="/vendenos-tu-campo"
+              className="text-[#BB8D42] hover:text-gray-300 font-light"
+            >
+
 
 
               <a
                 href="#"
-                className="rounded-md  px-3.5 py-2.5 text-sm font-semibold text-[#BB8D42] shadow-sm hover:text-[#ceb996] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 "
+                className="rounded-md  px-3.5 py-2.5 font-semibold text-[#BB8D42] shadow-sm hover:text-[#ceb996] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 text-xl "
               >
                ¡Hablemos! <span aria-hidden="true">&rarr;</span>
               </a>
-                    </ScrollLink>
+              
 
 
-            
+            </Link>
+
+
             </div>
           </div>
           <div className="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
             <div className="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
               <img
                 alt=""
-                src="https://plus.unsplash.com/premium_photo-1663952767325-6c318c960e1a?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="https://images.pexels.com/photos/4919672/pexels-photo-4919672.jpeg?auto=compress&cs=tinysrgb&w=600"
                 className="aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover"
               />
             </div>
@@ -60,21 +61,21 @@ function Tucampo() {
               <div className="order-first flex w-64 flex-none justify-end self-end lg:w-auto">
                 <img
                   alt=""
-                  src="https://images.unsplash.com/photo-1605656816944-971cd5c1407f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=768&h=604&q=80"
+                  src="https://images.pexels.com/photos/4452204/pexels-photo-4452204.jpeg?auto=compress&cs=tinysrgb&w=600"
                   className="aspect-[4/3] w-[24rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
                 />
               </div>
               <div className="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
                 <img
                   alt=""
-                 src="https://images.pexels.com/photos/1227513/pexels-photo-1227513.jpeg?auto=compress&cs=tinysrgb&w=600"
+                 src="https://images.pexels.com/photos/7939872/pexels-photo-7939872.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
                   className="aspect-[7/5] w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
                 />
               </div>
               <div className="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
                 <img
                   alt=""
-                  src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=768&h=604&q=80"
+                  src="https://images.pexels.com/photos/9470955/pexels-photo-9470955.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
                   className="aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover"
                 />
               </div>

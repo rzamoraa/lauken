@@ -52,7 +52,7 @@ const Mapa = ({center}) => {
   if (!isLoaded) return <div>Loading...</div>;
 
   return (
-    <div className="max-w-7xl mx-auto px-4">
+    <div  className="mx-auto max-w-7xl sm:px-6 sm:pt-4 lg:px-8   ">
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={center}

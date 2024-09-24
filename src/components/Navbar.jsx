@@ -91,7 +91,7 @@ function Navbar() {
                 exact="true"
                 activeClass="active"
               >
-                Oportunidades
+                Vende tu Campo
               </ScrollLink>
             </Link>
 
@@ -169,7 +169,7 @@ function Navbar() {
               exact="true"
               activeClass="active"
             >
-              Oportunidades
+             Vende tu Campo
             </ScrollLink>
           </Link>
           <Link to="/#proyectos">

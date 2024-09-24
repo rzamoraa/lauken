@@ -6,7 +6,8 @@ import logovalles from '../assets/logovalles.svg';
 import { motion } from "framer-motion"; // Importamos Framer Motion
 import { Helmet } from 'react-helmet-async';
 
-
+import costapulin from '../pages/img/bg-costa.jpg';
+import sanrafael from '../pages/img/bg-sanrafael.jpg';
 
 const proyectos = [
   
@@ -14,7 +15,7 @@ const proyectos = [
       nombreUnico: 'costa-pulin',
       titulo: 'Costa Pulin',
       descripcion: 'Lago Rapel',
-      imagen: 'https://images.pexels.com/photos/1165981/pexels-photo-1165981.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      imagen: costapulin,
       url: '/costa-pulin',
       logo: logopulin,
       activo: true
@@ -23,7 +24,7 @@ const proyectos = [
       nombreUnico: 'San Rafael',
       titulo: 'Costa San Rafael',
       descripcion: 'Lago Rapel',
-      imagen:  "https://images.pexels.com/photos/1287089/pexels-photo-1287089.jpeg?auto=compress&cs=tinysrgb&w=600",
+      imagen:  sanrafael,
       url: '/San-rafael',
       logo: logosanrafel,
       activo: true,

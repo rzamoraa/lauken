@@ -11,7 +11,7 @@
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth;
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 .hash-span {
@@ -36,7 +36,7 @@
 
 
 .bg-container {
-  background: #b3b0a24b; /* fallback for old browsers */
+  background: #ffffff4b; /* fallback for old browsers */
 
 }
 
@@ -226,3 +226,4 @@
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
   }
 }
+
