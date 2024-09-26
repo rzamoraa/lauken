@@ -16,14 +16,12 @@ function Tucampo() {
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
           <div className="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
           <h2 className="text-4xl font-light tracking-tight text-[#BB8D42] sm:text-6xl "><a className='font-medium '>
-          ¿Vendes tu Campo? 
-            </a> ¡Contáctanos!
+          ¿Quieres vender tu Campo?
+            </a> Maximiza el valor de tus parcelas agrícolas.
           </h2>
             <p className="mt-6 text-xl leading-8 text-gray-600">
-            En Lauken Inmobiliaria, estamos en constante búsqueda de nuevas oportunidades para desarrollar. Si posees un terreno y deseas venderlo, estamos aquí para ofrecerte una solución rápida y transparente. Nuestro equipo de expertos te guiará en cada paso del proceso, asegurando una transacción eficiente, justa y provechosa para todos.
-            </p>
+            ¡Confía en los expertos en corretaje de campos!            </p>
             <p className="mt-6 text-base leading-7 text-gray-600">
-            Confía en nuestra experiencia y profesionalismo para que juntos podamos crear un futuro mejor para todos. ¡Hablemos y descubre cómo podemos ayudarte!
             </p>
             <div className="mt-10 flex">
 
@@ -37,7 +35,7 @@ function Tucampo() {
 
               <a
                 href="#"
-                className="rounded-md  px-3.5 py-2.5 font-semibold text-[#BB8D42] shadow-sm hover:text-[#ceb996] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 text-xl "
+                className="rounded-md  px-3.5 py-2.5 font-semibold text-[#BB8D42] shadow-sm hover:text-[#ceb996] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 text-xl bg-gray-600/25  "
               >
                ¡Hablemos! <span aria-hidden="true">&rarr;</span>
               </a>

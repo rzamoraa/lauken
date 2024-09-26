@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import Header from "../components/Header";
 
-import Contactus from "./components/Contactus";
-import Contacto from "../components/Contacto";
 
+import Contacto from "../components/Contacto";
+import Vendido from "./components/Vendido";
 import Description from "./components/Descripcion";
 import Gallery from "./components/Gallery";
 import Spect from "./components/Spect";
@@ -53,7 +53,7 @@ function Entrevalles() {
         <meta name="description" content="Proyecto Entre Valles - Parcelación exclusiva en Chile." />
       </Helmet>
       <Header />
-
+      <Vendido />
       <Title
       logoproyecto={logovalles}
         video={

@@ -1,24 +1,27 @@
-import React, { useState, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Link as ScrollLink } from "react-scroll";
 import { Helmet } from "react-helmet-async";
-import logo from "../assets/logo.svg"; // Asegúrate de tener un logo en esta ruta o reemplázalo
+import { FaWhatsapp } from 'react-icons/fa';
+import emailjs from '@emailjs/browser'; // Importa EmailJS
+
+// Importa tus imágenes y componentes
+import logo from "../assets/logo.svg";
 import Contacto from "../components/Contacto";
 import manos from './img/manos.png';
 import heroimg from './img/vendetucampo.jpg';
-import { FaWhatsapp } from 'react-icons/fa'; // Importamos un icono de WhatsApp para el botón
 import logofull from "../assets/logofull.svg";
 import img1 from './img/img1.png';
 import bento  from './img/bento-03-performance.png';
 import seguridad  from './img/seguridad.png';
+
 function Logo() {
   return (
-    <nav className="bg-gradient fixed top-0 w-full z-20 ">
+    <nav className="bg-gradient fixed top-0 w-full z-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center  justify-center h-16">
-            <Link to="/" className="text-white hover:text-gray-300 font-light">
-              <img src={logo} alt="Logo" className="h-8" />
-            </Link>
+        <div className="flex items-center justify-center h-16">
+          <Link to="/" className="text-white hover:text-gray-300 font-light">
+            <img src={logo} alt="Logo" className="h-8" />
+          </Link>
         </div>
       </div> 
     </nav>
@@ -26,12 +29,42 @@ function Logo() {
 }
 
 function Tucampopage() {
+  const form = useRef(); // Referencia al formulario
+  const [mensaje, setMensaje] = useState({ tipo: '', texto: '' }); // Estado para mensajes
+  const [cargando, setCargando] = useState(false); // Estado para indicador de carga
+
   const whatsappLink = 'https://wa.me/56981381556?text=Hola,%20quiero%20más%20información%20sobre%20la%20empresa.';
+
   // Asegura que el scroll se posicione en la parte superior al montar el componente
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  // Función para enviar el formulario
+  const enviarEmail = (e) => {
+    e.preventDefault();
+    setCargando(true); // Iniciar carga
+
+    emailjs.sendForm(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      form.current,
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    )
+      .then((result) => {
+          console.log(result.text);
+          setMensaje({ tipo: 'exito', texto: '¡Mensaje enviado correctamente!' });
+          form.current.reset(); // Resetear el formulario
+      }, (error) => {
+          console.log(error.text);
+          setMensaje({ tipo: 'error', texto: 'Hubo un error al enviar el mensaje. Inténtalo de nuevo.' });
+      })
+      .finally(() => {
+          setCargando(false); // Finalizar carga
+      });
+  };
+
+  
   return (
     <section id="vendenos">
       <Helmet>
@@ -47,8 +80,11 @@ function Tucampopage() {
           <img
             alt=""
             src={heroimg}
-            className="absolute inset-0 -z-10 h-full w-full object-cover object-center"
+            className="absolute inset-0 -z-10 h-full w-full object-cover object-center  bg-slate-50 "
           />
+          <div className=" bg-slate-900/30 absolute scale-150  w-full h-full ">
+
+          </div>
             <div className="relative z-10 flex justify-center items-center  ">
           <img src={logofull} alt="Logo" className="w-200 h-48  fill-white pb-10" />
         </div>
@@ -68,12 +104,12 @@ function Tucampopage() {
            style={{ backgroundImage: `url(${manos})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}
 
             ></div>
-            <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
+            <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)] bg-slate-100/40">
               <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
                 <p className="mt-2 text-lg/7 font-medium tracking-tight text-gray-950 max-lg:text-center">
                 Tu éxito  es nuestro compromiso.
                 </p>
-                <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                <p className="mt-2 max-w-lg  text-gray-600 max-lg:text-center text-2xl">
                 Vende tus parcelas agrícolas con la asesoría experta que realmente mereces.
                 </p>
               </div>
@@ -97,12 +133,12 @@ function Tucampopage() {
 
 
 
-            <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
+            <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)] bg-slate-100/40">
               <div className="px-8 pt-8 sm:px-10 sm:pt-10">
                 <p className="mt-2 text-lg/7 font-medium tracking-tight text-gray-950 max-lg:text-center">
-                  Seguridad
+                  Confianza
                 </p>
-                <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                <p className="mt-2 max-w-lg  text-gray-600 max-lg:text-center text-2xl">
                 Contamos con el mejor equipo para gestionar la venta de tu campo de forma rápida y segura
                 </p>
               </div>
@@ -122,7 +158,7 @@ function Tucampopage() {
             ></div>
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
               <div className="px-8 pt-8 sm:px-10 sm:pt-10">
-                <p className="mt-2 text-lg/7 font-medium tracking-tight text-gray-950 max-lg:text-center">Confianza</p>
+                <p className="mt-2 text-lg/7 font-medium tracking-tight text-gray-950 max-lg:text-center">Seguridad</p>
                 <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
                   
                 </p>
@@ -151,30 +187,69 @@ function Tucampopage() {
                 </p>
               </div>
             
-              <form class="mt-8 space-y-4">
-                <input type='text' placeholder='Nombre'
-                    class="w-full  py-3 px-4 text-gray-800 bg-gray-100 focus:bg-gray-50 text-sm outline-[#BB8D42]" />
-                <input type='email' placeholder='Email'
-                    class="w-full  py-3 px-4 text-gray-800 bg-gray-100 focus:bg-gray-50 text-sm outline-[#BB8D42]" />
-                <input type='text' placeholder='Telefono'
-                    class="w-full  py-3 px-4 text-gray-800 bg-gray-100 focus:bg-gray-50text-sm outline-[#BB8D42]" />
-                <textarea placeholder='Mensaje' rows="6"
-                    class="w-full  px-4 text-gray-800 bg-gray-100 focus:bg-gray-50 text-sm pt-3 outline-[#BB8D42]"></textarea>
-                <button type='button'
-                    class="text-white bg-[#c0bebd] hover:bg-[#8d8d8d] tracking-wide  text-sm px-4 py-3 w-full">Enviar</button>
-            </form>
+              <form ref={form} onSubmit={enviarEmail} className="mt-8 space-y-4">
+                    <input 
+                      type='text' 
+                      name='user_name' // Atributo name para EmailJS
+                      placeholder='Nombre'
+                      required
+                      className="w-full py-3 px-4 text-gray-800 bg-gray-100 focus:bg-gray-50 text-sm outline-[#BB8D42] rounded-md"
+                    />
+                    <input 
+                      type='email' 
+                      name='user_email' // Atributo name para EmailJS
+                      placeholder='Email'
+                      required
+                      className="w-full py-3 px-4 text-gray-800 bg-gray-100 focus:bg-gray-50 text-sm outline-[#BB8D42] rounded-md"
+                    />
+                    <input 
+                      type='text' 
+                      name='telefono' // Atributo name para EmailJS
+                      placeholder='Telefono'
+                      required
+                      className="w-full py-3 px-4 text-gray-800 bg-gray-100 focus:bg-gray-50 text-sm outline-[#BB8D42] rounded-md"
+                    />
+                    <input 
+                      type='text' 
+                      name='ubicacion_campo' // Atributo name para EmailJS
+                      placeholder='Ubicación del Campo'
+                      required
+                      className="w-full py-3 px-4 text-gray-800 bg-gray-100 focus:bg-gray-50 text-sm outline-[#BB8D42] rounded-md"
+                    />
+                    <textarea 
+                      name='informacion_campo' // Atributo name para EmailJS
+                      placeholder='Información del Campo' 
+                      rows="6"
+                      required
+                      className="w-full px-4 text-gray-800 bg-gray-100 focus:bg-gray-50 text-sm pt-3 outline-[#BB8D42] rounded-md"
+                    ></textarea>
+                    <button 
+                      type='submit' // Cambiado a 'submit' para que el formulario se envíe
+                      className="text-white bg-[#c0bebd] hover:bg-[#8d8d8d] tracking-wide text-sm px-4 py-3 w-full rounded-md transition"
+                    >
+                      Enviar
+                    </button>
+                  </form>
 
 
 
 
-            <div className="flex justify-center m-4">
-            <a
-              href={whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center bg-green-500 text-white px-6 py-3 rounded-lg  font-light hover:bg-green-600 transition"
-            >
-              <FaWhatsapp className="mr-2 text-xl" /> Enviar mensaje por WhatsApp
+             {/* Mostrar Mensajes de Éxito o Error */}
+             {mensaje.texto && (
+                    <div className={`mt-4 text-sm ${mensaje.tipo === 'exito' ? 'text-green-500' : 'text-red-500'}`}>
+                      {mensaje.texto}
+                    </div>
+                  )}
+
+                  {/* Botón de WhatsApp */}
+                  <div className="flex justify-center m-4">
+                    <a
+                      href={whatsappLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center bg-green-500 text-white px-6 py-3 rounded-lg font-light hover:bg-green-600 transition"
+                    >
+                      <FaWhatsapp className="mr-2 text-xl" /> Enviar mensaje por WhatsApp
             </a>
           </div>
 

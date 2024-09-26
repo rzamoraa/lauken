@@ -80,7 +80,7 @@ function Atributos({title1, title2, text, image, t1, v1, t2, v2, t3, v3, t4, v4,
 
 
                     <a href="#" className=" font-light text-2xl leading-6   text-[#BB8D42]  hover:text-[#ceb996]    p-3 ">
-                    Conoce nuestros proyectos <span aria-hidden="true">→</span>
+                    Ven a conocerlo! <span aria-hidden="true">→</span>
 
 
          
