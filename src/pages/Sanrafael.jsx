@@ -33,7 +33,7 @@ import g7 from './img/san-rafael/carrusel/sr7.jpg';
 import g8 from './img/san-rafael/carrusel/sr8.jpg';
 
 
-import video from './img/san-rafael/videosanrafael.mp4';
+
 
 
 
@@ -64,12 +64,12 @@ function Sanrafael() {
       <Title
       logoproyecto={logosanrafel}
         video={
-          video
+         "https://storage.googleapis.com/bucket-launken/Videosanrafael.mp4"
         }
       />
       <Description
         video={
-          video
+          "https://storage.googleapis.com/bucket-launken/Videosanrafael.mp4"
         }
       />
 

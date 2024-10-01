@@ -28,7 +28,7 @@ import g6 from './img/costa-pulin-Sl/cp6.jpg';
 import g7 from './img/costa-pulin-Sl/cp7.jpg';
 import g8 from './img/costa-pulin-Sl/cp8.jpg';
 
-import videoA from './img/costa-pulin-Sl/Videocostapulin.mp4';
+
 
 
 function Costapulin() {
@@ -55,12 +55,12 @@ function Costapulin() {
       <Title
       logoproyecto={logopulin}
         video={
-          videoA
+          "https://storage.googleapis.com/bucket-launken/Videocostapulin.mp4"
         }
       />
       <Description
         video={
-          videoA
+         "https://storage.googleapis.com/bucket-launken/Videocostapulin.mp4"
         }
       />
 
