@@ -28,6 +28,9 @@ import g6 from './img/costa-pulin-Sl/cp6.jpg';
 import g7 from './img/costa-pulin-Sl/cp7.jpg';
 import g8 from './img/costa-pulin-Sl/cp8.jpg';
 
+import videoA from './img/costa-pulin-Sl/Videocostapulin.mp4';
+
+
 function Costapulin() {
 
    
@@ -52,12 +55,12 @@ function Costapulin() {
       <Title
       logoproyecto={logopulin}
         video={
-          "https://storage.googleapis.com/bucket-launken/costapulin/costaOnline.mp4"
+          videoA
         }
       />
       <Description
         video={
-          "https://storage.googleapis.com/bucket-launken/costapulin/costaOnline.mp4"
+          videoA
         }
       />
 
@@ -89,29 +92,29 @@ function Costapulin() {
  t2={"Rol"}
  v2={"Propio"}
 
- t3={"Caminos "}
- v3={"Estabilizados"}
+ t5={"Caminos "}
+ v5={"Estabilizados"}
 
  t4={"Acceso"}
  v4={"Controlado"}
 
- t5={"Factibilidad de"}
- v5={"Agua y Luz" }
+ t6={"Factibilidad de"}
+ v6={"Agua y Luz" }
  
- t6={"San Roberto"}
- v6={"Supermercado"}
+ t7={"San Roberto"}
+ v7={"Supermercado"}
  
- t7={"Marina"}
- v7={"Privada"}
+ t3={"Marina"}
+ v3={"Privada"}
 
- t8={"Santiago "}
- v8={"2hr"}
+ t9={"Santiago "}
+ v9={"2hr"}
 
- t9={"Santa Cruz :"}
- v9={"1,20hr"}
+ t10={"Santa Cruz :"}
+ v10={"1,20hr"}
 
- t10={"Acceso a "}
- v10={" Aeródromo"}
+ t8={"Acceso a "}
+ v8={" Aeródromo"}
 
 
       

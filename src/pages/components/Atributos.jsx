@@ -113,7 +113,7 @@ function Atributos({title1, title2, text, image, t1, v1, t2, v2, t3, v3, t4, v4,
                     <dt className="text-2xl font-light text-[#BB8D42] ">
                       {stat.name}
                     </dt>
-                    <dd className="text-4xl font-black text-[#bdb6ac] ">
+                    <dd className="text-3xl font-black text-[#bdb6ac]   ">
                       {stat.value}
                     </dd>
                   </div>

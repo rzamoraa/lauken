@@ -139,7 +139,8 @@ function Tucampopage() {
                   Confianza
                 </p>
                 <p className="mt-2 max-w-lg  text-gray-600 max-lg:text-center text-2xl">
-                Contamos con el mejor equipo para gestionar la venta de tu campo de forma rápida y segura
+               
+                Somos expertos en corretaje. Avancemos juntos  para maximizar el valor de tu patrimonio
                 </p>
               </div>
               <div className="flex flex-1 items-center justify-center px-8 max-lg:pb-12 max-lg:pt-10 sm:px-10 lg:pb-2">
@@ -150,17 +151,18 @@ function Tucampopage() {
                 />
               </div>
             </div>
-            <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-t-[2rem]"></div>
+            <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-t-[2rem] "></div>
           </div>
           <div className="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
             <div className="absolute inset-px rounded-lg bg-white"
             style={{ backgroundImage: `url(${manos})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}
             ></div>
-            <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
+            <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] bg-slate-100/40">
               <div className="px-8 pt-8 sm:px-10 sm:pt-10">
-                <p className="mt-2 text-lg/7 font-medium tracking-tight text-gray-950 max-lg:text-center">Seguridad</p>
-                <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                  
+                <p className="mt-2 text-lg/7 font-medium tracking-tight text-gray-950 max-lg:text-center ">Seguridad</p>
+                
+                <p className="mt-2 max-w-lg  text-gray-600 max-lg:text-center text-2xl">
+                Contamos con el mejor equipo para gestionar la venta de tu campo de forma rápida y segura
                 </p>
               </div>
               <div className="flex flex-1 items-center [container-type:inline-size] max-lg:py-6 lg:pb-2">
@@ -236,7 +238,7 @@ function Tucampopage() {
 
              {/* Mostrar Mensajes de Éxito o Error */}
              {mensaje.texto && (
-                    <div className={`mt-4 text-sm ${mensaje.tipo === 'exito' ? 'text-green-500' : 'text-red-500'}`}>
+                    <div className={`mt-4 text-xl text-center  scale-110 bg-slate-600/10 backdrop-blur-sm   ${mensaje.tipo === 'exito' ? 'text-white' : 'text-red-500'}`}>
                       {mensaje.texto}
                     </div>
                   )}

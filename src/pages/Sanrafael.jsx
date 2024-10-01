@@ -33,6 +33,8 @@ import g7 from './img/san-rafael/carrusel/sr7.jpg';
 import g8 from './img/san-rafael/carrusel/sr8.jpg';
 
 
+import video from './img/san-rafael/videosanrafael.mp4';
+
 
 
 
@@ -62,12 +64,12 @@ function Sanrafael() {
       <Title
       logoproyecto={logosanrafel}
         video={
-          "https://storage.googleapis.com/bucket-launken/sanrafael/sanrafael-homeonline.mp4"
+          video
         }
       />
       <Description
         video={
-          "https://storage.googleapis.com/bucket-launken/sanrafael/sanrafael-homeonline.mp4"
+          video
         }
       />
 
@@ -89,7 +91,7 @@ function Sanrafael() {
 
 <Atributos
  title1={"Costa San Rafael - Lago Rapel"}
- title2={"Proyecto único por su ubicación, características del suelo y marina privada.  "}
+ title2={"Proyecto único por su ubicación, características del suelo y acceso al lago.  "}
  text={""}
  image={f4}
 
@@ -102,26 +104,26 @@ function Sanrafael() {
  t3={"Caminos "}
  v3={"Estabilizados"}
 
- t4={"Acceso"}
- v4={"Controlado"}
+ t5={"Acceso al loteo"}
+ v5={"Controlado"}
 
- t5={"Factibilidad de"}
- v5={"Agua y Luz" }
+ t6={"Factibilidad de"}
+ v6={"Agua y Luz" }
  
- t6={"Marina "}
- v6={"Privada"}
+ t4={"Marina "}
+ v4={"Común"}
  
  t7={"Santiago"}
  v7={"2,30 hr"}
 
- t8={"La Estrella:  "}
- v8={"45 min"}
+ t10={"La Estrella:  "}
+ v10={"45 min"}
 
- t9={"Santa Cruz:"}
- v9={"1,20 hr"}
+ t8={"Santa Cruz:"}
+ v8={"1,20 hr"}
 
- t10={"Puertecillo: "}
- v10={" 1,20 hr"}
+ t9={"Puertecillo: "}
+ v9={" 1,20 hr"}
 
 
       
@@ -136,9 +138,9 @@ function Sanrafael() {
        image3={g3}
        image4={g4}
        image5={g5}
-       image6={g6}
+       image6={g8}
        image7={g7}
-       image8={g8}
+       image8={g6}
      />
 
 

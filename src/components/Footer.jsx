@@ -7,10 +7,10 @@ const navigation = {
 
 
   main: [
-    { name: 'Nosotros', href: '#' },
+    { name: '', href: '#' },
     { name: 'Proyectos', href: '#' },
-    { name: 'Politicas de usuario', href: '#' },
-    { name: 'Partners', href: '#' },
+    { name: '', href: '#' },
+    { name: '', href: '#' },
   ],
   social: [
     {
@@ -28,7 +28,7 @@ const navigation = {
     },
     {
       name: 'Instagram',
-      href: '#',
+      href: 'https://www.instagram.com/laukeninmobiliaria/',
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
