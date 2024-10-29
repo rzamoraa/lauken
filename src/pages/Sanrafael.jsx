@@ -33,7 +33,8 @@ import g7 from './img/san-rafael/carrusel/sr7.jpg';
 import g8 from './img/san-rafael/carrusel/sr8.jpg';
 
 
-
+import WebPreview from "./components/WebPreview";
+import { FaL } from "react-icons/fa6";
 
 
 
@@ -54,12 +55,16 @@ function Sanrafael() {
 
 
   return (
-    <div className="bg-white">
+    <div className="bg-background">
        <Helmet>
         <title>San Rafael - Proyecto Laukén</title>
         <meta name="description" content="Proyecto San Rafael de Laukén Inmobiliaria, parcelas exclusivas con vistas a la naturaleza en una de las regiones más privilegiadas de Chile." />
       </Helmet>
-      <Header />
+
+
+      <Header 
+      nube={true}
+      />
 
       <Title
       logoproyecto={logosanrafel}
@@ -143,6 +148,7 @@ function Sanrafael() {
        image8={g6}
      />
 
+<WebPreview url="https://lanube360.com/temporales/costa-sanrafael1/" />
 
       <Mapa 
       center={point}

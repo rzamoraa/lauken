@@ -19,7 +19,7 @@ function App() {
   return (
     <HelmetProvider> {/* Envuelve toda la aplicación */}
       <Router>
-        <div className='w-screen bg-white'>
+        <div className='w-screen bg-background'>
           <Routes>
             <Route
               path="/"
@@ -28,10 +28,19 @@ function App() {
                   {/* Puedes agregar Helmet aquí para la página principal */}
                   <Navbar />
                   <Hero />
+                  <div >
                   <Nosotros />
+                  </div>
+                  <div >
                   <Proyectos />
+                  </div>
+                  <div >
                   <Tucampo />
+                  </div>
+                  <div >
                   <Contacto />
+                  </div>
+                 
                   
                 </>
               }

@@ -5,12 +5,18 @@ import logo from '../assets/logo.svg'; // Asegúrate de tener un logo en esta ru
 import { Link as ScrollLink } from 'react-scroll';
 
 
-function Navbar() {
+function Header({activo}) {
   const [menuOpen, setMenuOpen] = useState(false);
+ 
+
+  const [weblink, setWeblink] = useState(activo)
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+
+
 
   return (
     <nav className="bg-gradient fixed top-0 w-full z-20">
@@ -79,9 +85,25 @@ function Navbar() {
           </ScrollLink>           
            
 
+
+          <ScrollLink  className=  {`text-white hover:text-gray-300 font-light cursor-pointer ${activo ? '' : ' hidden '}`}    
+              to="360" 
+              smooth={true} 
+              offset={-70} 
+              duration={500}
+              spy={true}
+              exact="true"
+              activeClass="active"
+            >
+              La Nube 360
+            </ScrollLink>
+
+
+
+
          
             <ScrollLink  className="text-white hover:text-gray-300 font-light cursor-pointer"
-            to="mapa" 
+            to="ubicacion" 
             smooth={true} 
             offset={-70} 
             duration={500}
@@ -92,8 +114,10 @@ function Navbar() {
             Ubicación
           </ScrollLink>
             
- 
-          
+        
+        
+
+
             <ScrollLink  className="text-white hover:text-gray-300 font-light cursor-pointer"
             to="contacto" 
             smooth={true} 
@@ -164,11 +188,24 @@ function Navbar() {
             activeClass="active"
           >
             Galería
-          </ScrollLink>           
-     
+          </ScrollLink>         
           
-            <ScrollLink  className="block text-white hover:bg-slate-300/10 px-3 py-2 rounded-md  font-light cursor-pointer"
-            to="mapa" 
+            
+          <ScrollLink className=  {`block text-white hover:bg-slate-300/10 px-3 py-2 rounded-md  font-light cursor-pointer  ${activo ? '' : ' hidden '}`} 
+            to="360" 
+            smooth={true} 
+            offset={-70} 
+            duration={500}
+            spy={true}
+            exact="true"
+            activeClass="active"
+          >
+            Lanube360
+          </ScrollLink>
+          
+          
+          <ScrollLink  className="block text-white hover:bg-slate-300/10 px-3 py-2 rounded-md  font-light cursor-pointer"
+            to="ubicacion" 
             smooth={true} 
             offset={-70} 
             duration={500}
@@ -180,8 +217,7 @@ function Navbar() {
           </ScrollLink>
             
             
-            
-          
+
           
 
         
@@ -207,4 +243,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Header;

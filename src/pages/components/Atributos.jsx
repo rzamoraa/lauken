@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion"; // Importamos Framer Motion
 import { Link as ScrollLink } from 'react-scroll';
+import updiv from './updiv.svg';
+import downdiv from './downdiv.svg'
 
 
 function Atributos({title1, title2, text, image, t1, v1, t2, v2, t3, v3, t4, v4, t5, v5, t6, v6, t7, v7, t8, v8, t9, v9, t10, v10 } ) {
@@ -49,7 +51,7 @@ function Atributos({title1, title2, text, image, t1, v1, t2, v2, t3, v3, t4, v4,
 
   return (
     <section id="atributos"  className="mx-auto max-w-7xl pb-0 sm:px-0 sm:pb-4 lg:px-8 ">
-      <div  className="overflow-hidden  relative h-full rounded-b-xl  bg-container  ">
+      <div  className="overflow-hidden  relative h-full lg:rounded-b-xl  rounded-none  bg-container  ">
      
         <img
           alt=""
@@ -125,6 +127,7 @@ function Atributos({title1, title2, text, image, t1, v1, t2, v2, t3, v3, t4, v4,
         </div>
      
       </div>
+      <img src={downdiv} alt="Logo" className="mx-auto" />
     </section>
   );
 }

@@ -6,6 +6,7 @@ import Description from "./components/Descripcion";
 import Gallery from "./components/Gallery";
 import Spect from "./components/Spect";
 
+
 import Title from "./components/Title";
 import Return from "./components/Return";
 import Mapa from "./components/Mapa";
@@ -28,7 +29,7 @@ import g6 from './img/costa-pulin-Sl/cp6.jpg';
 import g7 from './img/costa-pulin-Sl/cp7.jpg';
 import g8 from './img/costa-pulin-Sl/cp8.jpg';
 
-
+import WebPreview from "./components/WebPreview";
 
 
 function Costapulin() {
@@ -45,12 +46,14 @@ function Costapulin() {
   }, []); // Este efecto solo se ejecuta una vez, cuando el componente se monta
 
   return (
-    <div className="bg-white">
+    <div className="bg-background">
        <Helmet>
         <title>Costa Pulin - Proyecto</title>
         <meta name="description" content="Proyecto Costa Pulin - Parcelación cerca del mar." />
       </Helmet>
-      <Header />
+      <Header 
+      activo={true}
+      />
 
       <Title
       logoproyecto={logopulin}
@@ -134,11 +137,20 @@ function Costapulin() {
        image8={g8}
      />
 
+
+<WebPreview url="https://lanube360.com/temporales/costa-pulin1/" />
+
+
 <Mapa 
       center={point}
       />
 
 <Contacto />
+
+
+
+  
+
 
       <Return />
     </div>

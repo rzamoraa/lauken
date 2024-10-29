@@ -9,6 +9,12 @@ import { Helmet } from 'react-helmet-async';
 import costapulin from '../pages/img/bg-costa.jpg';
 import sanrafael from '../pages/img/bg-sanrafael.jpg';
 
+
+import down from '../pages/components/containers/Tdown.svg'
+
+import up from '../pages/components/containers/Tup.svg'
+
+
 const proyectos = [
   
     {
@@ -51,8 +57,11 @@ function Proyectos() {
         <meta name="description" content="Descubre nuestros proyectos de parcelación exclusivos en Chile. Laukén Inmobiliaria te ofrece terrenos únicos en las mejores zonas." />
       </Helmet>
 <div className=" ">
-<div className="mx-auto max-w-5xl px-6 lg:px-8 my-16  ">
+<img src={up} alt="Logo" className="mx-auto  "  />
+<div className="mx-auto max-w-5xl px-6 lg:px-8   ">
+  
          <div className="mx-auto max-w-2xl text-center ">
+          
          <h1 className="text-4xl font-light tracking-tight text-[#BB8D42] sm:text-6xl ">
         <a>Proyectos Exclusivos</a> 
          </h1>
@@ -84,7 +93,9 @@ function Proyectos() {
 
            </motion.div>
         ))}
+          
       </div>
+      <img src={down} alt="Logo" className="mx-auto   "  />
       </div>
       </div>
     </section>

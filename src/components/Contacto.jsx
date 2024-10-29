@@ -2,6 +2,8 @@ import React, { useRef, useState } from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
 import { Helmet } from 'react-helmet-async';
 import emailjs from '@emailjs/browser';
+import updiv from '../pages/components/updiv.svg'
+import downdiv from '../pages/components/downdiv.svg'
 
 function Contacto() {
   const form = useRef();
@@ -29,7 +31,8 @@ function Contacto() {
   };
 
   return (
-    <section id="contacto" className="py-1 bg-white text-center">
+    <section id="contacto" className="py-1  text-center">
+      <img src={updiv} alt="Logo" className="mx-auto" />
       <Helmet>
         <title>Contacto - Laukén Inmobiliaria</title>
         <meta name="description" content="Contáctanos en Laukén Inmobiliaria para obtener más información sobre nuestros proyectos de parcelación en Chile." />
@@ -92,6 +95,7 @@ function Contacto() {
           </div>
         </div>
       </div>
+      <img src={downdiv} alt="Logo" className="mx-auto" />
     </section>
   )
 }

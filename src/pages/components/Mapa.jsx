@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
+import updiv from './updiv.svg';
+import downdiv from './downdiv.svg'
+
 
 const containerStyle = {
   width: '100%',
-  height: '400px',
+  height: '100%',
 };
 
 const mapStyle = [
@@ -52,8 +55,10 @@ const Mapa = ({center}) => {
   if (!isLoaded) return <div>Loading...</div>;
 
   return (
-    <div  className="mx-auto max-w-7xl sm:px-6 sm:pt-4 lg:px-8   ">
-      <GoogleMap
+    <section id="ubicacion">
+         <img src={updiv} alt="Logo" className=" mx-auto" />
+    <div  className="mx-auto max-w-7xl sm:px-6  lg:px-8 h-96   ">
+      <GoogleMap 
         mapContainerStyle={containerStyle}
         center={center}
         zoom={15}
@@ -71,6 +76,8 @@ const Mapa = ({center}) => {
         )}
       </GoogleMap>
     </div>
+    <img src={downdiv} alt="Logo" className="mx-auto" />
+    </section>
   );
 };
 

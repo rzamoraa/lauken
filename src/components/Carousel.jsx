@@ -76,10 +76,10 @@ const Carousel = ({ images }) => {
   return (
     <section
       id="especificaciones"
-      className="mx-auto max-w-7xl py-0 sm:px-6 sm:py-4 lg:px-8"
+      className=""
     >
      
-        <div aria-labelledby="features-heading" className="relative h-full">
+        <div aria-labelledby="features-heading" className="">
      
 
         
@@ -96,10 +96,7 @@ const Carousel = ({ images }) => {
           </Slider>
         </div>
 
-        <div className="m-auto w-full text-center pt-3">
-     
-      
-      </div>
+   
     </section>
   );
 };

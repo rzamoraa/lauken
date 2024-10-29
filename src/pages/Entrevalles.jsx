@@ -47,12 +47,14 @@ function Entrevalles() {
   }, []); // Este efecto solo se ejecuta una vez, cuando el componente se monta
 
   return (
-    <div className="bg-white">
+    <div className="bg-background">
        <Helmet>
         <title>Entre Valles - Proyecto</title>
         <meta name="description" content="Proyecto Entre Valles - Parcelación exclusiva en Chile." />
       </Helmet>
-      <Header />
+      <Header 
+      nube={false}
+      />
       <Vendido />
       <Title
       logoproyecto={logovalles}

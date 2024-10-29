@@ -10,6 +10,13 @@ import p2 from '../assets/img/p2.jpg';
 import p3 from '../assets/img/p3.jpg';
 import p4 from '../assets/img/p4.jpg';
 import p5 from '../assets/img/p5.jpg';
+
+
+import updiv from '../pages/components/updiv.svg'
+import downdiv from '../pages/components/downdiv.svg'
+
+
+
 const navigation = [
 
 
@@ -25,7 +32,7 @@ const navigation = [
 function Nosotros() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   return (
-    <section id="nosotros" className=" bg-white text-center">
+    <section id="nosotros" className=" text-center">
 
 <Helmet>
         <title>Laukén Inmobiliaria - Parcelación de Terrenos en Chile</title>
@@ -34,11 +41,11 @@ function Nosotros() {
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://tusitio.com/nosotros" />
       </Helmet>
-      
-    <div className="bg-white">
+      <img src={downdiv} alt="Logo" className="mx-auto" />
+    <div className="">
     
       <main>
-        <div className="relative isolate m-auto">
+        <div className="relative isolate -mt-16 -mb-20 ">
           <svg
             aria-hidden="true"
             className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-[#d6d3c5] [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]"
@@ -168,6 +175,7 @@ function Nosotros() {
         </div>
       </main>
     </div>
+    
     </section>
   )
 }

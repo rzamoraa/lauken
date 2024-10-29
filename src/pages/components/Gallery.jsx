@@ -1,5 +1,7 @@
 import React from "react";
 import logo from "./lauken.svg"; // Asegúrate de que la ruta es correcta
+import updiv from './updiv.svg';
+import downdiv from './downdiv.svg'
 
 function Gallery({
   direccion,
@@ -21,6 +23,9 @@ function Gallery({
 
      
         <div className="mx-auto max-w-2xl px-4  sm:px-6 sm:py-0 lg:max-w-7xl lg:px-8 bg-container">
+
+        <img src={downdiv} alt="Logo" className="mx-auto" />
+        
           <div className="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2">
             <div className="p-10">
               <div className="border-b border-gray-200 pb-10 ">

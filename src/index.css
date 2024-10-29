@@ -36,7 +36,15 @@
 
 
 .bg-container {
-  background: #b3b0a24b; /* fallback for old browsers */
+/* image 3 */
+
+
+
+
+  background:
+  -webkit-linear-gradient(
+    90deg, #E9E8E4 0%, #E9E8E4 48.5%, #E9E8E4 100%);
+  background: linear-gradient(90deg, #E9E8E4 -50%, #E9E8E4 48.5%, #E9E8E4 150%);
 
 }
 

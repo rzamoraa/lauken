@@ -2,6 +2,11 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion"; // Importamos Framer Motion
 import { Link as ScrollLink } from 'react-scroll';
+import down from '../pages/components/containers/Tdown.svg'
+
+import up from '../pages/components/containers/Tup.svg'
+
+
 function Card({ titulo, descripcion, imagen, url, logo, activo }) {
   const [isHovered, setIsHovered] = useState(false); // Estado para el hover
 
@@ -17,7 +22,14 @@ function Card({ titulo, descripcion, imagen, url, logo, activo }) {
 
 
       <div className="relative isolate flex flex-col justify-end overflow-hidden  px-8 pb-8 pt-80 sm:pt-48">
+
+
         
+     
+
+
+
+      
         {/* Imagen principal con animación de zoom */}
         <motion.img
           src={imagen}
@@ -45,6 +57,7 @@ function Card({ titulo, descripcion, imagen, url, logo, activo }) {
           </div>
           <div></div>
           <div>
+            
             <a href={url} className="mt-auto text-lg m-auto text-white">
               {titulo}
             </a>
@@ -57,9 +70,12 @@ function Card({ titulo, descripcion, imagen, url, logo, activo }) {
                 </div>
               </div>
             )}
+            
           </div>
         </div>
+      
       </div>
+      
     
     </Link>
   );
