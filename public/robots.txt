@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://lauken.cl/sitemap.xml
+
+# No indexar páginas de error o admin
+Disallow: /404
+Disallow: /admin/*
+Disallow: /api/*
+
+# Permitir archivos estáticos
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.css$
+Allow: /*.js$
