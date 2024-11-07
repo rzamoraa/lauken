@@ -6,6 +6,7 @@ import downdiv from './downdiv.svg'
 function Gallery({
   direccion,
   title,
+  subtitle,
   subtitle1,
   subdes1,
   subtitle2,
@@ -26,63 +27,67 @@ function Gallery({
 
         <img src={downdiv} alt="Logo" className="mx-auto" />
         
-          <div className="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2">
-            <div className="p-10">
+          <div className="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2 ">
+            <div className="py-10 ">
               <div className="border-b border-gray-200 pb-10 ">
-                <h1 className="text-4xl font-light text-[#BB8D42] ">{direccion}</h1>
+                <h1 className="text-4xl font-light text-[#BB8D42] mx-1">{direccion}</h1>
                 <h1 className="text-4xl font-light tracking-tight text-gray-900 sm:text-6xl ">
                   {title}
                 </h1>
+                <h1 className="text-2xl font-light tracking-tight text-gray-900 sm:text-4xl mx-1 ">
+                  {subtitle}
+                </h1>
               </div>
 
-              <dl className="mt-10 space-y-10 ">
+              <dl className=" space-y-10 ">
                 <div>
-                  <dt className="text-sm font-medium text-gray-900">
+                  <dt className="text-sm font-medium  text-gray-900">
                     {subtitle1}
                   </dt>
-                  <dd className="mt-3 text-sm text-gray-500">{subdes1}</dd>
+                  <dd className="mt-3 text-sm text-gray-500 text-justify  me-0  lg:me-10 ">{subdes1}</dd>
                 </div>
 
                 <div>
-                  <dt className="text-sm font-medium text-gray-900">
+                  <dt className="text-sm font-medium text-gray-900 ">
                     {subtitle2}
                   </dt>
-                  <dd className="mt-3 text-sm text-gray-500">{subdes2}</dd>
+                  <dd className="mt-3 text-sm text-gray-500 text-justify  me-0  lg:me-10">{subdes2}</dd>
                 </div>
 
                 <div>
                   <dt className="text-sm font-medium text-gray-900">
                     {subtitle3}
                   </dt>
-                  <dd className="mt-3 text-sm text-gray-500">{subdes3}</dd>
+                  <dd className="mt-3 text-sm text-gray-500 text-justify  me-0  lg:me-10">{subdes3}</dd>
                 </div>
 
                 <div>
                   <dt className="text-sm font-medium text-gray-900">
                     {subtitle4}
                   </dt>
-                  <dd className="mt-3 text-sm text-gray-500">{subdes4}</dd>
+                  <dd className="mt-3 text-sm text-gray-500 text-justify me-0  lg:me-10 ">{subdes4}</dd>
                 </div>
               </dl>
+
             </div>
-            <div className="pb-5">
-              <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-100">
+            <div className="   py-10 ">
+              <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-md bg-gray-100">
                 <img
-                  alt="Black kettle with long pour spot and angled body on marble counter next to coffee mug and pour-over system."
+                  alt="costa pulin, lago rapel"
                   src={image1}
                   className="h-full w-full object-cover object-center"
                 />
               </div>
 
-              <div className="mt-4 grid grid-cols-2 gap-4 sm:mt-6 sm:gap-6 lg:mt-8 lg:gap-8">
-                <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-100">
+              <div className="mt-2 grid grid-cols-2 gap-2 sm:mt-3 sm:gap-3 lg:mt-4 lg:gap-4">
+                <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-md bg-gray-100">
                   <img
                     alt="Detail of temperature setting button on kettle bass with digital degree readout."
                     src={image2}
                     className="h-full w-full object-cover object-center"
                   />
                 </div>
-                <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-100">
+                <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-md bg-gray-100">
                   <img
                     alt="Kettle spout pouring boiling water into coffee grounds in pour-over mug."
                     src={image3}

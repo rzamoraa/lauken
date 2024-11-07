@@ -67,13 +67,154 @@ function Tucampopage() {
   
   return (
     <section id="vendenos">
-      <Helmet>
-        <title>¿Quieres vender tu Campo? - Laukén</title>
-        <meta
-          name="description"
-          content="Tu éxito es nuestro compromiso. Vende tus parcelas agrícolas con la asesoría experta que realmente mereces. Contamos con el mejor equipo para gestionar la venta de tu campo de forma rápida y segura"
-        />
-      </Helmet>
+
+      
+   <Helmet>
+  <title>Vende tu Campo al Mejor Precio | Expertos en Corretaje | Laukén</title>
+  
+  <meta 
+    name="description" 
+    content="Maximiza el valor de tu campo con los expertos en corretaje agrícola. Asesoría profesional, gestión segura y rápida. Evaluación gratuita de tu propiedad. Más de 10 años de experiencia en venta de campos en Chile." 
+  />
+  
+  <meta 
+    name="keywords" 
+    content="vender campo chile, tasación campos agrícolas, corretaje terrenos, venta parcelas agrícolas, asesoría venta campos, valor terreno agrícola, precio hectárea chile, vender terreno agrícola, corredores campos chile, inversión campos" 
+  />
+  
+  {/* Open Graph / Facebook */}
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lauken.cl/vende-tu-campo" />
+  <meta property="og:title" content="Vende tu Campo con Expertos | Maximiza el Valor de tu Propiedad" />
+  <meta property="og:description" content="Somos expertos en corretaje de campos. Obtén la mejor asesoría y el máximo valor por tu propiedad agrícola. Gestión rápida y segura garantizada." />
+  <meta property="og:image" content={heroimg} />
+  <meta property="og:image:alt" content="Asesoría experta en venta de campos" />
+  
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vende tu Campo con la Mejor Asesoría | Laukén" />
+  <meta name="twitter:description" content="Maximiza el valor de tu campo con expertos en corretaje. Gestión profesional y segura de principio a fin." />
+  <meta name="twitter:image" content={heroimg} />
+  
+  {/* Datos estructurados para servicio de corretaje */}
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "name": "Laukén Inmobiliaria",
+      "description": "Expertos en corretaje y venta de campos en Chile",
+      "url": "https://lauken.cl/vende-tu-campo",
+      "logo": "https://lauken.cl/logo.svg",
+      "sameAs": [
+        "https://wa.me/56981381556"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+56981381556",
+        "contactType": "sales",
+        "availableLanguage": "Spanish",
+        "areaServed": "CL"
+      },
+      "makesOffer": {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Servicio de Corretaje de Campos",
+          "description": "Servicio profesional de venta de campos y terrenos agrícolas",
+          "provider": {
+            "@type": "RealEstateAgent",
+            "name": "Laukén Inmobiliaria"
+          }
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Servicios de Venta de Campos",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Evaluación Gratuita"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Asesoría Legal"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Marketing Inmobiliario"
+              }
+            }
+          ]
+        }
+      },
+      "areaServed": [
+        "Región del Libertador General Bernardo O'Higgins",
+        "Región Metropolitana",
+        "Chile Central"
+      ],
+      "potentialAction": {
+        "@type": "ContactAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://lauken.cl/vende-tu-campo",
+          "inLanguage": "es",
+          "actionPlatform": [
+            "http://schema.org/DesktopWebPlatform",
+            "http://schema.org/MobileWebPlatform"
+          ]
+        },
+        "result": {
+          "@type": "Message",
+          "name": "Consulta de Venta de Campo"
+        }
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Clientes Satisfechos"
+        }
+      }
+    })}
+  </script>
+
+  {/* Lead Form Schema */}
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebForm",
+      "name": "Formulario de Contacto Venta de Campos",
+      "url": "https://lauken.cl/vende-tu-campo#formulario",
+      "purpose": "Consulta venta de campo",
+      "creator": {
+        "@type": "RealEstateAgent",
+        "name": "Laukén Inmobiliaria"
+      }
+    })}
+  </script>
+
+  {/* Metadatos para SEO Local */}
+  <meta name="geo.region" content="CL" />
+  <meta name="geo.position" content="-34.1708;-70.7444" />
+  <meta name="ICBM" content="-34.1708, -70.7444" />
+  
+  {/* Canonical URL */}
+  <link rel="canonical" href="https://lauken.cl/vende-tu-campo" />
+</Helmet>
+
+
       <Logo />
       <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="relative isolate overflow-hidden px-6 py-12 shadow-2xl sm:rounded-t-xl sm:px-24 mt-20 h-56">

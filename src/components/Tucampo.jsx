@@ -7,10 +7,98 @@ import { Link } from "react-router-dom";
 function Tucampo() {
   return (
     <section id="vendenos" >
-        <Helmet>
-        <title>Tu Campo - Proyecto Laukén</title>
-        <meta name="description" content="Proyecto Tu Campo de Laukén Inmobiliaria ofrece parcelas únicas para aquellos que buscan tranquilidad y naturaleza en Chile." />
-      </Helmet>
+
+
+
+      
+       <Helmet>
+  <title>Vende tu Campo o Terreno Agrícola | Maximiza su Valor | Laukén Inmobiliaria</title>
+  
+  <meta 
+    name="description" 
+    content="Expertos en la venta de campos y terrenos agrícolas en Chile. Maximiza el valor de tu propiedad con Laukén Inmobiliaria. Tasación gratuita, asesoría profesional y amplia cartera de inversionistas." 
+  />
+  
+  <meta 
+    name="keywords" 
+    content="vender campo chile, venta terrenos agrícolas, tasación campos, corretaje propiedades agrícolas, vender parcelas, compra campos chile, terrenos agrícolas en venta, inversión campos chile, loteo terrenos agrícolas, subdivisión campos" 
+  />
+  
+  {/* Open Graph / Facebook */}
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lauken.cl/vendenos-tu-campo" />
+  <meta property="og:title" content="¿Quieres Vender tu Campo? | Expertos en Corretaje de Campos | Laukén" />
+  <meta property="og:description" content="Maximiza el valor de tu campo o terreno agrícola con los expertos en corretaje. Tasación profesional y asesoría especializada para la venta de tu propiedad." />
+  <meta property="og:image" content="https://images.pexels.com/photos/4919672/pexels-photo-4919672.jpeg" />
+  
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vende tu Campo con Expertos | Laukén Inmobiliaria" />
+  <meta name="twitter:description" content="Especialistas en venta de campos y terrenos agrícolas. Obtén el mejor valor por tu propiedad con asesoría profesional." />
+  <meta name="twitter:image" content="https://images.pexels.com/photos/4919672/pexels-photo-4919672.jpeg" />
+  
+  {/* Datos estructurados para servicio de venta de campos */}
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "name": "Laukén Inmobiliaria",
+      "description": "Especialistas en venta y corretaje de campos en Chile",
+      "knowsAbout": [
+        "Venta de campos",
+        "Tasación de terrenos agrícolas",
+        "Subdivisión de predios",
+        "Desarrollo inmobiliario",
+        "Loteos agrícolas"
+      ],
+      "service": {
+        "@type": "Service",
+        "name": "Venta de Campos y Terrenos Agrícolas",
+        "description": "Servicio profesional de corretaje y venta de campos con maximización de valor",
+        "serviceType": "Real Estate Service",
+        "provider": {
+          "@type": "RealEstateAgent",
+          "name": "Laukén Inmobiliaria"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Servicios de Venta de Campos",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Tasación Profesional de Campos"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Asesoría en Subdivisión de Terrenos"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Corretaje de Propiedades Agrícolas"
+              }
+            }
+          ]
+        }
+      },
+      "areaServed": "Chile",
+      "serviceArea": ["Región del Libertador General Bernardo O'Higgins", "Región Metropolitana"],
+      "slogan": "¡Confía en los expertos en corretaje de campos!"
+    })}
+  </script>
+
+  <link rel="canonical" href="https://lauken.cl/vendenos-tu-campo" />
+</Helmet>
+
+
+
     <div className="overflow-hidden  py-12">
       <div className="mx-auto max-w-7xl px-6 lg:flex lg:px-8 ">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">

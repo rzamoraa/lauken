@@ -48,10 +48,142 @@ function Entrevalles() {
 
   return (
     <div className="bg-background">
-       <Helmet>
-        <title>Entre Valles - Proyecto</title>
-        <meta name="description" content="Proyecto Entre Valles - Parcelación exclusiva en Chile." />
-      </Helmet>
+
+
+      
+<Helmet>
+  <title>Entre Valles Pumanque | Parcelas de 5.000m² | Proyecto Vendido | Laukén</title>
+  
+  <meta 
+    name="description" 
+    content="Entre Valles Pumanque: 21 parcelas planas de 5.000m² en Rincón del Sauce. Proyecto vendido con urbanización completa, factibilidad de agua y luz, roles propios y aprobación SAG. A 1 hora de Santa Cruz." 
+  />
+  
+  <meta 
+    name="keywords" 
+    content="entre valles pumanque, parcelas pumanque, rincon del sauce, terrenos sexta region, parcelas planas, parcelas urbanizadas, inversión terrenos chile, proyectos vendidos lauken, santa cruz chile, parcelas con rol propio" 
+  />
+  
+  {/* Open Graph / Facebook */}
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lauken.cl/entre-valles" />
+  <meta property="og:title" content="Entre Valles Pumanque | Proyecto Premium Vendido | Laukén Inmobiliaria" />
+  <meta property="og:description" content="21 parcelas planas de 5.000m² en sector Rincón del Sauce. Proyecto vendido con urbanización completa, factibilidad de servicios y aprobación SAG." />
+  <meta property="og:image" content={entrevalles1} />
+  <meta property="og:image:alt" content="Vista panorámica de Entre Valles Pumanque" />
+  
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Entre Valles | Parcelas Premium en Pumanque" />
+  <meta name="twitter:description" content="Proyecto vendido: 21 parcelas planas con urbanización completa en Rincón del Sauce, Pumanque. Entorno natural privilegiado." />
+  <meta name="twitter:image" content={entrevalles1} />
+  
+  {/* Datos estructurados para proyecto inmobiliario */}
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "RealEstateListing",
+      "name": "Entre Valles Pumanque",
+      "description": "Proyecto de 21 parcelas planas en sector Rincón del Sauce, Pumanque",
+      "url": "https://lauken.cl/entre-valles",
+      "status": "SOLD",
+      "provider": {
+        "@type": "RealEstateAgent",
+        "name": "Laukén Inmobiliaria",
+        "url": "https://lauken.cl"
+      },
+      "numberOfRooms": {
+        "@type": "QuantitativeValue",
+        "value": 21,
+        "unitText": "Parcelas"
+      },
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Factibilidad de Agua",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Factibilidad de Luz",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Caminos Establecidos",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Aprobación SAG",
+          "value": true
+        }
+      ],
+      "locationCreative": {
+        "@type": "CreativeWork",
+        "video": {
+          "@type": "VideoObject",
+          "url": "https://storage.googleapis.com/bucket-launken/entrevalleVideo.mp4",
+          "thumbnailUrl": entrevalles1,
+          "name": "Tour Virtual Entre Valles",
+          "description": "Video aéreo del proyecto Entre Valles en Pumanque"
+        }
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-34.625450416181025",
+        "longitude": "-71.59507535756717"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Tamaño parcelas",
+          "value": "5000m²"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Distancia a Santa Cruz",
+          "value": "1 hora"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Distancia a Pichilemu",
+          "value": "1.30 horas"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Distancia a Pumanque",
+          "value": "7 minutos"
+        }
+      ],
+      "publicTransport": "7 minutos al centro de Pumanque",
+      "potentialAction": {
+        "@type": "ViewAction",
+        "target": "https://lauken.cl/proyectos"
+      }
+    })}
+  </script>
+
+  {/* Metadatos para SEO Local */}
+  <meta name="geo.position" content="-34.625450416181025;-71.59507535756717" />
+  <meta name="geo.placename" content="Entre Valles, Pumanque" />
+  <meta name="geo.region" content="CL-LI" />
+  
+  {/* Canonical URL */}
+  <link rel="canonical" href="https://lauken.cl/entre-valles" />
+  
+  {/* Precargar video */}
+  <link 
+    rel="preload" 
+    href="https://storage.googleapis.com/bucket-launken/entrevalleVideo.mp4" 
+    as="video" 
+    type="video/mp4" 
+  />
+</Helmet>
+
+
+
+
       <Header 
       nube={false}
       />

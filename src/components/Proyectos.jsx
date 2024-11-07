@@ -19,7 +19,7 @@ const proyectos = [
   
     {
       nombreUnico: 'costa-pulin',
-      titulo: 'Costa Pulin',
+      titulo: 'Costa Pulín',
       descripcion: 'Lago Rapel',
       imagen: costapulin,
       url: '/costa-pulin',
@@ -52,10 +52,79 @@ const proyectos = [
 function Proyectos() {
   return (
     <section id="proyectos" >
+
+      
 <Helmet>
-        <title>Proyectos - Laukén Inmobiliaria</title>
-        <meta name="description" content="Descubre nuestros proyectos de parcelación exclusivos en Chile. Laukén Inmobiliaria te ofrece terrenos únicos en las mejores zonas." />
-      </Helmet>
+  <title>Proyectos Exclusivos en Lago Rapel | Costa Pulín y San Rafael | Laukén Inmobiliaria</title>
+  
+  <meta 
+    name="description" 
+    content="Descubre nuestros exclusivos proyectos de parcelación: Costa Pulín y Costa San Rafael en Lago Rapel, y Entre Valles en Pumanque. Parcelas con vista al lago, terrenos urbanizados y proyectos premium en las mejores ubicaciones de la VI Región." 
+  />
+  
+  <meta 
+    name="keywords" 
+    content="parcelas lago rapel, costa pulin, costa san rafael, entre valles pumanque, terrenos lago rapel, parcelas vista al lago, proyectos inmobiliarios sexta región, parcelas premium chile, terrenos urbanizados, inversión inmobiliaria lago rapel" 
+  />
+  
+  {/* Open Graph / Facebook */}
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lauken.cl/proyectos" />
+  <meta property="og:title" content="Proyectos Premium en Lago Rapel | Laukén Inmobiliaria" />
+  <meta property="og:description" content="Parcelas exclusivas en Costa Pulín y Costa San Rafael con vista al Lago Rapel. Proyectos premium con la mejor ubicación y urbanización completa." />
+  <meta property="og:image" content={costapulin} />
+  
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Parcelas Premium en Lago Rapel | Proyectos Laukén" />
+  <meta name="twitter:description" content="Descubre nuestros proyectos exclusivos: Costa Pulín y Costa San Rafael en Lago Rapel. Parcelas premium con la mejor vista al lago." />
+  <meta name="twitter:image" content={costapulin} />
+  
+  {/* Datos estructurados para proyectos inmobiliarios */}
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "name": "Laukén Inmobiliaria",
+      "description": "Desarrolladora de proyectos exclusivos en Lago Rapel y Pumanque",
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "RealEstateListing",
+            "name": "Costa Pulín",
+            "description": "Parcelas exclusivas con vista al Lago Rapel",
+            "areaServed": "Lago Rapel, Chile"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "RealEstateListing",
+            "name": "Costa San Rafael",
+            "description": "Terrenos premium en Lago Rapel",
+            "areaServed": "Lago Rapel, Chile"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "RealEstateListing",
+            "name": "Entre Valles",
+            "description": "Proyecto exclusivo en Pumanque",
+            "areaServed": "Pumanque, Chile"
+          }
+        }
+      ],
+      "areaServed": ["Lago Rapel", "Pumanque", "VI Región"],
+      "hasMap": "https://www.google.com/maps?q=lago+rapel"
+    })}
+  </script>
+
+  <link rel="canonical" href="https://lauken.cl/proyectos" />
+</Helmet>
+
+
 <div className=" ">
 <img src={up} alt="Logo" className="mx-auto  "  />
 <div className="mx-auto max-w-5xl px-6 lg:px-8   ">

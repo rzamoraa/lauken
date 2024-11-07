@@ -33,10 +33,92 @@ function Contacto() {
   return (
     <section id="contacto" className="py-1  text-center">
       <img src={updiv} alt="Logo" className="mx-auto" />
+
+
       <Helmet>
-        <title>Contacto - Laukén Inmobiliaria</title>
-        <meta name="description" content="Contáctanos en Laukén Inmobiliaria para obtener más información sobre nuestros proyectos de parcelación en Chile." />
-      </Helmet>
+  <title>Contacto | Agenda tu Visita a Nuestros Proyectos | Laukén Inmobiliaria</title>
+  
+  <meta 
+    name="description" 
+    content="¡Agenda tu visita a nuestros proyectos exclusivos en Lago Rapel! Contáctanos por WhatsApp o formulario para conocer nuestras parcelas premium. Respuesta inmediata y atención personalizada." 
+  />
+  
+  <meta 
+    name="keywords" 
+    content="contacto laukén inmobiliaria, agendar visita parcelas, contacto proyectos lago rapel, visitar costa pulin, visitar costa san rafael, whatsapp laukén, corredor propiedades lago rapel, consulta parcelas chile" 
+  />
+  
+  {/* Open Graph / Facebook */}
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lauken.cl/contacto" />
+  <meta property="og:title" content="¡Agenda tu Visita! | Proyectos Exclusivos Lago Rapel | Laukén" />
+  <meta property="og:description" content="Contáctanos para visitar nuestros proyectos exclusivos en Lago Rapel. Atención inmediata por WhatsApp o formulario. ¡Conoce tu futura parcela!" />
+  
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contacta a Laukén Inmobiliaria | Visita Nuestros Proyectos" />
+  <meta name="twitter:description" content="Agenda una visita a nuestros proyectos exclusivos en Lago Rapel. Atención personalizada y respuesta inmediata." />
+  
+  {/* Datos estructurados para página de contacto */}
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "name": "Laukén Inmobiliaria",
+      "description": "Desarrolladora de proyectos exclusivos en Lago Rapel",
+      "url": "https://lauken.cl",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+56981381556",
+        "contactType": "sales",
+        "availableLanguage": ["Spanish"],
+        "contactOption": ["TollFree", "HearingImpairedSupported"],
+        "areaServed": "CL"
+      },
+      "location": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "CL",
+          "addressRegion": "Región del Libertador General Bernardo O'Higgins"
+        }
+      },
+      "sameAs": [
+        "https://wa.me/56981381556"
+      ],
+      "potentialAction": {
+        "@type": "ReserveAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://lauken.cl/contacto",
+          "inLanguage": "es",
+          "actionPlatform": [
+            "http://schema.org/DesktopWebPlatform",
+            "http://schema.org/MobileWebPlatform"
+          ]
+        },
+        "result": {
+          "@type": "Reservation",
+          "name": "Agenda de visita a proyectos"
+        }
+      }
+    })}
+  </script>
+
+  {/* Metadatos adicionales */}
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="canonical" href="https://lauken.cl/contacto" />
+  
+  {/* Metadatos para motores de búsqueda locales */}
+  <meta name="geo.region" content="CL-LI" />
+  <meta name="geo.placename" content="Lago Rapel" />
+  <meta name="geo.position" content="-34.1667;-71.2833" />
+  <meta name="ICBM" content="-34.1667, -71.2833" />
+</Helmet>
+
+
+
+
       <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="relative isolate overflow-hidden bg-slate-800/90 px-6 py-24 shadow-2xl sm:rounded-xl sm:px-24 xl:py-32 ">
           <h1 className="mx-auto max-w-2xl text-center text-4xl tracking-tight text-white/80 sm:text-6xl font-light">

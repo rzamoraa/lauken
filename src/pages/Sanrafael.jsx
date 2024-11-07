@@ -56,11 +56,144 @@ function Sanrafael() {
 
   return (
     <div className="bg-background">
-       <Helmet>
-        <title>San Rafael - Proyecto Laukén</title>
-        <meta name="description" content="Proyecto San Rafael de Laukén Inmobiliaria, parcelas exclusivas con vistas a la naturaleza en una de las regiones más privilegiadas de Chile." />
-      </Helmet>
+    <Helmet>
+  <title>Costa San Rafael | Parcelas con Marina Exclusiva en Lago Rapel | Laukén</title>
+  
+  <meta 
+    name="description" 
+    content="47 parcelas exclusivas de 5.000m² en Costa San Rafael, Lago Rapel. Marina privada de 16.000m² con muelle propio. Vista al lago y Cordillera de Los Andes. A 2,5 hrs de Santiago. Proyecto premium ideal para deportes náuticos." 
+  />
+  
+  <meta 
+    name="keywords" 
+    content="costa san rafael lago rapel, parcelas vista al lago, marina exclusiva rapel, parcelas con muelle, terrenos lago rapel, parcelas 5000m2, propiedades premium lago rapel, deportes náuticos rapel, parcelas con rol propio, vista cordillera andes" 
+  />
+  
+  {/* Open Graph / Facebook */}
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lauken.cl/costa-san-rafael" />
+  <meta property="og:title" content="Costa San Rafael | Parcelas Premium con Marina Exclusiva en Lago Rapel" />
+  <meta property="og:description" content="Exclusivo proyecto de 47 parcelas con marina privada, muelle y áreas comunes en Lago Rapel. Vista privilegiada al lago y Cordillera de Los Andes." />
+  <meta property="og:image" content={f1} />
+  <meta property="og:image:alt" content="Vista panorámica de Costa San Rafael en Lago Rapel" />
+  
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Costa San Rafael | Parcelas con Marina en Lago Rapel" />
+  <meta name="twitter:description" content="47 parcelas exclusivas con marina privada de 16.000m². Proyecto premium para amantes de los deportes náuticos." />
+  <meta name="twitter:image" content={f1} />
+  
+  {/* Datos estructurados para proyecto inmobiliario */}
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "RealEstateListing",
+      "name": "Costa San Rafael",
+      "description": "Proyecto exclusivo de 47 parcelas con marina privada en Lago Rapel",
+      "url": "https://lauken.cl/costa-san-rafael",
+      "provider": {
+        "@type": "RealEstateAgent",
+        "name": "Laukén Inmobiliaria",
+        "url": "https://lauken.cl"
+      },
+      "numberOfRooms": {
+        "@type": "QuantitativeValue",
+        "value": 47,
+        "unitText": "Parcelas"
+      },
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Marina Privada",
+          "value": true,
+          "description": "Marina de 16.000m² con muelle y playa"
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Vista al Lago",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Vista Cordillera",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Acceso Controlado",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Factibilidad Servicios",
+          "value": true,
+          "description": "Agua y luz disponibles"
+        }
+      ],
+      "locationCreative": {
+        "@type": "CreativeWork",
+        "video": {
+          "@type": "VideoObject",
+          "url": "https://storage.googleapis.com/bucket-launken/Videosanrafael.mp4",
+          "thumbnailUrl": f1,
+          "name": "Tour Virtual Costa San Rafael",
+          "description": "Vista aérea del proyecto Costa San Rafael en Lago Rapel"
+        }
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-34.187536",
+        "longitude": "-71.490558"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Tamaño parcelas",
+          "value": "5000m²"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tamaño marina",
+          "value": "16000m²"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Frente lago",
+          "value": "70 metros"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Distancia Santiago",
+          "value": "2.5 horas"
+        }
+      ],
+      "specialFeatures": [
+        "Marina exclusiva",
+        "Muelle privado",
+        "Playa",
+        "Estacionamientos de embarcaciones",
+        "Áreas comunes",
+        "Vista al lago",
+        "Vista Cordillera de Los Andes"
+      ]
+    })}
+  </script>
 
+  {/* Metadatos para SEO Local */}
+  <meta name="geo.position" content="-34.187536;-71.490558" />
+  <meta name="geo.placename" content="Costa San Rafael, Lago Rapel" />
+  <meta name="geo.region" content="CL-LI" />
+  
+  {/* Enlaces canónicos y precargas */}
+  <link rel="canonical" href="https://lauken.cl/costa-san-rafael" />
+  <link 
+    rel="preload" 
+    href="https://storage.googleapis.com/bucket-launken/Videosanrafael.mp4" 
+    as="video" 
+    type="video/mp4" 
+  />
+  <link rel="prerender" href="https://lanube360.com/temporales/costa-sanrafael1/" />
+</Helmet>
 
       <Header 
       nube={true}
@@ -80,7 +213,8 @@ function Sanrafael() {
 
 <Gallery
         direccion="Proyecto"
-        title="Costa San Rafael Lago Rapel"
+        title="Costa San Rafael"
+        subtitle="Lago Rapel"
         subtitle1="Proyecto Revolucionario"
         subdes1="  Exclusivo proyecto 47 parcelas planas y de lomaje suave y con vista hacia el lago y Cordillera de Los Andes. Todas de 5.000m2 y con rol propio, ubicadas al interior de fundo militar en un valle único de sector San Rafael."
         subtitle2="Atributos Únicos"

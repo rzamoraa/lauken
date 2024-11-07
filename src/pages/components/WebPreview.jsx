@@ -32,7 +32,7 @@ const WebPreview = ({ url }) => {
 
        <div className="overflow-hidden bg-container rounded-none px-0    sm:rounded-xl  ">
             <Titulo 
-            title= "Cloud 360"
+            title= "La Nube 360"
             />
         <div className="relative w-full h-svh" style={{ paddingTop: '56.25%' }}>
           

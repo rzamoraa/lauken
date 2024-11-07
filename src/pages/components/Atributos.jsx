@@ -50,8 +50,13 @@ function Atributos({title1, title2, text, image, t1, v1, t2, v2, t3, v3, t4, v4,
 
 
   return (
-    <section id="atributos"  className="mx-auto max-w-7xl pb-0 sm:px-0 sm:pb-4 lg:px-8 ">
+    <section id="atributos"  className="mx-auto max-w-7xl pb-0 sm:px-0 sm:pb-4 lg:px-8  ">
+      <div className="bg-container">
+      <img src={updiv} alt="Logo" className="mx-auto " />
+      </div>
+      
       <div  className="overflow-hidden  relative h-full lg:rounded-b-xl  rounded-none  bg-container  ">
+      
      
         <img
           alt=""
@@ -60,11 +65,11 @@ function Atributos({title1, title2, text, image, t1, v1, t2, v2, t3, v3, t4, v4,
         />
         <div className="mx-auto grid max-w-7xl lg:grid-cols-2 ">
           <div className="px-6 pb-24 pt-16 sm:pb-32 sm:pt-20 lg:col-start-2 lg:px-8 lg:pt-32 ">
-            <div className="mx-auto max-w-2xl lg:mr-0 lg:max-w-lg">
+            <div className="mx-auto max-w-1xl lg:mr-0 lg:max-w-lg">
               <h2 className="text-4xl font-light text-[#BB8D42] ">
              {title1}
               </h2>
-              <h1 className="text-4xl font-light tracking-tight text-gray-900 sm:text-6xl ">
+              <h1 className="text-4xl font-light  text-gray-900 sm:text-6xl me-16 text ">
               {title2}
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-600">

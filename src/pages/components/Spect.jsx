@@ -35,7 +35,7 @@ function Spect({
       <img src={updiv} alt="Logo" className=" mx-auto" />
 
       <div className=" bg-container rounded-none sm:rounded-xl">
-        <Titulo title="Galeria" />
+        <Titulo title="Galería" />
 
     <div>
 

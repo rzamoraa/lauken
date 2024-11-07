@@ -30,17 +30,56 @@ const navigation = [
 
 
 function Nosotros() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  return (
-    <section id="nosotros" className=" text-center">
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  
+  // Datos estructurados para la empresa inmobiliaria
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "Laukén Inmobiliaria",
+    "description": "Desarrolladora de proyectos de parcelación exclusivos en Chile, especializada en zonas privilegiadas con enfoque en sustentabilidad y respeto al entorno.",
+    "areaServed": "Chile",
+    "knowsAbout": ["Parcelación de terrenos", "Desarrollo inmobiliario", "Proyectos exclusivos"],
+    "slogan": "Confía en los que saben"
+  };
 
+  return (
+    <section id="nosotros" className="text-center">
 <Helmet>
-        <title>Laukén Inmobiliaria - Parcelación de Terrenos en Chile</title>
-        <meta name="description" content="Desarrollamos proyectos de parcelación exclusivos en las regiones más privilegiadas de Chile, respetando el entorno y las comunidades locales." />
-        <meta name="keywords" content="Laukén, parcelación, terrenos, Chile, inmobiliaria, lujo, proyectos exclusivos" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://tusitio.com/nosotros" />
-      </Helmet>
+  <title>Sobre Laukén Inmobiliaria | Desarrolladores de Parcelas Exclusivas en Chile</title>
+  
+  <meta name="description" content="Laukén Inmobiliaria desarrolla proyectos de parcelación exclusivos en Chile, con valores centrados en el respeto al entorno y la transparencia. Expertos en terrenos y parcelas premium." />
+  
+  <meta name="keywords" content="Laukén Inmobiliaria, parcelas exclusivas chile, desarrollo inmobiliario sustentable, terrenos premium chile, proyectos parcelación, inmobiliaria transparente" />
+  
+  {/* Open Graph / Facebook */}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Laukén Inmobiliaria | Desarrolladores de Confianza en Chile" />
+  <meta property="og:description" content="Desarrollamos proyectos de parcelación únicos en zonas exclusivas de Chile, respetando el entorno y priorizando la transparencia." />
+  
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Conoce Laukén Inmobiliaria | Parcelas Exclusivas en Chile" />
+  <meta name="twitter:description" content="Expertos en desarrollo de parcelas premium en Chile. Proyectos únicos con respeto al entorno y transparencia." />
+  
+  {/* Datos estructurados */}
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "name": "Laukén Inmobiliaria",
+      "description": "Desarrolladora de proyectos de parcelación exclusivos en Chile",
+      "areaServed": "Chile",
+      "knowsAbout": ["Parcelación de terrenos", "Desarrollo inmobiliario sustentable", "Proyectos exclusivos"],
+      "slogan": "Confía en los que saben",
+      "serviceType": ["Desarrollo de parcelas", "Proyectos inmobiliarios exclusivos"]
+    })}
+  </script>
+
+  <link rel="canonical" href="https://lauken.cl/nosotros" />
+</Helmet>
+
+      
       <img src={downdiv} alt="Logo" className="mx-auto" />
     <div className="">
     

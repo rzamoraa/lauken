@@ -47,10 +47,125 @@ function Costapulin() {
 
   return (
     <div className="bg-background">
-       <Helmet>
-        <title>Costa Pulin - Proyecto</title>
-        <meta name="description" content="Proyecto Costa Pulin - Parcelación cerca del mar." />
-      </Helmet>
+
+
+      
+     <Helmet>
+  <title>Costa Pulín | Parcelas Exclusivas en Lago Rapel | Marina Privada</title>
+  
+  <meta 
+    name="description" 
+    content="Costa Pulín: 13 parcelas exclusivas de 5.000m² a orillas de Lago Rapel, con marina privada. Proyecto premium en Condominio Costa del Sol con acceso controlado, factibilidad de agua y luz. A 2 horas de Santiago." 
+  />
+  
+  <meta 
+    name="keywords" 
+    content="costa pulin, parcelas lago rapel, marina privada lago rapel, condominio costa del sol, terrenos orilla lago, parcelas 5000m2, propiedades premium lago rapel, inversión lago rapel, parcelas con embarcadero" 
+  />
+  
+  {/* Open Graph / Facebook */}
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lauken.cl/costa-pulin" />
+  <meta property="og:title" content="Costa Pulín | Parcelas Premium con Marina Privada en Lago Rapel" />
+  <meta property="og:description" content="Exclusivo proyecto de 13 parcelas con marina privada en Lago Rapel. Ubicado en Condominio Costa del Sol, con seguridad 24/7 y acceso controlado." />
+  <meta property="og:image" content={entrevalles1} />
+  <meta property="og:image:alt" content="Vista aérea de Costa Pulín en Lago Rapel" />
+  
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Costa Pulín | Parcelas Premium en Lago Rapel" />
+  <meta name="twitter:description" content="13 parcelas exclusivas con marina privada en Lago Rapel. Condominio cerrado, alta plusvalía y entorno natural privilegiado." />
+  <meta name="twitter:image" content={entrevalles1} />
+  
+  {/* Datos estructurados para proyecto inmobiliario */}
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "RealEstateListing",
+      "name": "Costa Pulín",
+      "description": "Exclusivo proyecto de 13 parcelas con marina privada en Lago Rapel",
+      "url": "https://lauken.cl/costa-pulin",
+      "provider": {
+        "@type": "RealEstateAgent",
+        "name": "Laukén Inmobiliaria",
+        "url": "https://lauken.cl"
+      },
+      "numberOfRooms": {
+        "@type": "QuantitativeValue",
+        "value": 13,
+        "unitText": "Parcelas"
+      },
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Marina Privada",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Acceso Controlado",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Factibilidad Servicios Básicos",
+          "value": true
+        }
+      ],
+      "locationCreative": {
+        "@type": "CreativeWork",
+        "video": {
+          "@type": "VideoObject",
+          "url": "https://storage.googleapis.com/bucket-launken/Videocostapulin.mp4",
+          "thumbnailUrl": entrevalles1,
+          "name": "Tour Virtual Costa Pulín",
+          "description": "Video aéreo del proyecto Costa Pulín en Lago Rapel"
+        }
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-34.10409508034245",
+        "longitude": "-71.54721887210357"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Tamaño parcelas",
+          "value": "5000m²"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Distancia a Santiago",
+          "value": "2 horas"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Ubicación",
+          "value": "Condominio Costa del Sol, Lago Rapel"
+        }
+      ]
+    })}
+  </script>
+
+  {/* Metadatos para SEO Local */}
+  <meta name="geo.position" content="-34.10409508034245;-71.54721887210357" />
+  <meta name="geo.placename" content="Costa Pulín, Lago Rapel" />
+  <meta name="geo.region" content="CL-LI" />
+  
+  {/* Canonical URL */}
+  <link rel="canonical" href="https://lauken.cl/costa-pulin" />
+  
+  {/* Precargar video */}
+  <link 
+    rel="preload" 
+    href="https://storage.googleapis.com/bucket-launken/Videocostapulin.mp4" 
+    as="video" 
+    type="video/mp4" 
+  />
+</Helmet>
+
+
+
       <Header 
       activo={true}
       />
@@ -69,7 +184,8 @@ function Costapulin() {
 
       <Gallery
         direccion="Proyecto"
-        title="Costa Pulin Lago Rapel"
+        title="Costa Pulín"
+        subtitle="Lago Rapel"
         subtitle1="Diseño único"
         subdes1="  Exclusivo proyecto compuesto por 13 sitios ubicado a orillas de Lago Rapel. Desarrollo cuenta con marina privada."
         subtitle2="Exclusividad y Tranquilidad"
@@ -85,7 +201,7 @@ function Costapulin() {
 
 <Atributos
  title1={"Costa Pulín - Lago Rapel"}
- title2={"Ubicado en un sector exclusivo al interior de condominio Costa del Sol"}
+ title2={"Ubicado en un sector exclusivo al interior de Condominio Costa del Sol"}
  text={""}
  image={entrevalles4}
 
