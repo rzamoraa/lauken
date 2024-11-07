@@ -15,6 +15,8 @@ import Costapulin from './pages/Costapulin';
 import Sanrafael from './pages/Sanrafael';
 import Tucampopage from './pages/Tucampopage.jsx';
 
+import Layout from './components/Layout';
+
 // Componente MainContent que maneja el scroll y contiene el Schema principal
 function MainContent() {
   const location = useLocation();
@@ -241,6 +243,7 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
+      <Layout>  {/* Añadir este wrapper */}
         <div className='w-screen bg-background'>
           <Routes>
             {/* Rutas que comparten el contenido principal */}
@@ -258,6 +261,7 @@ function App() {
           </Routes>
           <Footer />
         </div>
+        </Layout>
       </Router>
     </HelmetProvider>
   );
