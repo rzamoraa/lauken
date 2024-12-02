@@ -36,7 +36,7 @@ function Contacto() {
 
 
       <Helmet>
-  <title>Contacto | Agenda tu Visita a Nuestros Proyectos | Laukén Inmobiliaria</title>
+  <title>Laukén Inmobiliaria</title>
   
   <meta 
     name="description" 
