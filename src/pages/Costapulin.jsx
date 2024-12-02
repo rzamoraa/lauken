@@ -28,6 +28,9 @@ import g5 from './img/costa-pulin-Sl/cp5.jpg';
 import g6 from './img/costa-pulin-Sl/cp6.jpg';
 import g7 from './img/costa-pulin-Sl/cp7.jpg';
 import g8 from './img/costa-pulin-Sl/cp8.jpg';
+import g9 from './img/costa-pulin-Sl/cp9.jpg';
+import g10 from './img/costa-pulin-Sl/cp10.jpg';
+
 
 import WebPreview from "./components/WebPreview";
 
@@ -158,7 +161,7 @@ function Costapulin() {
   {/* Precargar video */}
   <link 
     rel="preload" 
-    href="https://storage.googleapis.com/bucket-launken/Videocostapulin.mp4" 
+    href="https://storage.googleapis.com/bucket-launken/TV-Pulin_LOW.mp4" 
     as="video" 
     type="video/mp4" 
   />
@@ -178,7 +181,7 @@ function Costapulin() {
       />
       <Description
         video={
-         "https://storage.googleapis.com/bucket-launken/Videocostapulin.mp4"
+         "https://storage.googleapis.com/bucket-launken/TV-Pulin_LOW.mp4"
         }
       />
 
@@ -248,13 +251,15 @@ function Costapulin() {
        image3={g3}
        image4={g4}
        image5={g5}
-       image6={g6}
+       image6={g10}
        image7={g7}
        image8={g8}
+       image9={g9}
+       image10={g6}
      />
 
 
-<WebPreview url="https://lanube360.com/temporales/costa-pulin1/" />
+<WebPreview url="https://www.lanube360.com/costa-pulin/" />
 
 
 <Mapa 

@@ -12,8 +12,8 @@ function Description({ video }) {
       id="home"
       className="mx-auto max-w-7xl sm:px-6 sm:pt-4 lg:px-8   ">
           <img src={updiv} alt="Logo" className="mx-auto" />
-      <div className="overflow-hidden  rounded-none sm:rounded-t-xl bg-container  ">
-        <div className="relative h-full md:h-[45vh]  ">
+      <div className="overflow-hidden  rounded-none sm:rounded-t-xl bg-container   ">
+        <div className="relative h-full md:h-full  content-center  ">
           <video className="" src={video} autoPlay loop muted playsInline />
         </div>
       </div>

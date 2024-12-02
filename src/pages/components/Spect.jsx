@@ -15,6 +15,8 @@ function Spect({
   image6,
   image7,
   image8,
+  image9,
+  image10,
 }) {
   const images = [
     image1,
@@ -25,6 +27,8 @@ function Spect({
     image6,
     image7,
     image8,
+    image9,
+    image10,
   ];
 
   return (
