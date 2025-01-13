@@ -282,7 +282,7 @@ function Sanrafael() {
        image8={g6}
      />
 
-<WebPreview url="https://lanube360.com/temporales/costa-sanrafael1/" />
+<WebPreview url="https://www.lanube360.com/costa-sanrafael/" />
 
       <Mapa 
       center={point}
