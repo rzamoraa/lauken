@@ -19,7 +19,7 @@ import { Helmet } from 'react-helmet-async';
 
 import f1 from './img/san-rafael/san-rafael-1.jpg';
 import f2 from './img/san-rafael/san-rafael-2.jpg';
-import f3 from './img/san-rafael/san-rafael-3.jpg';
+import f3 from './img/san-rafael/san-rafael-6.jpg';
 
 import f4 from './img/san-rafael/san-rafael-4.jpg';
 
