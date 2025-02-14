@@ -223,9 +223,9 @@ function Sanrafael() {
         subdes3="   Proyecto 100% enfocado en cautivar el ambiente familiar y atraer a los amantes de los deportes náuticos."
         subtitle4="Inversión Segura"
         subdes4="    A tan solo 2,5 hrs de Santiago, en una ubicación estratégica y con características únicas, garantizando alta plusvalía a futuro."
-        image1= {f1}
+        image1= {f3}
         image2= {f2}
-        image3={f3}
+        image3={f1}
       />
 
 <Atributos
