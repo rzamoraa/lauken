@@ -48,6 +48,20 @@
 
 }
 
+.bg-atributos {
+  /* image 3 */
+  
+  
+  
+  
+    background:
+    -webkit-linear-gradient(
+      90deg, #E9E8E4 0%, #E9E8E4 48.5%, #E9E8E4 100%);
+    background: linear-gradient(90deg, #34445a -50%, #1e314b 48.5%, #080C12 150%);
+  
+  }
+
+
 
 .bg-gradient {
   background: #000000; /* fallback for old browsers */

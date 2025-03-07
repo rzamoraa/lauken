@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Proyectos from './components/Proyectos';
 import Contacto from './components/Contacto';
+import Contactofooter from './components/Contactofooter.jsx';
 import Footer from './components/Footer';
 import Nosotros from './components/Nosotros';
 import Tucampo from './components/Tucampo';
@@ -115,17 +116,27 @@ function MainContent() {
       <div id="inicio">
         <Hero />
       </div>
+
+      {/*
       <div id="nosotros">
         <Nosotros />
       </div>
+      */}
+
+
       <div id="proyectos">
         <Proyectos />
       </div>
+      {/*
       <div id="vendenos">
         <Tucampo />
-      </div>
+      </div> 
+      */}
       <div id="contacto">
         <Contacto />
+      </div>
+      <div >
+        <Contactofooter />
       </div>
     </>
   );
@@ -157,6 +168,9 @@ const EntrevallesWrapper = () => (
       </script>
     </Helmet>
     <Entrevalles />
+   
+        <Contactofooter />
+      
   </>
 );
 
@@ -185,6 +199,7 @@ const CostapulinWrapper = () => (
       </script>
     </Helmet>
     <Costapulin />
+    <Contactofooter />
   </>
 );
 
@@ -213,6 +228,7 @@ const SanrafaelWrapper = () => (
       </script>
     </Helmet>
     <Sanrafael />
+    <Contactofooter />
   </>
 );
 
@@ -236,6 +252,7 @@ const TucampopageWrapper = () => (
       </script>
     </Helmet>
     <Tucampopage />
+    <Contactofooter />
   </>
 );
 

@@ -120,7 +120,7 @@ function Contacto() {
 
 
       <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div className="relative isolate overflow-hidden bg-slate-800/90 px-6 py-24 shadow-2xl sm:rounded-xl sm:px-24 xl:py-32 ">
+        <div className="relative isolate overflow-hidden bg-atributos px-6 py-24 shadow-2xl sm:rounded-xl sm:px-24 xl:py-32 ">
           <h1 className="mx-auto max-w-2xl text-center text-4xl tracking-tight text-white/80 sm:text-6xl font-light">
             ¡Agenda tu Visita!
           </h1>
@@ -166,14 +166,7 @@ function Contacto() {
           )}
 
           <div className="flex justify-center mt-10">
-            <a
-              href={whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center bg-green-500 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-green-600 transition"
-            >
-              <FaWhatsapp className="mr-2 text-2xl" /> Enviar mensaje por WhatsApp
-            </a>
+        
           </div>
         </div>
       </div>

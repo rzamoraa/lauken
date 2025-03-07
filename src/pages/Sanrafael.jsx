@@ -19,7 +19,7 @@ import { Helmet } from 'react-helmet-async';
 
 import f1 from './img/san-rafael/san-rafael-1.jpg';
 import f2 from './img/san-rafael/san-rafael-2.jpg';
-import f3 from './img/san-rafael/san-rafael-6.jpg';
+import f3 from './img/san-rafael/san-rafael-7.jpg';
 
 import f4 from './img/san-rafael/san-rafael-4.jpg';
 
@@ -198,17 +198,28 @@ function Sanrafael() {
       <Header 
       nube={true}
       />
+<Title
+  logoproyecto={logosanrafel}
+  video="https://storage.googleapis.com/bucket-launken/Videosanrafael.mp4"
+   brochurePdf="https://storage.googleapis.com/bucket-launken/brochure/DesarrollosLauken%5B1%5D.pdf"
+  showBrochureButton={true}
+/>
 
-      <Title
-      logoproyecto={logosanrafel}
-        video={
-         "https://storage.googleapis.com/bucket-launken/Videosanrafael.mp4"
-        }
-      />
       <Description
         video={
           "https://storage.googleapis.com/bucket-launken/Videosanrafael.mp4"
         }
+        precioOferta="DESDE $30.000.000"
+        oportunidadunica=""
+      
+        a1=""
+        a2=""
+        b1=""
+        b2=""
+        enabled={true}
+
+      
+      
       />
 
 <Gallery

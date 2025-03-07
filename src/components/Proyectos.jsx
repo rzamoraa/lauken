@@ -126,13 +126,13 @@ function Proyectos() {
 
 
 <div className=" ">
-<img src={up} alt="Logo" className="mx-auto  "  />
-<div className="mx-auto max-w-5xl px-6 lg:px-8   ">
+<img src={down} alt="Logo" className="mx-auto  "  />
+<div className="mx-auto max-w-5xl px-6 lg:px-8 py-10  ">
   
          <div className="mx-auto max-w-2xl text-center ">
           
          <h1 className="text-4xl font-light tracking-tight text-[#BB8D42] sm:text-6xl ">
-        <a>Proyectos Exclusivos</a> 
+        <a>Proyectos</a> 
          </h1>
          
         </div>

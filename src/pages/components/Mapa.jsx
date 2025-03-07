@@ -55,8 +55,8 @@ const Mapa = ({center}) => {
   if (!isLoaded) return <div>Loading...</div>;
 
   return (
-    <section id="ubicacion">
-         <img src={updiv} alt="Logo" className=" mx-auto" />
+    <section id="ubicacion" className="sm:pb-3 pb-0">
+         <img src={updiv} alt="Logo" className=" mx-auto " />
     <div  className="mx-auto max-w-7xl sm:px-6  lg:px-8 h-96   ">
       <GoogleMap 
         mapContainerStyle={containerStyle}

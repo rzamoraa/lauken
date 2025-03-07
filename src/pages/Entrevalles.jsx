@@ -198,6 +198,7 @@ function Entrevalles() {
         video={
           "https://storage.googleapis.com/bucket-launken/entrevalleVideo.mp4"
         }
+        enabled={false}
       />
 
       <Gallery

@@ -55,7 +55,7 @@ function Atributos({title1, title2, text, image, t1, v1, t2, v2, t3, v3, t4, v4,
       <img src={updiv} alt="Logo" className="mx-auto " />
       </div>
       
-      <div  className="overflow-hidden  relative h-full lg:rounded-b-xl  rounded-none  bg-container  ">
+      <div  className="overflow-hidden  relative h-full lg:rounded-b-xl  rounded-none bg-atributos ">
       
      
         <img
@@ -66,10 +66,10 @@ function Atributos({title1, title2, text, image, t1, v1, t2, v2, t3, v3, t4, v4,
         <div className="mx-auto grid max-w-7xl lg:grid-cols-2 ">
           <div className="px-6 pb-24 pt-16 sm:pb-32 sm:pt-20 lg:col-start-2 lg:px-8 lg:pt-32 ">
             <div className="mx-auto max-w-1xl lg:mr-0 lg:max-w-lg">
-              <h2 className="text-4xl font-light text-[#BB8D42] ">
+              <h2 className="text-4xl mb-6 font-bold text-[#BB8D42] ">
              {title1}
               </h2>
-              <h1 className="text-4xl font-light  text-gray-900 sm:text-6xl me-16 text ">
+              <h1 className="text-4xl font-light  text-[#ece0ca] sm:text-6xl  ">
               {title2}
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -86,7 +86,7 @@ function Atributos({title1, title2, text, image, t1, v1, t2, v2, t3, v3, t4, v4,
           >
 
 
-                    <a href="#" className=" font-light text-2xl leading-6   text-[#BB8D42]  hover:text-[#ceb996]    p-3 ">
+                    <a href="#" className=" font-light text-2xl   text-[#ece0ca]  hover:text-[#ceb996]    p-3 ">
                     Ven a conocerlo! <span aria-hidden="true">→</span>
 
 
@@ -117,10 +117,10 @@ function Atributos({title1, title2, text, image, t1, v1, t2, v2, t3, v3, t4, v4,
                     key={stat.id}
                     className="flex flex-col gap-y-3 border-l border-gray-900/10 pl-6"
                   >
-                    <dt className="text-2xl font-light text-[#BB8D42] ">
+                    <dt className="text-2xl font-light text-[#ece0ca] ">
                       {stat.name}
                     </dt>
-                    <dd className="text-3xl font-black text-[#bdb6ac]   ">
+                    <dd className="text-3xl font-black text-[#e6ad5d]   ">
                       {stat.value}
                     </dd>
                   </div>

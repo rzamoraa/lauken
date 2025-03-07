@@ -14,7 +14,7 @@ import Atributos from "./components/Atributos";
 import logopulin from '../assets/logopulin.svg'
 import { Helmet } from 'react-helmet-async';
 
-import entrevalles1 from './img/costa-pulin-1.jpg';
+import entrevalles1 from './img/costa-pulin-5.jpg';
 import entrevalles2 from './img/costa-pulin-2.jpg';
 import entrevalles3 from './img/costa-pulin-3.jpg';
 
@@ -173,16 +173,24 @@ function Costapulin() {
       activo={true}
       />
 
-      <Title
-      logoproyecto={logopulin}
-        video={
-          "https://storage.googleapis.com/bucket-launken/Videocostapulin.mp4"
-        }
-      />
+<Title
+  logoproyecto={logopulin}
+  video="https://storage.googleapis.com/bucket-launken/TV-Pulin_LOW.mp4"
+    brochurePdf="https://storage.googleapis.com/bucket-launken/brochure/DesarrollosLauken%5B1%5D.pdf"
+  showBrochureButton={true}
+/>
       <Description
         video={
          "https://storage.googleapis.com/bucket-launken/TV-Pulin_LOW.mp4"
         }
+          precioOferta="DESDE UF 3000"
+          oportunidadunica="Ofrecemos crédito directo:"
+          a1="Hasta "
+          a2="60 cuotas"
+          b1=", tasa UF +"
+          b2="8%"
+          enabled={true}
+
       />
 
       <Gallery

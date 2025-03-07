@@ -22,7 +22,7 @@ const WebPreview = ({ url }) => {
   return (
     <section
     id="360"
-    className="mx-auto max-w-7xl py-0 sm:px-6 sm:py-4 lg:px-8 "
+    className="mx-auto max-w-7xl py-0 sm:px-6 sm:py-4 lg:px-8   "
   >
 
 
@@ -62,9 +62,7 @@ const WebPreview = ({ url }) => {
           )}
         </div>
 
-        <Ending 
-            title= ""
-            />
+      
       </div>
       
       <img src={downdiv} alt="Logo" className="mx-auto" />

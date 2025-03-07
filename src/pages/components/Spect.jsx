@@ -34,7 +34,7 @@ function Spect({
   return (
     <section
       id="especificaciones"
-      className="mx-auto max-w-7xl sm:px-6 lg:px-8 sm:mt-0 mt-4   "
+      className="mx-auto max-w-7xl sm:px-6 lg:px-8  "
     >
       <img src={updiv} alt="Logo" className=" mx-auto" />
 
