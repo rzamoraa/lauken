@@ -4,10 +4,12 @@ import { Helmet } from 'react-helmet-async';
 import emailjs from '@emailjs/browser';
 import updiv from '../pages/components/updiv.svg'
 import downdiv from '../pages/components/downdiv.svg'
+import { BoxSelect, CheckCircle2 } from 'lucide-react';
 
 function Contacto() {
   const form = useRef();
   const [mensaje, setMensaje] = useState({ tipo: '', texto: '' });
+  const [proyecto, setProyecto] = useState('');
 
   const whatsappLink = 'https://wa.me/56981381556?text=Hola,%20quiero%20más%20información%20sobre%20la%20empresa.';
 
@@ -24,6 +26,7 @@ function Contacto() {
           console.log(result.text);
           setMensaje({ tipo: 'exito', texto: '¡Mensaje enviado correctamente!' });
           form.current.reset();
+          setProyecto('');
       }, (error) => {
           console.log(error.text);
           setMensaje({ tipo: 'error', texto: 'Hubo un error al enviar el mensaje. Inténtalo de nuevo.' });
@@ -31,7 +34,7 @@ function Contacto() {
   };
 
   return (
-    <section id="contacto" className="py-1  text-center">
+    <section id="contacto" className="  text-center">
       <img src={updiv} alt="Logo" className="mx-auto" />
 
 
@@ -120,7 +123,7 @@ function Contacto() {
 
 
       <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div className="relative isolate overflow-hidden bg-atributos px-6 py-24 shadow-2xl sm:rounded-xl sm:px-24 xl:py-32 ">
+        <div className="relative isolate overflow-hidden bg-atributos px-6 py-16 shadow-2xl sm:rounded-xl sm:px-24  ">
           <h1 className="mx-auto max-w-2xl text-center text-4xl tracking-tight text-white/80 sm:text-6xl font-light">
             ¡Agenda tu Visita!
           </h1>
@@ -144,6 +147,33 @@ function Contacto() {
               required
               className="w-full rounded-md py-3 px-4 text-gray-400 bg-white/10 text-sm outline-[#BB8D42] focus:outline focus:outline-2 focus:outline-[#BB8D42]" 
             />
+            <input 
+              type='tel' 
+              name='user_phone' 
+              placeholder='Teléfono'
+              required
+              className="w-full rounded-md py-3 px-4 text-gray-400 bg-white/10 text-sm outline-[#BB8D42] focus:outline focus:outline-2 focus:outline-[#BB8D42]" 
+            />
+            
+            <div className="relative">
+              <select
+                name='proyecto'
+                value={proyecto}
+                onChange={(e) => setProyecto(e.target.value)}
+                required
+                className="w-full rounded-md py-3 px-4 text-gray-400 bg-white/10 text-sm outline-[#BB8D42] focus:outline focus:outline-2 focus:outline-[#BB8D42] appearance-none"
+              >
+                <option value="" disabled>Selecciona el proyecto</option>
+                <option value="Costa Pulín">Costa Pulín</option>
+                <option value="Costa San Rafael">Costa San Rafael</option>
+              </select>
+              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-400">
+                <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                  <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+                </svg>
+              </div>
+            </div>
+           
             <textarea 
               name='message' 
               placeholder='Mensaje' 

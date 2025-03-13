@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';  // Usaremos estos íconos para el menú
 import logo from '../assets/logo.svg'; // Asegúrate de tener un logo en esta ruta o reemplázalo
 import { Link as ScrollLink } from 'react-scroll';
+import logofull from "../assets/logolinea.svg";
 
 
 function Header({activo}) {
@@ -25,7 +26,7 @@ function Header({activo}) {
           {/* Logo */}
           <div className="flex-shrink-0">
           <Link to="/" className="text-white hover:text-gray-300 font-light">
-          <img src={logo} alt="Logo" className="h-8" />
+          <img src={logofull} alt="Logo" className="h-12" />
           </Link>
           </div>
 
@@ -33,7 +34,29 @@ function Header({activo}) {
           <div className="hidden md:flex space-x-8">
             <Link to="/" className="text-white hover:text-gray-300 font-light">Inicio</Link>
 
+            <ScrollLink  className=  {`text-white hover:text-gray-300 font-light cursor-pointer ${activo ? '' : ' hidden '}`}    
+              to="360" 
+              smooth={true} 
+              offset={-70} 
+              duration={500}
+              spy={true}
+              exact="true"
+              activeClass="active"
+            >
+              Vista Panorámica
+            </ScrollLink>
 
+            <ScrollLink  className="text-white hover:text-gray-300 font-light cursor-pointer"
+            to="atributos" 
+            smooth={true} 
+            offset={-70} 
+            duration={500}
+            spy={true}
+            exact="true"
+            activeClass="active"
+          >
+            Atributos
+          </ScrollLink>
            
               <ScrollLink className="text-white hover:text-gray-300 font-light cursor-pointer"
             to="descripción" 
@@ -56,17 +79,7 @@ function Header({activo}) {
           
 
           
-            <ScrollLink  className="text-white hover:text-gray-300 font-light cursor-pointer"
-            to="atributos" 
-            smooth={true} 
-            offset={-70} 
-            duration={500}
-            spy={true}
-            exact="true"
-            activeClass="active"
-          >
-            Atributos
-          </ScrollLink>
+          
             
             
             
@@ -86,17 +99,7 @@ function Header({activo}) {
            
 
 
-          <ScrollLink  className=  {`text-white hover:text-gray-300 font-light cursor-pointer ${activo ? '' : ' hidden '}`}    
-              to="360" 
-              smooth={true} 
-              offset={-70} 
-              duration={500}
-              spy={true}
-              exact="true"
-              activeClass="active"
-            >
-              La Nube 360
-            </ScrollLink>
+          
 
 
 

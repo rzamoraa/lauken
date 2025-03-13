@@ -22,17 +22,18 @@ const WebPreview = ({ url }) => {
   return (
     <section
     id="360"
-    className="mx-auto max-w-7xl py-0 sm:px-6 sm:py-4 lg:px-8   "
+    className="mx-auto max-w-7xl py-0 sm:px-6 sm:mb-0 lg:px-8    "
   >
 
 
-    <img src={updiv} alt="Logo" className=" mx-auto" />
 
 
 
-       <div className="overflow-hidden bg-container rounded-none px-0    sm:rounded-xl  ">
+       <div className="overflow-hidden bg-container rounded-none px-0     ">
+        
+    <img src={downdiv} alt="Logo" className=" mx-auto" />
             <Titulo 
-            title= "La Nube 360"
+            title= "Vista Panorámica"
             />
         <div className="relative w-full h-svh" style={{ paddingTop: '56.25%' }}>
           
@@ -61,11 +62,11 @@ const WebPreview = ({ url }) => {
            
           )}
         </div>
-
+        <img src={downdiv} alt="Logo" className="mx-auto " />
       
       </div>
       
-      <img src={downdiv} alt="Logo" className="mx-auto" />
+    
      
     </section>
   );

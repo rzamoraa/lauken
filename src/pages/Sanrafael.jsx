@@ -217,28 +217,8 @@ function Sanrafael() {
         b1=""
         b2=""
         enabled={true}
-
-      
-      
       />
-
-<Gallery
-        direccion="Proyecto"
-        title="Costa San Rafael"
-        subtitle="Lago Rapel"
-        subtitle1="Proyecto Revolucionario"
-        subdes1="  Exclusivo proyecto 47 parcelas planas y de lomaje suave y con vista hacia el lago y Cordillera de Los Andes. Todas de 5.000m2 y con rol propio, ubicadas al interior de fundo militar en un valle único de sector San Rafael."
-        subtitle2="Atributos Únicos"
-        subdes2="   Marina exclusiva para la copropiedad, compuesta por un terreno plano de 16.000 m2, 70 mts de frente de lago con muelle, estacionamientos, áreas comunes, playa y amplia bajada para embarcaciones."
-        subtitle3="Ambiente Familiar"
-        subdes3="   Proyecto 100% enfocado en cautivar el ambiente familiar y atraer a los amantes de los deportes náuticos."
-        subtitle4="Inversión Segura"
-        subdes4="    A tan solo 2,5 hrs de Santiago, en una ubicación estratégica y con características únicas, garantizando alta plusvalía a futuro."
-        image1= {f3}
-        image2= {f2}
-        image3={f1}
-      />
-
+<WebPreview url="https://www.lanube360.com/costa-sanrafael/" />
 <Atributos
  title1={"Costa San Rafael - Lago Rapel"}
  title2={"Proyecto único por su ubicación, características del suelo y acceso al lago.  "}
@@ -280,6 +260,24 @@ function Sanrafael() {
       
       
       />
+<Gallery
+        direccion="Proyecto"
+        title="Costa San Rafael"
+        subtitle="Lago Rapel"
+        subtitle1="Proyecto Revolucionario"
+        subdes1="  Exclusivo proyecto 47 parcelas planas y de lomaje suave y con vista hacia el lago y Cordillera de Los Andes. Todas de 5.000m2 y con rol propio, ubicadas al interior de fundo militar en un valle único de sector San Rafael."
+        subtitle2="Atributos Únicos"
+        subdes2="   Marina exclusiva para la copropiedad, compuesta por un terreno plano de 16.000 m2, 70 mts de frente de lago con muelle, estacionamientos, áreas comunes, playa y amplia bajada para embarcaciones."
+        subtitle3="Ambiente Familiar"
+        subdes3="   Proyecto 100% enfocado en cautivar el ambiente familiar y atraer a los amantes de los deportes náuticos."
+        subtitle4="Inversión Segura"
+        subdes4="    A tan solo 2,5 hrs de Santiago, en una ubicación estratégica y con características únicas, garantizando alta plusvalía a futuro."
+        image1= {f3}
+        image2= {f2}
+        image3={f1}
+      />
+
+
 
 <Spect
        
@@ -293,7 +291,7 @@ function Sanrafael() {
        image8={g6}
      />
 
-<WebPreview url="https://www.lanube360.com/costa-sanrafael/" />
+
 
       <Mapa 
       center={point}

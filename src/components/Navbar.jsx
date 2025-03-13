@@ -3,6 +3,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { Link as ScrollLink } from "react-scroll";
 import { useLocation, useNavigate } from "react-router-dom";
 import logo from "../assets/logo.svg";
+import logofull from "../assets/logolinea.svg";
 
 
 
@@ -112,7 +113,8 @@ function Navbar() {
 
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        {/*toda la barra de arriba*/}
+        <div className="flex justify-evenly items-center h-full w-full"> 
           {/* Logo */}
           <ScrollLink
             to="inicio"
@@ -122,11 +124,15 @@ function Navbar() {
             className="cursor-pointer"
             onClick={() => handleSectionClick('inicio')}
           >
-            <img src={logo} alt="Logo" className="h-8" />
+            <img src={logofull} alt="Logo" className="h-12 w-full  " />
           </ScrollLink>
+<div
+className="h-16 w-16"
+>
 
+</div>
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex  content-between w-full mx-16">
             {sections.map(({ id, name }) => (
               <ScrollLink
                 key={id}
@@ -136,16 +142,22 @@ function Navbar() {
                 offset={-70}
                 duration={500}
                 onSetActive={handleSetActive}
-                className="text-white hover:text-gray-300 font-light cursor-pointer"
+                className="text-white hover:text-gray-300 font-light cursor-pointer w-full h-full "
                 onClick={() => handleSectionClick(id)}
               >
                 {name}
               </ScrollLink>
             ))}
+            
           </div>
+<div
+className="h-16 w-16">
+
+</div>
+
           <div className="">
 
-<div className=" flex justify-center space-x-10">
+          <div className=" flex  space-x-10 m-auto h-full w-full">
   {navigation.social.map((item) => (
     <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
       <span className="sr-only">{item.name}</span>

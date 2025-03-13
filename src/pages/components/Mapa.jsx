@@ -23,13 +23,14 @@ const mapStyle = [
     "elementType": "geometry",
     "stylers": [
       { "visibility": "simplified" }
+      
     ]
   },
   {
     "featureType": "water",
     "elementType": "geometry",
     "stylers": [
-      { "color": "#e2cead" }
+      { "color": "#34445a" }
     ]
   }
 ];
@@ -55,7 +56,7 @@ const Mapa = ({center}) => {
   if (!isLoaded) return <div>Loading...</div>;
 
   return (
-    <section id="ubicacion" className="sm:pb-3 pb-0">
+    <section id="ubicacion" className="">
          <img src={updiv} alt="Logo" className=" mx-auto " />
     <div  className="mx-auto max-w-7xl sm:px-6  lg:px-8 h-96   ">
       <GoogleMap 

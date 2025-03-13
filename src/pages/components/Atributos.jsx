@@ -50,12 +50,12 @@ function Atributos({title1, title2, text, image, t1, v1, t2, v2, t3, v3, t4, v4,
 
 
   return (
-    <section id="atributos"  className="mx-auto max-w-7xl pb-0 sm:px-0 sm:pb-4 lg:px-8  ">
+    <section id="atributos"  className="mx-auto max-w-7xl pb-0 sm:px-0 sm:pb-0 lg:px-8   bg ">
       <div className="bg-container">
       <img src={updiv} alt="Logo" className="mx-auto " />
       </div>
       
-      <div  className="overflow-hidden  relative h-full lg:rounded-b-xl  rounded-none bg-atributos ">
+      <div  className="overflow-hidden  relative h-full   rounded-none bg-atributos ">
       
      
         <img
@@ -132,7 +132,7 @@ function Atributos({title1, title2, text, image, t1, v1, t2, v2, t3, v3, t4, v4,
         </div>
      
       </div>
-      <img src={downdiv} alt="Logo" className="mx-auto" />
+      
     </section>
   );
 }

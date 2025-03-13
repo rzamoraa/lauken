@@ -4,6 +4,7 @@ import logo from "../assets/lauken.svg";
 import logofull from "../assets/logofull.svg";
 import { Helmet } from "react-helmet-async";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom"; // Asegúrate de tener esta importación
 
 import promo03 from '../assets/img/p1.jpg';
 import promo04 from '../assets/img/p2.jpg';
@@ -21,27 +22,28 @@ function Hero() {
 
   // Datos de ejemplo para los slides con logos personalizados
   const slides = [
-    {
-      type: "video",
-      src: "https://videos.pexels.com/video-files/3126453/3126453-uhd_2560_1440_24fps.mp4",
-      title: "Bienvenidos a Laukén Inmobiliaria",
-      description: "Descubre nuestros exclusivos proyectos de parcelación en las mejores zonas de Chile.",
-      separador: "|",
-      description2:"Ofrecemos credito Directo ",
-      logoOnly: true, // Indicador para mostrar solo el logo en esta diapositiva
-      customLogo: logofull, // Logo personalizado para este slide
-      cartel: "asasas"
-    },
+    //{
+      //type: "video",
+      //src: "https://videos.pexels.com/video-files/3126453/3126453-uhd_2560_1440_24fps.mp4",
+      //title: "Bienvenidos a Laukén Inmobiliaria",
+      //description: "Descubre nuestros exclusivos proyectos de parcelación en las mejores zonas de Chile.",
+      //separador: "|",
+      //description2:"Ofrecemos credito Directo ",
+      //logoOnly: true, // Indicador para mostrar solo el logo en esta diapositiva
+      //customLogo: logofull, // Logo personalizado para este slide
+     // cartel: "asasas"
+    //},
     
     {
       type: "video",
       src: "https://storage.googleapis.com/bucket-launken/costapulin/P%C3%A1gina%20CP%201080p.mp4",
       title: "Desde UF 3.000",
-      description: "13 sitios con Rol Propio",
+      description: "13 parcelas con Rol Propio",
       separador: "|",
       description2:"Ofrecemos Crédito Directo  ",
       customLogo: logopulin, // Logo por defecto, puede ser cambiado
-      cartel: "Proyecto Exclusivo"
+      cartel: "Proyecto Exclusivo",
+      href: '/costa-pulin',
     },
     {
       type: "video",
@@ -51,27 +53,30 @@ function Hero() {
       separador: "|",
       description2:"Ofrecemos Crédito Directo ",
       customLogo: logopulin, // Logo por defecto, puede ser cambiado
-      cartel: "¡OPORTUNIDAD ÚNICA!"
+      cartel: "¡OPORTUNIDAD ÚNICA!",
+      href: '/costa-pulin',
     },
     {
       type: "video",
       src: "https://storage.googleapis.com/bucket-launken/costapulin/P%C3%A1gina%20SR%201080p.mp4",
       title: "Proyecto Exclusivo",
-      description: "47 sitios con Rol Propio ",
+      description: "47 parcelas con Rol Propio ",
       separador: "|",
       description2:"Desde $30.000.000 ",
       customLogo: logosanrafael, // Logo por defecto, puede ser cambiado
-      cartel: "¡OPORTUNIDAD ÚNICA!"
+      cartel: "¡OPORTUNIDAD ÚNICA!",
+      href: '/San-rafael',
     },
     {
       type: "video",
       src: "https://storage.googleapis.com/bucket-launken/costapulin/P%C3%A1gina%20SR%20ovejas%201080%20p.mp4",
       title: "Invierte en tu futuro",
-      description: "47 sitios con Rol Propio ",
+      description: "47 parcelas con Rol Propio ",
       separador: "|",
       description2:"Desde $30.000.000 ",
       customLogo: logosanrafael, // Logo por defecto, puede ser cambiado
-      cartel: "¡OPORTUNIDAD ÚNICA!"
+      cartel: "¡OPORTUNIDAD ÚNICA!",
+      href: '/San-rafael',
     }
   ];
 
@@ -217,7 +222,7 @@ function Hero() {
   {/* Logo superior (siempre visible, personalizado por slide) */}
   {!slide.logoOnly && (
           <motion.div
-            className=" z-10  h-full flex  flex-grow   pt-36"
+            className=" z-10  h-full flex  flex-grow   pt-36  "
             variants={itemVariants}
             initial="hidden"
             animate="visible"
@@ -282,7 +287,7 @@ function Hero() {
         >
           {/* Contenedor con estilos similares a Description */}
           <motion.div
-            className="bg-gradient-to-r from-[#000000] via-[#111111] to-[#000000] py-6 px-8 rounded-lg border border-[#F0B94D]/60 shadow-lg w-full"
+            className="bg-gradient-to-r from-[#0000005e] via-[#1111112a] to-[#00000069] py-6 px-8 rounded-lg border border-[#F0B94D]/60 shadow-lg w-full"
             animate={{ scale: [0.98, 1], opacity: [0.8, 1] }}
             transition={{ duration: 0.8 }}
           >
@@ -340,14 +345,16 @@ function Hero() {
 
             
             {/* Botón CTA con estilo dorado de Description */}
-            <motion.button 
-              className="bg-[#F0B94D] text-xs  hover:bg-[#E0A93D] text-black font-bold py-2 px-6 rounded-md shadow-lg transform transition-transform duration-300 ease-in-out"
-              variants={itemVariants}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              VER MÁS
-            </motion.button>
+            <Link to={slide.href}>
+              <motion.button 
+                className="bg-[#F0B94D] text-xs hover:bg-[#E0A93D] text-black font-bold py-2 px-6 rounded-md shadow-lg transform transition-transform duration-300 ease-in-out"
+                variants={itemVariants}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                VER MÁS
+              </motion.button>
+            </Link>
           </motion.div>
         </motion.div>
       )}

@@ -36,14 +36,15 @@ function Spect({
       id="especificaciones"
       className="mx-auto max-w-7xl sm:px-6 lg:px-8  "
     >
-      <img src={updiv} alt="Logo" className=" mx-auto" />
+     
 
       <div className=" bg-container rounded-none sm:rounded-xl">
-        <Titulo title="Galería" />
+      
+        <Titulo title="" />
 
     <div>
 
-
+    <img src={updiv} alt="Logo" className=" mx-auto" />
    
         <Carousel images={images} />
         </div>
@@ -58,7 +59,7 @@ function Spect({
             activeClass="active"
           >
             <a className="font-light text-2xl text-[#BB8D42] hover:text-[#ceb996]  cursor-pointer">
-              ¡Ven a conocerlo!
+             
             </a>
           </ScrollLink>
         </div>

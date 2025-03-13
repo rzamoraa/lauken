@@ -192,24 +192,7 @@ function Costapulin() {
           enabled={true}
 
       />
-
-      <Gallery
-        direccion="Proyecto"
-        title="Costa Pulín"
-        subtitle="Lago Rapel"
-        subtitle1="Diseño único"
-        subdes1="  Exclusivo proyecto compuesto por 13 sitios ubicado a orillas de Lago Rapel. Desarrollo cuenta con marina privada."
-        subtitle2="Exclusividad y Tranquilidad"
-        subdes2="    Ubicado en uno de los sectores más exclusivos de Lago Rapel, al interior de Condominio Costa del Sol y rodeado de valles y vegetación nativa."
-        subtitle3="Privacidad y Seguridad"
-        subdes3="   Proyecto cuenta con acceso controlado,  garantizando privacidad y seguridad a sus residentes. Un espacio para descansar y disfrutar sin preocupaciones."
-        subtitle4="Gran Plusvalía"
-        subdes4="    Ubicación estratégica en los alrededores más codiciados por la gente. Una oportunidad de inversión 100% garantizada con gran valor agregado a futuro."
-        image1= {entrevalles1}
-        image2= {entrevalles2}
-        image3={entrevalles3}
-      />
-
+<WebPreview url="https://www.lanube360.com/costa-pulin/" />
 <Atributos
  title1={"Costa Pulín - Lago Rapel"}
  title2={"Ubicado en un sector exclusivo al interior de Condominio Costa del Sol"}
@@ -251,6 +234,24 @@ function Costapulin() {
       
       
       />
+      <Gallery
+        direccion="Proyecto"
+        title="Costa Pulín"
+        subtitle="Lago Rapel"
+        subtitle1="Diseño único"
+        subdes1="  Exclusivo proyecto compuesto por 13 sitios ubicado a orillas de Lago Rapel. Desarrollo cuenta con marina privada."
+        subtitle2="Exclusividad y Tranquilidad"
+        subdes2="    Ubicado en uno de los sectores más exclusivos de Lago Rapel, al interior de Condominio Costa del Sol y rodeado de valles y vegetación nativa."
+        subtitle3="Privacidad y Seguridad"
+        subdes3="   Proyecto cuenta con acceso controlado,  garantizando privacidad y seguridad a sus residentes. Un espacio para descansar y disfrutar sin preocupaciones."
+        subtitle4="Gran Plusvalía"
+        subdes4="    Ubicación estratégica en los alrededores más codiciados por la gente. Una oportunidad de inversión 100% garantizada con gran valor agregado a futuro."
+        image1= {entrevalles1}
+        image2= {entrevalles2}
+        image3={entrevalles3}
+      />
+
+
 
 <Spect
        
@@ -267,7 +268,6 @@ function Costapulin() {
      />
 
 
-<WebPreview url="https://www.lanube360.com/costa-pulin/" />
 
 
 <Mapa 

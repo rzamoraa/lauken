@@ -105,7 +105,7 @@ function Description({
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                CONSULTAR AHORA
+                CONTACTAR AHORA
               </motion.button>
             </div>
           </div>
@@ -163,13 +163,24 @@ function Description({
               </div>
              
               {/* Botón de llamada a la acción */}
+              <ScrollLink
+  to="contacto"
+  smooth={true}
+  offset={-70}
+  duration={500}
+  spy={true}
+  exact="true"
+  activeClass="active"
+  className="bg-[#F0B94D] hover:bg-[#E0A93D] text-black font-bold py-3 px-6 rounded-md shadow-lg transform transition-transform duration-300 ease-in-out m-auto"
+
+>
               <motion.button
-                className="bg-[#F0B94D] hover:bg-[#E0A93D] text-black font-bold py-3 px-6 rounded-md shadow-lg transform transition-transform duration-300 ease-in-out m-auto"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                CONSULTAR AHORA
+                CONTACTAR AHORA
               </motion.button>
+              </ScrollLink>
             </div>
           </div>
         </motion.div>
