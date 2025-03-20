@@ -201,7 +201,7 @@ function Sanrafael() {
 <Title
   logoproyecto={logosanrafel}
   video="https://storage.googleapis.com/bucket-launken/Videosanrafael.mp4"
-   brochurePdf="https://storage.googleapis.com/bucket-launken/brochure/DesarrollosLauken%5B1%5D.pdf"
+   brochurePdf="https://storage.googleapis.com/bucket-launken/DesarrollosLauken%5Bcc%5D.pdf"
   showBrochureButton={true}
 />
 
