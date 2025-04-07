@@ -176,7 +176,7 @@ function Costapulin() {
 <Title
   logoproyecto={logopulin}
   video="https://storage.googleapis.com/bucket-launken/TV-Pulin_LOW.mp4"
-    brochurePdf="https://storage.googleapis.com/bucket-launken/DesarrollosLauken%5Bcc%5D.pdf"
+    brochurePdf="https://storage.googleapis.com/bucket-launken/DesarrollosLauken_CC2.pdf"
   showBrochureButton={true}
 />
       <Description

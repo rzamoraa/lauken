@@ -201,7 +201,7 @@ function Sanrafael() {
 <Title
   logoproyecto={logosanrafel}
   video="https://storage.googleapis.com/bucket-launken/Videosanrafael.mp4"
-   brochurePdf="https://storage.googleapis.com/bucket-launken/DesarrollosLauken%5Bcc%5D.pdf"
+   brochurePdf="https://storage.googleapis.com/bucket-launken/DesarrollosLauken_CC2.pdf"
   showBrochureButton={true}
 />
 
@@ -209,7 +209,7 @@ function Sanrafael() {
         video={
           "https://storage.googleapis.com/bucket-launken/Videosanrafael.mp4"
         }
-        precioOferta="DESDE $30.000.000"
+        precioOferta="DESDE $40.000.000"
         oportunidadunica=""
       
         a1=""

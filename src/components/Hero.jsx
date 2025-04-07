@@ -62,7 +62,7 @@ function Hero() {
       title: "Proyecto Exclusivo",
       description: "47 parcelas con Rol Propio ",
       separador: "|",
-      description2:"Desde $30.000.000 ",
+      description2:"Desde $40.000.000 ",
       customLogo: logosanrafael, // Logo por defecto, puede ser cambiado
       cartel: "¡OPORTUNIDAD ÚNICA!",
       href: '/San-rafael',
@@ -73,7 +73,7 @@ function Hero() {
       title: "Invierte en tu futuro",
       description: "47 parcelas con Rol Propio ",
       separador: "|",
-      description2:"Desde $30.000.000 ",
+      description2:"Desde $40.000.000 ",
       customLogo: logosanrafael, // Logo por defecto, puede ser cambiado
       cartel: "¡OPORTUNIDAD ÚNICA!",
       href: '/San-rafael',
