@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';  // Usaremos estos íconos para el menú
-import logo from '../assets/logo.svg'; // Asegúrate de tener un logo en esta ruta o reemplázalo
 import { Link as ScrollLink } from 'react-scroll';
 import logofull from "../assets/logolinea.svg";
 

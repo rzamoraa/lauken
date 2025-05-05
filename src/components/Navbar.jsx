@@ -43,9 +43,9 @@ const navigation = {
         </svg>
       ),
     },
- 
-   
-   
+
+
+
   ],
 }
 
@@ -57,10 +57,10 @@ function Navbar() {
   const navigate = useNavigate();
 
 
-  
-  const sections = [ 
-  
-    {  id: "inicio", path: "/", name: "Inicio" },
+
+  const sections = [
+
+    { id: "inicio", path: "/", name: "Inicio" },
     { /*id: "nosotros", path: "/nosotros", name: "Nosotros"*/ },
     { id: "proyectos", path: "/proyectos", name: "Proyectos" },
     { /*id: "vendenos", path: "/vendenos", name: "Vende tu Campo" */ },
@@ -87,7 +87,7 @@ function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + window.innerHeight / 3;
-      
+
       sections.forEach(({ id, path }) => {
         const element = document.getElementById(id);
         if (element) {
@@ -114,7 +114,7 @@ function Navbar() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/*toda la barra de arriba*/}
-        <div className="flex justify-evenly items-center h-full w-full"> 
+        <div className="flex justify-evenly items-center h-full w-full">
           {/* Logo */}
           <ScrollLink
             to="inicio"
@@ -126,11 +126,11 @@ function Navbar() {
           >
             <img src={logofull} alt="Logo" className="h-12 w-full  " />
           </ScrollLink>
-<div
-className="h-16 w-16"
->
+          <div
+            className="h-16 w-16"
+          >
 
-</div>
+          </div>
           {/* Desktop Menu */}
           <div className="hidden md:flex  content-between w-full mx-16">
             {sections.map(({ id, name }) => (
@@ -148,25 +148,25 @@ className="h-16 w-16"
                 {name}
               </ScrollLink>
             ))}
-            
-          </div>
-<div
-className="h-16 w-16">
 
-</div>
+          </div>
+          <div
+            className="h-6 w-16">
+
+          </div>
 
           <div className="">
 
-          <div className=" flex  space-x-10 m-auto h-full w-full">
-  {navigation.social.map((item) => (
-    <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
-      <span className="sr-only">{item.name}</span>
-      <item.icon aria-hidden="true" className="h-6 w-6" />
-    </a>
-  ))}
-</div>
+            <div className=" flex  space-x-10 m-auto h-full w-full">
+              {navigation.social.map((item) => (
+                <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
+                  <span className="sr-only">{item.name}</span>
+                  <item.icon aria-hidden="true" className="h-6 w-6" />
+                </a>
+              ))}
+            </div>
 
-</div>
+          </div>
 
           {/* Mobile Menu Toggle */}
           <div className="md:hidden">

@@ -21,23 +21,23 @@ function Hero() {
   const [direction, setDirection] = useState(1); // 1 para derecha, -1 para izquierda
 
   // Datos de ejemplo para los slides con logos personalizados
-  const slides = [
-    //{
+ const slides = [
+   // {
       //type: "video",
-      //src: "https://videos.pexels.com/video-files/3126453/3126453-uhd_2560_1440_24fps.mp4",
-      //title: "Bienvenidos a Laukén Inmobiliaria",
+      //src: "https://videos.pexels.com/video-files/3126453/3126453-uhd_2560_1440_24fps.mp4 ",
+     // title: "Bienvenidos a Laukén Inmobiliaria",
       //description: "Descubre nuestros exclusivos proyectos de parcelación en las mejores zonas de Chile.",
       //separador: "|",
-      //description2:"Ofrecemos credito Directo ",
-      //logoOnly: true, // Indicador para mostrar solo el logo en esta diapositiva
-      //customLogo: logofull, // Logo personalizado para este slide
-     // cartel: "asasas"
-    //},
+     // description2:"Ofrecemos credito Directo ",
+     // logoOnly: true, // Indicador para mostrar solo el logo en esta diapositiva
+     // customLogo: logofull, // Logo personalizado para este slide
+      //cartel: "asasas"
+  // },
     
     {
       type: "video",
       src: "https://storage.googleapis.com/bucket-launken/costapulin/P%C3%A1gina%20CP%201080p.mp4",
-      title: "Desde UF 3.000",
+      title: "Desde UF 2.200",
       description: "13 parcelas con Rol Propio",
       separador: "|",
       description2:"Ofrecemos Crédito Directo  ",
@@ -49,7 +49,7 @@ function Hero() {
       type: "video",
       src: "https://storage.googleapis.com/bucket-launken/costapulin/P%C3%A1gina%20CP%20windsurf%201080p.mp4",
       title: "Vive tu experiencia en Lago Rapel",
-      description: "Desde UF 3.000",
+      description: "Desde UF 2.200",
       separador: "|",
       description2:"Ofrecemos Crédito Directo ",
       customLogo: logopulin, // Logo por defecto, puede ser cambiado
@@ -62,7 +62,7 @@ function Hero() {
       title: "Proyecto Exclusivo",
       description: "47 parcelas con Rol Propio ",
       separador: "|",
-      description2:"Desde $40.000.000 ",
+      description2:"Desde $34.900.000 ",
       customLogo: logosanrafael, // Logo por defecto, puede ser cambiado
       cartel: "¡OPORTUNIDAD ÚNICA!",
       href: '/San-rafael',
@@ -73,7 +73,7 @@ function Hero() {
       title: "Invierte en tu futuro",
       description: "47 parcelas con Rol Propio ",
       separador: "|",
-      description2:"Desde $40.000.000 ",
+      description2:"Desde $34.900.000 ",
       customLogo: logosanrafael, // Logo por defecto, puede ser cambiado
       cartel: "¡OPORTUNIDAD ÚNICA!",
       href: '/San-rafael',
@@ -173,7 +173,7 @@ function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[50vh] md:min-h-[70vh] flex flex-col justify-between items-center text-white overflow-hidden bg-black"
+      className="relative min-h-[50vh] md:min-h-[70vh] flex flex-col justify-between items-center text-white overflow-hidden bg-black "
     >
       <Helmet>
         <title>{slide.title} | Laukén Inmobiliaria</title>
