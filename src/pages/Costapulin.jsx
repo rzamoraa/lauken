@@ -66,9 +66,9 @@ function Costapulin() {
         }
           precioOferta="DESDE UF 2.200"
           oportunidadunica="Ofrecemos crédito directo:"
-          a1="Hasta "
-          a2="60 cuotas"
-          b1=", tasa UF +"
+          a1=" "
+          a2=""
+          b1="tasa UF +"
           b2="8%"
           enabled={true}
 
