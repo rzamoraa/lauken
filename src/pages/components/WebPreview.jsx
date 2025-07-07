@@ -22,20 +22,18 @@ const WebPreview = ({ url }) => {
   return (
     <section
     id="360"
-    className="mx-auto max-w-7xl py-0 sm:px-6 sm:mb-0 lg:px-8    "
+    className="relative    "
   >
 
 
 
 
 
-       <div className="overflow-hidden bg-container rounded-none px-0     ">
+       <div className="overflow-hidden bg-container rounded-none px-0      ">
         
-    <img src={downdiv} alt="Logo" className=" mx-auto" />
-            <Titulo 
-            title= "Vista Panorámica"
-            />
-        <div className="relative w-full h-svh" style={{ paddingTop: '56.25%' }}>
+
+  
+        <div className="relative  h-80" style={{ paddingTop: '56.25%' }}>
           
           {isLoading && (
             <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
@@ -62,7 +60,7 @@ const WebPreview = ({ url }) => {
            
           )}
         </div>
-        <img src={downdiv} alt="Logo" className="mx-auto " />
+      
       
       </div>
       

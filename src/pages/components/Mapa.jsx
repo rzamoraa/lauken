@@ -10,29 +10,7 @@ const containerStyle = {
 };
 
 const mapStyle = [
-  {
-    "featureType": "all",
-    "elementType": "all",
-    "stylers": [
-      { "saturation": -100 },
-      { "lightness": 20 }
-    ]
-  },
-  {
-    "featureType": "road",
-    "elementType": "geometry",
-    "stylers": [
-      { "visibility": "simplified" }
-      
-    ]
-  },
-  {
-    "featureType": "water",
-    "elementType": "geometry",
-    "stylers": [
-      { "color": "#34445a" }
-    ]
-  }
+  
 ];
 
 const Mapa = ({center}) => {
@@ -56,9 +34,16 @@ const Mapa = ({center}) => {
   if (!isLoaded) return <div>Loading...</div>;
 
   return (
-    <section id="ubicacion" className="">
-         <img src={updiv} alt="Logo" className=" mx-auto " />
-    <div  className="mx-auto max-w-7xl sm:px-6  lg:px-8 h-96   ">
+    <section id="ubicacion" className="relative">
+      {/* Título de la galería */}
+          <div className="text-center py-8">
+   
+                        <h2 className="text-4xl md:text-5xl font-bold text-gray-800 tracking-wide">
+              UBICACIÓN
+            </h2>
+          </div>
+
+    <div  className="  h-96  ">
       <GoogleMap 
         mapContainerStyle={containerStyle}
         center={center}
@@ -69,15 +54,10 @@ const Mapa = ({center}) => {
           zoomControl: false,
         }}
       >
-        {icon && (
-          <Marker 
-            position={center} 
-            icon={icon}  // Solo renderiza el marcador si el icono está definido
-          />
-        )}
+      
       </GoogleMap>
     </div>
-    <img src={downdiv} alt="Logo" className="mx-auto" />
+ 
     </section>
   );
 };

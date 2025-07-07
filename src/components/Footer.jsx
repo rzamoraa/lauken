@@ -51,7 +51,7 @@ const navigation = {
 function Footer() {
   return (
     <footer className="">
-      <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
+      <div className="mx-auto max-w-2xl overflow-hidden px-6 pb-10 sm:pb-10 lg:px-8">
         <nav aria-label="Footer" className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12">
           {navigation.main.map((item) => (
             <div key={item.name} className="pb-6">

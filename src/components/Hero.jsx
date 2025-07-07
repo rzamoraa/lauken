@@ -37,7 +37,7 @@ function Hero() {
     {
       type: "video",
       src: "https://storage.googleapis.com/bucket-launken/costapulin/P%C3%A1gina%20CP%201080p.mp4",
-      title: "Desde UF 2.200",
+      title: "Desde UF 2.500",
       description: "13 parcelas con Rol Propio",
       separador: "|",
       description2:"Ofrecemos Crédito Directo  ",
@@ -49,7 +49,7 @@ function Hero() {
       type: "video",
       src: "https://storage.googleapis.com/bucket-launken/costapulin/P%C3%A1gina%20CP%20windsurf%201080p.mp4",
       title: "Vive tu experiencia en Lago Rapel",
-      description: "Desde UF 2.200",
+      description: "Desde UF 2.500",
       separador: "|",
       description2:"Ofrecemos Crédito Directo ",
       customLogo: logopulin, // Logo por defecto, puede ser cambiado
@@ -62,7 +62,7 @@ function Hero() {
       title: "Proyecto Exclusivo",
       description: "47 parcelas con Rol Propio ",
       separador: "|",
-      description2:"Desde $34.900.000 ",
+      description2:"Desde $40.000.000 ",
       customLogo: logosanrafael, // Logo por defecto, puede ser cambiado
       cartel: "¡OPORTUNIDAD ÚNICA!",
       href: '/San-rafael',
@@ -73,7 +73,7 @@ function Hero() {
       title: "Invierte en tu futuro",
       description: "47 parcelas con Rol Propio ",
       separador: "|",
-      description2:"Desde $34.900.000 ",
+      description2:"Desde $40.000.000 ",
       customLogo: logosanrafael, // Logo por defecto, puede ser cambiado
       cartel: "¡OPORTUNIDAD ÚNICA!",
       href: '/San-rafael',
@@ -287,13 +287,13 @@ function Hero() {
         >
           {/* Contenedor con estilos similares a Description */}
           <motion.div
-            className="bg-gradient-to-r from-[#0000005e] via-[#1111112a] to-[#00000069] py-6 px-8 rounded-lg border border-[#F0B94D]/60 shadow-lg w-full"
+            className="bg-gradient-to-r from-[#0000005e] via-[#1111112a] to-[#00000069] py-6 px-8 rounded-lg border border-yellow-500 shadow-lg w-full"
             animate={{ scale: [0.98, 1], opacity: [0.8, 1] }}
             transition={{ duration: 0.8 }}
           >
             {/* Cinta decorativa similar a Description */}
             {!isMobile && (
-              <div className="bg-[#F0B94D] text-black font-bold text-md  px-2 rounded-t-md absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 whitespace-nowrap text-center z-10">
+              <div className="bg-yellow-500 text-black font-bold text-md  px-2 rounded-t-md absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 whitespace-nowrap text-center z-10">
                 {slide.cartel}
               </div>
             )}
@@ -309,8 +309,8 @@ function Hero() {
             >
               <motion.h1 
                 className={isMobile ? 
-                  "text-[#F0B94D] text-xl font-extrabold mb-2 tracking-wider" : 
-                  "text-[#F0B94D] text-3xl font-extrabold mb-2 tracking-wider"
+                  "text-yellow-500 text-xl font-extrabold mb-2 tracking-wider" : 
+                  "text-yellow-500 text-3xl font-extrabold mb-2 tracking-wider"
                 }
                 variants={itemVariants}
               >
@@ -332,7 +332,7 @@ function Hero() {
                         variants={itemVariants}
                       >
                         
-                        {slide.description } <span className="text-[#F0B94D]"> {slide.separador }</span><span className="text-white text-2xl font-bold"> {slide.description2 }</span>
+                        {slide.description } <span className="text-yellow-500"> {slide.separador }</span><span className="text-white text-2xl font-bold"> {slide.description2 }</span>
                       </motion.p>
 
 
@@ -347,7 +347,7 @@ function Hero() {
             {/* Botón CTA con estilo dorado de Description */}
             <Link to={slide.href}>
               <motion.button 
-                className="bg-[#F0B94D] text-xs hover:bg-[#E0A93D] text-black font-bold py-2 px-6 rounded-md shadow-lg transform transition-transform duration-300 ease-in-out"
+                className="bg-[#F0B94D] text-xs hover:bg-yellow-400 text-black font-bold py-2 px-6 rounded-md shadow-lg transform transition-transform duration-300 ease-in-out"
                 variants={itemVariants}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -379,7 +379,7 @@ function Hero() {
       {/* Controles de navegación */}
       <motion.button 
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/50 hover:bg-[#F0B94D]/70 text-white p-2 rounded-full transition-all"
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/50 hover:bg-yellow-400 text-white p-2 rounded-full transition-all"
         aria-label="Slide anterior"
         whileHover={{ scale: 1.1, backgroundColor: "rgba(240, 185, 77, 0.5)" }}
         whileTap={{ scale: 0.9 }}
@@ -389,7 +389,7 @@ function Hero() {
       
       <motion.button 
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/50 hover:bg-[#F0B94D]/70 text-white p-2 rounded-full transition-all"
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/50 hover:bg-yellow-400 text-white p-2 rounded-full transition-all"
         aria-label="Siguiente slide"
         whileHover={{ scale: 1.1, backgroundColor: "rgba(240, 185, 77, 0.5)" }}
         whileTap={{ scale: 0.9 }}

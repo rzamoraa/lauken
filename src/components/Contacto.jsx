@@ -1,17 +1,18 @@
 import React, { useRef, useState } from 'react';
-import { FaWhatsapp } from 'react-icons/fa';
-import { Helmet } from 'react-helmet-async';
+
+
 import emailjs from '@emailjs/browser';
-import updiv from '../pages/components/updiv.svg'
-import downdiv from '../pages/components/downdiv.svg'
-import { BoxSelect, CheckCircle2 } from 'lucide-react';
+import logo2 from './logo_go.png';
+import logo1 from './logolinea.svg';
+
+
 
 function Contacto() {
-  const form = useRef();
+  const formRef = useRef();
   const [mensaje, setMensaje] = useState({ tipo: '', texto: '' });
   const [proyecto, setProyecto] = useState('');
 
-  const whatsappLink = 'https://wa.me/56981381556?text=Hola,%20quiero%20más%20información%20sobre%20la%20empresa.';
+
 
   const enviarEmail = (e) => {
     e.preventDefault();
@@ -34,173 +35,146 @@ function Contacto() {
   };
 
   return (
-    <section id="contacto" className="  text-center">
-      <img src={updiv} alt="Logo" className="mx-auto" />
+    <section id="contacto" className="bg-slate-800 min-h-screen flex items-center justify-center py-8 ">
 
-
-      <Helmet>
-  <title>Laukén Inmobiliaria</title>
-  
-  <meta 
-    name="description" 
-    content="¡Agenda tu visita a nuestros proyectos exclusivos en Lago Rapel! Contáctanos por WhatsApp o formulario para conocer nuestras parcelas premium. Respuesta inmediata y atención personalizada." 
-  />
-  
-  <meta 
-    name="keywords" 
-    content="contacto laukén inmobiliaria, agendar visita parcelas, contacto proyectos lago rapel, visitar costa pulin, visitar costa san rafael, whatsapp laukén, corredor propiedades lago rapel, consulta parcelas chile" 
-  />
-  
-  {/* Open Graph / Facebook */}
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://lauken.cl/contacto" />
-  <meta property="og:title" content="¡Agenda tu Visita! | Proyectos Exclusivos Lago Rapel | Laukén" />
-  <meta property="og:description" content="Contáctanos para visitar nuestros proyectos exclusivos en Lago Rapel. Atención inmediata por WhatsApp o formulario. ¡Conoce tu futura parcela!" />
-  
-  {/* Twitter */}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Contacta a Laukén Inmobiliaria | Visita Nuestros Proyectos" />
-  <meta name="twitter:description" content="Agenda una visita a nuestros proyectos exclusivos en Lago Rapel. Atención personalizada y respuesta inmediata." />
-  
-  {/* Datos estructurados para página de contacto */}
-  <script type="application/ld+json">
-    {JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "RealEstateAgent",
-      "name": "Laukén Inmobiliaria",
-      "description": "Desarrolladora de proyectos exclusivos en Lago Rapel",
-      "url": "https://lauken.cl",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+56981381556",
-        "contactType": "sales",
-        "availableLanguage": ["Spanish"],
-        "contactOption": ["TollFree", "HearingImpairedSupported"],
-        "areaServed": "CL"
-      },
-      "location": {
-        "@type": "Place",
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "CL",
-          "addressRegion": "Región del Libertador General Bernardo O'Higgins"
-        }
-      },
-      "sameAs": [
-        "https://wa.me/56981381556"
-      ],
-      "potentialAction": {
-        "@type": "ReserveAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://lauken.cl/contacto",
-          "inLanguage": "es",
-          "actionPlatform": [
-            "http://schema.org/DesktopWebPlatform",
-            "http://schema.org/MobileWebPlatform"
-          ]
-        },
-        "result": {
-          "@type": "Reservation",
-          "name": "Agenda de visita a proyectos"
-        }
-      }
-    })}
-  </script>
-
-  {/* Metadatos adicionales */}
-  <meta name="format-detection" content="telephone=no" />
-  <link rel="canonical" href="https://lauken.cl/contacto" />
-  
-  {/* Metadatos para motores de búsqueda locales */}
-  <meta name="geo.region" content="CL-LI" />
-  <meta name="geo.placename" content="Lago Rapel" />
-  <meta name="geo.position" content="-34.1667;-71.2833" />
-  <meta name="ICBM" content="-34.1667, -71.2833" />
-</Helmet>
-
-
-
-
-      <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div className="relative isolate overflow-hidden bg-atributos px-6 py-16 shadow-2xl sm:rounded-xl sm:px-24  ">
-          <h1 className="mx-auto max-w-2xl text-center text-4xl tracking-tight text-white/80 sm:text-6xl font-light">
-            ¡Agenda tu Visita!
+      <div className="w-full max-w-md mx-auto  ">
+        {/* Título */}
+        <div className="text-center mb-8">
+          <h1 className="text-4xl md:text-4xl font-bold text-white mb-2">
+            ¡AGENDA TU VISITA!
           </h1>
-
-          <p className="mx-auto mt-2 max-w-xl text-center text-lg leading-8 text-[#BB8D42]">
+          <p className="text-gray-300 text-lg">
             Escríbenos y te responderemos a la brevedad
           </p>
+        </div>
 
-          <form ref={form} onSubmit={enviarEmail} className="mt-8 space-y-4">
-            <input 
-              type='text' 
-              name='user_name' 
-              placeholder='Nombre'
+        {/* Formulario */}
+        <div ref={formRef} className="space-y-4">
+          <input 
+            type='text' 
+            name='user_name' 
+            placeholder='Nombre'
+            required
+            className="w-full rounded-md py-4 px-4 text-gray-800 bg-gray-200 placeholder-gray-600 text-base focus:outline-none focus:ring-2 focus:ring-[#BB8D42]" 
+          />
+          
+          <input 
+            type='email' 
+            name='user_email' 
+            placeholder='Correo'
+            required
+            className="w-full rounded-md py-4 px-4 text-gray-800 bg-gray-200 placeholder-gray-600 text-base focus:outline-none focus:ring-2 focus:ring-[#BB8D42]" 
+          />
+          
+          <input 
+            type='tel' 
+            name='user_phone' 
+            placeholder='Celular'
+            required
+            className="w-full rounded-md py-2 px-4 text-gray-800 bg-gray-200 placeholder-gray-600 text-base focus:outline-none focus:ring-2 focus:ring-[#BB8D42]" 
+          />
+          
+          <div className="relative">
+            <select
+              name='proyecto'
+              value={proyecto}
+              onChange={(e) => setProyecto(e.target.value)}
               required
-              className="w-full rounded-md py-3 px-4 text-gray-400 bg-white/10 text-sm outline-[#BB8D42] focus:outline focus:outline-2 focus:outline-[#BB8D42]" 
-            />
-            <input 
-              type='email' 
-              name='user_email' 
-              placeholder='Correo'
-              required
-              className="w-full rounded-md py-3 px-4 text-gray-400 bg-white/10 text-sm outline-[#BB8D42] focus:outline focus:outline-2 focus:outline-[#BB8D42]" 
-            />
-            <input 
-              type='tel' 
-              name='user_phone' 
-              placeholder='Teléfono'
-              required
-              className="w-full rounded-md py-3 px-4 text-gray-400 bg-white/10 text-sm outline-[#BB8D42] focus:outline focus:outline-2 focus:outline-[#BB8D42]" 
-            />
-            
-            <div className="relative">
-              <select
-                name='proyecto'
-                value={proyecto}
-                onChange={(e) => setProyecto(e.target.value)}
-                required
-                className="w-full rounded-md py-3 px-4 text-gray-400 bg-white/10 text-sm outline-[#BB8D42] focus:outline focus:outline-2 focus:outline-[#BB8D42] appearance-none"
-              >
-                <option value="" disabled>Selecciona el proyecto</option>
-                <option value="Costa Pulín">Costa Pulín</option>
-                <option value="Costa San Rafael">Costa San Rafael</option>
-              </select>
-              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-400">
-                <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                  <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
-                </svg>
-              </div>
-            </div>
-           
-            <textarea 
-              name='message' 
-              placeholder='Mensaje' 
-              rows="6"
-              required
-              className="w-full rounded-md px-4 text-gray-400 bg-white/10 text-sm pt-3 outline-[#BB8D42] focus:outline focus:outline-2 focus:outline-[#BB8D42]"
-            ></textarea>
-            <button 
-              type='submit'
-              className="text-white bg-[#b8a27f] hover:bg-[#BB8D42] tracking-wide rounded-md text-sm px-4 py-3 w-full transition"
+              className="w-full rounded-md py-2 px-4 text-gray-800 bg-gray-200 text-base focus:outline-none focus:ring-2 focus:ring-[#BB8D42] appearance-none"
             >
-              Enviar
-            </button>
-          </form>
-
-          {mensaje.texto && (
-            <div className={`mt-4 text-sm ${mensaje.tipo === 'exito' ? 'text-green-500' : 'text-red-500'}`}>
-              {mensaje.texto}
+              <option value="" disabled>Selecciona el proyecto</option>
+              <option value="Costa Pulín">Costa Pulín</option>
+              <option value="Costa San Rafael">Costa San Rafael</option>
+            </select>
+            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-600">
+              <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+              </svg>
             </div>
-          )}
+          </div>
+         
+          <textarea 
+            name='message' 
+            placeholder='Mensaje' 
+            rows="5"
+            required
+            className="w-full rounded-md py-4 px-4 text-gray-800 bg-gray-200 placeholder-gray-600 text-base focus:outline-none focus:ring-2 focus:ring-[#BB8D42] resize-none"
+          />
+          
+          <button 
+            onClick={enviarEmail}
+            className="w-full text-white bg-[#BB8D42] hover:bg-[#a67c37] rounded-md text-lg font-semibold py-1 px-4 transition-colors duration-300"
+          >
+            Enviar
+          </button>
+        </div>
 
-          <div className="flex justify-center mt-10">
-        
+        {mensaje.texto && (
+          <div className={`mt-4 text-sm text-center ${mensaje.tipo === 'exito' ? 'text-green-400' : 'text-red-400'}`}>
+            {mensaje.texto}
+          </div>
+        )}
+
+        {/* Logos y información de contacto */}
+        <div className="mt-12 text-center">
+          {/* Logos */}
+          <div className="flex items-center justify-center space-x-8 mb-8">
+            {/* Logo Laukén */}
+            <div className="flex items-center text-white">
+
+                           <img
+          src={logo1}
+          alt="LAUKEN"
+          className="w-fill h-10 object-cover"
+        />
+
+
+
+
+    </div>
+
+            {/* Logo Goycoolea */}
+            <div className="flex items-center text-white">
+
+                           <img
+          src={logo2}
+          alt="GOYCOOLEA PROPIEDADES"
+          className="w-fill h-10 object-cover"
+        />
+
+
+ </div>
+
+
+            
+          </div>
+
+          {/* Información de contacto */}
+          <div className="space-y-3 text-gray-300 text-sm">
+            <div className="flex items-center justify-center">
+              <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+              </svg>
+              <span>Avenida Vitacura 3092, Vitacura, Santiago</span>
+            </div>
+            
+            <div className="flex items-center justify-center">
+              <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+              </svg>
+              <span>+56 2 2206 5654 / +56 9 9275 7172</span>
+            </div>
+            
+            <div className="flex items-center justify-center">
+              <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+              </svg>
+              <span>hola@lauken.cl</span>
+            </div>
           </div>
         </div>
       </div>
-      <img src={downdiv} alt="Logo" className="mx-auto" />
     </section>
   )
 }

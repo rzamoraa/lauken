@@ -30,8 +30,18 @@ import g3 from './img/entre-valles-s-3.jpg';
 import g4 from './img/entre-valles-s-4.jpg';
 import g5 from './img/entre-valles-s-5.jpg';
 import g6 from './img/entre-valles-s-6.jpg';
+import g7 from './img/entre-valles-s-7.jpg';
+import g8 from './img/entre-valles-s-8.jpg';
+import g9 from './img/entre-valles-s-9.jpg';
+
+import Folleto from "./components/folleto";
 
 
+import { MapPin, FileText, Anchor, Lock, Route, Droplets, ShoppingCart, Plane, Clock, Timer, Zap, CircleCheckBig  } from 'lucide-react';
+
+
+import Mocap from "./img/mocap.png";
+import Fondo from "./img/costa-pulin-Sl/cp1.jpg";
 
 function Entrevalles() {
 
@@ -48,43 +58,32 @@ function Entrevalles() {
 
   return (
     <div className="bg-background">
-      <Header 
-      nube={false}
-      />
+  
       <Vendido />
       <Title
       logoproyecto={logovalles}
         video={
           "https://storage.googleapis.com/bucket-launken/entrevalleVideo.mp4"
         }
+
+          precio="" 
+  texto1="21 parcelas con Rol Propio "
+  texto2=" Éxito Total de Ventas "
+  showBrochureButton={false}
+
+
       />
       <Description
-        video={
-          "https://storage.googleapis.com/bucket-launken/entrevalleVideo.mp4"
-        }
-        enabled={false}
-      />
-
-      <Gallery
-        direccion="Proyecto"
-        title="Entre Valles Pumanque "
-        subtitle1="Entorno Armónico"
-        subdes1="21 parcelas totalmente planas en sector “Rincón del Sauce”. Proyecto  rodeado por 3 valles únicos y abundante vegetación nativa"
-        subtitle2="Comodidad y Tranquilidad"
-        subdes2=" Caminos establecidos, rodeado de naturaleza y apartado de la urbanización en un lugar privilegiado de la 6ta región"
-        subtitle3="Calidad Garantizada"
-        subdes3="   Inversión en urbanización, incluyendo portones de acceso, cercos, pasos de aguas-lluvia. Incluye factibilidad de agua y luz"
-        subtitle4="Inversión Segura"
-        subdes4="   Ubicación en un sector exclusivo con tremenda plusvalía. Parcelas de 5.000mts2, planos actualizados con aprobación total por parte del SAG y cada parcela cuenta con Rol propio. "
-        image1= {entrevalles1}
-        image2= {entrevalles2}
-        image3= {entrevalles3}
+          nombre= "ENTRE VALLES"
+          bajada="LAGO RAPEL"
+          precio="DESDE UF 2200"
+          logoproyecto={logovalles}
       />
 
       <Atributos
-      title1={"Entre Valles - Pumanque"}
-      title2={"Ubicado en un lugar exclusivo en sector Rincón del Sauce."}
-      text={""}
+    
+      texto={"Exclusivo proyecto de 21 parcelas de 5.000 m² en el sector Rincón del Sauce, rodeadas por tres valles únicos y vegetación nativa. Un entorno natural, tranquilo y con caminos establecidos, ideal para quienes buscan desconexión y calidad de vida. Inversión segura y plusvalía garantizada en una zona privilegiada de la VI región."}
+   
       image={entrevalles4}
 
       t1={"21 Parcelas de"}
@@ -108,6 +107,19 @@ function Entrevalles() {
       t10={"Pumanque Centro: "}
       v10={" 7 min"}
 
+
+      i1={MapPin}
+      i2={FileText}
+      i3={Route}
+      i4={Lock}
+      i5={Droplets}
+      i6={Zap}
+      i7={CircleCheckBig}
+      i8={Plane}
+      i9={Clock}
+      i10={Timer}
+
+
       
       
       />
@@ -120,9 +132,17 @@ function Entrevalles() {
         image4={g4}
         image5={g5}
         image6={g6}
-        image7={g2}
-        image8={g3}
+        image7={g7}
+        image8={g8}
+        image9={g9}
       />
+
+
+
+
+
+
+
 
       <Mapa 
       center={point}
@@ -132,7 +152,6 @@ function Entrevalles() {
 </div>
    
 
-      <Return />
     </div>
   );
 }

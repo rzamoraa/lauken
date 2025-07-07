@@ -18,14 +18,14 @@ import entrevalles1 from './img/costa-pulin-5.jpg';
 import entrevalles2 from './img/costa-pulin-2.jpg';
 import entrevalles3 from './img/costa-pulin-3.jpg';
 
-import entrevalles4 from './img/costa-pulin-4.jpg';
+import entrevalles4 from './img/costa-pulin-Sl/datos.jpg';
 
 import g1 from './img/costa-pulin-Sl/cp1.jpg';
 import g2 from './img/costa-pulin-Sl/cp2.jpg';
 import g3 from './img/costa-pulin-Sl/cp3.jpg';
 import g4 from './img/costa-pulin-Sl/cp4.jpg';
 import g5 from './img/costa-pulin-Sl/cp5.jpg';
-import g6 from './img/costa-pulin-Sl/cp6.jpg';
+import g6 from './img/costa-pulin-Sl/cp6.JPG';
 import g7 from './img/costa-pulin-Sl/cp7.jpg';
 import g8 from './img/costa-pulin-Sl/cp8.jpg';
 import g9 from './img/costa-pulin-Sl/cp9.jpg';
@@ -33,6 +33,17 @@ import g10 from './img/costa-pulin-Sl/cp10.jpg';
 
 
 import WebPreview from "./components/WebPreview";
+
+
+import Folleto from "./components/folleto";
+
+
+import { MapPin, FileText, Anchor, Lock, Route, Droplets, ShoppingCart, Plane, Clock, Timer } from 'lucide-react';
+
+
+
+import Mocap from "./img/mocap costapulin.png";
+import Fondo from "./img/costa-pulin-Sl/cp1.jpg";
 
 
 function Costapulin() {
@@ -50,38 +61,35 @@ function Costapulin() {
 
   return (
     <div className="bg-background">
-      <Header 
-      activo={true}
-      />
+
 
 <Title
   logoproyecto={logopulin}
-  video="https://storage.googleapis.com/bucket-launken/TV-Pulin_LOW.mp4"
+  video="https://storage.googleapis.com/bucket-launken/opcionBanner1.mp4"
     brochurePdf="https://storage.googleapis.com/bucket-launken/costapulin/Lauken_CC3.pdf"
   showBrochureButton={true}
+  precio="Desde UF 2.500" 
+  texto1="13 parcelas con Rol Propio "
+  texto2=" Ofrecemos Crédito Directo "
 />
       <Description
-        video={
-         "https://storage.googleapis.com/bucket-launken/TV-Pulin_LOW.mp4"
-        }
-          precioOferta="DESDE UF 2.200"
-          oportunidadunica="Ofrecemos crédito directo:"
-          a1=" "
-          a2=""
-          b1="tasa UF +"
-          b2="8%"
-          enabled={true}
-
+          nombre= "COSTA PULIN"
+          bajada="LAGO RAPEL"
+          precio="DESDE UF 2200"
+           logoproyecto={logopulin}
       />
 <WebPreview url="https://www.lanube360.com/costa-pulin/" />
 <Atributos
- title1={"Costa Pulín - Lago Rapel"}
- title2={"Ubicado en un sector exclusivo al interior de Condominio Costa del Sol"}
- text={""}
+
+
+ texto={"Proyecto único de 13 parcelas de 5.000 m², ubicadas a orillas del Lago Rapel, en el exclusivo sector de Pulín, Costa del Sol. Un entorno ideal para vivir la experiencia del lago, practicar deportes al aire libre y disfrutar en familia. Seguridad, naturaleza y una inversión con alto potencial de plusvalía futura."}
+ 
+
+
  image={entrevalles4}
 
- t1={"13 Parcelas de"}
- v1={"5.000 mts2"}
+ t1={"13 Parcelas "}
+ v1={"de 5.000 mts2"}
 
  t2={"Rol"}
  v2={"Propio"}
@@ -109,28 +117,25 @@ function Costapulin() {
 
  t8={"Acceso a "}
  v8={" Aeródromo"}
+      
 
 
-      
-      
-      
+      i1={MapPin}
+      i2={FileText}
+      i3={Anchor}
+      i4={Lock}
+      i5={Route}
+      i6={Droplets}
+      i7={ShoppingCart}
+      i8={Plane}
+      i9={Clock}
+      i10={Timer}
+
+
+
       />
-      <Gallery
-        direccion="Proyecto"
-        title="Costa Pulín"
-        subtitle="Lago Rapel"
-        subtitle1="Diseño único"
-        subdes1="  Exclusivo proyecto compuesto por 13 sitios ubicado a orillas de Lago Rapel. Desarrollo cuenta con marina privada."
-        subtitle2="Exclusividad y Tranquilidad"
-        subdes2="    Ubicado en uno de los sectores más exclusivos de Lago Rapel, al interior de Condominio Costa del Sol y rodeado de valles y vegetación nativa."
-        subtitle3="Privacidad y Seguridad"
-        subdes3="   Proyecto cuenta con acceso controlado,  garantizando privacidad y seguridad a sus residentes. Un espacio para descansar y disfrutar sin preocupaciones."
-        subtitle4="Gran Plusvalía"
-        subdes4="    Ubicación estratégica en los alrededores más codiciados por la gente. Una oportunidad de inversión 100% garantizada con gran valor agregado a futuro."
-        image1= {entrevalles1}
-        image2= {entrevalles2}
-        image3={entrevalles3}
-      />
+
+
 
 
 
@@ -150,6 +155,11 @@ function Costapulin() {
 
 
 
+<Folleto
+mocap={Mocap}
+fondo={g1}
+linkfolleto={'https://storage.googleapis.com/bucket-launken/brochure/BrochurePulin.pdf'}
+/>
 
 <Mapa 
       center={point}
@@ -159,10 +169,7 @@ function Costapulin() {
 
 
 
-  
 
-
-      <Return />
     </div>
   );
 }

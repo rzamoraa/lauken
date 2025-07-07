@@ -38,7 +38,6 @@ function Gallery({
   return (
     <section id="descripción" className="mx-auto max-w-7xl sm:px-6 lg:px-8">
       <div className="mx-auto max-w-2xl px-4 sm:px-6 sm:py-0 lg:max-w-7xl lg:px-8 bg-container">
-        <img src={downdiv} alt="Decoración" className="mx-auto" />
        
         <div className="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2">
           <div className="py-10">

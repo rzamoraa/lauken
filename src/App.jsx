@@ -10,11 +10,12 @@ import Contacto from './components/Contacto';
 import Contactofooter from './components/Contactofooter.jsx';
 import Footer from './components/Footer';
 import Nosotros from './components/Nosotros';
-import Tucampo from './components/Tucampo';
+
 import Entrevalles from './pages/Entrevalles';
 import Costapulin from './pages/Costapulin';
 import Sanrafael from './pages/Sanrafael';
-import Tucampopage from './pages/Tucampopage.jsx';
+import CampoLanding from './pages/Tucampopage.jsx';
+import SomosLanding from './pages/Quienessomos.jsx';
 
 import Layout from './components/Layout';
 
@@ -56,82 +57,24 @@ function MainContent() {
 
   return (
     <>
-      <Helmet>
-        {/* Schema principal del sitio */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            "url": "https://lauken.cl/",
-            "name": "Laukén Inmobiliaria",
-            "potentialAction": {
-              "@type": "SearchAction",
-              "target": {
-                "@type": "EntryPoint",
-                "urlTemplate": "https://lauken.cl/buscar?q={search_term_string}"
-              },
-              "query-input": "required name=search_term_string"
-            }
-          })}
-        </script>
-        {/* Schema para Sitelinks */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "ItemList",
-            "itemListElement": [
-              {
-                "@type": "SiteNavigationElement",
-                "position": 1,
-                "name": "Proyectos",
-                "description": "Proyectos exclusivos en Lago Rapel",
-                "url": "https://lauken.cl/proyectos"
-              },
-              {
-                "@type": "SiteNavigationElement",
-                "position": 2,
-                "name": "Costa Pulín",
-                "description": "Parcelas con marina privada",
-                "url": "https://lauken.cl/costa-pulin"
-              },
-              {
-                "@type": "SiteNavigationElement",
-                "position": 3,
-                "name": "Costa San Rafael",
-                "description": "Vista privilegiada al lago",
-                "url": "https://lauken.cl/san-rafael"
-              },
-              {
-                "@type": "SiteNavigationElement",
-                "position": 4,
-                "name": "Vende tu Campo",
-                "description": "Maximiza el valor de tu propiedad",
-                "url": "https://lauken.cl/vendenos-tu-campo"
-              }
-            ]
-          })}
-        </script>
-      </Helmet>
+    
       <Navbar />
       <div id="inicio">
         <Hero />
       </div>
 
-      {/*
-      <div id="nosotros">
-        <Nosotros />
-      </div>
-      */}
+    
+      
 
 
       <div id="proyectos">
         <Proyectos />
       </div>
-      {/*
-      <div id="vendenos">
-        <Tucampo />
-      </div> 
-      */}
+        
+      <div id="nosotros">
+        <Nosotros />
+      </div>
+
       <div id="contacto">
         <Contacto />
       </div>
@@ -145,28 +88,7 @@ function MainContent() {
 // Wrappers para las páginas independientes con sus schemas específicos
 const EntrevallesWrapper = () => (
   <>
-    <Helmet>
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "RealEstateListing",
-          "name": "Entre Valles Pumanque - Parcelas Exclusivas",
-          "description": "21 parcelas planas de 5.000m² en sector Rincón del Sauce. Proyecto con caminos establecidos y factibilidad de servicios básicos.",
-          "url": "https://lauken.cl/entre-valles",
-          "numberOfRooms": "21 parcelas",
-          "floorSize": {
-            "@type": "QuantitativeValue",
-            "value": 5000,
-            "unitCode": "MTK"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "-34.625450416181025",
-            "longitude": "-71.59507535756717"
-          }
-        })}
-      </script>
-    </Helmet>
+  <Navbar />
     <Entrevalles />
    
         <Contactofooter />
@@ -176,28 +98,7 @@ const EntrevallesWrapper = () => (
 
 const CostapulinWrapper = () => (
   <>
-    <Helmet>
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "RealEstateListing",
-          "name": "Costa Pulín - Parcelas Premium en Lago Rapel",
-          "description": "13 parcelas exclusivas de 5.000m² con marina privada en Lago Rapel.",
-          "url": "https://lauken.cl/costa-pulin",
-          "numberOfRooms": "13 parcelas",
-          "floorSize": {
-            "@type": "QuantitativeValue",
-            "value": 5000,
-            "unitCode": "MTK"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "-34.10409508034245",
-            "longitude": "-71.54721887210357"
-          }
-        })}
-      </script>
-    </Helmet>
+ <Navbar />
     <Costapulin />
     <Contactofooter />
   </>
@@ -205,28 +106,7 @@ const CostapulinWrapper = () => (
 
 const SanrafaelWrapper = () => (
   <>
-    <Helmet>
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "RealEstateListing",
-          "name": "Costa San Rafael - Parcelas con Vista al Lago",
-          "description": "47 parcelas de 5.000m² con marina exclusiva de 16.000m² en Lago Rapel.",
-          "url": "https://lauken.cl/san-rafael",
-          "numberOfRooms": "47 parcelas",
-          "floorSize": {
-            "@type": "QuantitativeValue",
-            "value": 5000,
-            "unitCode": "MTK"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "-34.187536",
-            "longitude": "-71.490558"
-          }
-        })}
-      </script>
-    </Helmet>
+  <Navbar />
     <Sanrafael />
     <Contactofooter />
   </>
@@ -234,34 +114,63 @@ const SanrafaelWrapper = () => (
 
 const TucampopageWrapper = () => (
   <>
-    <Helmet>
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Service",
-          "name": "Venta de Campos - Laukén Inmobiliaria",
-          "description": "Servicio profesional de corretaje para la venta de campos y terrenos agrícolas.",
-          "url": "https://lauken.cl/vendenos-tu-campo",
-          "provider": {
-            "@type": "RealEstateAgent",
-            "name": "Laukén Inmobiliaria",
-            "telephone": "+56981381556",
-            "url": "https://lauken.cl"
-          }
-        })}
-      </script>
-    </Helmet>
-    <Tucampopage />
+<Navbar />
+    <CampoLanding />
+    <div id="contacto">
+       
+      </div>
     <Contactofooter />
+
   </>
 );
+
+
+const QuienesSomosWrapper = () => (
+  <>
+<Navbar />
+    <SomosLanding />
+    <div id="contacto">
+        <Contacto />
+      </div>
+    <Contactofooter />
+
+  </>
+);
+
+const ProyectosWrapper = () => (
+  <>
+<Navbar />
+ <Hero />
+   <Proyectos />
+    <div id="contacto">
+        <Contacto />
+      </div>
+    <Contactofooter />
+
+  </>
+);
+
+
+
+const ContactoWrapper = () => (
+  <>
+<Navbar />
+
+    <div id="contacto" className='py-10'>
+        <Contacto />
+      </div>
+    <Contactofooter />
+
+  </>
+);
+
 
 function App() {
   return (
     <HelmetProvider>
       <Router>
       <Layout>  {/* Añadir este wrapper */}
-        <div className='w-screen bg-background'>
+        <div className='w-screen bg-white'>
           <Routes>
             {/* Rutas que comparten el contenido principal */}
             <Route path="/" element={<MainContent />} />
@@ -274,7 +183,10 @@ function App() {
             <Route path="/entre-valles" element={<EntrevallesWrapper />} />
             <Route path="/costa-pulin" element={<CostapulinWrapper />} />
             <Route path="/san-rafael" element={<SanrafaelWrapper />} />
-            <Route path="/vendenos-tu-campo" element={<TucampopageWrapper />} />
+            <Route path="/vende-tu-campo" element={<TucampopageWrapper />} />
+            <Route path="/Quines-somos" element={<QuienesSomosWrapper />} />
+            <Route path="/Proyectos-" element={<ProyectosWrapper />} />
+            <Route path="/Contacto-" element={<ContactoWrapper />} />
           </Routes>
           <Footer />
         </div>

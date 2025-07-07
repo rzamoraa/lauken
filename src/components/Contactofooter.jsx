@@ -3,6 +3,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 
 
 
+
 function Contactofooter() {
 
 
@@ -39,7 +40,7 @@ function Contactofooter() {
             className="fixed bottom-4 right-4 bg-green-500 text-white px-4 py-4 rounded-full shadow-lg flex items-center gap-2 hover:bg-green-600 transition"
           >
             {/* Texto visible solo en pantallas medianas o más grandes */}
-            <span className="hidden md:inline text-lg font-semibold">Contáctanos</span>
+            
             <FaWhatsapp className="text-4xl" />
           </a>
         </div>

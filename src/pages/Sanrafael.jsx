@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
-import Header from "../components/Header";
+
 
 import Contacto from "../components/Contacto";
 import Description from "./components/Descripcion";
-import Gallery from "./components/Gallery";
+
 import Spect from "./components/Spect";
 
 import Title from "./components/Title";
-import Return from "./components/Return";
+
 import Mapa from "./components/Mapa";
 import Atributos from "./components/Atributos";
 
@@ -16,10 +16,6 @@ import logosanrafel from '../assets/logosanrafel.svg'
 
 
 
-
-import f1 from './img/san-rafael/san-rafael-1.jpg';
-import f2 from './img/san-rafael/san-rafael-2.jpg';
-import f3 from './img/san-rafael/san-rafael-7.jpg';
 
 import f4 from './img/san-rafael/san-rafael-4.jpg';
 
@@ -31,12 +27,22 @@ import g5 from './img/san-rafael/carrusel/sr5.jpg';
 import g6 from './img/san-rafael/carrusel/sr6.jpg';
 import g7 from './img/san-rafael/carrusel/sr7.jpg';
 import g8 from './img/san-rafael/carrusel/sr8.jpg';
+import g9 from './img/san-rafael/carrusel/sr9.jpg';
 
 
 import WebPreview from "./components/WebPreview";
-import { FaL } from "react-icons/fa6";
 
 
+
+import Folleto from "./components/folleto";
+
+
+
+import Mocap from "./img/mocap sanrafael.png";
+import Fondo from "./img/costa-pulin-Sl/cp1.jpg";
+
+
+import { MapPin, FileText, Anchor, Lock, Route, Droplets, ShoppingCart, Plane, Clock, Timer, Building } from 'lucide-react';
 
 
 
@@ -56,34 +62,34 @@ function Sanrafael() {
 
   return (
     <div className="bg-background">
-      <Header 
-      nube={true}
-      />
+
+    
+ 
 <Title
   logoproyecto={logosanrafel}
   video="https://storage.googleapis.com/bucket-launken/Videosanrafael.mp4"
    brochurePdf="https://storage.googleapis.com/bucket-launken/costapulin/Lauken_CC3.pdf"
   showBrochureButton={true}
+
+  precio="Desde $40.000.000" 
+  texto1="47 parcelas con Rol Propio "
+  texto2=" ¡Agenda tu visita! "
+
+
 />
 
       <Description
-        video={
-          "https://storage.googleapis.com/bucket-launken/Videosanrafael.mp4"
-        }
-        precioOferta="DESDE $34.900.000"
-        oportunidadunica=""
-      
-        a1=""
-        a2=""
-        b1=""
-        b2=""
-        enabled={true}
+          nombre= "SAN RAFAEL"
+          bajada="LAGO RAPEL"
+          precio="DESDE UF 2200"
+          logoproyecto={logosanrafel}
+          
       />
+
+
 <WebPreview url="https://www.lanube360.com/costa-sanrafael/" />
 <Atributos
- title1={"Costa San Rafael - Lago Rapel"}
- title2={"Proyecto único por su ubicación, características del suelo y acceso al lago.  "}
- text={""}
+ texto={"Innovador proyecto de 47 parcelas con terrenos planos y suaves lomajes, que ofrecen espectaculares vistas al Lago Rapel y la Cordillera de los Andes. Vive rodeado de naturaleza, en un entorno ideal para descansar, practicar deportes y conectar con lo mejor de la vida junto al lago. Todo esto, en un valle privilegiado del sector San Rafael, Lago Rapel. "}
  image={f4}
 
  t1={"47 Parcelas de "}
@@ -116,26 +122,21 @@ function Sanrafael() {
  t9={"Puertecillo: "}
  v9={" 1,20 hr"}
 
+      i1={MapPin}
+      i2={FileText}
+      i3={Route}
+      i4={Anchor}
+      i5={Lock}
+      i6={Droplets}
+      i7={ShoppingCart}
+      i8={Building}
+      i9={Clock}
+      i10={Timer}
 
       
       
+
       
-      />
-<Gallery
-        direccion="Proyecto"
-        title="Costa San Rafael"
-        subtitle="Lago Rapel"
-        subtitle1="Proyecto Revolucionario"
-        subdes1="  Exclusivo proyecto 47 parcelas planas y de lomaje suave y con vista hacia el lago y Cordillera de Los Andes. Todas de 5.000m2 y con rol propio, ubicadas al interior de fundo militar en un valle único de sector San Rafael."
-        subtitle2="Atributos Únicos"
-        subdes2="   Marina exclusiva para la copropiedad, compuesta por un terreno plano de 16.000 m2, 70 mts de frente de lago con muelle, estacionamientos, áreas comunes, playa y amplia bajada para embarcaciones."
-        subtitle3="Ambiente Familiar"
-        subdes3="   Proyecto 100% enfocado en cautivar el ambiente familiar y atraer a los amantes de los deportes náuticos."
-        subtitle4="Inversión Segura"
-        subdes4="    A tan solo 2,5 hrs de Santiago, en una ubicación estratégica y con características únicas, garantizando alta plusvalía a futuro."
-        image1= {f3}
-        image2= {f2}
-        image3={f1}
       />
 
 
@@ -147,12 +148,17 @@ function Sanrafael() {
        image3={g3}
        image4={g4}
        image5={g5}
-       image6={g8}
+       image6={g6}
        image7={g7}
-       image8={g6}
+       image8={g8}
+       image9={g9}
      />
 
-
+<Folleto
+mocap={Mocap}
+fondo={g1}
+linkfolleto={'https://storage.googleapis.com/bucket-launken/brochure/BrochureSR.pdf'}
+/>
 
       <Mapa 
       center={point}
@@ -160,7 +166,7 @@ function Sanrafael() {
 
 <Contacto />
 
-      <Return />
+ 
     </div>
   );
 }
