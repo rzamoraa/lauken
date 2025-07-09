@@ -25,7 +25,11 @@ import g2 from './img/costa-pulin-Sl/cp2.jpg';
 import g3 from './img/costa-pulin-Sl/cp3.jpg';
 import g4 from './img/costa-pulin-Sl/cp4.jpg';
 import g5 from './img/costa-pulin-Sl/cp5.jpg';
-import g6 from './img/costa-pulin-Sl/cp6.JPG';
+
+import g6 from './img/costa-pulin-Sl/costapulin6.jpg';
+
+
+
 import g7 from './img/costa-pulin-Sl/cp7.jpg';
 import g8 from './img/costa-pulin-Sl/cp8.jpg';
 import g9 from './img/costa-pulin-Sl/cp9.jpg';
