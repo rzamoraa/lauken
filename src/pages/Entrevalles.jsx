@@ -34,7 +34,7 @@ import g7 from './img/entre-valles-s-7.jpg';
 import g8 from './img/entre-valles-s-8.jpg';
 import g9 from './img/entre-valles-s-9.jpg';
 
-import Folleto from "./components/folleto";
+
 
 
 import { MapPin, FileText, Anchor, Lock, Route, Droplets, ShoppingCart, Plane, Clock, Timer, Zap, CircleCheckBig  } from 'lucide-react';
