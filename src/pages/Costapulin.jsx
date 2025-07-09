@@ -39,7 +39,7 @@ import g10 from './img/costa-pulin-Sl/cp10.jpg';
 import WebPreview from "./components/WebPreview";
 
 
-import Folleto from "./components/folleto";
+import Folleto from "./components/Folleto";
 
 
 import { MapPin, FileText, Anchor, Lock, Route, Droplets, ShoppingCart, Plane, Clock, Timer } from 'lucide-react';

@@ -1,15 +1,15 @@
 import React, { useEffect } from "react";
-import Header from "../components/Header";
+
 
 
 import Contacto from "../components/Contacto";
 import Vendido from "./components/Vendido";
 import Description from "./components/Descripcion";
-import Gallery from "./components/Gallery";
+
 import Spect from "./components/Spect";
 
 import Title from "./components/Title";
-import Return from "./components/Return";
+
 import Mapa from "./components/Mapa";
 import Atributos from "./components/Atributos";
 
@@ -18,9 +18,6 @@ import logovalles from '../assets/logovalles.svg'
 
 
 
-import entrevalles1 from './img/entre-valles1.jpeg';
-import entrevalles2 from './img/entre-valles2.jpeg';
-import entrevalles3 from './img/entre-valles3.jpeg';
 
 import entrevalles4 from './img/entre-valles4.jpeg';
 
@@ -40,8 +37,7 @@ import g9 from './img/entre-valles-s-9.jpg';
 import { MapPin, FileText, Anchor, Lock, Route, Droplets, ShoppingCart, Plane, Clock, Timer, Zap, CircleCheckBig  } from 'lucide-react';
 
 
-import Mocap from "./img/mocap.png";
-import Fondo from "./img/costa-pulin-Sl/cp1.jpg";
+
 
 function Entrevalles() {
 

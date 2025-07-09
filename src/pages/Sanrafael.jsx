@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 
 import Contacto from "../components/Contacto";
 import Description from "./components/Descripcion";
+import Folleto from "./components/Folleto";
 
 import Spect from "./components/Spect";
 
@@ -34,7 +35,7 @@ import WebPreview from "./components/WebPreview";
 
 
 
-import Folleto from "./components/folleto";
+
 
 
 
