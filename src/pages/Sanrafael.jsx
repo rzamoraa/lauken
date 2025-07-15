@@ -73,7 +73,7 @@ function Sanrafael() {
   showBrochureButton={true}
 
   precio="Desde $40.000.000" 
-  texto1="47 parcelas con Rol Propio "
+  texto1="47 Parcelas con Rol Propio "
   texto2=" ¡Agenda tu visita! "
 
 

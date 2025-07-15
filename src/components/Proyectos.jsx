@@ -19,7 +19,7 @@ const proyectos = [
     url: '/costa-pulin',
     logo: logopulin,
     activo: true,
-    precios:'Desde UF 2500'
+    precios:'Desde UF 2.500'
   },
   {
     nombreUnico: 'San Rafael',

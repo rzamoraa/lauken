@@ -3,7 +3,8 @@ import React, { useRef, useState } from 'react';
 
 import emailjs from '@emailjs/browser';
 import logo2 from './logo_go.png';
-import logo1 from './logolinea.svg';
+import logo1 from './logo_juntos.png';
+
 
 
 
@@ -116,63 +117,67 @@ function Contacto() {
         )}
 
         {/* Logos y información de contacto */}
-        <div className="mt-12 text-center">
-          {/* Logos */}
-          <div className="flex items-center justify-center space-x-8 mb-8">
+
+
+
+
+        <div className="mt-12 text-center ">
+         
+          <div className="flex items-center justify-center space-x-2 p-2 mb-8 ">
+
+
+
             {/* Logo Laukén */}
-            <div className="flex items-center text-white">
+<a
+  href="https://www.goycooleapropiedades.cl/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center text-white w-full p-1"
+>
+  <img
+    src={logo1}
+    alt="LAUKEN"
+    className="w-full h-10 object-cover"
+  />
+</a>
 
-                           <img
-          src={logo1}
-          alt="LAUKEN"
-          className="w-fill h-10 object-cover"
-        />
+         
 
 
 
 
+            
+          </div>
+
+<div className="space-y-3 text-gray-300 text-sm">
+  {/* Dirección (no clickeable) */}
+  <div className="flex items-center justify-center">
+    <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+      <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+    </svg>
+    <span>Avenida Vitacura 3092, Vitacura, Santiago</span>
+  </div>
+
+  {/* Teléfonos */}
+  <div className="flex items-center justify-center">
+    <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+    </svg>
+    <div className="flex flex-col">
+      <a href="tel:+56222065654" className="hover:underline">+56 2 2206 5654</a>
+      <a href="tel:+56992757172" className="hover:underline">+56 9 9275 7172</a>
     </div>
+  </div>
 
-            {/* Logo Goycoolea */}
-            <div className="flex items-center text-white">
-
-                           <img
-          src={logo2}
-          alt="GOYCOOLEA PROPIEDADES"
-          className="w-fill h-10 object-cover"
-        />
-
-
- </div>
-
-
-            
-          </div>
-
-          {/* Información de contacto */}
-          <div className="space-y-3 text-gray-300 text-sm">
-            <div className="flex items-center justify-center">
-              <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-              </svg>
-              <span>Avenida Vitacura 3092, Vitacura, Santiago</span>
-            </div>
-            
-            <div className="flex items-center justify-center">
-              <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-              </svg>
-              <span>+56 2 2206 5654 / +56 9 9275 7172</span>
-            </div>
-            
-            <div className="flex items-center justify-center">
-              <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-              </svg>
-              <span>hola@lauken.cl</span>
-            </div>
-          </div>
+  {/* Correo */}
+  <div className="flex items-center justify-center">
+    <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+      <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+      <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+    </svg>
+    <a href="mailto:hola@lauken.cl" className="hover:underline">hola@lauken.cl</a>
+  </div>
+</div>
         </div>
       </div>
     </section>

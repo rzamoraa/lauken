@@ -156,7 +156,7 @@ const ContactoWrapper = () => (
   <>
 <Navbar />
 
-    <div id="contacto" className='py-10'>
+    <div id="contacto" className='py-24'>
         <Contacto />
       </div>
     <Contactofooter />

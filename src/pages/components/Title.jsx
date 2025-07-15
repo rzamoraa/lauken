@@ -22,8 +22,8 @@ function Title({ precio, texto1, texto2, video, logoproyecto, brochurePdf, showB
   return (
     <section
       id="title"
-      className="relative h-[45vh] flex flex-col justify-center items-center"
-    >
+      className="relative min-h-[90vh]  flex flex-col justify-between items-center text-white overflow-hidden bg-black "
+    > 
       {/* Video de fondo */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"
@@ -38,23 +38,24 @@ function Title({ precio, texto1, texto2, video, logoproyecto, brochurePdf, showB
 
 <div
          
-          className="relative z-10 w-full px- max-w-4xl mx-auto  "
+          className="relative z-10 w-full max-w-4xl   bg-teal-50  m-auto "
     
         >
           {/* Contenedor con estilos similares a Description */}
           
           
+       
           
           
           
-          
-          <div     className="bg-gradient-to-r from-[#000000b7] via-[#111111a7] to-[#000000ce] py-6 px-8 rounded-lg border border-yellow-500 shadow-lg w-full absolute my-28"
+          <div   className="bg-gradient-to-r from-[#000000b7] via-[#111111a7] to-[#000000ce] 
+          py-6 px-8 rounded-lg border border-yellow-500 shadow-lg w-full absolute my-28"
           
          
           >
             {/* Cinta decorativa similar a Description */}
            
-              <div className="bg-yellow-500 text-black font-bold text-md  px-2 rounded-t-md absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 whitespace-nowrap text-center z-10">
+              <div className="bg-yellow-500 text-black font-bold text-sm md:text-md  px-2 rounded-t-md absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 whitespace-nowrap text-center z-10">
               Proyecto Exclusivo
               </div>
       
@@ -65,7 +66,7 @@ function Title({ precio, texto1, texto2, video, logoproyecto, brochurePdf, showB
             >
               <h1 
                 className=
-                  "text-yellow-500 text-4xl font-extrabold mb-2 tracking-wider" 
+                  "text-yellow-500 font-extrabold mb-2 tracking-wider text-2xl md:text-4xl " 
 
               >
                {precio}
@@ -74,7 +75,7 @@ function Title({ precio, texto1, texto2, video, logoproyecto, brochurePdf, showB
 
                                   <div 
                                     className=
-                                      "text-white text-md font-semibold mb-3 tracking-wider" 
+                                      "text-white text-sm font-semibold mb-3 tracking-wider md:text-md" 
                                      
                                   
                                     
@@ -86,11 +87,17 @@ function Title({ precio, texto1, texto2, video, logoproyecto, brochurePdf, showB
                                      |
                                      </span>
                                      
-                                     <span className="text-white text-2xl font-bold"> 
+                                     <span className="text-white text-xl font-bold md:text-2xl"> 
                                      {texto2}
                                      </span>
                                   </div>
 </div>
+
+
+<div>
+</div>
+
+
 </div>
 
 

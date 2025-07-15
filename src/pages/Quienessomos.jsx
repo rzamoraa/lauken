@@ -44,7 +44,7 @@ function SomosLanding() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
         {/* Simulando el letrero Costa Pullin */}
         <div className="absolute bottom-8 right-8 bg-white/10 backdrop-blur-sm text-white p-4 rounded">
-          <div className="text-2xl font-bold">SAN RAFAEL</div>
+          <div className="text-2xl font-bold">COSTA SAN RAFAEL</div>
           <div className="text-sm">Lago Rapel</div>
         </div>
       </section>
@@ -108,7 +108,7 @@ function SomosLanding() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
         {/* Simulando el letrero Costa Pullin */}
         <div className="absolute bottom-8 right-8 bg-white/10 backdrop-blur-sm text-white p-4 rounded">
-          <div className="text-2xl font-bold">COSTA PULLÍN</div>
+          <div className="text-2xl font-bold">COSTA PULÍN</div>
           <div className="text-sm">Lago Rapel</div>
         </div>
       </section>

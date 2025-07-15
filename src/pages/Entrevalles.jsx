@@ -63,7 +63,7 @@ function Entrevalles() {
         }
 
           precio="" 
-  texto1="21 parcelas con Rol Propio "
+  texto1="21 Parcelas con Rol Propio "
   texto2=" Éxito Total de Ventas "
   showBrochureButton={false}
 

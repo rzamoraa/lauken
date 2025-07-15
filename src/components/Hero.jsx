@@ -38,7 +38,7 @@ function Hero() {
       type: "video",
       src: "https://storage.googleapis.com/bucket-launken/costapulin/P%C3%A1gina%20CP%201080p.mp4",
       title: "Desde UF 2.500",
-      description: "13 parcelas con Rol Propio",
+      description: "13 Parcelas con Rol Propio",
       separador: "|",
       description2:"Ofrecemos Crédito Directo  ",
       customLogo: logopulin, // Logo por defecto, puede ser cambiado
@@ -48,7 +48,7 @@ function Hero() {
     {
       type: "video",
       src: "https://storage.googleapis.com/bucket-launken/costapulin/P%C3%A1gina%20CP%20windsurf%201080p.mp4",
-      title: "Vive tu experiencia en Lago Rapel",
+      title: "Vive tu Experiencia en Lago Rapel",
       description: "Desde UF 2.500",
       separador: "|",
       description2:"Ofrecemos Crédito Directo ",
@@ -60,7 +60,7 @@ function Hero() {
       type: "video",
       src: "https://storage.googleapis.com/bucket-launken/costapulin/P%C3%A1gina%20SR%201080p.mp4",
       title: "Proyecto Exclusivo",
-      description: "47 parcelas con Rol Propio ",
+      description: "47 Parcelas con Rol Propio ",
       separador: "|",
       description2:"Desde $40.000.000 ",
       customLogo: logosanrafael, // Logo por defecto, puede ser cambiado
@@ -71,7 +71,7 @@ function Hero() {
       type: "video",
       src: "https://storage.googleapis.com/bucket-launken/costapulin/P%C3%A1gina%20SR%20ovejas%201080%20p.mp4",
       title: "Invierte en tu futuro",
-      description: "47 parcelas con Rol Propio ",
+      description: "47 Parcelas con Rol Propio ",
       separador: "|",
       description2:"Desde $40.000.000 ",
       customLogo: logosanrafael, // Logo por defecto, puede ser cambiado
@@ -175,10 +175,7 @@ function Hero() {
       id="hero"
       className="relative min-h-[50vh] md:min-h-[70vh] flex flex-col justify-between items-center text-white overflow-hidden bg-black "
     >
-      <Helmet>
-        <title>{slide.title} | Laukén Inmobiliaria</title>
-        <meta name="description" content={slide.description} />
-      </Helmet>
+
 
       {/* Contenido de fondo según el tipo con animación - SOLO FADE */}
       <AnimatePresence initial={false} mode="wait">

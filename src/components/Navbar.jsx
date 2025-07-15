@@ -62,14 +62,7 @@ function Navbar() {
       <div className="bg-gray-700 text-white py-2">
         <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
           <div className="flex items-center space-x-6">
-            <div className="flex items-center space-x-2">
-              <Mail className="w-4 h-4" />
-              <span className="text-sm">hola@lauken.cl</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Phone className="w-4 h-4" />
-              <span className="text-sm">+56 9 9275 7772</span>
-            </div>
+
           </div>
           <div className="flex space-x-4">
             <SocialIcons />
@@ -77,23 +70,19 @@ function Navbar() {
         </div>
       </div>
 
+
+
+
+
+
+
       {/* Navbar principal */}
       <nav className="bg-white shadow-md">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-between items-center h-16">
             
             {/* Navegación izquierda - Solo los primeros 3 elementos */}
-            <div className="hidden md:flex items-center space-x-8">
-              {sections.slice(0, 3).map((section) => (
-                <button
-                  key={section.name}
-                  onClick={() => handleClick(section)}
-                  className="text-gray-700 hover:text-gray-900 font-medium border-b-2 border-transparent hover:border-gray-900 transition-all duration-200 pb-1"
-                >
-                  {section.name}
-                </button>
-              ))}
-            </div>
+
 
             {/* Logo central - Ahora después de "Vende tu campo" */}
             <div className="flex-shrink-0">
@@ -146,8 +135,8 @@ function Navbar() {
             </div>
 
             {/* Navegación derecha - Los últimos 2 elementos + búsqueda */}
-            <div className="hidden md:flex items-center space-x-8">
-              {sections.slice(3).map((section) => (
+            <div className="hidden md:flex items-center space-x-8  mx-auto">
+              {sections.slice().map((section) => (
                 <button
                   key={section.name}
                   onClick={() => handleClick(section)}
@@ -160,7 +149,7 @@ function Navbar() {
             </div>
 
             {/* Botón móvil */}
-            <div className="md:hidden">
+            <div className="md:hidden mx-5">
               <button onClick={() => setMenuOpen(!menuOpen)} className="text-gray-700">
                 {menuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
@@ -169,13 +158,13 @@ function Navbar() {
 
           {/* Menú móvil */}
           {menuOpen && (
-            <div className="md:hidden border-t border-gray-200">
-              <div className="px-2 pt-2 pb-3 space-y-1">
+            <div className="md:hidden border-t border-gray-200 mx-auto  ">
+              <div className="px-2 pt-2 pb-3 space-y-1 ">
                 {sections.map((section) => (
                   <button
                     key={section.name}
                     onClick={() => handleClick(section)}
-                    className="block w-full text-left text-gray-700 hover:text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-md font-medium"
+                    className="block w-full  text-gray-700 hover:text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-md font-medium text-center "
                   >
                     {section.name}
                   </button>

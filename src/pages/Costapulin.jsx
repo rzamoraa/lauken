@@ -73,7 +73,7 @@ function Costapulin() {
     brochurePdf="https://storage.googleapis.com/bucket-launken/costapulin/Lauken_CC3.pdf"
   showBrochureButton={true}
   precio="Desde UF 2.500" 
-  texto1="13 parcelas con Rol Propio "
+  texto1="13 Parcelas con Rol Propio "
   texto2=" Ofrecemos Crédito Directo "
 />
       <Description
