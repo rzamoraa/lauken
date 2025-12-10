@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-import { Helmet } from 'react-helmet-async';
+
 import { scroller } from 'react-scroll';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -14,6 +14,13 @@ import Nosotros from './components/Nosotros';
 import Entrevalles from './pages/Entrevalles';
 import Costapulin from './pages/Costapulin';
 import Sanrafael from './pages/Sanrafael';
+
+
+import Palmas from './pages/Palmas.jsx';
+import VallesdeRangue from './pages/Vallesderangue.jsx';
+import Brisas from './pages/Brisas.jsx';
+
+
 import CampoLanding from './pages/Tucampopage.jsx';
 import SomosLanding from './pages/Quienessomos.jsx';
 
@@ -86,6 +93,49 @@ function MainContent() {
 }
 
 // Wrappers para las páginas independientes con sus schemas específicos
+
+
+
+
+
+
+const PalmasWrapper = () => (
+  <>
+  <Navbar />
+    <Palmas />
+   
+        <Contactofooter />
+      
+  </>
+);
+
+const BrisasWrapper = () => (
+  <>
+  <Navbar />
+    <Brisas />
+   
+        <Contactofooter />
+      
+  </>
+);
+
+const VallesderangueWrapper = () => (
+  <>
+  <Navbar />
+    <VallesdeRangue />
+   
+        <Contactofooter />
+      
+  </>
+);
+
+
+
+
+
+
+
+
 const EntrevallesWrapper = () => (
   <>
   <Navbar />
@@ -111,6 +161,12 @@ const SanrafaelWrapper = () => (
     <Contactofooter />
   </>
 );
+
+
+
+
+
+
 
 const TucampopageWrapper = () => (
   <>
@@ -165,6 +221,10 @@ const ContactoWrapper = () => (
 );
 
 
+
+
+
+
 function App() {
   return (
     <HelmetProvider>
@@ -183,6 +243,13 @@ function App() {
             <Route path="/entre-valles" element={<EntrevallesWrapper />} />
             <Route path="/costa-pulin" element={<CostapulinWrapper />} />
             <Route path="/san-rafael" element={<SanrafaelWrapper />} />
+
+
+            <Route path="/bahia-las-palmas" element={<PalmasWrapper />} />
+            <Route path="/valles-de-rangue" element={<VallesderangueWrapper />} />
+            <Route path="/la-brisa" element={<BrisasWrapper />} />
+
+
             <Route path="/vende-tu-campo" element={<TucampopageWrapper />} />
             <Route path="/Quines-somos" element={<QuienesSomosWrapper />} />
             <Route path="/Proyectos-" element={<ProyectosWrapper />} />

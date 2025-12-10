@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion"; // Importamos Framer Motion
 import { Link as ScrollLink } from 'react-scroll';
 
-function Card({ titulo, descripcion, imagen, url, logo, activo , precio}) {
+function Card({ titulo, descripcion, imagen, url, logo, activo , precio, franja, pronto}) {
   const [isHovered, setIsHovered] = useState(false); // Estado para el hover
   
   return (
@@ -29,21 +29,40 @@ function Card({ titulo, descripcion, imagen, url, logo, activo , precio}) {
           <img
             src={logo}
             alt={titulo}
-            className="absolute inset-0 h-full w-full p-10"
+            className="absolute inset-0 h-56 w-auto p-10 m-auto object-contain"
           />
           
           {/* Gradiente sobre la imagen */}
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40" />
           <div className="absolute inset-0 ring-1 ring-inset ring-gray-900/10" />
+
+ {/* Marca de "verde" si no está a pronto */}
+
+              {!pronto && (
+            <div className="absolute inset-0 h-full m-auto w-full object-cover">
+              <div className="text-2xl  py-auto text-center text-slate-50/50   font-black backdrop-blur-sm my-3  bg-green-500/50">
+            {franja}
+              </div>
+            </div>
+          )}
+
+
+
           
           {/* Marca de "Vendido" si no está activo */}
           {!activo && (
             <div className="absolute inset-0 h-full m-auto w-full object-cover">
-              <div className="text-2xl  py-auto text-center text-slate-50/50   font-black backdrop-blur-sm my-3 bg-red-500/50">
-               100% VENDIDO
+              <div className="text-2xl  py-auto text-center text-slate-50/50   font-black backdrop-blur-sm my-3 bg-red-800">
+              {franja}
               </div>
             </div>
           )}
+
+
+        
+
+
+
         </div>
         
         {/* Franja blanca con los textos */}

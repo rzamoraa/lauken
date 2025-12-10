@@ -72,7 +72,7 @@ function Sanrafael() {
    brochurePdf="https://storage.googleapis.com/bucket-launken/costapulin/Lauken_CC3.pdf"
   showBrochureButton={true}
 
-  precio="Desde $40.000.000" 
+  precio="Desde $34.900.000" 
   texto1="47 Parcelas con Rol Propio "
   texto2=" ¡Agenda tu visita! "
 

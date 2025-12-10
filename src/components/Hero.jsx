@@ -37,7 +37,7 @@ function Hero() {
     {
       type: "video",
       src: "https://storage.googleapis.com/bucket-launken/costapulin/P%C3%A1gina%20CP%201080p.mp4",
-      title: "Desde UF 2.500",
+      title: "Desde UF 2.200",
       description: "13 Parcelas con Rol Propio",
       separador: "|",
       description2:"Ofrecemos Crédito Directo  ",
@@ -49,7 +49,7 @@ function Hero() {
       type: "video",
       src: "https://storage.googleapis.com/bucket-launken/costapulin/P%C3%A1gina%20CP%20windsurf%201080p.mp4",
       title: "Vive tu Experiencia en Lago Rapel",
-      description: "Desde UF 2.500",
+      description: "Desde UF 2.200",
       separador: "|",
       description2:"Ofrecemos Crédito Directo ",
       customLogo: logopulin, // Logo por defecto, puede ser cambiado
@@ -62,7 +62,7 @@ function Hero() {
       title: "Proyecto Exclusivo",
       description: "47 Parcelas con Rol Propio ",
       separador: "|",
-      description2:"Desde $40.000.000 ",
+      description2:"Desde $34.900.000 ",
       customLogo: logosanrafael, // Logo por defecto, puede ser cambiado
       cartel: "¡OPORTUNIDAD ÚNICA!",
       href: '/San-rafael',
@@ -73,7 +73,7 @@ function Hero() {
       title: "Invierte en tu futuro",
       description: "47 Parcelas con Rol Propio ",
       separador: "|",
-      description2:"Desde $40.000.000 ",
+      description2:"Desde $34.900.000 ",
       customLogo: logosanrafael, // Logo por defecto, puede ser cambiado
       cartel: "¡OPORTUNIDAD ÚNICA!",
       href: '/San-rafael',
