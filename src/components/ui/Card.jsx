@@ -2,74 +2,101 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-function Card({ titulo, descripcion, imagen, url, logo, activo , precio, franja, pronto}) {
-  const [isHovered, setIsHovered] = useState(false); // Estado para el hover
-  
-  // Si no hay URL, renderizar sin el Link
+/**
+ * Card - Tarjeta de proyecto para la página principal
+ * 
+ * @param {string} titulo - Nombre del proyecto
+ * @param {string} descripcion - Descripción breve
+ * @param {string} imagen - URL de la imagen de fondo
+ * @param {string} url - URL de destino al hacer clic
+ * @param {string} logo - Logo del proyecto
+ * @param {boolean} activo - Si el proyecto está activo (no vendido)
+ * @param {string} precio - Precio o rango de precios
+ * @param {string} franja - Texto de la franja (ej: "VENDIDO", "ÚLTIMAS UNIDADES")
+ * @param {boolean} pronto - Si el proyecto está "Próximamente"
+ */
+function Card({ titulo, descripcion, imagen, url, logo, activo = true, precio, franja, pronto }) {
+  const [isHovered, setIsHovered] = useState(false);
+
   const CardContent = (
-    <div className="relative isolate flex flex-col overflow-hidden bg-white shadow-lg">
+    <div className="relative isolate flex flex-col overflow-hidden bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
       {/* Contenedor de la imagen */}
-      <div className="relative h-64 overflow-hidden">
+      <div className="relative h-56 md:h-64 overflow-hidden">
         {/* Imagen principal con animación de zoom */}
         <motion.img
           src={imagen}
           alt={titulo}
-          className={`absolute inset-0 h-full w-full object-cover ${activo ? '' : 'saturate-0'}`}
-          animate={isHovered ? { scale: 1.1 } : { scale: 1 }}
-          transition={{ duration: 0.4 }}
+          className={`absolute inset-0 h-full w-full object-cover ${activo ? '' : 'saturate-0 brightness-75'}`}
+          animate={isHovered ? { scale: 1.08 } : { scale: 1 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
         />
-        
-        {/* Logo de la tarjeta */}
-        <img
-          src={logo}
-          alt={titulo}
-          className="absolute inset-0 h-56 w-auto p-10 m-auto object-contain"
-        />
-        
-        {/* Gradiente sobre la imagen */}
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40" />
-        <div className="absolute inset-0 ring-1 ring-inset ring-gray-900/10" />
 
-        {/* Marca de "verde" si no está a pronto */}
-        {!pronto && (
-          <div className="absolute inset-0 h-full m-auto w-full object-cover">
-            <div className="text-2xl py-auto text-center text-slate-50/50 font-black backdrop-blur-sm my-3 bg-green-500/50">
+        {/* Logo del proyecto */}
+        {logo && (
+          <img
+            src={logo}
+            alt={titulo}
+            className="absolute inset-0 h-44 md:h-52 w-auto p-8 m-auto object-contain drop-shadow-lg"
+          />
+        )}
+
+        {/* Gradiente sobre la imagen */}
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent" />
+        
+        {/* Ring decorativo */}
+        <div className="absolute inset-0 ring-1 ring-inset ring-gray-900/10 rounded-t-lg" />
+
+        {/* Franja de estado - Próximamente (amarillo/dorado) */}
+        {pronto && activo && (
+          <div className="absolute top-3 left-0 right-0 ">
+            <div className="text-sm md:text-base py-1.5 text-center text-white font-semibold backdrop-blur-sm bg-[#F0B94D]/90 rounded">
+              {franja || "PRÓXIMAMENTE"}
+            </div>
+          </div>
+        )}
+
+        {/* Franja de estado - Disponible/Últimas unidades (verde) */}
+        {!pronto && activo && franja && (
+          <div className="absolute top-3 left-0 right-0 ">
+            <div className="text-sm md:text-base py-1.5 text-center text-white font-semibold backdrop-blur-sm bg-green-500/80 ">
               {franja}
             </div>
           </div>
         )}
 
-        {/* Marca de "Vendido" si no está activo */}
+        {/* Franja de estado - Vendido (rojo) */}
         {!activo && (
-          <div className="absolute inset-0 h-full m-auto w-full object-cover">
-            <div className="text-2xl py-auto text-center text-slate-50/50 font-black backdrop-blur-sm my-3 bg-red-800">
-              {franja}
+          <div className="absolute top-3 left-0 right-0 ">
+            <div className="text-sm md:text-base py-1.5 text-center text-white font-semibold backdrop-blur-sm bg-red-700/90 ">
+              {franja || "VENDIDO"}
             </div>
           </div>
         )}
       </div>
-      
-      {/* Franja blanca con los textos */}
-      <div className="bg-white px-6 py-4">
-        <div className="text-gray-900 text-lg font-medium">
+
+      {/* Contenido inferior */}
+      <div className="bg-white px-5 py-4 md:px-6 md:py-5">
+        <h3 className="text-gray-900 text-base md:text-lg font-semibold mb-1">
           {titulo}
-        </div>
-        <span className="text-gray-500 text-sm font-light mb-1">
+        </h3>
+        <p className="text-gray-500 text-sm font-light mb-2 line-clamp-2">
           {descripcion}
-        </span>
-        <h2 className="text-yellow-500 text-lg font-black">
-          {precio}
-        </h2>
+        </p>
+        {precio && (
+          <p className="text-[#F0B94D] text-base md:text-lg font-bold">
+            {precio}
+          </p>
+        )}
       </div>
     </div>
   );
 
-  // Si hay URL, envolver en Link; si no, solo renderizar el contenido
+  // Si hay URL, envolver en Link
   if (url) {
     return (
       <Link
         to={url}
-        className="text-white hover:text-gray-300 font-light block"
+        className="block group"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
@@ -78,9 +105,10 @@ function Card({ titulo, descripcion, imagen, url, logo, activo , precio, franja,
     );
   }
 
+  // Sin URL, solo mostrar tarjeta sin link
   return (
     <div
-      className="text-white hover:text-gray-300 font-light block cursor-default"
+      className="block cursor-default"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

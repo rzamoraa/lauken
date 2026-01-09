@@ -84,7 +84,7 @@ function SellYourLandPage() {
                 onChange={handleInputChange}
                 placeholder="Nombre"
                 required
-                className="w-full py-4 px-6 bg-gray-300 text-gray-800 placeholder-gray-600 text-lg outline-none focus:bg-gray-200 transition-colors"
+                className="w-full py-4 px-6 bg-white text-gray-800 placeholder-gray-400 text-lg outline-none border border-gray-300 focus:border-[#F0B94D] focus:ring-2 focus:ring-[#F0B94D]/20 transition-all rounded-lg shadow-sm"
               />
               <input
                 type="text"
@@ -93,7 +93,7 @@ function SellYourLandPage() {
                 onChange={handleInputChange}
                 placeholder="Apellido"
                 required
-                className="w-full py-4 px-6 bg-gray-300 text-gray-800 placeholder-gray-600 text-lg outline-none focus:bg-gray-200 transition-colors"
+                className="w-full py-4 px-6 bg-white text-gray-800 placeholder-gray-400 text-lg outline-none border border-gray-300 focus:border-[#F0B94D] focus:ring-2 focus:ring-[#F0B94D]/20 transition-all rounded-lg shadow-sm"
               />
             </div>
 
@@ -105,7 +105,7 @@ function SellYourLandPage() {
                 onChange={handleInputChange}
                 placeholder="Correo"
                 required
-                className="w-full py-4 px-6 bg-gray-300 text-gray-800 placeholder-gray-600 text-lg outline-none focus:bg-gray-200 transition-colors"
+                className="w-full py-4 px-6 bg-white text-gray-800 placeholder-gray-400 text-lg outline-none border border-gray-300 focus:border-[#F0B94D] focus:ring-2 focus:ring-[#F0B94D]/20 transition-all rounded-lg shadow-sm"
               />
               <input
                 type="tel"
@@ -114,7 +114,7 @@ function SellYourLandPage() {
                 onChange={handleInputChange}
                 placeholder="Celular"
                 required
-                className="w-full py-4 px-6 bg-gray-300 text-gray-800 placeholder-gray-600 text-lg outline-none focus:bg-gray-200 transition-colors"
+                className="w-full py-4 px-6 bg-white text-gray-800 placeholder-gray-400 text-lg outline-none border border-gray-300 focus:border-[#F0B94D] focus:ring-2 focus:ring-[#F0B94D]/20 transition-all rounded-lg shadow-sm"
               />
             </div>
 
@@ -126,7 +126,7 @@ function SellYourLandPage() {
                 onChange={handleInputChange}
                 placeholder="Ubicación de campo"
                 required
-                className="w-full py-4 px-6 bg-gray-300 text-gray-800 placeholder-gray-600 text-lg outline-none focus:bg-gray-200 transition-colors"
+                className="w-full py-4 px-6 bg-white text-gray-800 placeholder-gray-400 text-lg outline-none border border-gray-300 focus:border-[#F0B94D] focus:ring-2 focus:ring-[#F0B94D]/20 transition-all rounded-lg shadow-sm"
               />
               <input
                 type="text"
@@ -135,7 +135,7 @@ function SellYourLandPage() {
                 onChange={handleInputChange}
                 placeholder="Número de hectáreas"
                 required
-                className="w-full py-4 px-6 bg-gray-300 text-gray-800 placeholder-gray-600 text-lg outline-none focus:bg-gray-200 transition-colors"
+                className="w-full py-4 px-6 bg-white text-gray-800 placeholder-gray-400 text-lg outline-none border border-gray-300 focus:border-[#F0B94D] focus:ring-2 focus:ring-[#F0B94D]/20 transition-all rounded-lg shadow-sm"
               />
             </div>
 
@@ -147,14 +147,14 @@ function SellYourLandPage() {
                 placeholder="Mensaje"
                 rows="6"
                 required
-                className="w-full py-4 px-6 bg-gray-300 text-gray-800 placeholder-gray-600 text-lg outline-none focus:bg-gray-200 transition-colors resize-none"
+                className="w-full py-4 px-6 bg-white text-gray-800 placeholder-gray-400 text-lg outline-none border border-gray-300 focus:border-[#F0B94D] focus:ring-2 focus:ring-[#F0B94D]/20 transition-all rounded-lg shadow-sm resize-none"
               ></textarea>
             </div>
 
             <button
               onClick={enviarEmail}
               disabled={cargando}
-              className="w-full py-4 px-8 bg-yellow-600 hover:bg-yellow-700 text-white text-xl font-semibold transition-colors disabled:opacity-70"
+              className="w-full py-4 px-8 bg-[#F0B94D] hover:bg-yellow-500 text-slate-800 text-xl font-semibold transition-colors disabled:opacity-70 rounded-lg"
             >
               {cargando ? 'Enviando...' : 'Enviar'}
             </button>

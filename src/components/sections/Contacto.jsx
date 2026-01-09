@@ -1,171 +1,255 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { Send, MapPin, Phone, Mail, CheckCircle, AlertCircle } from 'lucide-react';
 
+/**
+ * Contacto - Formulario de contacto principal
+ * 
+ * Características:
+ * - Formulario con validación
+ * - Integración con EmailJS
+ * - Información de contacto
+ * - Diseño responsive
+ */
 
+// Proyectos disponibles para el select
+const proyectosDisponibles = [
+  { value: 'Costa Pulín', label: 'Costa Pulín' },
+  { value: 'Costa San Rafael', label: 'Costa San Rafael' },
+];
 
+// Información de contacto
+const contactInfo = {
+  address: 'Avenida Vitacura 3092, Vitacura, Santiago',
+  phones: [
+    { number: '+56 2 2206 5654', raw: '+56222065654' },
+    { number: '+56 9 9275 7172', raw: '+56992757172' },
+  ],
+  email: 'hola@lauken.cl',
+};
 
 function Contacto() {
   const formRef = useRef();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [mensaje, setMensaje] = useState({ tipo: '', texto: '' });
-  const [proyecto, setProyecto] = useState('');
+  const [formData, setFormData] = useState({
+    user_name: '',
+    user_email: '',
+    user_phone: '',
+    proyecto: '',
+    message: '',
+  });
 
-
-
-  const enviarEmail = (e) => {
-    e.preventDefault();
-
-    emailjs.sendForm(
-      import.meta.env.VITE_EMAILJS_SERVICE_ID,
-      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-      form.current,
-      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-    )
-      .then((result) => {
-          console.log(result.text);
-          setMensaje({ tipo: 'exito', texto: '¡Mensaje enviado correctamente!' });
-          form.current.reset();
-          setProyecto('');
-      }, (error) => {
-          console.log(error.text);
-          setMensaje({ tipo: 'error', texto: 'Hubo un error al enviar el mensaje. Inténtalo de nuevo.' });
-      });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const enviarEmail = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setMensaje({ tipo: '', texto: '' });
+
+    try {
+      await emailjs.sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+      
+      setMensaje({ tipo: 'exito', texto: '¡Mensaje enviado correctamente!' });
+      setFormData({
+        user_name: '',
+        user_email: '',
+        user_phone: '',
+        proyecto: '',
+        message: '',
+      });
+    } catch (error) {
+      console.error('Error al enviar:', error);
+      setMensaje({ tipo: 'error', texto: 'Hubo un error al enviar el mensaje. Inténtalo de nuevo.' });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  // Estilos de input reutilizables
+  const inputClass = `
+    w-full rounded-lg 
+    py-3 md:py-4 px-4 
+    text-gray-800 bg-gray-50 
+    placeholder-gray-500 
+    text-base 
+    border-2 border-transparent
+    focus:outline-none focus:border-[#F0B94D] focus:bg-white
+    transition-all duration-200
+  `;
+
   return (
-    <section id="contacto" className="bg-slate-800 min-h-screen flex items-center justify-center py-8 ">
+    <section id="contacto" className="bg-slate-800 py-16 md:py-20 h-full">
+      <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+          {/* Columna izquierda: Información */}
+          <div className="text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              ¡AGENDA TU VISITA!
+            </h2>
+            <p className="text-gray-300 text-lg mb-8">
+              Escríbenos y te responderemos a la brevedad
+            </p>
 
-      <div className="w-full max-w-md mx-auto  ">
-        {/* Título */}
-        <div className="text-center mb-8">
-          <h1 className="text-4xl md:text-4xl font-bold text-white mb-2">
-            ¡AGENDA TU VISITA!
-          </h1>
-          <p className="text-gray-300 text-lg">
-            Escríbenos y te responderemos a la brevedad
-          </p>
-        </div>
+            {/* Info de contacto */}
+            <div className="space-y-4 text-gray-300">
+              <div className="flex items-start gap-3">
+                <MapPin className="w-5 h-5 mt-0.5 text-[#F0B94D] flex-shrink-0" />
+                <span>{contactInfo.address}</span>
+              </div>
 
-        {/* Formulario */}
-        <div ref={formRef} className="space-y-4">
-          <input 
-            type='text' 
-            name='user_name' 
-            placeholder='Nombre'
-            required
-            className="w-full rounded-md py-4 px-4 text-gray-800 bg-gray-200 placeholder-gray-600 text-base focus:outline-none focus:ring-2 focus:ring-[#BB8D42]" 
-          />
-          
-          <input 
-            type='email' 
-            name='user_email' 
-            placeholder='Correo'
-            required
-            className="w-full rounded-md py-4 px-4 text-gray-800 bg-gray-200 placeholder-gray-600 text-base focus:outline-none focus:ring-2 focus:ring-[#BB8D42]" 
-          />
-          
-          <input 
-            type='tel' 
-            name='user_phone' 
-            placeholder='Celular'
-            required
-            className="w-full rounded-md py-2 px-4 text-gray-800 bg-gray-200 placeholder-gray-600 text-base focus:outline-none focus:ring-2 focus:ring-[#BB8D42]" 
-          />
-          
-          <div className="relative">
-            <select
-              name='proyecto'
-              value={proyecto}
-              onChange={(e) => setProyecto(e.target.value)}
-              required
-              className="w-full rounded-md py-2 px-4 text-gray-800 bg-gray-200 text-base focus:outline-none focus:ring-2 focus:ring-[#BB8D42] appearance-none"
-            >
-              <option value="" disabled>Selecciona el proyecto</option>
-              <option value="Costa Pulín">Costa Pulín</option>
-              <option value="Costa San Rafael">Costa San Rafael</option>
-            </select>
-            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-600">
-              <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
-              </svg>
+              <div className="flex items-start gap-3">
+                <Phone className="w-5 h-5 mt-0.5 text-[#F0B94D] flex-shrink-0" />
+                <div className="flex flex-col">
+                  {contactInfo.phones.map((phone) => (
+                    <a
+                      key={phone.raw}
+                      href={`tel:${phone.raw}`}
+                      className="hover:text-white transition-colors"
+                    >
+                      {phone.number}
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <Mail className="w-5 h-5 text-[#F0B94D] flex-shrink-0" />
+                <a
+                  href={`mailto:${contactInfo.email}`}
+                  className="hover:text-white transition-colors"
+                >
+                  {contactInfo.email}
+                </a>
+              </div>
             </div>
           </div>
-         
-          <textarea 
-            name='message' 
-            placeholder='Mensaje' 
-            rows="5"
-            required
-            className="w-full rounded-md py-4 px-4 text-gray-800 bg-gray-200 placeholder-gray-600 text-base focus:outline-none focus:ring-2 focus:ring-[#BB8D42] resize-none"
-          />
-          
-          <button 
-            onClick={enviarEmail}
-            className="w-full text-white bg-[#BB8D42] hover:bg-[#a67c37] rounded-md text-lg font-semibold py-1 px-4 transition-colors duration-300"
-          >
-            Enviar
-          </button>
-        </div>
 
-        {mensaje.texto && (
-          <div className={`mt-4 text-sm text-center ${mensaje.tipo === 'exito' ? 'text-green-400' : 'text-red-400'}`}>
-            {mensaje.texto}
+          {/* Columna derecha: Formulario */}
+          <div>
+            <form ref={formRef} onSubmit={enviarEmail} className="space-y-4">
+              <input
+                type="text"
+                name="user_name"
+                value={formData.user_name}
+                onChange={handleChange}
+                placeholder="Nombre completo"
+                required
+                className={inputClass}
+              />
+
+              <input
+                type="email"
+                name="user_email"
+                value={formData.user_email}
+                onChange={handleChange}
+                placeholder="Correo electrónico"
+                required
+                className={inputClass}
+              />
+
+              <input
+                type="tel"
+                name="user_phone"
+                value={formData.user_phone}
+                onChange={handleChange}
+                placeholder="Teléfono"
+                required
+                className={inputClass}
+              />
+
+              <div className="relative">
+                <select
+                  name="proyecto"
+                  value={formData.proyecto}
+                  onChange={handleChange}
+                  required
+                  className={`${inputClass} appearance-none cursor-pointer`}
+                >
+                  <option value="" disabled>Selecciona el proyecto</option>
+                  {proyectosDisponibles.map((proyecto) => (
+                    <option key={proyecto.value} value={proyecto.value}>
+                      {proyecto.label}
+                    </option>
+                  ))}
+                </select>
+                <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+              </div>
+
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Tu mensaje"
+                rows="4"
+                required
+                className={`${inputClass} resize-none`}
+              />
+
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className={`
+                  w-full 
+                  flex items-center justify-center gap-2
+                  bg-[#F0B94D] hover:bg-[#E0A93D] 
+                  text-white font-semibold 
+                  py-4 px-6 
+                  rounded-lg 
+                  transition-all duration-300
+                  ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:scale-[1.02]'}
+                `}
+              >
+                {isSubmitting ? (
+                  <>
+                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                    Enviando...
+                  </>
+                ) : (
+                  <>
+                    <Send className="w-5 h-5" />
+                    Enviar mensaje
+                  </>
+                )}
+              </button>
+            </form>
+
+            {/* Mensaje de estado */}
+            {mensaje.texto && (
+              <div
+                className={`
+                  mt-4 p-4 rounded-lg flex items-center gap-2
+                  ${mensaje.tipo === 'exito' 
+                    ? 'bg-green-500/20 text-green-400' 
+                    : 'bg-red-500/20 text-red-400'
+                  }
+                `}
+              >
+                {mensaje.tipo === 'exito' ? (
+                  <CheckCircle className="w-5 h-5" />
+                ) : (
+                  <AlertCircle className="w-5 h-5" />
+                )}
+                {mensaje.texto}
+              </div>
+            )}
           </div>
-        )}
-
-        {/* Logos y información de contacto */}
-
-
-
-
-        <div className="mt-12 text-center ">
-         
-          <div className="flex items-center justify-center space-x-2 p-2 mb-8 ">
-
-
-
-
-
-         
-
-
-
-
-            
-          </div>
-
-<div className="space-y-3 text-gray-300 text-sm">
-  {/* Dirección (no clickeable) */}
-  <div className="flex items-center justify-center">
-    <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-      <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-    </svg>
-    <span>Avenida Vitacura 3092, Vitacura, Santiago</span>
-  </div>
-
-  {/* Teléfonos */}
-  <div className="flex items-center justify-center">
-    <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-    </svg>
-    <div className="flex flex-col">
-      <a href="tel:+56222065654" className="hover:underline">+56 2 2206 5654</a>
-      <a href="tel:+56992757172" className="hover:underline">+56 9 9275 7172</a>
-    </div>
-  </div>
-
-  {/* Correo */}
-  <div className="flex items-center justify-center">
-    <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-      <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-      <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-    </svg>
-    <a href="mailto:hola@lauken.cl" className="hover:underline">hola@lauken.cl</a>
-  </div>
-</div>
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 export default Contacto;
