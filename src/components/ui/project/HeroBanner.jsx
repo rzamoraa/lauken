@@ -19,7 +19,7 @@ function HeroBanner({
   return (
     <section
       id="hero"
-      className="relative min-h-[85vh] md:min-h-[90vh] flex items-center justify-center text-white overflow-hidden bg-slate-800"
+      className="relative min-h-[85vh] md:min-h-[90vh] flex items-end justify-center pb-12 md:pb-16 text-white overflow-hidden bg-slate-800"
     >
       {/* Video de fondo */}
       {video && (
