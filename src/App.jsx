@@ -3,28 +3,37 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { HelmetProvider } from 'react-helmet-async';
 
 import { scroller } from 'react-scroll';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Proyectos from './components/Proyectos';
-import Contacto from './components/Contacto';
-import Contactofooter from './components/Contactofooter.jsx';
-import Footer from './components/Footer';
-import Nosotros from './components/Nosotros';
+import Navbar from './components/layout/Navbar';
+import Hero from './components/sections/Hero';
+import Proyectos from './components/sections/Proyectos';
+import Contacto from './components/sections/Contacto';
+import Contactofooter from './components/sections/Contactofooter';
+import Footer from './components/layout/Footer';
+import Nosotros from './components/sections/Nosotros';
 
-import Entrevalles from './pages/Entrevalles';
-import Costapulin from './pages/Costapulin';
-import Sanrafael from './pages/Sanrafael';
+// Componente genérico de proyecto
+import ProjectPage from './pages/projects/ProjectPage';
 
+// Páginas estáticas
+import CampoLanding from './pages/static/SellYourLandPage';
+import SomosLanding from './pages/static/CompanyPage';
 
-import Palmas from './pages/Palmas.jsx';
-import VallesdeRangue from './pages/Vallesderangue.jsx';
-import Brisas from './pages/Brisas.jsx';
+import Layout from './components/layout/Layout';
 
-
-import CampoLanding from './pages/Tucampopage.jsx';
-import SomosLanding from './pages/Quienessomos.jsx';
-
-import Layout from './components/Layout';
+// Wrapper genérico para páginas de proyecto
+const PageWrapper = ({ children, showContacto = false, showHero = false, contactoPadding = false }) => (
+  <>
+    <Navbar />
+    {showHero && <Hero />}
+    {children}
+    {showContacto && (
+      <div id="contacto" className={contactoPadding ? 'py-24' : ''}>
+        <Contacto />
+      </div>
+    )}
+    <Contactofooter />
+  </>
+);
 
 // Componente MainContent que maneja el scroll y contiene el Schema principal
 function MainContent() {
@@ -64,199 +73,49 @@ function MainContent() {
 
   return (
     <>
-    
       <Navbar />
       <div id="inicio">
         <Hero />
       </div>
-
-    
-      
-
-
       <div id="proyectos">
         <Proyectos />
       </div>
-        
       <div id="nosotros">
         <Nosotros />
       </div>
-
       <div id="contacto">
         <Contacto />
       </div>
-      <div >
-        <Contactofooter />
-      </div>
+      <Contactofooter />
     </>
   );
 }
-
-// Wrappers para las páginas independientes con sus schemas específicos
-
-
-
-
-
-
-const PalmasWrapper = () => (
-  <>
-  <Navbar />
-    <Palmas />
-   
-        <Contactofooter />
-      
-  </>
-);
-
-const BrisasWrapper = () => (
-  <>
-  <Navbar />
-    <Brisas />
-   
-        <Contactofooter />
-      
-  </>
-);
-
-const VallesderangueWrapper = () => (
-  <>
-  <Navbar />
-    <VallesdeRangue />
-   
-        <Contactofooter />
-      
-  </>
-);
-
-
-
-
-
-
-
-
-const EntrevallesWrapper = () => (
-  <>
-  <Navbar />
-    <Entrevalles />
-   
-        <Contactofooter />
-      
-  </>
-);
-
-const CostapulinWrapper = () => (
-  <>
- <Navbar />
-    <Costapulin />
-    <Contactofooter />
-  </>
-);
-
-const SanrafaelWrapper = () => (
-  <>
-  <Navbar />
-    <Sanrafael />
-    <Contactofooter />
-  </>
-);
-
-
-
-
-
-
-
-const TucampopageWrapper = () => (
-  <>
-<Navbar />
-    <CampoLanding />
-    <div id="contacto">
-       
-      </div>
-    <Contactofooter />
-
-  </>
-);
-
-
-const QuienesSomosWrapper = () => (
-  <>
-<Navbar />
-    <SomosLanding />
-    <div id="contacto">
-        <Contacto />
-      </div>
-    <Contactofooter />
-
-  </>
-);
-
-const ProyectosWrapper = () => (
-  <>
-<Navbar />
- <Hero />
-   <Proyectos />
-    <div id="contacto">
-        <Contacto />
-      </div>
-    <Contactofooter />
-
-  </>
-);
-
-
-
-const ContactoWrapper = () => (
-  <>
-<Navbar />
-
-    <div id="contacto" className='py-24'>
-        <Contacto />
-      </div>
-    <Contactofooter />
-
-  </>
-);
-
-
-
-
-
 
 function App() {
   return (
     <HelmetProvider>
       <Router>
-      <Layout>  {/* Añadir este wrapper */}
-        <div className='w-screen bg-white'>
-          <Routes>
-            {/* Rutas que comparten el contenido principal */}
-            <Route path="/" element={<MainContent />} />
-            <Route path="/nosotros" element={<MainContent />} />
-            <Route path="/proyectos" element={<MainContent />} />
-            <Route path="/vendenos" element={<MainContent />} />
-            <Route path="/contacto" element={<MainContent />} />
-            
-            {/* Rutas de páginas independientes con sus schemas */}
-            <Route path="/entre-valles" element={<EntrevallesWrapper />} />
-            <Route path="/costa-pulin" element={<CostapulinWrapper />} />
-            <Route path="/san-rafael" element={<SanrafaelWrapper />} />
+        <Layout>
+          <div className='w-screen bg-white'>
+            <Routes>
+              {/* Rutas que comparten el contenido principal */}
+              <Route path="/" element={<MainContent />} />
+              <Route path="/nosotros" element={<MainContent />} />
+              <Route path="/proyectos" element={<MainContent />} />
+              <Route path="/vendenos" element={<MainContent />} />
+              <Route path="/contacto" element={<MainContent />} />
+              
+              {/* Ruta dinámica para todos los proyectos */}
+              <Route path="/:projectId" element={<PageWrapper><ProjectPage /></PageWrapper>} />
 
-
-            <Route path="/bahia-las-palmas" element={<PalmasWrapper />} />
-            <Route path="/valles-de-rangue" element={<VallesderangueWrapper />} />
-            <Route path="/la-brisa" element={<BrisasWrapper />} />
-
-
-            <Route path="/vende-tu-campo" element={<TucampopageWrapper />} />
-            <Route path="/Quines-somos" element={<QuienesSomosWrapper />} />
-            <Route path="/Proyectos-" element={<ProyectosWrapper />} />
-            <Route path="/Contacto-" element={<ContactoWrapper />} />
-          </Routes>
-          <Footer />
-        </div>
+              {/* Rutas de páginas estáticas */}
+              <Route path="/vende-tu-campo" element={<PageWrapper><CampoLanding /></PageWrapper>} />
+              <Route path="/quienes-somos" element={<PageWrapper showContacto><SomosLanding /></PageWrapper>} />
+              <Route path="/ver-proyectos" element={<PageWrapper showHero showContacto><Proyectos /></PageWrapper>} />
+              <Route path="/formulario-contacto" element={<PageWrapper showContacto contactoPadding />} />
+            </Routes>
+            <Footer />
+          </div>
         </Layout>
       </Router>
     </HelmetProvider>
