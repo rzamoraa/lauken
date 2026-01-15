@@ -20,10 +20,10 @@ import bahiaLasPalmas from './bahia-las-palmas';
 const projects = [
   costaPulin,
   costaSanRafael,
-  entreValles,
+  bahiaLasPalmas,
   laBrisa,
   vallesDeRangue,
-  bahiaLasPalmas,
+  entreValles,
 ];
 
 // Exportar el array completo
