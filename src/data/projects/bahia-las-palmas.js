@@ -1,7 +1,7 @@
 import { MapPin, FileText, Anchor, Lock, Route, Droplets, ShoppingCart, Plane, Clock, Timer,Ship,Sailboat   } from 'lucide-react';
 
 // Bahía Las Palmas - Configuración del proyecto
-import logo from '../../assets/projects/palmas/Logo pag web LP .png';
+import logo from '../../assets/projects/palmas/Logo pag web LP1.png';
 import bgCard from '../../assets/projects/palmas/bg-bahialaspalmas.jpg'; 
 import g1 from '../../assets/projects/palmas/galeria/foto1.jpg';
 import g2 from '../../assets/projects/palmas/galeria/foto2.jpg';
@@ -12,10 +12,10 @@ import g6 from '../../assets/projects/palmas/galeria/foto6.jpg';
 import g7 from '../../assets/projects/palmas/galeria/foto7.jpg';
 import g8 from '../../assets/projects/palmas/galeria/foto8.jpg';
 import g9 from '../../assets/projects/palmas/galeria/foto9.jpg';
-import atributosImg from '../../assets/projects/palmas/galeria/foto6.jpg'; // '../../assets/projects/palmas/atributosLP.png';
+import atributosImg from '../../assets/projects/palmas/galeria/foto6.jpg'; 
 import mocap from '../../assets/projects/palmas/mockupLP.png';
 import fondo from '../../assets/projects/palmas/bgmocap.jpg';
-import videoBanner from '../../assets/projects/palmas/galeria/videobanner.mp4';
+
 
 
 const bahiaLasPalmas = {
@@ -36,11 +36,11 @@ const bahiaLasPalmas = {
   page: {
     title: {
       logo: logo,
-      video: videoBanner, 
-      brochurePdf: 'https://storage.googleapis.com/bucket-launken/costapulin/Lauken_CC3.pdf',
+      video: 'https://storage.googleapis.com/bucket-launken-web/las-palmas/videobanner.mp4', 
+      brochurePdf: 'https://storage.googleapis.com/bucket-launken-web/las-palmas/Brochure.pdf',
       showBrochureButton: true,
       precio: 'Parcelas a 49.900.000',
-      texto1: '79 parcelas con rol propio a orillas de Lago Rapel',
+      texto1: '79 sitios urbanizados con acceso a lago rapel',
       texto2: '',
     },
     
@@ -58,7 +58,7 @@ const bahiaLasPalmas = {
     
     atributos: {
       tipo: 'icons',
-      texto: 'Proyecto exclusivo condominio de 79 sitios desde 1.500 m² a orillas del Lago Rapel, con acceso a marina privada. Un entorno único, urbanizado y con agua y luz subterránea, pensado para disfrutar la vida frente al lago, conectar con la naturaleza y asegurar una inversión de alto potencial. Vive tranquilidad, paisaje y experiencias inolvidables en Rapel.',
+      texto: 'Exclusivo condominio de 79 sitios desde 1.500 m² a orillas del Lago Rapel, con acceso a marina privada. Un entorno único, urbanizado y con agua y luz subterránea, pensado para disfrutar la vida frente al lago, conectar con la naturaleza y asegurar una inversión de alto potencial. Vive tranquilidad, paisaje y experiencias inolvidables en Rapel.',
       image: atributosImg,
       items: [
         { icon: MapPin, titulo: '79 sitios urbanizados', valor: 'desde 1.500 mts2' },
@@ -80,7 +80,7 @@ const bahiaLasPalmas = {
       enabled: true,
       mocap: mocap,
       fondo: fondo,
-      link: 'https://storage.googleapis.com/bucket-launken/brochure/BrochureSR.pdf',
+      link: 'https://storage.googleapis.com/bucket-launken-web/las-palmas/Brochure.pdf',
     },
     
     mapa: {
