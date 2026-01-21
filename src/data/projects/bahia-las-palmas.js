@@ -1,7 +1,8 @@
 import { MapPin, FileText, Anchor, Lock, Route, Droplets, ShoppingCart, Plane, Clock, Timer,Ship,Sailboat   } from 'lucide-react';
 
 // Bahía Las Palmas - Configuración del proyecto
-import logo from '../../assets/projects/palmas/Logo pag web LP1.png';
+import logo from '../../assets/projects/palmas/Logo pag web LP .png';
+import logocard from '../../assets/projects/palmas/Logo pag web LP1.png';
 import bgCard from '../../assets/projects/palmas/bg-bahialaspalmas.jpg'; 
 import g1 from '../../assets/projects/palmas/galeria/foto1.jpg';
 import g2 from '../../assets/projects/palmas/galeria/foto2.jpg';
@@ -26,7 +27,7 @@ const bahiaLasPalmas = {
     descripcion: 'Lago Rapel',
     imagen: bgCard,
     logo: logo,
-    precio: 'Desde $49.900.000',
+    precio: 'Desde UF 1.250',
     activo: true,
     pronto: false,
     vendido: false,
@@ -37,10 +38,10 @@ const bahiaLasPalmas = {
     title: {
       logo: logo,
       video: 'https://storage.googleapis.com/bucket-launken-web/las-palmas/videobanner.mp4', 
-      brochurePdf: 'https://storage.googleapis.com/bucket-launken-web/las-palmas/Brochure.pdf',
+      brochurePdf: 'https://storage.googleapis.com/bucket-launken-web/las-palmas/Brochure.pdf', 
       showBrochureButton: true,
-      precio: 'Parcelas a 49.900.000',
-      texto1: '79 sitios urbanizados con acceso a lago rapel',
+      precio: 'Sitios desde UF 1.250',
+      texto1: 'Condominio de 79 sitios urbanizados con acceso a Lago Rapel',
       texto2: '',
     },
     
@@ -48,7 +49,7 @@ const bahiaLasPalmas = {
       nombre: 'BAHÍA LAS PALMAS',
       bajada: 'LAGO RAPEL',
       precio: 'DESDE UF 2200',
-      logo: logo,
+      logo: logocard,
     },
     
     webPreview: {
@@ -85,8 +86,8 @@ const bahiaLasPalmas = {
     
     mapa: {
       enabled: true,
-      lat: -34.187536,
-      lng: -71.490558,
+        lat: -34.207007333422425,
+        lng: -71.44824885767264,
     },
     
     showVendido: false,

@@ -74,6 +74,7 @@ const WebPreview = ({ url, title = "TOUR 360°" }) => {
               sandbox="allow-scripts allow-same-origin"
               title="Tour virtual 360°"
             />
+
           )}
         </div>
       </div>
