@@ -155,7 +155,6 @@ function Hero() {
         >
           {slide.type === "video" ? (
             <video
-              //className="absolute inset-0 w-full h-full object-contain md:object-cover" //para moviles
               className="absolute inset-0 w-full h-full object-cover" // ocupa toda la pantalla
               src={slide.src}
               autoPlay
@@ -176,24 +175,24 @@ function Hero() {
         </motion.div>
       </AnimatePresence>
 
-      {/* Logo del proyecto */}
-      <AnimatePresence initial={false} mode="wait">
-        <motion.div
-          className="z-10 flex flex-grow pt-36"
-          variants={itemVariants}
-          initial="hidden"
-          animate="visible"
-        >
-      
-         { <img 
-            src={slide.customLogo}
-            alt="Logo del proyecto" 
-             className="w-48 md:w-64 h-auto" 
-            //className="w-48 md:w-64 h-auto" 
-          /> }
+     {/* Logo del proyecto */}
+<AnimatePresence initial={false} mode="wait">
+  <motion.div
+    className="z-10 flex flex-grow pt-36"
+    variants={itemVariants}
+    initial="hidden"
+    animate="visible"
+  >
+    <div className={slide.customLogo === logolaspalmas ? "-translate-y-6" : ""}>
+      <img
+        src={slide.customLogo}
+        alt="Logo del proyecto"
+        className="w-48 md:w-64 h-auto"
+      />
+    </div>
+  </motion.div>
+</AnimatePresence>
 
-        </motion.div>
-      </AnimatePresence>
 
       {/* Espacio flexible */}
       <div className="flex-grow" />
