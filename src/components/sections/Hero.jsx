@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 // Logos de proyectos
 import logopulin from "../../assets/icons/logopulin.svg";
 import logosanrafael from "../../assets/icons/logosanrafel.svg";
+import logolaspalmas from "../../assets/icons/logolaspalmas.svg";
 
 /**
  * Hero - Componente de slider principal
@@ -19,6 +20,17 @@ const AUTOPLAY_INTERVAL = 18000;
 
 // Configuración de los slides
 const SLIDES = [
+/*banner las palmas */
+    {
+    type: "video",
+    src: "https://storage.googleapis.com/bucket-launken-web/las-palmas/banner-laspalmas.mp4",
+    title: "Sitios desde UF 1.250",
+    description: "Condominio de 79 sitios urbanizados con acceso a Lago Rapel",
+    //description2: "Ofrecemos Crédito Directo",
+    customLogo: logolaspalmas,
+    //badge: "Proyecto Exclusivo",
+    href: '/bahia-las-palmas',
+  },
   {
     type: "video",
     src: "https://storage.googleapis.com/bucket-launken/costapulin/P%C3%A1gina%20CP%201080p.mp4",
@@ -141,9 +153,10 @@ function Hero() {
           transition={{ opacity: { duration: 0.8 } }}
           className="absolute inset-0"
         >
-          {slide.type === "video" ? (
+         {/* {slide.type === "video" ? (
             <video
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute inset-0 w-full h-full object-contain md:object-cover" //para moviles
+              //className="absolute inset-0 w-full h-full object-cover" // ocupa toda la pantalla
               src={slide.src}
               autoPlay
               loop
@@ -156,7 +169,38 @@ function Hero() {
               src={slide.src}
               alt={slide.title}
             />
-          )}
+          )}*/}
+
+          {slide.type === "video" ? (
+  <div className="absolute inset-0">
+    {/* Fondo blur SOLO móvil */}
+    <video
+      className="absolute inset-0 w-full h-full object-cover blur-xl scale-110 opacity-60 md:hidden"
+      src={slide.src}
+      autoPlay
+      loop
+      muted
+      playsInline
+    />
+
+    {/* Video principal (igual que proyectos) */}
+    <video
+      className="absolute inset-0 w-full h-full object-contain md:object-cover"
+      src={slide.src}
+      autoPlay
+      loop
+      muted
+      playsInline
+    />
+  </div>
+) : (
+  <img
+    className="absolute inset-0 w-full h-full object-cover"
+    src={slide.src}
+    alt={slide.title}
+  />
+)}
+
           
           {/* Overlay con gradiente */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/50 to-black/80" />
@@ -171,11 +215,24 @@ function Hero() {
           initial="hidden"
           animate="visible"
         >
-          <img 
+      
+         {/* <img 
             src={slide.customLogo}
             alt="Logo del proyecto" 
-            className="w-48 md:w-64 h-auto"
-          />
+            className="h-auto w-44 sm:w-52 md:w-64 max-h-[22vh] object-contain"
+            //className="w-48 md:w-64 h-auto" 
+          /> */}
+
+          <img
+  src={slide.customLogo}
+  alt="Logo del proyecto"
+  className={`h-auto object-contain ${
+    slide.customLogo === logolaspalmas
+      ? "w-28 sm:w-32 md:w-64"  // solo moviles
+      : "w-48 md:w-64"          // mantenemos el responsive de escritorio
+  }`}
+/>
+
         </motion.div>
       </AnimatePresence>
 
@@ -226,8 +283,14 @@ function Hero() {
             variants={itemVariants}
           >
             {slide.description}
-            <span className="text-yellow-500"> | </span>
-            <span className="text-white text-2xl font-bold">{slide.description2}</span>
+
+          {slide.description2 && (
+  <>
+    <span className="text-yellow-500"> | </span>
+    <span className="text-white text-2xl font-bold">{slide.description2}</span> {/*test */}
+  </>
+)}
+ 
           </motion.p>
 
           {/* Botón CTA */}
