@@ -1,6 +1,6 @@
 // La Brisa - Configuración del proyecto
 import logo from '../../assets/projects/brisas/logo pag web LB.png';
-import bgCard from '../../assets/projects/san-rafael/bg-sanrafael.png'; // Usa la misma imagen por ahora
+import bgCard from '../../assets/projects/brisas/galeria/Portada La Brisa.jpg'; // Usa la misma imagen por ahora
 import g1 from '../../assets/projects/brisas/galeria/1.jpg';
 import g2 from '../../assets/projects/brisas/galeria/2.jpg';
 import g3 from '../../assets/projects/brisas/galeria/3.jpg';

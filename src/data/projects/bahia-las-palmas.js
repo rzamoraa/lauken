@@ -37,7 +37,7 @@ const bahiaLasPalmas = {
   page: {
     title: {
       logo: logo,
-      video: 'https://storage.googleapis.com/bucket-launken-web/las-palmas/videobanner.mp4', 
+      video: 'https://storage.googleapis.com/bucket-launken-web/las-palmas/banner-laspalmas.mp4', 
       brochurePdf: 'https://storage.googleapis.com/bucket-launken-web/las-palmas/Brochure.pdf', 
       showBrochureButton: true,
       precio: 'Sitios desde UF 1.250',
@@ -69,7 +69,7 @@ const bahiaLasPalmas = {
         { icon: Route, titulo: 'Caminos', valor: 'Estabilizados' },
         { icon: Droplets, titulo: 'Agua y Luz', valor: 'subterránea' },
         { icon: ShoppingCart, titulo: 'Supermercados', valor: 'en la zona' },
-        { icon: Clock, titulo: 'Santiago', valor: 'a 2.30 horas' },
+        { icon: Clock, titulo: 'Santiago', valor: 'a 2 horas' },
         { icon: Ship , titulo: 'Acceso', valor: 'a Lago Rapel' }, 
         { icon: Timer, titulo: 'Santa Cruz:', valor: 'a 1.20 horas' },
       ],

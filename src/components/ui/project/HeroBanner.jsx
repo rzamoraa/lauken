@@ -24,7 +24,8 @@ function HeroBanner({
       {/* Video de fondo */}
       {video && (
         <video
-          className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-contain md:object-cover"
+          //className="absolute inset-0 w-full h-full object-cover"
           src={video}
           autoPlay
           loop

@@ -1,6 +1,6 @@
 // Valles de Rangue - Configuración del proyecto
 import logo from '../../assets/projects/valles-rangue/logo pag web LR.png';
-import bgCard from '../../assets/projects/san-rafael/bg-sanrafael.png'; // Usa la misma imagen por ahora
+import bgCard from '../../assets/projects/valles-rangue/galeria/portada Valles de Rangue.jpg'; // Usa la misma imagen por ahora //bgcard --> carta proyecto
 import g1 from '../../assets/projects/valles-rangue/galeria/1.jpg';
 import g2 from '../../assets/projects/valles-rangue/galeria/2.jpg';
 import g3 from '../../assets/projects/valles-rangue/galeria/3.jpg';
