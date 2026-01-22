@@ -153,10 +153,10 @@ function Hero() {
           transition={{ opacity: { duration: 0.8 } }}
           className="absolute inset-0"
         >
-         {/* {slide.type === "video" ? (
+          {slide.type === "video" ? (
             <video
-              className="absolute inset-0 w-full h-full object-contain md:object-cover" //para moviles
-              //className="absolute inset-0 w-full h-full object-cover" // ocupa toda la pantalla
+              //className="absolute inset-0 w-full h-full object-contain md:object-cover" //para moviles
+              className="absolute inset-0 w-full h-full object-cover" // ocupa toda la pantalla
               src={slide.src}
               autoPlay
               loop
@@ -169,41 +169,10 @@ function Hero() {
               src={slide.src}
               alt={slide.title}
             />
-          )}*/}
-
-          {slide.type === "video" ? (
-  <div className="absolute inset-0">
-    {/* Fondo blur SOLO móvil */}
-    <video
-      className="absolute inset-0 w-full h-full object-cover blur-xl scale-110 opacity-60 md:hidden"
-      src={slide.src}
-      autoPlay
-      loop
-      muted
-      playsInline
-    />
-
-    {/* Video principal (igual que proyectos) */}
-    <video
-      className="absolute inset-0 w-full h-full object-contain md:object-cover"
-      src={slide.src}
-      autoPlay
-      loop
-      muted
-      playsInline
-    />
-  </div>
-) : (
-  <img
-    className="absolute inset-0 w-full h-full object-cover"
-    src={slide.src}
-    alt={slide.title}
-  />
-)}
-
+          )}
           
           {/* Overlay con gradiente */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/50 to-black/80" />
+          //<div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/50 to-black/80" />
         </motion.div>
       </AnimatePresence>
 
@@ -216,22 +185,12 @@ function Hero() {
           animate="visible"
         >
       
-         {/* <img 
+         { <img 
             src={slide.customLogo}
             alt="Logo del proyecto" 
-            className="h-auto w-44 sm:w-52 md:w-64 max-h-[22vh] object-contain"
+             className="w-48 md:w-64 h-auto" 
             //className="w-48 md:w-64 h-auto" 
-          /> */}
-
-          <img
-  src={slide.customLogo}
-  alt="Logo del proyecto"
-  className={`h-auto object-contain ${
-    slide.customLogo === logolaspalmas
-      ? "w-28 sm:w-32 md:w-64"  // solo moviles
-      : "w-48 md:w-64"          // mantenemos el responsive de escritorio
-  }`}
-/>
+          /> }
 
         </motion.div>
       </AnimatePresence>
