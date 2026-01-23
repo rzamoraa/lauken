@@ -30,6 +30,8 @@ const SLIDES = [
     customLogo: logolaspalmas,
     //badge: "Proyecto Exclusivo",
     href: '/bahia-las-palmas',
+    ribbon: "Nuevo Proyecto",  
+     ribbonTone: "yellow",
   },
   {
     type: "video",
@@ -40,6 +42,8 @@ const SLIDES = [
     customLogo: logopulin,
     badge: "Proyecto Exclusivo",
     href: '/costa-pulin',
+    ribbon: "Últimas unidades",  
+     ribbonTone: "blue",
   },
   {
     type: "video",
@@ -50,6 +54,8 @@ const SLIDES = [
     customLogo: logopulin,
     badge: "¡OPORTUNIDAD ÚNICA!",
     href: '/costa-pulin',
+    ribbon: "Últimas unidades",  
+     ribbonTone: "blue",
   },
   {
     type: "video",
@@ -60,6 +66,8 @@ const SLIDES = [
     customLogo: logosanrafael,
     badge: "¡OPORTUNIDAD ÚNICA!",
     href: '/San-rafael',
+    ribbon: "Últimas unidades",  
+     ribbonTone: "blue",
   },
   {
     type: "video",
@@ -70,6 +78,8 @@ const SLIDES = [
     customLogo: logosanrafael,
     badge: "¡OPORTUNIDAD ÚNICA!",
     href: '/San-rafael',
+    ribbon: "Últimas unidades",  
+     ribbonTone: "blue",
   }
 ];
 
@@ -115,6 +125,12 @@ function Hero() {
 
   const slide = SLIDES[currentSlide];
 
+  const ribbonToneClass =
+  slide.ribbonTone === "yellow"
+    ? "bg-[#FDBD59]/90 text-white"
+    : "bg-blue-900/90 text-white";
+
+
   // Navegación del slider
   const prevSlide = useCallback(() => {
     setDirection(-1);
@@ -140,7 +156,7 @@ function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[50vh] md:min-h-[70vh] flex flex-col justify-between items-center text-white overflow-hidden bg-black"
+      className="relative isolate min-h-[50vh] md:min-h-[70vh] flex flex-col justify-between items-center text-white overflow-hidden bg-black"
     >
       {/* Fondo con video/imagen */}
       <AnimatePresence initial={false} mode="wait">
@@ -171,9 +187,67 @@ function Hero() {
           )}
           
           {/* Overlay con gradiente */}
-          //<div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/50 to-black/80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/50 to-black/80" />
+
+{slide.ribbon && (
+  <div
+    className="
+      absolute right-0 z-[10] overflow-hidden pointer-events-none
+      + top-[clamp(70px,12vw,220px)] md:top-24
+      w-[clamp(260px,38vw,460px)] h-[clamp(260px,38vw,460px)]
+      md:w-[clamp(520px,60vw,1200px)] md:h-[clamp(520px,60vw,1200px)]
+    "
+  >
+   <div
+  className={`
+    absolute rotate-[40deg]
+    ${ribbonToneClass}
+    font-semibold tracking-widest uppercase shadow-lg text-center whitespace-nowrap
+    w-[clamp(260px,70vw,520px)] md:w-[clamp(420px,90vw,820px)]
+    py-[clamp(6px,1vw,10px)] md:py-[clamp(8px,1.2vw,16px)]
+    text-[clamp(10px,2.2vw,14px)] md:text-[clamp(12px,2.6vw,20px)]
+    top-[clamp(70px,9vw,140px)]
+    right-[clamp(-120px,-18vw,-70px)] md:right-[clamp(-170px,-22vw,-100px)]
+  `}
+>
+
+      {slide.ribbon}
+    </div>
+  </div>
+)}
+
+
+
+          
         </motion.div>
       </AnimatePresence>
+          {/* Cinta diagonal (recortada en la esquina) 
+{slide.ribbon && (
+  <div
+    className="
+      absolute top-0 right-0 z-[80] overflow-hidden pointer-events-none
+      w-[clamp(220px,32vw,420px)] h-[clamp(220px,32vw,420px)]
+      md:top-24 md:w-[clamp(520px,60vw,1200px)] md:h-[clamp(520px,60vw,1200px)]
+    "
+  >
+    <div
+      className="
+        absolute rotate-[40deg]
+        bg-blue-900/90 text-white font-semibold tracking-widest uppercase shadow-lg text-center
+        w-[clamp(420px,90vw,820px)]
+        py-[clamp(8px,1.2vw,16px)]
+        text-[clamp(12px,2.6vw,20px)]
+        top-[clamp(70px,9vw,140px)]
+        right-[clamp(-170px,-22vw,-100px)]
+      "
+    >
+      {slide.ribbon}
+    </div>
+  </div>
+)}
+*/}
+
+
 
      {/* Logo del proyecto */}
 <AnimatePresence initial={false} mode="wait">
