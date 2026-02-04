@@ -24,7 +24,7 @@ const SLIDES = [
     {
     type: "video",
     src: "https://storage.googleapis.com/bucket-launken-web/las-palmas/banner-laspalmas.mp4",
-    title: "Sitios desde UF 1.250",
+    title: "Sitios desde UF 1.500",
     description: "Condominio de 79 sitios urbanizados con acceso a Lago Rapel",
     //description2: "Ofrecemos Crédito Directo",
     customLogo: logolaspalmas,
