@@ -77,6 +77,25 @@ const WebPreview = ({ url, title = "TOUR 360°" }) => {
 
           )}
         </div>
+         <div className="mt-16 flex justify-center">
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="
+  inline-flex items-center justify-center gap-2
+  bg-[#F0B94D] hover:bg-[#d9a33f]
+  text-slate-900 font-semibold
+  text-base md:text-lg
+  px-10 py-5 rounded-xl
+  transition-colors duration-300
+  shadow
+"
+
+    >
+      Abrir tour 360
+    </a>
+  </div>
       </div>
     </section>
   );
