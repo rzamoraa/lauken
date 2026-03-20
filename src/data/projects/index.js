@@ -18,10 +18,10 @@ import bahiaLasPalmas from './bahia-las-palmas';
 
 // Array de todos los proyectos - El orden aquí determina el orden de las cards
 const projects = [
-  costaPulin,
-  costaSanRafael,
   bahiaLasPalmas,
   vallesDeRangue,
+  costaSanRafael,
+  costaPulin,
   laBrisa,
   entreValles,
 ];
@@ -45,10 +45,10 @@ export const getProjectCards = () => {
 
 // Exportar proyectos individuales por si se necesitan
 export {
+  bahiaLasPalmas,
   costaPulin,
   costaSanRafael,
   entreValles,
   laBrisa,
-  vallesDeRangue,
-  bahiaLasPalmas,
+  vallesDeRangue
 };
