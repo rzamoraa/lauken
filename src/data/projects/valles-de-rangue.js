@@ -22,11 +22,11 @@ const vallesDeRangue = {
     descripcion: 'Laguna de Aculeo',
     imagen: bgCard,
     logo: logo,
-    precio: 'Próximamente',
+    precio: 'Desde UF 1.500',
     activo: true,
-    pronto: true,
+    pronto: false,
     vendido: false,
-    franja: 'Próximamente',
+    franja: '',
   },
   
   page: {
