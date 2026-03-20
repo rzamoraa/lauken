@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import logopulin from "../../assets/icons/logopulin.svg";
 import logosanrafael from "../../assets/icons/logosanrafel.svg";
 import logolaspalmas from "../../assets/icons/logolaspalmas.svg";
-import logovallesderangue from "../../assets/icons/logovalles.svg";
+import logovallesderangue from "../../assets/icons/logo_valles_de_rangue.svg";
 
 /**
  * Hero - Componente de slider principal
@@ -265,7 +265,7 @@ function Hero() {
      {/* Logo del proyecto */}
 <AnimatePresence initial={false} mode="wait">
   <motion.div
-    className="z-10 flex flex-grow pt-36"
+    className="z-10 flex flex-grow pt-48"
     variants={itemVariants}
     initial="hidden"
     animate="visible"
