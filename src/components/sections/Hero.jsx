@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import logopulin from "../../assets/icons/logopulin.svg";
 import logosanrafael from "../../assets/icons/logosanrafel.svg";
 import logolaspalmas from "../../assets/icons/logolaspalmas.svg";
+import logovallesderangue from "../../assets/icons/logovalles.svg";
 
 /**
  * Hero - Componente de slider principal
@@ -21,6 +22,18 @@ const AUTOPLAY_INTERVAL = 18000;
 // Configuración de los slides
 const SLIDES = [
 /*banner las palmas */
+  {
+  type: "video",
+  src: "https://storage.googleapis.com/bucket-launken/videosproyectos/banner%20lomas%20de%20rangue%20.mp4",
+  title: "Desde $49.990.900",
+  description: "19 parcelas planas ubicadas en Laguna de Aculeo",
+  //description2: "descripcion2",
+  customLogo: logovallesderangue,
+  badge: "Nuevo Proyecto",
+  href: "/valles-de-rangue",
+  ribbon: "Nuevo Proyecto",
+  ribbonTone: "yellow",
+},
     {
     type: "video",
     src: "https://storage.googleapis.com/bucket-launken-web/las-palmas/banner-laspalmas.mp4",

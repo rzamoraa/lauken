@@ -22,7 +22,7 @@ const vallesDeRangue = {
     descripcion: 'Laguna de Aculeo',
     imagen: bgCard,
     logo: logo,
-    precio: 'Desde UF 1.500',
+    precio: 'Desde $49.900.000',
     activo: true,
     pronto: false,
     vendido: false,
@@ -35,8 +35,8 @@ const vallesDeRangue = {
       video: 'https://storage.googleapis.com/bucket-launken/videosproyectos/banner%20lomas%20de%20rangue%20.mp4',
       brochurePdf: 'https://storage.googleapis.com/bucket-launken/costapulin/Lauken_CC3.pdf',
       showBrochureButton: true,
-      precio: 'Parcelas a 49.900.000',
-      texto1: '19 parcelas ubicadas en Laguna de Aculeo',
+      precio: 'Parcelas desde $49.900.000',
+      texto1: '19 parcelas planas ubicadas en Laguna de Aculeo',
       texto2: '',
     },
     
@@ -70,8 +70,8 @@ const vallesDeRangue = {
     
     mapa: {
       enabled: true,
-      lat: -34.187536,
-      lng: -71.490558,
+      lat: -33.838242,
+      lng: -70.950378,
     },
     
     showVendido: false,
