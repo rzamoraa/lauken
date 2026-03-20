@@ -25,7 +25,7 @@ const SLIDES = [
   {
   type: "video",
   src: "https://storage.googleapis.com/bucket-launken/videosproyectos/banner%20lomas%20de%20rangue%20.mp4",
-  title: "Desde $49.990.900",
+  title: "Desde $49.900.000",
   description: "19 parcelas planas ubicadas en Laguna de Aculeo",
   //description2: "descripcion2",
   customLogo: logovallesderangue,
