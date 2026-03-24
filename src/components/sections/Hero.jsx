@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import logopulin from "../../assets/icons/logopulin.svg";
 import logosanrafael from "../../assets/icons/logosanrafel.svg";
 import logolaspalmas from "../../assets/icons/logolaspalmas.svg";
-import logovallesderangue from "../../assets/icons/logo_valles_de_rangue.svg";
+import logovallesderangue from "../../assets/icons/logo_valles_de_rangue_2.svg";
 
 /**
  * Hero - Componente de slider principal
@@ -265,16 +265,16 @@ function Hero() {
      {/* Logo del proyecto */}
 <AnimatePresence initial={false} mode="wait">
   <motion.div
-    className="z-10 flex flex-grow pt-20 sm:pt-24 md:pt-48"
+    className="z-10 flex flex-grow pt-48"
     variants={itemVariants}
     initial="hidden"
     animate="visible"
   >
-   <div className={slide.customLogo === logovallesderangue ? "-translate-y-20 md:-translate-y-24 lg:translate-y-0" : slide.customLogo === logolaspalmas ? "-translate-y-6" : ""}>
+    <div className={slide.customLogo === logovallesderangue ? "-translate-y-12 sm:-translate-y-16 md:translate-y-0" : slide.customLogo === logolaspalmas ? "-translate-y-6" : ""}>
       <img
         src={slide.customLogo}
         alt="Logo del proyecto"
-        className="w-48 md:w-64 h-auto"
+        className={slide.customLogo === logovallesderangue || slide.customLogo === logolaspalmas ? "w-40 md:w-64 h-auto" : "w-48 md:w-64 h-auto"}
       />
     </div>
   </motion.div>
