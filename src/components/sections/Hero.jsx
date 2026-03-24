@@ -265,12 +265,12 @@ function Hero() {
      {/* Logo del proyecto */}
 <AnimatePresence initial={false} mode="wait">
   <motion.div
-    className="z-10 flex flex-grow pt-48"
+    className="z-10 flex flex-grow pt-20 sm:pt-24 md:pt-48"
     variants={itemVariants}
     initial="hidden"
     animate="visible"
   >
-    <div className={slide.customLogo === logolaspalmas ? "-translate-y-6" : ""}>
+   <div className={slide.customLogo === logovallesderangue ? "-translate-y-20 md:-translate-y-24 lg:translate-y-0" : slide.customLogo === logolaspalmas ? "-translate-y-6" : ""}>
       <img
         src={slide.customLogo}
         alt="Logo del proyecto"
