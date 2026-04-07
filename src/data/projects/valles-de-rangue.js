@@ -32,7 +32,8 @@ const vallesDeRangue = {
   page: {
     title: {
       logo: logo,
-      video: 'https://storage.googleapis.com/bucket-launken/videosproyectos/banner%20lomas%20de%20rangue%20.mp4',
+      //video: 'https://storage.googleapis.com/bucket-launken/videosproyectos/banner%20lomas%20de%20rangue%20.mp4',
+      video: 'https://storage.googleapis.com/bucket-launken-web/valles-rangue/banner-vallesderangue.mp4',
       brochurePdf: 'https://storage.googleapis.com/bucket-launken/costapulin/Lauken_CC3.pdf',
       showBrochureButton: true,
       precio: 'Parcelas desde $49.900.000',
