@@ -10,7 +10,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 
 // Configuración del enlace de WhatsApp
 const WHATSAPP_CONFIG = {
-  number: '56992757172',
+  number: '56966440166',
   message: 'Hola, quiero más información sobre los proyectos de Lauken Inmobiliaria.',
 };
 
