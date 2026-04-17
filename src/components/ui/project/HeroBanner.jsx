@@ -14,6 +14,7 @@ function HeroBanner({
   texto1, 
   texto2, 
   video,
+  logo,
   badge = "Proyecto Exclusivo"
 }) {
   return (
@@ -38,7 +39,14 @@ function HeroBanner({
       <div className="absolute inset-0 bg-black/30" />
 
       {/* Contenido principal */}
-      <div className="relative z-10 w-full max-w-3xl mx-auto px-4 md:px-6">
+      <div className="relative z-10 w-full max-w-3xl mx-auto px-4 md:px-6 flex flex-col items-center">
+        {logo && (
+  <img
+    src={logo}
+    alt="Logo del proyecto"
+    className="w-40 md:w-64 h-auto mb-6"
+  />
+)}
         <div className="
           bg-gradient-to-r from-black/70 via-black/60 to-black/70
           py-8 md:py-10 px-6 md:px-10

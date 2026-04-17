@@ -53,11 +53,12 @@ function ProjectPage() {
       
       {/* Hero Banner */}
       <HeroBanner
-        video={page.title.video}
-        precio={page.title.precio}
-        texto1={page.title.texto1}
-        texto2={page.title.texto2}
-      />
+  video={page.title.video}
+  logo={page.title.logo}
+  precio={page.title.precio}
+  texto1={page.title.texto1}
+  texto2={page.title.texto2}
+/>
       
       {/* Logo del proyecto */}
       <ProjectLogo

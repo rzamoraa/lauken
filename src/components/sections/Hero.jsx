@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import logopulin from "../../assets/icons/logopulin.svg";
 import logosanrafael from "../../assets/icons/logosanrafel.svg";
 import logolaspalmas from "../../assets/icons/logolaspalmas.svg";
-import logovallesderangue from "../../assets/icons/logo_valles_de_rangue_2.svg";
+import logovallesderangue from "../../assets/projects/valles-rangue/logo pag web LR.png";
 
 /**
  * Hero - Componente de slider principal
