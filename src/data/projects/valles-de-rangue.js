@@ -12,6 +12,7 @@ import g8 from '../../assets/projects/valles-rangue/galeria/8.jpg';
 import g9 from '../../assets/projects/valles-rangue/galeria/9.jpg';
 import g10 from '../../assets/projects/valles-rangue/galeria/10.jpg';
 import g11 from '../../assets/projects/valles-rangue/galeria/11.jpg';
+import g12 from '../../assets/projects/valles-rangue/galeria/12.jpg';
 import atributosImg from '../../assets/projects/valles-rangue/atributosAculeo.jpg';
 import mocap from '../../assets/projects/valles-rangue/mockupRangue.png';
 import fondo from '../../assets/projects/valles-rangue/Fondo folleto con opacidad.jpg';
@@ -62,7 +63,7 @@ const vallesDeRangue = {
       items: [],
     },
     
-    galeria: [g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11],
+    galeria: [g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11, g12],
     
     folleto: {
       enabled: true,
