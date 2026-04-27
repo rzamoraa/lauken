@@ -13,6 +13,10 @@ import g6 from '../../assets/projects/san-rafael/carrusel/sr6.jpg';
 import g7 from '../../assets/projects/san-rafael/carrusel/sr7.jpg';
 import g8 from '../../assets/projects/san-rafael/carrusel/sr8.jpg';
 import g9 from '../../assets/projects/san-rafael/carrusel/sr9.jpg';
+import g10 from '../../assets/projects/san-rafael/carrusel/sr10.jpg';
+import g11 from '../../assets/projects/san-rafael/carrusel/sr11.jpg';
+import g12 from '../../assets/projects/san-rafael/carrusel/sr12.jpg';
+import g13 from '../../assets/projects/san-rafael/carrusel/sr13.jpg';
 import mocap from '../../assets/projects/san-rafael/mocap sanrafael.png';
 
 const costaSanRafael = {
@@ -71,7 +75,7 @@ const costaSanRafael = {
       ],
     },
     
-    galeria: [g1, g2, g3, g4, g5, g6, g7, g8, g9],
+    galeria: [g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11, g12, g13],
     
     folleto: {
       enabled: true,
