@@ -7,6 +7,7 @@ import bgCard from '../../assets/projects/san-rafael/bg-sanrafael.png';
 import g1 from '../../assets/projects/san-rafael/carrusel/sr1.jpg';
 import g2 from '../../assets/projects/san-rafael/carrusel/sr2.jpg';
 import g3 from '../../assets/projects/san-rafael/carrusel/sr3.jpg';
+import sr4horizontal from '../../assets/projects/san-rafael/carrusel/sr4horizontal.jpg';
 import g4 from '../../assets/projects/san-rafael/carrusel/sr4.jpg';
 import g5 from '../../assets/projects/san-rafael/carrusel/sr5.jpg';
 import g6 from '../../assets/projects/san-rafael/carrusel/sr6.jpg';
@@ -60,7 +61,7 @@ const costaSanRafael = {
     atributos: {
       tipo: 'icons',
       texto: 'Innovador proyecto de 47 parcelas con terrenos planos y suaves lomajes, que ofrecen espectaculares vistas al Lago Rapel y la Cordillera de los Andes. Vive rodeado de naturaleza, en un entorno ideal para descansar, practicar deportes y conectar con lo mejor de la vida junto al lago. Todo esto, en un valle privilegiado del sector San Rafael, Lago Rapel.',
-      image: g4,
+      image: sr4horizontal,
       items: [
         { icon: MapPin, titulo: '47 Parcelas de', valor: '5.000 mts2' },
         { icon: FileText, titulo: 'Rol', valor: 'Propio' },
