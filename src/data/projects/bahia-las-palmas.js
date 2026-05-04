@@ -13,6 +13,7 @@ import g6 from '../../assets/projects/palmas/galeria/foto6.jpg';
 import g7 from '../../assets/projects/palmas/galeria/foto7.jpg';
 import g8 from '../../assets/projects/palmas/galeria/foto8.jpg';
 import g9 from '../../assets/projects/palmas/galeria/foto9.jpg';
+import g10 from '../../assets/projects/palmas/galeria/foto10.png';
 import atributosImg from '../../assets/projects/palmas/galeria/foto6.jpg'; 
 import mocap from '../../assets/projects/palmas/mockupLP.png';
 import fondo from '../../assets/projects/palmas/bgmocap.jpg';
@@ -75,7 +76,7 @@ const bahiaLasPalmas = {
       ],
     },
     
-    galeria: [g1, g2, g3, g4, g5, g6, g7, g8, g9],
+    galeria: [g1, g2, g3, g4, g5, g6, g7, g8, g9, g10],
     
     folleto: {
       enabled: true,
