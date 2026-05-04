@@ -14,7 +14,7 @@ import g7 from '../../assets/projects/palmas/galeria/foto7.jpg';
 import g8 from '../../assets/projects/palmas/galeria/foto8.jpg';
 import g9 from '../../assets/projects/palmas/galeria/foto9.jpg';
 import g10 from '../../assets/projects/palmas/galeria/foto10.png';
-import atributosImg from '../../assets/projects/palmas/galeria/foto6.jpg'; 
+import atributosImg from '../../assets/projects/palmas/galeria/atributos.jpg'; 
 import mocap from '../../assets/projects/palmas/mockupLP.png';
 import fondo from '../../assets/projects/palmas/bgmocap.jpg';
 
