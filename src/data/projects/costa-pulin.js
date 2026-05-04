@@ -15,6 +15,8 @@ import g7 from '../../assets/projects/costa-pulin/cp7.jpg';
 import g8 from '../../assets/projects/costa-pulin/cp8.jpg';
 import g9 from '../../assets/projects/costa-pulin/cp9.jpg';
 import g10 from '../../assets/projects/costa-pulin/cp10.jpg';
+import g11 from '../../assets/projects/costa-pulin/cp11.jpg';
+import g12 from '../../assets/projects/costa-pulin/cp12.jpg';
 import mocap from '../../assets/projects/costa-pulin/mocap costapulin.png';
 
 const costaPulin = {
@@ -27,7 +29,7 @@ const costaPulin = {
     descripcion: 'Lago Rapel',
     imagen: bgCard,
     logo: logo,
-    precio: 'Desde UF 2.200',
+    precio: 'Desde UF 2.000',
     activo: true,
     pronto: false,
     vendido: false,
@@ -81,7 +83,7 @@ const costaPulin = {
     },
     
     // Galería de imágenes
-    galeria: [g1, g2, g3, g4, g5, g6, g7],
+    galeria: [g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11, g12],
     
     // Folleto/Brochure
     folleto: {

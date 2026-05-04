@@ -76,7 +76,7 @@ const bahiaLasPalmas = {
       ],
     },
     
-    galeria: [g1, g2, g3, g4, g5, g6, g7, g8, g9, g10],
+    galeria: [g1, g10, g3, g4, g2, g9, g7, g5, g6],
     
     folleto: {
       enabled: true,

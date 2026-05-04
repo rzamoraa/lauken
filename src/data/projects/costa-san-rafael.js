@@ -76,7 +76,7 @@ const costaSanRafael = {
       ],
     },
     
-    galeria: [g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11, g12, g13],
+    galeria: [g1, g2, g3, g7, g13, g6, g4, g12, g10, g9, g8, g5],
     
     folleto: {
       enabled: true,
