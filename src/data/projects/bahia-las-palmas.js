@@ -38,8 +38,8 @@ const bahiaLasPalmas = {
   page: {
     title: {
       logo: logo,
-      video: 'https://storage.googleapis.com/bucket-launken-web/las-palmas/banner-laspalmas.mp4', 
-      brochurePdf: 'https://storage.googleapis.com/bucket-launken-web/las-palmas/Brochure.pdf', 
+      video: 'https://storage.googleapis.com/lauken/lauken-web/proyectos/videos/las-palmas/banner-laspalmas.mp4', 
+      brochurePdf: 'https://storage.googleapis.com/lauken/lauken-web/Brochure/las-palmas/Brochure.pdf', 
       showBrochureButton: true,
       precio: 'Sitios desde UF 1.500',
       texto1: 'Condominio de 79 sitios urbanizados con acceso a Lago Rapel',

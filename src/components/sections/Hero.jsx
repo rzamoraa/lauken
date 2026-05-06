@@ -25,7 +25,7 @@ const SLIDES = [
   {
   type: "video",
   //src: "https://storage.googleapis.com/bucket-launken/videosproyectos/banner%20lomas%20de%20rangue%20.mp4",
-  src: "https://storage.googleapis.com/bucket-launken-web/valles-rangue/banner-vallesderangue.mp4",
+  src: "https://storage.googleapis.com/lauken/lauken-web/proyectos/videos/valles-de-rangue/banner-vallesderangue.mp4",
   title: "Desde $60.000.000",
   description: "19 parcelas planas ubicadas en Laguna de Aculeo",
   //description2: "descripcion2",
@@ -37,7 +37,7 @@ const SLIDES = [
 },
     {
     type: "video",
-    src: "https://storage.googleapis.com/bucket-launken-web/las-palmas/banner-laspalmas.mp4",
+    src: "https://storage.googleapis.com/lauken/lauken-web/proyectos/videos/las-palmas/banner-laspalmas.mp4",
     title: "Sitios desde UF 1.500",
     description: "Condominio de 79 sitios urbanizados con acceso a Lago Rapel",
     //description2: "Ofrecemos Crédito Directo",
