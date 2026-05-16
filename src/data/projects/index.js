@@ -15,6 +15,7 @@ import entreValles from './entre-valles';
 import laBrisa from './la-brisa';
 import vallesDeRangue from './valles-de-rangue';
 import bahiaLasPalmas from './bahia-las-palmas';
+import vallesDeRangue2 from './valles-de-rangue-2';
 
 // Array de todos los proyectos - El orden aquí determina el orden de las cards
 const projects = [
@@ -23,6 +24,7 @@ const projects = [
   costaSanRafael,
   costaPulin,
   laBrisa,
+  vallesDeRangue2,
   entreValles,
 ];
 
@@ -50,5 +52,6 @@ export {
   costaSanRafael,
   entreValles,
   laBrisa,
-  vallesDeRangue
+  vallesDeRangue,
+  vallesDeRangue2,
 };

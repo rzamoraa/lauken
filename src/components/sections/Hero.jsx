@@ -32,8 +32,8 @@ const SLIDES = [
   customLogo: logovallesderangue,
   badge: "Nuevo Proyecto",
   href: "/valles-de-rangue",
-  ribbon: "Nuevo Proyecto",
-  ribbonTone: "yellow",
+  ribbon: "Éxito de ventas\nÚltimas 2 unidades",
+  ribbonTone: "green",
 },
     {
     type: "video",
@@ -142,7 +142,11 @@ function Hero() {
   const ribbonToneClass =
   slide.ribbonTone === "yellow"
     ? "bg-[#FDBD59]/90 text-white"
+    : slide.ribbonTone === "green"
+    ? "bg-green-600/90 text-white"
     : "bg-blue-900/90 text-white";
+
+    const isVallesDeRangue = slide.href === "/valles-de-rangue";
 
 
   // Navegación del slider
@@ -216,7 +220,8 @@ function Hero() {
   className={`
     absolute rotate-[40deg]
     ${ribbonToneClass}
-    font-semibold tracking-widest uppercase shadow-lg text-center whitespace-nowrap
+    font-semibold tracking-widest uppercase shadow-lg text-center
+    ${isVallesDeRangue ? "whitespace-pre-line leading-tight" : "whitespace-nowrap"}
     w-[clamp(260px,70vw,520px)] md:w-[clamp(420px,90vw,820px)]
     py-[clamp(6px,1vw,10px)] md:py-[clamp(8px,1.2vw,16px)]
     text-[clamp(10px,2.2vw,14px)] md:text-[clamp(12px,2.6vw,20px)]

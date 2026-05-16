@@ -53,7 +53,7 @@ const costaPulin = {
     description: {
       nombre: 'COSTA PULIN',
       bajada: 'LAGO RAPEL',
-      precio: 'DESDE UF 2200',
+      precio: 'DESDE UF 2000',
       logo: logo,
     },
     
