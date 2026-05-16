@@ -1,6 +1,7 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Send, MapPin, Phone, Mail, CheckCircle, AlertCircle } from 'lucide-react';
+import { getProjectCards } from '../../data/projects';
 
 /**
  * Contacto - Formulario de contacto principal
@@ -13,10 +14,10 @@ import { Send, MapPin, Phone, Mail, CheckCircle, AlertCircle } from 'lucide-reac
  */
 
 // Proyectos disponibles para el select
-const proyectosDisponibles = [
-  { value: 'Costa Pulín', label: 'Costa Pulín' },
-  { value: 'Costa San Rafael', label: 'Costa San Rafael' },
-];
+const proyectosDisponibles = getProjectCards().map((project) => ({
+  value: project.titulo,
+  label: project.titulo,
+}));
 
 // Información de contacto
 const contactInfo = {

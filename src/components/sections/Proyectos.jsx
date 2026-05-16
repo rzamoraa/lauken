@@ -10,14 +10,25 @@ function Proyectos() {
   const proyectos = getProjectCards();
 
   const proyectosPorPagina = 6;
+  const proyectosPorPaginaMobile = 3;
   const totalPaginas = Math.ceil(proyectos.length / proyectosPorPagina);
+  const totalPaginasMobile = Math.ceil(proyectos.length / proyectosPorPaginaMobile);
   const [paginaActual, setPaginaActual] = useState(0);
   const [touchStartX, setTouchStartX] = useState(null);
+  const [paginaActualMobile, setPaginaActualMobile] = useState(0);
+  const [touchStartXMobile, setTouchStartXMobile] = useState(null);
 
   const paginas = Array.from({ length: totalPaginas }, (_, index) =>
     proyectos.slice(
       index * proyectosPorPagina,
       index * proyectosPorPagina + proyectosPorPagina
+    )
+  );
+
+  const paginasMobile = Array.from({ length: totalPaginasMobile }, (_, index) =>
+    proyectos.slice(
+      index * proyectosPorPaginaMobile,
+      index * proyectosPorPaginaMobile + proyectosPorPaginaMobile
     )
   );
 
@@ -27,6 +38,14 @@ function Proyectos() {
 
   const paginaAnterior = () => {
     setPaginaActual((prev) => (prev === 0 ? totalPaginas - 1 : prev - 1));
+  };
+
+  const siguientePaginaMobile = () => {
+    setPaginaActualMobile((prev) => (prev + 1) % totalPaginasMobile);
+  };
+
+  const paginaAnteriorMobile = () => {
+    setPaginaActualMobile((prev) => (prev === 0 ? totalPaginasMobile - 1 : prev - 1));
   };
 
   const handleIndicadorTouchEnd = (event) => {
@@ -48,24 +67,71 @@ function Proyectos() {
     setTouchStartX(null);
   };
 
+  const handleMobileTouchEnd = (event) => {
+    if (touchStartXMobile === null) {
+      return;
+    }
+
+    const touchEndX = event.changedTouches[0]?.clientX;
+    const distance = touchStartXMobile - touchEndX;
+
+    if (Math.abs(distance) > 40) {
+      if (distance > 0) {
+        siguientePaginaMobile();
+      } else {
+        paginaAnteriorMobile();
+      }
+    }
+
+    setTouchStartXMobile(null);
+  };
+
   return (
     <section id="proyectos" className="py-12 md:py-16 lg:py-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-6 md:hidden">
-          {proyectos.map((proyecto) => (
-            <Card
-              key={proyecto.id}
-              titulo={proyecto.titulo}
-              descripcion={proyecto.descripcion}
-              imagen={proyecto.imagen}
-              url={proyecto.pronto ? undefined : proyecto.url}
-              logo={proyecto.logo}
-              activo={proyecto.activo}
-              precio={proyecto.precio}
-              franja={proyecto.franja}
-              pronto={proyecto.pronto}
-            />
-          ))}
+        <div
+          className="md:hidden overflow-hidden"
+          onTouchStart={(event) => setTouchStartXMobile(event.touches[0]?.clientX ?? null)}
+          onTouchEnd={handleMobileTouchEnd}
+        >
+          <div
+            className="flex gap-6 transition-transform duration-500 ease-in-out"
+            style={{ transform: `translateX(calc(-${paginaActualMobile * 100}% - ${paginaActualMobile * 1.5}rem))` }}
+          >
+            {paginasMobile.map((pagina, index) => (
+              <div key={index} className="min-w-full shrink-0 grid grid-cols-3 gap-3">
+                {pagina.map((proyecto) => (
+                  <Card
+                    key={proyecto.id}
+                    titulo={proyecto.titulo}
+                    descripcion={proyecto.descripcion}
+                    imagen={proyecto.imagen}
+                    url={proyecto.pronto ? undefined : proyecto.url}
+                    logo={proyecto.logo}
+                    activo={proyecto.activo}
+                    precio={proyecto.precio}
+                    franja={proyecto.franja}
+                    pronto={proyecto.pronto}
+                  />
+                ))}
+              </div>
+            ))}
+          </div>
+
+          {totalPaginasMobile > 1 && (
+            <div className="flex justify-center gap-2 mt-6">
+              {paginasMobile.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setPaginaActualMobile(index)}
+                  className={`w-3 h-3 rounded-full transition ${
+                    paginaActualMobile === index ? 'bg-yellow-500' : 'bg-gray-300'
+                  }`}
+                  aria-label={`Ir a pagina ${index + 1}`}
+                />
+              ))}
+            </div>
+          )}
         </div>
 
         <div className="relative hidden md:block">

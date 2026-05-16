@@ -21,7 +21,7 @@ function Card({ titulo, descripcion, imagen, url, logo, activo = true, precio, f
   const CardContent = (
     <div className="relative isolate flex flex-col overflow-hidden bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
       {/* Contenedor de la imagen */}
-      <div className="relative h-56 md:h-64 overflow-hidden">
+      <div className="relative h-28 sm:h-40 md:h-64 overflow-hidden">
         {/* Imagen principal con animación de zoom */}
         <motion.img
           src={imagen}
@@ -36,7 +36,7 @@ function Card({ titulo, descripcion, imagen, url, logo, activo = true, precio, f
           <img
             src={logo}
             alt={titulo}
-            className="absolute inset-0 h-44 md:h-52 w-auto p-8 m-auto object-contain drop-shadow-lg"
+            className="absolute inset-0 h-20 sm:h-28 md:h-52 w-auto p-3 sm:p-5 md:p-8 m-auto object-contain drop-shadow-lg"
           />
         )}
 
@@ -49,7 +49,7 @@ function Card({ titulo, descripcion, imagen, url, logo, activo = true, precio, f
         {/* Franja de estado - Próximamente (amarillo/dorado) */}
         {pronto && activo && (
           <div className="absolute top-3 left-0 right-0 ">
-            <div className="text-sm md:text-base py-1.5 text-center text-white font-semibold backdrop-blur-sm bg-[#F0B94D]/90 rounded">
+            <div className="text-[10px] sm:text-xs md:text-base py-1 md:py-1.5 text-center text-white font-semibold backdrop-blur-sm bg-[#F0B94D]/90 rounded">
               {franja || "PRÓXIMAMENTE"}
             </div>
           </div>
@@ -58,7 +58,7 @@ function Card({ titulo, descripcion, imagen, url, logo, activo = true, precio, f
         {/* Franja de estado - Disponible/Últimas unidades (verde) */}
         {!pronto && activo && franja && (
           <div className="absolute top-3 left-0 right-0 ">
-            <div className="text-sm md:text-base py-1.5 text-center text-white font-semibold backdrop-blur-sm bg-green-500/80 ">
+            <div className="text-[10px] sm:text-xs md:text-base py-1 md:py-1.5 text-center text-white font-semibold backdrop-blur-sm bg-green-500/80 ">
               {franja}
             </div>
           </div>
@@ -67,7 +67,7 @@ function Card({ titulo, descripcion, imagen, url, logo, activo = true, precio, f
         {/* Franja de estado - Vendido (rojo) */}
         {!activo && (
           <div className="absolute top-3 left-0 right-0 ">
-            <div className="text-sm md:text-base py-1.5 text-center text-white font-semibold backdrop-blur-sm bg-red-700/90 ">
+            <div className="text-[10px] sm:text-xs md:text-base py-1 md:py-1.5 text-center text-white font-semibold backdrop-blur-sm bg-red-700/90 ">
               {franja || "VENDIDO"}
             </div>
           </div>
@@ -75,15 +75,15 @@ function Card({ titulo, descripcion, imagen, url, logo, activo = true, precio, f
       </div>
 
       {/* Contenido inferior */}
-      <div className="bg-white px-5 py-4 md:px-6 md:py-5">
-        <h3 className="text-gray-900 text-base md:text-lg font-semibold mb-1">
+      <div className="bg-white px-2 py-2 sm:px-3 sm:py-3 md:px-6 md:py-5">
+        <h3 className="text-gray-900 text-[11px] sm:text-sm md:text-lg font-semibold mb-1 leading-tight">
           {titulo}
         </h3>
-        <p className="text-gray-500 text-sm font-light mb-2 line-clamp-2">
+        <p className="text-gray-500 text-[10px] sm:text-xs md:text-sm font-light mb-1 md:mb-2 line-clamp-2 leading-tight">
           {descripcion}
         </p>
         {precio && (
-          <p className="text-[#F0B94D] text-base md:text-lg font-bold">
+          <p className="text-[#F0B94D] text-[10px] sm:text-xs md:text-lg font-bold leading-tight">
             {precio}
           </p>
         )}
