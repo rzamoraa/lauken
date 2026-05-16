@@ -25,7 +25,7 @@ const vallesDeRangue = {
     descripcion: 'Laguna de Aculeo',
     imagen: bgCard,
     logo: logo,
-    precio: 'Desde $60.000.000',
+    precio: 'Próximamente',
     activo: true,
     pronto: true,
     vendido: false,
