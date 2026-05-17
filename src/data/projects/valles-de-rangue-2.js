@@ -15,7 +15,6 @@ import g11 from '../../assets/projects/valles-rangue-2/galeria/11.jpg';
 import g12 from '../../assets/projects/valles-rangue-2/galeria/12.jpg';
 import atributosImg from '../../assets/projects/valles-rangue-2/atributosAculeo.jpg';
 import mocap from '../../assets/projects/valles-rangue-2/mockupRangue.png';
-import fondo from '../../assets/projects/valles-rangue-2/Fondo folleto con opacidad.jpg';
 
 const vallesDeRangue = {
   id: 'valles-de-rangue-2',
@@ -53,7 +52,7 @@ const vallesDeRangue = {
     
     webPreview: {
       enabled: true,
-      url: 'https://www.lanube360.com/vallederangue/',
+      url: 'https://www.lanube360.com/valle-rangue-2/',
     },
     
     atributos: {

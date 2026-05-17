@@ -14,10 +14,12 @@ import { getProjectCards } from '../../data/projects';
  */
 
 // Proyectos disponibles para el select
-const proyectosDisponibles = getProjectCards().map((project) => ({
-  value: project.titulo,
-  label: project.titulo,
-}));
+const proyectosDisponibles = getProjectCards()
+  .filter((project) => project.id !== 'entre-valles')
+  .map((project) => ({
+    value: project.titulo,
+    label: project.titulo,
+  }));
 
 // Información de contacto
 const contactInfo = {
