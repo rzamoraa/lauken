@@ -26,9 +26,9 @@ const vallesDeRangue = {
     logo: logo,
     precio: 'Próximamente',
     activo: true,
-    pronto: true,
+    pronto: false,
     vendido: false,
-    franja: 'Próximamente',
+    franja: '',
   },
   
   page: {
