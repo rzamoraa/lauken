@@ -39,7 +39,7 @@ const vallesDeRangue = {
       brochurePdf: 'https://storage.googleapis.com/bucket-launken/costapulin/Lauken_CC3.pdf',
       showBrochureButton: true,
       precio: 'Parcelas desde $60.000.000',
-      texto1: '19 parcelas planas ubicadas en Laguna de Aculeo',
+      texto1: '21 parcelas planas a orillas de Laguna de Aculeo',
       texto2: '',
     },
     
@@ -57,7 +57,7 @@ const vallesDeRangue = {
     
     atributos: {
       tipo: 'image',
-      texto: 'Proyecto exclusivo de 19 parcelas de 5.000 m² en la Laguna de Aculeo, rodeado de naturaleza y tranquilidad. Disfruta de excelente conectividad con Santiago, en un entorno ideal para vivir, descansar y disfrutar al aire libre. Una oportunidad única de inversión con alta plusvalía.',
+      texto: 'Valles de Rangue 2 es un proyecto exclusivo de solo 21 parcelas planas de 5.000 m², ubicadas a orilla de laguna en el privilegiado entorno de la Laguna de Aculeo. Su excelente ubicación, a solo una hora de Santiago, permite combinar conectividad y descanso en un entorno ideal para vivir.',
       image: atributosImg,
       items: [],
     },
