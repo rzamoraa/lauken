@@ -11,7 +11,6 @@ import SectionTitle from "../SectionTitle";
 function AttributesWithIcons({ texto, image, attributes = [] }) {
   // Si se pasan props individuales (legacy), convertir a array
   const stats = attributes.length > 0 ? attributes : [];
-  const hasStats = stats.length > 0;
 
   return (
     <section id="atributos" className="relative">
@@ -32,7 +31,7 @@ function AttributesWithIcons({ texto, image, attributes = [] }) {
       </div>
 
       {/* Imagen de fondo con características */}
-      <div className={`relative py-14 md:py-18 lg:py-20 overflow-hidden ${hasStats ? '' : 'min-h-[360px] md:min-h-[480px] lg:min-h-[568px]'}`}>
+      <div className="relative py-14 md:py-18 lg:py-20 overflow-hidden">
         {/* Imagen de fondo */}
         <img
           alt="Características del proyecto"
