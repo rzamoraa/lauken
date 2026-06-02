@@ -28,11 +28,7 @@ const vallesDeRangue = {
     activo: true,
     pronto: false,
     vendido: false,
-<<<<<<< Updated upstream
-    franja: '',
-=======
     franja: '', // Próximamente
->>>>>>> Stashed changes
   },
   
   page: {
