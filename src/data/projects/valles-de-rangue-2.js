@@ -57,7 +57,7 @@ const vallesDeRangue = {
     
     atributos: {
       tipo: 'image',
-      texto: 'Valles de Rangue 2 es un proyecto exclusivo de solo 21 parcelas planas de 5.000 m², ubicadas a orilla de laguna en el privilegiado entorno de la Laguna de Aculeo. Su excelente ubicación, a solo una hora de Santiago, permite combinar conectividad y descanso en un entorno ideal para vivir.',
+      texto: 'La segunda etapa de Valles de Rangue es un proyecto exclusivo de solo 21 parcelas planas de 5.000 m², ubicadas a orilla de laguna en el privilegiado entorno de la Laguna de Aculeo. Su excelente ubicación, a solo una hora de Santiago, permite combinar conectividad y descanso en un entorno ideal para vivir.',
       image: atributosImg,
       items: [],
     },
