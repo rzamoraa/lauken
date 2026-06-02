@@ -13,7 +13,7 @@ import g9 from '../../assets/projects/valles-rangue-2/galeria/9.jpg';
 import g10 from '../../assets/projects/valles-rangue-2/galeria/10.jpg';
 import g11 from '../../assets/projects/valles-rangue-2/galeria/11.jpg';
 import g12 from '../../assets/projects/valles-rangue-2/galeria/12.jpg';
-import atributosImg from '../../assets/projects/valles-rangue-2/atributosAculeo.jpg';
+import atributosImg from '../../assets/projects/valles-rangue-2/atributosAculeo.png';
 import mocap from '../../assets/projects/valles-rangue-2/mockupRangue.png';
 
 const vallesDeRangue = {

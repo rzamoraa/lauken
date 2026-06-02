@@ -27,14 +27,12 @@ function AttributesSimple({ texto, image }) {
 
       {/* Imagen destacada */}
       {image && (
-        <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 pb-12 md:pb-16">
-          <div className="rounded-lg overflow-hidden shadow-lg">
-            <img 
-              src={image} 
-              alt="Imagen del proyecto" 
-              className="w-full h-auto object-cover"
-            />
-          </div>
+        <div className="pb-12 md:pb-16">
+          <img
+            src={image}
+            alt="Imagen del proyecto"
+            className="w-full h-auto object-cover"
+          />
         </div>
       )}
     </section>
