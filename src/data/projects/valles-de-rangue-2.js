@@ -28,7 +28,11 @@ const vallesDeRangue = {
     activo: true,
     pronto: false,
     vendido: false,
+<<<<<<< Updated upstream
     franja: '',
+=======
+    franja: '', // Próximamente
+>>>>>>> Stashed changes
   },
   
   page: {
@@ -62,7 +66,7 @@ const vallesDeRangue = {
       items: [],
     },
     
-    galeria: [g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11, g12],
+    galeria: [g1, g2, g3, g4, g5, g6, g10, g11, g12],
     
     folleto: {
       enabled: true,
