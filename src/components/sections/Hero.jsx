@@ -8,6 +8,7 @@ import logopulin from "../../assets/icons/logopulin.svg";
 import logosanrafael from "../../assets/icons/logosanrafel.svg";
 import logolaspalmas from "../../assets/icons/logolaspalmas.svg";
 import logovallesderangue from "../../assets/projects/valles-rangue/logo pag web LR.png";
+import logovallesderangue2 from "../../assets/projects/valles-rangue-2/valles de rangue 2 blanco logo.png";
 
 /**
  * Hero - Componente de slider principal
@@ -21,6 +22,18 @@ const AUTOPLAY_INTERVAL = 18000;
 
 // Configuración de los slides
 const SLIDES = [
+  /* banner valles de rangue 2 */
+  {
+    type: "video",
+    src: "https://storage.googleapis.com/lauken/lauken-web/proyectos/videos/valles-de-range-2/banner-vallesderangue-2.mp4",
+    title: "Desde $60.000.000",
+    description: "21 parcelas planas a orillas de Laguna de Aculeo",
+    customLogo: logovallesderangue2,
+    badge: "Nuevo Proyecto",
+    href: "/valles-de-rangue-2",
+    ribbon: "Nuevo Proyecto",
+    ribbonTone: "yellow",
+  },
 /*banner las palmas */
   {
   type: "video",
@@ -32,7 +45,7 @@ const SLIDES = [
   customLogo: logovallesderangue,
   badge: "Nuevo Proyecto",
   href: "/valles-de-rangue",
-  ribbon: "Éxito de ventas\nÚltimas 2 unidades",
+  ribbon: "Última unidad",
   ribbonTone: "green",
 },
     {
@@ -44,8 +57,8 @@ const SLIDES = [
     customLogo: logolaspalmas,
     //badge: "Proyecto Exclusivo",
     href: '/bahia-las-palmas',
-    ribbon: "Nuevo Proyecto",  
-     ribbonTone: "yellow",
+    ribbon: "Nuevo Proyecto,\n Éxito de Ventas: 50% VENDIDO",  
+     ribbonTone: "green",
   },
   {
     type: "video",
@@ -56,8 +69,8 @@ const SLIDES = [
     customLogo: logopulin,
     badge: "Proyecto Exclusivo",
     href: '/costa-pulin',
-    ribbon: "Últimas unidades",  
-     ribbonTone: "blue",
+    ribbon: "Éxito de Ventas, últimas unidades",
+    ribbonTone: "green",
   },
   {
     type: "video",
@@ -68,8 +81,8 @@ const SLIDES = [
     customLogo: logopulin,
     badge: "¡OPORTUNIDAD ÚNICA!",
     href: '/costa-pulin',
-    ribbon: "Últimas unidades",  
-     ribbonTone: "blue",
+    ribbon: "Éxito de Ventas, últimas unidades",
+    ribbonTone: "green",
   },
   {
     type: "video",
@@ -80,8 +93,8 @@ const SLIDES = [
     customLogo: logosanrafael,
     badge: "¡OPORTUNIDAD ÚNICA!",
     href: '/San-rafael',
-    ribbon: "Últimas unidades",  
-     ribbonTone: "blue",
+    ribbon: "Éxito de Ventas, últimas 4 unidades",
+    ribbonTone: "green",
   },
   {
     type: "video",
@@ -92,8 +105,8 @@ const SLIDES = [
     customLogo: logosanrafael,
     badge: "¡OPORTUNIDAD ÚNICA!",
     href: '/San-rafael',
-    ribbon: "Últimas unidades",  
-     ribbonTone: "blue",
+    ribbon: "Éxito de Ventas, últimas 4 unidades",
+    ribbonTone: "green",
   }
 ];
 
@@ -221,7 +234,7 @@ function Hero() {
     absolute rotate-[40deg]
     ${ribbonToneClass}
     font-semibold tracking-widest uppercase shadow-lg text-center
-    ${isVallesDeRangue ? "whitespace-pre-line leading-tight" : "whitespace-nowrap"}
+    ${slide.ribbon?.includes('\n') ? "whitespace-pre-line leading-tight" : "whitespace-nowrap"}
     w-[clamp(260px,70vw,520px)] md:w-[clamp(420px,90vw,820px)]
     py-[clamp(6px,1vw,10px)] md:py-[clamp(8px,1.2vw,16px)]
     text-[clamp(10px,2.2vw,14px)] md:text-[clamp(12px,2.6vw,20px)]

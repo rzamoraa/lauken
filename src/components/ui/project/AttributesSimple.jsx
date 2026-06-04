@@ -5,8 +5,9 @@ import React from "react";
  * 
  * @param {string} texto - Descripción del proyecto
  * @param {string} image - Imagen destacada del proyecto
+ * @param {boolean} fullWidth - Si la imagen ocupa todo el ancho (sin contenedor)
  */
-function AttributesSimple({ texto, image }) {
+function AttributesSimple({ texto, image, fullWidth = false }) {
   return (
     <section id="atributos" className="relative">
       {/* Banner superior con título */}
@@ -27,13 +28,25 @@ function AttributesSimple({ texto, image }) {
 
       {/* Imagen destacada */}
       {image && (
-        <div className="pb-12 md:pb-16">
-          <img
-            src={image}
-            alt="Imagen del proyecto"
-            className="w-full h-auto object-cover"
-          />
-        </div>
+        fullWidth ? (
+          <div className="pb-12 md:pb-16">
+            <img
+              src={image}
+              alt="Imagen del proyecto"
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        ) : (
+          <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 pb-12 md:pb-16">
+            <div className="rounded-lg overflow-hidden shadow-lg">
+              <img
+                src={image}
+                alt="Imagen del proyecto"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+        )
       )}
     </section>
   );

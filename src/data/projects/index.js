@@ -20,10 +20,10 @@ import vallesDeRangue2 from './valles-de-rangue-2';
 // Array de todos los proyectos - El orden aquí determina el orden de las cards
 const projects = [
   bahiaLasPalmas,
-  vallesDeRangue,
-  costaSanRafael,
-  costaPulin,
   vallesDeRangue2,
+  costaPulin,
+  costaSanRafael,
+  vallesDeRangue,
   laBrisa,
   entreValles,
 ];

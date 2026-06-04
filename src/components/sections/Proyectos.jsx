@@ -108,6 +108,7 @@ function Proyectos() {
                     imagen={proyecto.imagen}
                     url={proyecto.pronto ? undefined : proyecto.url}
                     logo={proyecto.logo}
+                    logoSmall={proyecto.logoSmall}
                     activo={proyecto.activo}
                     precio={proyecto.precio}
                     franja={proyecto.franja}
@@ -175,6 +176,7 @@ function Proyectos() {
                       imagen={proyecto.imagen}
                       url={proyecto.pronto ? undefined : proyecto.url}
                       logo={proyecto.logo}
+                      logoSmall={proyecto.logoSmall}
                       activo={proyecto.activo}
                       precio={proyecto.precio}
                       franja={proyecto.franja}

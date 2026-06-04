@@ -14,8 +14,8 @@ import g7 from '../../assets/projects/palmas/galeria/foto7.jpg';
 import g8 from '../../assets/projects/palmas/galeria/foto8.jpg';
 import g9 from '../../assets/projects/palmas/galeria/foto9.jpg';
 import g10 from '../../assets/projects/palmas/galeria/foto10.png';
-//import atributosImg from '../../assets/projects/palmas/galeria/atributos.jpg'; 
-import atributosImg from '../../assets/projects/palmas/galeria/Gráfica-para-web(1).png'; 
+import atributosImg from '../../assets/projects/palmas/galeria/atributos.jpg';
+//import atributosImg from '../../assets/projects/palmas/galeria/Gráfica-para-web(1).png'; 
 
 import mocap from '../../assets/projects/palmas/mockupLP.png';
 import fondo from '../../assets/projects/palmas/bgmocap.jpg';
@@ -64,8 +64,6 @@ const bahiaLasPalmas = {
       tipo: 'icons',
       texto: 'Exclusivo condominio de 79 sitios desde 1.500 m² a orillas del Lago Rapel, con acceso a marina privada. Un entorno único, urbanizado y con agua y luz subterránea, pensado para disfrutar la vida frente al lago, conectar con la naturaleza y asegurar una inversión de alto potencial. Vive tranquilidad, paisaje y experiencias inolvidables en Rapel.',
       image: atributosImg,
-      items: [],
-      /*
       items: [
         { icon: MapPin, titulo: '79 sitios urbanizados', valor: 'desde 1.500 mts2' },
         { icon: FileText, titulo: 'Rol', valor: 'Propio' },
@@ -75,10 +73,9 @@ const bahiaLasPalmas = {
         { icon: Droplets, titulo: 'Agua y Luz', valor: 'subterránea' },
         { icon: ShoppingCart, titulo: 'Supermercados', valor: 'en la zona' },
         { icon: Clock, titulo: 'Santiago', valor: 'a 2 horas' },
-        { icon: Ship , titulo: 'Acceso', valor: 'a Lago Rapel' }, 
+        { icon: Ship , titulo: 'Acceso', valor: 'a Lago Rapel' },
         { icon: Timer, titulo: 'Santa Cruz:', valor: 'a 1.20 horas' },
       ],
-      */
     },
     
     galeria: [g1, g10, g3, g4, g2, g9, g7, g5, g6],

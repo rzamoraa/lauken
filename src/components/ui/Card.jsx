@@ -15,7 +15,7 @@ import { motion } from "framer-motion";
  * @param {string} franja - Texto de la franja (ej: "VENDIDO", "ÚLTIMAS UNIDADES")
  * @param {boolean} pronto - Si el proyecto está "Próximamente"
  */
-function Card({ titulo, descripcion, imagen, url, logo, activo = true, precio, franja, pronto }) {
+function Card({ titulo, descripcion, imagen, url, logo, logoSmall = false, activo = true, precio, franja, pronto }) {
   const [isHovered, setIsHovered] = useState(false);
 
   const CardContent = (
@@ -36,7 +36,7 @@ function Card({ titulo, descripcion, imagen, url, logo, activo = true, precio, f
           <img
             src={logo}
             alt={titulo}
-            className="absolute inset-0 h-20 sm:h-28 md:h-52 w-auto p-3 sm:p-5 md:p-8 m-auto object-contain drop-shadow-lg"
+            className={`absolute inset-0 w-auto m-auto object-contain drop-shadow-lg ${logoSmall ? 'h-14 sm:h-20 md:h-40 p-3 sm:p-4 md:p-6' : 'h-20 sm:h-28 md:h-52 p-3 sm:p-5 md:p-8'}`}
           />
         )}
 

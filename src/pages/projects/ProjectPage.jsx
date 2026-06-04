@@ -87,6 +87,7 @@ function ProjectPage() {
         <AttributesSimple
           texto={page.atributos.texto}
           image={page.atributos.image}
+          fullWidth={page.atributos.fullWidth}
         />
       )}
       

@@ -1,5 +1,5 @@
 // Valles de Rangue - Configuración del proyecto
-import logo from '../../assets/projects/valles-rangue-2/test2.png';
+import logo from '../../assets/projects/valles-rangue-2/valles de rangue 2 blanco logo.png';
 import bgCard from '../../assets/projects/valles-rangue-2/galeria/portada Valles de Rangue2.jpg'; // Usa la misma imagen por ahora //bgcard --> carta proyecto
 import g1 from '../../assets/projects/valles-rangue-2/galeria/1.jpg';
 import g2 from '../../assets/projects/valles-rangue-2/galeria/2.jpg';
@@ -15,6 +15,7 @@ import g11 from '../../assets/projects/valles-rangue-2/galeria/11.jpg';
 import g12 from '../../assets/projects/valles-rangue-2/galeria/12.jpg';
 import atributosImg from '../../assets/projects/valles-rangue-2/atributosAculeo.png';
 import mocap from '../../assets/projects/valles-rangue-2/mockupRangue.png';
+import logoNegro from '../../assets/projects/valles-rangue-2/valles de rangue 2 negro logo.png';
 
 const vallesDeRangue = {
   id: 'valles-de-rangue-2',
@@ -24,7 +25,8 @@ const vallesDeRangue = {
     descripcion: 'Laguna de Aculeo',
     imagen: bgCard,
     logo: logo,
-    precio: 'Próximamente',
+    logoSmall: true,
+    precio: 'Desde $60.000.000',
     activo: true,
     pronto: false,
     vendido: false,
@@ -47,7 +49,7 @@ const vallesDeRangue = {
       nombre: 'VALLES DE RANGUE',
       bajada: 'LAGUNA DE ACULEO',
       precio: 'DESDE UF 2200',
-      logo: logo,
+      logo: logoNegro,
     },
     
     webPreview: {
@@ -57,6 +59,7 @@ const vallesDeRangue = {
     
     atributos: {
       tipo: 'image',
+      fullWidth: true,
       texto: 'La segunda etapa de Valles de Rangue es un proyecto exclusivo de solo 21 parcelas planas de 5.000 m², ubicadas a orilla de laguna en el privilegiado entorno de la Laguna de Aculeo. Su excelente ubicación, a solo una hora de Santiago, permite combinar conectividad y descanso en un entorno ideal para vivir.',
       image: atributosImg,
       items: [],
