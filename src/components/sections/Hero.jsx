@@ -289,11 +289,11 @@ function Hero() {
     initial="hidden"
     animate="visible"
   >
-    <div className={slide.customLogo === logovallesderangue ? "-translate-y-12 sm:-translate-y-16 md:translate-y-0" : slide.customLogo === logolaspalmas ? "-translate-y-6" : ""}>
+    <div className={slide.customLogo === logovallesderangue || slide.customLogo === logovallesderangue2 ? "-translate-y-12 sm:-translate-y-16 md:translate-y-0" : slide.customLogo === logolaspalmas ? "-translate-y-6" : ""}>
       <img
         src={slide.customLogo}
         alt="Logo del proyecto"
-        className={slide.customLogo === logovallesderangue || slide.customLogo === logolaspalmas ? "w-40 md:w-64 h-auto" : "w-48 md:w-64 h-auto"}
+        className={slide.customLogo === logovallesderangue2 ? "w-52 md:w-72 h-auto" : slide.customLogo === logovallesderangue ? "w-48 md:w-64 h-auto" : slide.customLogo === logolaspalmas ? "w-40 md:w-64 h-auto" : "w-48 md:w-64 h-auto"}
       />
     </div>
   </motion.div>
