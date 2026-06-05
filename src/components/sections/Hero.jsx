@@ -25,7 +25,7 @@ const SLIDES = [
   /* banner valles de rangue 2 */
   {
     type: "video",
-    src: "https://storage.googleapis.com/lauken/lauken-web/proyectos/videos/valles-de-range-2/banner-vallesderangue-2.mp4",
+    src: "https://storage.googleapis.com/lauken/lauken-web/proyectos/videos/valles-de-range-2/video-banner-valles-de-rangue-2-video%20.mp4",
     title: "Desde $60.000.000",
     description: "21 parcelas planas a orillas de Laguna de Aculeo",
     customLogo: logovallesderangue2,
@@ -57,7 +57,7 @@ const SLIDES = [
     customLogo: logolaspalmas,
     //badge: "Proyecto Exclusivo",
     href: '/bahia-las-palmas',
-    ribbon: "Nuevo Proyecto,\n Éxito de Ventas: 50% VENDIDO",  
+    ribbon: "Éxito de Ventas: 50% VENDIDO",  
      ribbonTone: "green",
   },
   {
