@@ -237,7 +237,7 @@ function Hero() {
     ${slide.ribbon?.includes('\n') ? "whitespace-pre-line leading-tight" : "whitespace-nowrap"}
     w-[clamp(260px,70vw,520px)] md:w-[clamp(420px,90vw,820px)]
     py-[clamp(6px,1vw,10px)] md:py-[clamp(8px,1.2vw,16px)]
-    text-[clamp(10px,2.2vw,14px)] md:text-[clamp(12px,2.6vw,20px)]
+    text-[clamp(7px,1.6vw,11px)] md:text-[clamp(12px,2.6vw,20px)]
     top-[clamp(70px,9vw,140px)]
     right-[clamp(-120px,-18vw,-70px)] md:right-[clamp(-170px,-22vw,-100px)]
   `}
