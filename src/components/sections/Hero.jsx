@@ -161,6 +161,10 @@ function Hero() {
 
     const isVallesDeRangue = slide.href === "/valles-de-rangue";
 
+    // Cintas con texto largo necesitan fuente y espaciado mas compactos
+    // para no salirse del area visible (recortada) de la cinta.
+    const isLongRibbon = (slide.ribbon || "").replace(/\n/g, "").length > 16;
+
 
   // Navegación del slider
   const prevSlide = useCallback(() => {
@@ -233,11 +237,14 @@ function Hero() {
   className={`
     absolute rotate-[40deg]
     ${ribbonToneClass}
-    font-semibold tracking-widest uppercase shadow-lg text-center
+    font-semibold uppercase shadow-lg text-center
+    ${isLongRibbon ? "tracking-wider" : "tracking-widest"}
     ${slide.ribbon?.includes('\n') ? "whitespace-pre-line leading-tight" : "whitespace-nowrap"}
     w-[clamp(260px,70vw,520px)] md:w-[clamp(420px,90vw,820px)]
     py-[clamp(6px,1vw,10px)] md:py-[clamp(8px,1.2vw,16px)]
-    text-[clamp(7px,1.6vw,11px)] md:text-[clamp(12px,2.6vw,20px)]
+    ${isLongRibbon
+      ? "text-[clamp(7px,1.4vw,10px)] md:text-[clamp(11px,2vw,15px)]"
+      : "text-[clamp(7px,1.6vw,11px)] md:text-[clamp(12px,2.6vw,20px)]"}
     top-[clamp(70px,9vw,140px)]
     right-[clamp(-120px,-18vw,-70px)] md:right-[clamp(-170px,-22vw,-100px)]
   `}
@@ -284,7 +291,11 @@ function Hero() {
      {/* Logo del proyecto */}
 <AnimatePresence initial={false} mode="wait">
   <motion.div
-    className="z-10 flex flex-grow pt-48"
+    className={`z-10 flex flex-grow pt-48 ${
+      slide.customLogo === logovallesderangue || slide.customLogo === logovallesderangue2
+        ? "md:pb-28"
+        : ""
+    }`}
     variants={itemVariants}
     initial="hidden"
     animate="visible"
