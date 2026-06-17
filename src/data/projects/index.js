@@ -24,9 +24,9 @@ const projects = [
   vallesDeRangue2,
   costaPulin,
   costaSanRafael,
-  vallesDeRangue,
   laBrisa,
   praderas,
+  vallesDeRangue,
   entreValles,
 ];
 
