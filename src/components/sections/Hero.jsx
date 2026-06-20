@@ -45,8 +45,8 @@ const SLIDES = [
   customLogo: logovallesderangue,
   badge: "Nuevo Proyecto",
   href: "/valles-de-rangue",
-  ribbon: "Última unidad",
-  ribbonTone: "green",
+  ribbon: "100% vendido",
+  ribbonTone: "red",
 },
     {
     type: "video",
@@ -63,7 +63,7 @@ const SLIDES = [
   {
     type: "video",
     src: "https://storage.googleapis.com/bucket-launken/costapulin/P%C3%A1gina%20CP%201080p.mp4",
-    title: "Desde UF 2.000",
+    title: "Últimos dos sitios en $70.000.000 cada uno",
     description: "13 Parcelas con Rol Propio",
     description2: "Ofrecemos Crédito Directo",
     customLogo: logopulin,
@@ -76,7 +76,7 @@ const SLIDES = [
     type: "video",
     src: "https://storage.googleapis.com/bucket-launken/costapulin/P%C3%A1gina%20CP%20windsurf%201080p.mp4",
     title: "Vive tu Experiencia en Lago Rapel",
-    description: "Desde UF 2.000",
+    description: "Sitios en $70.000.000",
     description2: "Ofrecemos Crédito Directo",
     customLogo: logopulin,
     badge: "¡OPORTUNIDAD ÚNICA!",
@@ -157,6 +157,8 @@ function Hero() {
     ? "bg-[#FDBD59]/90 text-white"
     : slide.ribbonTone === "green"
     ? "bg-green-600/90 text-white"
+    : slide.ribbonTone === "red"
+    ? "bg-red-700/90 text-white"
     : "bg-blue-900/90 text-white";
 
     const isVallesDeRangue = slide.href === "/valles-de-rangue";

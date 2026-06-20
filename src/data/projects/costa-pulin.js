@@ -29,7 +29,7 @@ const costaPulin = {
     descripcion: 'Lago Rapel',
     imagen: bgCard,
     logo: logo,
-    precio: 'Desde UF 2.000',
+    precio: '$70.000.000',
     activo: true,
     pronto: false,
     vendido: false,
