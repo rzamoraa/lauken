@@ -43,7 +43,7 @@ const praderas = {
 
     atributos: {
       tipo: 'image',
-      texto: 'Proyecto de 76 parcelas de 5.000 m² en Lago Rapel, emplazado en un valle único y privilegiado que combina tranquilidad, conectividad y una excelente proyección de inversión. Cada parcela cuenta con factibilidad de luz y agua, acceso controlado y caminos estabilizados. Un lugar ideal para desconectarse de la ciudad, conectar con la naturaleza y vivir experiencias inolvidables.',
+      texto: 'Parcelación compuesta por 76 unidades desde 5.000 m² en Lago Rapel, emplazado en un valle único y privilegiado que combina tranquilidad, conectividad y una excelente proyección de inversión. El proyecto cuenta con red eléctrica subterránea y factibilidad de agua, acceso controlado y caminos estabilizados. Un lugar ideal para desconectarse de la ciudad, conectar con la naturaleza y vivir experiencias inolvidables.',
       image: null,
       items: [],
     },
