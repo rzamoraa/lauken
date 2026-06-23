@@ -24,19 +24,19 @@ const laBrisa = {
     logo: logo,
     precio: 'Próximamente',
     activo: true,
-    pronto: false,
+    pronto: true,
     vendido: false,
-    franja: null,
+    franja: 'Próximamente',
   },
   
   page: {
     title: {
       logo: logo,
-      video: 'https://storage.googleapis.com/bucket-launken/videosproyectos/banner%20La%20Brisa.mp4',
+      video: 'https://storage.googleapis.com/lauken/lauken-web/proyectos/videos/la-brisa/banner-video-la-brisa.mp4',
       brochurePdf: 'https://storage.googleapis.com/bucket-launken/costapulin/Lauken_CC3.pdf',
       showBrochureButton: true,
-      precio: 'Parcelas a 49.900.000',
-      texto1: '34 parcelas con rol propio a orillas de Lago Rapel',
+      precio: 'Parcelas desde $60.000.000',
+      texto1: 'Condominio de 34 parcelas urbanizadas con acceso a Lago Rapel',
       texto2: '',
     },
     
@@ -54,7 +54,7 @@ const laBrisa = {
     
     atributos: {
       tipo: 'image', // usa componente Atributosimagen
-      texto: 'Proyecto exclusivo de 34 parcelas de 5.000 m², ubicadas en el sector de San Rafael, a orillas del Lago Rapel. Un entorno privilegiado donde la naturaleza y la tranquilidad se combinan con la comodidad de contar con acceso directo al lago a través de una marina privada, ideal para disfrutar de actividades náuticas, deportes al aire libre y momentos únicos.',
+      texto: 'Exclusivo proyecto de 34 parcelas de 5.000 m² en el sector San Rafael, Lago Rapel. Terrenos planos con espectaculares vistas al lago y la Cordillera de los Andes, en un entorno natural ideal para descansar, disfrutar de actividades al aire libre y vivir la experiencia única de la vida junto al lago.',
       image: atributosImg,
       items: [], // No usa items porque es tipo 'image'
     },

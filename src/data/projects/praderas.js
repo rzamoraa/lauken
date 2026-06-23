@@ -12,9 +12,9 @@ const praderas = {
     logo: logo,
     precio: 'Próximamente',
     activo: true,
-    pronto: false,
+    pronto: true,
     vendido: false,
-    franja: null,
+    franja: 'Próximamente',
   },
 
   page: {
