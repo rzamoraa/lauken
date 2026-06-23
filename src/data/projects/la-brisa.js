@@ -23,10 +23,10 @@ const laBrisa = {
     imagen: bgCard,
     logo: logo,
     precio: 'Próximamente',
-    activo: true,
-    pronto: true,
-    vendido: false,
-    franja: 'Próximamente',
+    activo: true,    // activo: true, 
+    pronto: false,    // pronto: true, 
+    vendido: false, // vendido: false, 
+    franja: '', //franja: 'Próximamente', 
   },
   
   page: {
