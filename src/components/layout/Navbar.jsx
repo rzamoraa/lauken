@@ -19,6 +19,7 @@ const navItems = [
   { name: "Vende tu campo", path: "/vende-tu-campo" },
   { name: "Quiénes somos", path: "/quienes-somos" },
   { name: "Contacto", path: "/formulario-contacto" },
+  { name: "Simulador de Crédito", path: "/simulador-credito", destacado: true },
 ];
 
 // Redes sociales
@@ -134,11 +135,13 @@ function Navbar() {
                   key={item.name}
                   to={item.path}
                   className={`
-                    px-4 py-2 
-                    text-sm font-medium 
+                    px-4 py-2
+                    text-sm font-medium
                     rounded-md
                     transition-all duration-200
-                    ${isActive(item.path)
+                    ${item.destacado
+                      ? 'text-red-600 font-bold hover:text-red-700 hover:bg-red-50'
+                      : isActive(item.path)
                       ? 'text-[#F0B94D] bg-amber-50'
                       : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50'
                     }
@@ -168,12 +171,14 @@ function Navbar() {
                   to={item.path}
                   onClick={closeMenu}
                   className={`
-                    block px-4 py-3 
-                    text-base font-medium 
+                    block px-4 py-3
+                    text-base font-medium
                     text-center
                     rounded-md mx-2 my-1
                     transition-all duration-200
-                    ${isActive(item.path)
+                    ${item.destacado
+                      ? 'text-red-600 font-bold hover:text-red-700 hover:bg-red-50'
+                      : isActive(item.path)
                       ? 'text-[#F0B94D] bg-amber-50'
                       : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50'
                     }

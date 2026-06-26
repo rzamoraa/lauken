@@ -13,6 +13,7 @@ import { Hero, Proyectos, Contacto, WhatsAppButton, ImageShowcase } from './comp
 import ProjectPage from './pages/projects/ProjectPage';
 import SellYourLandPage from './pages/static/SellYourLandPage';
 import CompanyPage from './pages/static/CompanyPage';
+import SimuladorCreditoPage from './pages/static/SimuladorCreditoPage';
 
 /**
  * PageWrapper - Wrapper para páginas secundarias
@@ -125,6 +126,7 @@ function App() {
               {/* Páginas estáticas */}
               <Route path="/vende-tu-campo" element={<PageWrapper><SellYourLandPage /></PageWrapper>} />
               <Route path="/quienes-somos" element={<PageWrapper ><CompanyPage /></PageWrapper>} />
+              <Route path="/simulador-credito" element={<PageWrapper><SimuladorCreditoPage /></PageWrapper>} />
               <Route path="/ver-proyectos" element={<PageWrapper showHero ><Proyectos /></PageWrapper>} />
               <Route path="/formulario-contacto" element={<PageWrapper showContacto contactoPadding />} />
             </Routes>
