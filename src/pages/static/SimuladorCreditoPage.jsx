@@ -1,4 +1,4 @@
-import React, { useMemo, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import {
   Calculator,
   Home,
@@ -28,15 +28,23 @@ import { getProjectCards } from "../../data/projects";
  *   La reserva (editable) se descuenta del pie al momento de la firma.
  */
 
-// Interés mensual aplicado al saldo financiado (según referencia: 3% mensual)
-const INTERES_MENSUAL = 0.03;
+// Tasa de interés: UF + 10% anual (nominal → mensual = 10% / 12)
+const TASA_ANUAL = 0.1;
+const INTERES_MENSUAL = TASA_ANUAL / 12;
 
 // Reserva por defecto que se descuenta del pie al firmar
 const RESERVA_DEFAULT = 250000;
 
 // Rango de cuotas mensuales permitido
 const PLAZO_MIN = 4;
-const PLAZO_MAX = 44;
+const PLAZO_MAX = 24;
+
+// Pie mínimo exigido (% del precio)
+const PIE_MINIMO_PCT = 50;
+
+// Valor UF por defecto (respaldo si la API no responde) y endpoint
+const UF_DEFAULT = 39000;
+const UF_API = "https://mindicador.cl/api/uf";
 
 // Número de WhatsApp de Lauken (mismo del botón flotante)
 const WHATSAPP_NUMBER = "56966440166";
@@ -48,6 +56,13 @@ const formatCLP = (valor) =>
     currency: "CLP",
     maximumFractionDigits: 0,
   }).format(Math.round(valor || 0));
+
+// Formatea un valor en UF (2 decimales)
+const formatUF = (valor) =>
+  `${new Intl.NumberFormat("es-CL", {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }).format(valor || 0)} UF`;
 
 // Convierte un texto a número (solo dígitos)
 const parseNumber = (texto) => Number(String(texto).replace(/\D/g, "")) || 0;
@@ -70,26 +85,77 @@ function SimuladorCreditoPage() {
 
   // Plan de pago
   const [precio, setPrecio] = useState(0);
-  const [pieModo, setPieModo] = useState("monto"); // 'monto' | 'porcentaje'
-  const [pieValor, setPieValor] = useState(0);
-  const [plazoMeses, setPlazoMeses] = useState(24);
+  const [pieModo, setPieModo] = useState("porcentaje"); // 'monto' | 'porcentaje'
+  const [pieValor, setPieValor] = useState(PIE_MINIMO_PCT);
+  const [plazoMeses, setPlazoMeses] = useState(12);
+
+  // Valor de la UF del día (se intenta traer de la API; editable como respaldo)
+  const [valorUF, setValorUF] = useState(UF_DEFAULT);
+
+  useEffect(() => {
+    let activo = true;
+    fetch(UF_API)
+      .then((r) => r.json())
+      .then((data) => {
+        const valor = Math.round(data?.serie?.[0]?.valor || 0);
+        if (activo && valor > 0) {
+          setValorUF(valor);
+        }
+      })
+      .catch(() => {
+        /* La API no respondió: se mantiene el valor por defecto/manual */
+      });
+    return () => {
+      activo = false;
+    };
+  }, []);
 
   const parcelaSeleccionada = parcelas.find((p) => p.id === parcelaId) || null;
 
-  // Monto del pie según el modo activo
-  const pieMonto =
+  // Pie mínimo exigido (50% del precio)
+  const pieMinimoMonto = Math.round((precio * PIE_MINIMO_PCT) / 100);
+
+  // Monto del pie según el modo activo, nunca por debajo del mínimo (50%)
+  const rawPieMonto =
     pieModo === "porcentaje" ? Math.round((precio * pieValor) / 100) : pieValor;
+  const pieMonto = precio > 0 ? Math.max(rawPieMonto, pieMinimoMonto) : rawPieMonto;
   const piePct = precio > 0 ? (pieMonto / precio) * 100 : 0;
+  const pieSuficiente = precio > 0;
 
   // Alterna entre ingresar el pie como % o como $ (convirtiendo el valor)
   const cambiarModoPie = (modo) => {
     if (modo === pieModo) return;
     if (modo === "porcentaje") {
-      setPieValor(precio > 0 ? Number((pieMonto / precio * 100).toFixed(2)) : 0);
+      setPieValor(
+        precio > 0
+          ? Math.max(PIE_MINIMO_PCT, Number(((pieMonto / precio) * 100).toFixed(2)))
+          : PIE_MINIMO_PCT
+      );
     } else {
-      setPieValor(pieMonto);
+      setPieValor(Math.max(pieMonto, pieMinimoMonto));
     }
     setPieModo(modo);
+  };
+
+  // Al ingresar el precio, ajusta el pie para que nunca quede bajo el 50%
+  const handlePrecio = (nuevo) => {
+    setPrecio(nuevo);
+    if (pieModo === "monto") {
+      const min = Math.round((nuevo * PIE_MINIMO_PCT) / 100);
+      setPieValor((v) => Math.max(v, min));
+    } else {
+      setPieValor((v) => Math.max(v, PIE_MINIMO_PCT));
+    }
+  };
+
+  // Fuerza el pie al mínimo (50%) al salir del campo
+  const aplicarPieMinimo = () => {
+    if (precio <= 0) return;
+    setPieValor((v) =>
+      pieModo === "porcentaje"
+        ? Math.max(PIE_MINIMO_PCT, v)
+        : Math.max(pieMinimoMonto, v)
+    );
   };
 
   const ajustarCuotas = (n) =>
@@ -111,7 +177,11 @@ function SimuladorCreditoPage() {
     return { saldoEnCuotas, cuotaMensual, totalEnCuotas, valorTotal, saldoPieAPagar };
   }, [precio, pieMonto, plazoMeses, reserva]);
 
-  const hayDatos = precio > 0;
+  // Cuota mensual estimada expresada también en UF
+  const cuotaUF = valorUF > 0 ? resultado.cuotaMensual / valorUF : 0;
+
+  // La simulación es válida solo con precio y pie >= 50%
+  const hayDatos = pieSuficiente;
 
   // Generación / descarga / compartido de la cotización como imagen
   const cotizacionRef = useRef(null);
@@ -163,7 +233,8 @@ function SimuladorCreditoPage() {
     `• Pie inicial (${Math.round(piePct)}%): ${formatCLP(pieMonto)}`,
     `• Reserva: ${formatCLP(reserva)}`,
     `• Plazo: ${plazoMeses} cuotas mensuales`,
-    `• Cuota mensual estimada: ${formatCLP(resultado.cuotaMensual)}`,
+    "• Tasa: UF + 10% anual",
+    `• Cuota mensual estimada: ${formatCLP(resultado.cuotaMensual)} (≈ ${formatUF(cuotaUF)})`,
     `• Total en cuotas: ${formatCLP(resultado.totalEnCuotas)}`,
     `• Valor total de la operación: ${formatCLP(resultado.valorTotal)}`,
     "",
@@ -345,6 +416,24 @@ function SimuladorCreditoPage() {
                 <h2 className="text-base font-bold text-slate-800">Plan de pago</h2>
                 <p className="text-xs text-slate-400">Precio, pie y cuotas mensuales</p>
               </div>
+
+              {/* Valor UF de hoy (editable) */}
+              <div className="ml-auto">
+                <span className="block text-[10px] font-semibold tracking-wide text-slate-400 uppercase text-right">
+                  UF de hoy
+                </span>
+                <div className="relative mt-0.5">
+                  <span className="absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-400 text-sm">$</span>
+                  <input
+                    type="text"
+                    inputMode="numeric"
+                    value={valorUF ? valorUF.toLocaleString("es-CL") : ""}
+                    onChange={(e) => setValorUF(parseNumber(e.target.value))}
+                    aria-label="Valor UF de hoy"
+                    className="w-28 pl-6 pr-2 py-1.5 rounded-lg border border-slate-200 focus:border-[#F0B94D] focus:ring-2 focus:ring-[#F0B94D]/30 outline-none text-slate-800 font-semibold text-sm text-right transition"
+                  />
+                </div>
+              </div>
             </div>
 
             {/* Precio de la parcela */}
@@ -358,7 +447,7 @@ function SimuladorCreditoPage() {
                   type="text"
                   inputMode="numeric"
                   value={precio ? precio.toLocaleString("es-CL") : ""}
-                  onChange={(e) => setPrecio(parseNumber(e.target.value))}
+                  onChange={(e) => handlePrecio(parseNumber(e.target.value))}
                   placeholder="0"
                   className={`${inputBase} pl-8 font-semibold`}
                 />
@@ -401,27 +490,34 @@ function SimuladorCreditoPage() {
                     inputMode="numeric"
                     value={pieValor ? pieValor.toLocaleString("es-CL") : ""}
                     onChange={(e) => setPieValor(parseNumber(e.target.value))}
+                    onBlur={aplicarPieMinimo}
                     placeholder="0"
                     className={`${inputBase} pl-8 font-semibold`}
                   />
                 ) : (
                   <input
                     type="number"
-                    min="0"
+                    min={PIE_MINIMO_PCT}
                     max="100"
                     step="0.1"
                     value={pieValor || ""}
                     onChange={(e) => setPieValor(Number(e.target.value))}
+                    onBlur={aplicarPieMinimo}
                     placeholder="0"
                     className={`${inputBase} pl-8 font-semibold`}
                   />
                 )}
               </div>
-              {hayDatos && pieMonto > 0 && (
+              {precio > 0 && pieMonto > 0 && (
                 <span className="text-sm font-semibold text-[#F0B94D] mt-1.5 block">
                   {pieModo === "monto"
                     ? `= ${piePct.toLocaleString("es-CL", { maximumFractionDigits: 1 })}%`
                     : `= ${formatCLP(pieMonto)}`}
+                </span>
+              )}
+              {precio > 0 && (
+                <span className="text-xs text-slate-400 mt-1 block">
+                  Mínimo {PIE_MINIMO_PCT}% del precio ({formatCLP(pieMinimoMonto)}).
                 </span>
               )}
             </label>
@@ -503,7 +599,10 @@ function SimuladorCreditoPage() {
             <p className="text-3xl md:text-4xl font-extrabold text-white mt-1">
               {hayDatos ? formatCLP(resultado.cuotaMensual) : "—"}
             </p>
-            <p className="text-xs text-slate-400 mt-1">{plazoMeses} cuotas mensuales</p>
+            <p className="text-xs text-slate-400 mt-1">
+              {hayDatos ? `≈ ${formatUF(cuotaUF)} · ` : ""}
+              {plazoMeses} cuotas mensuales
+            </p>
           </div>
 
           {/* Dos recuadros: Total en cuotas / Saldo en cuotas */}
@@ -562,6 +661,10 @@ function SimuladorCreditoPage() {
 
           {/* Notas */}
           <div className="mt-5 space-y-3 text-xs text-slate-300/90">
+            <p>
+              Crédito reajustable en UF + 10% anual. Cuota calculada con la UF de hoy
+              ({formatCLP(valorUF)}); el valor en pesos se reajusta mensualmente según la UF.
+            </p>
             <p>
               La reserva de {formatCLP(reserva)} se descuenta del pie al momento de la
               firma. Valores referenciales sujetos a condiciones comerciales vigentes.

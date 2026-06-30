@@ -7,7 +7,7 @@ import { scroller } from 'react-scroll';
 import { Layout, Navbar } from './components/layout';
 
 // Section components
-import { Hero, Proyectos, Contacto, WhatsAppButton, ImageShowcase } from './components/sections';
+import { Hero, Proyectos, Contacto, WhatsAppButton, SimuladorButton, ImageShowcase } from './components/sections';
 
 // Pages
 import ProjectPage from './pages/projects/ProjectPage';
@@ -34,6 +34,7 @@ const PageWrapper = ({ children, showContacto = false, showHero = false, contact
       </div>
     )}
     <WhatsAppButton />
+    <SimuladorButton />
   </>
 );
 
@@ -94,6 +95,7 @@ function MainContent() {
         <Contacto />
       </section>
       <WhatsAppButton />
+      <SimuladorButton />
     </>
   );
 }

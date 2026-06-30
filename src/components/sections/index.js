@@ -12,5 +12,6 @@
 export { default as Hero } from './Hero';
 export { default as Contacto } from './Contacto';
 export { default as WhatsAppButton } from './WhatsAppButton';
+export { default as SimuladorButton } from './SimuladorButton';
 export { default as ImageShowcase } from './ImageShowcase';
 export { default as Proyectos } from './Proyectos';
