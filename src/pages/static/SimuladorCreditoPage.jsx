@@ -1,39 +1,22 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import {
-  Calculator,
-  Home,
-  Wallet,
-  CalendarClock,
-  MapPin,
-  Hash,
-  User,
-  Calendar,
-  Minus,
-  Plus,
-  Download,
-} from "lucide-react";
+import { Calculator, Wallet, CalendarClock, Minus, Plus, Download } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { toPng } from "html-to-image";
-import { getProjectCards } from "../../data/projects";
 
 /**
  * SimuladorCreditoPage - Simulador de crédito / plan de pago para parcelas
  *
- * Lógica (amortización francesa, igual que el simulador de referencia):
+ * Lógica (amortización francesa):
  *   pie ($)            = monto ingresado (o % del precio)
  *   saldo en cuotas    = precio - pie
  *   cuota mensual      = saldo * i / (1 - (1+i)^-n)   con i = interés mensual
  *   total en cuotas    = cuota * n
  *   valor total operación = pie + total en cuotas
- *   La reserva (editable) se descuenta del pie al momento de la firma.
  */
 
 // Tasa de interés: UF + 10% anual (nominal → mensual = 10% / 12)
 const TASA_ANUAL = 0.1;
 const INTERES_MENSUAL = TASA_ANUAL / 12;
-
-// Reserva por defecto que se descuenta del pie al firmar
-const RESERVA_DEFAULT = 250000;
 
 // Rango de cuotas mensuales permitido
 const PLAZO_MIN = 4;
@@ -42,9 +25,10 @@ const PLAZO_MAX = 24;
 // Pie mínimo exigido (% del precio)
 const PIE_MINIMO_PCT = 50;
 
-// Valor UF por defecto (respaldo si la API no responde) y endpoint
-const UF_DEFAULT = 39000;
-const UF_API = "https://mindicador.cl/api/uf";
+// Valor UF por defecto (respaldo si la API no responde) y endpoint propio
+// (Cloudflare Pages Function que consulta al Banco Central, fuente oficial)
+const UF_DEFAULT = 40807;
+const UF_API = "/api/uf";
 
 // Número de WhatsApp de Lauken (mismo del botón flotante)
 const WHATSAPP_NUMBER = "56966440166";
@@ -70,26 +54,14 @@ const parseNumber = (texto) => Number(String(texto).replace(/\D/g, "")) || 0;
 const HOY = new Date().toISOString().slice(0, 10);
 
 function SimuladorCreditoPage() {
-  // Parcelas disponibles: activas, no vendidas y no "Próximamente"
-  const parcelas = useMemo(
-    () => getProjectCards().filter((p) => p.activo && !p.vendido && !p.pronto),
-    []
-  );
-
-  // Datos del proyecto / cliente
-  const [parcelaId, setParcelaId] = useState("");
-  const [unidad, setUnidad] = useState("");
-  const [fecha, setFecha] = useState(HOY);
-  const [cliente, setCliente] = useState("");
-  const [reserva, setReserva] = useState(RESERVA_DEFAULT);
-
   // Plan de pago
   const [precio, setPrecio] = useState(0);
   const [pieModo, setPieModo] = useState("porcentaje"); // 'monto' | 'porcentaje'
   const [pieValor, setPieValor] = useState(PIE_MINIMO_PCT);
   const [plazoMeses, setPlazoMeses] = useState(12);
+  const [fecha] = useState(HOY);
 
-  // Valor de la UF del día (se intenta traer de la API; editable como respaldo)
+  // Valor de la UF del día (se trae de la API; no editable)
   const [valorUF, setValorUF] = useState(UF_DEFAULT);
 
   useEffect(() => {
@@ -97,20 +69,18 @@ function SimuladorCreditoPage() {
     fetch(UF_API)
       .then((r) => r.json())
       .then((data) => {
-        const valor = Math.round(data?.serie?.[0]?.valor || 0);
+        const valor = Math.round(data?.uf || 0);
         if (activo && valor > 0) {
           setValorUF(valor);
         }
       })
       .catch(() => {
-        /* La API no respondió: se mantiene el valor por defecto/manual */
+        /* La API no respondió: se mantiene el valor por defecto */
       });
     return () => {
       activo = false;
     };
   }, []);
-
-  const parcelaSeleccionada = parcelas.find((p) => p.id === parcelaId) || null;
 
   // Pie mínimo exigido (50% del precio)
   const pieMinimoMonto = Math.round((precio * PIE_MINIMO_PCT) / 100);
@@ -172,10 +142,10 @@ function SimuladorCreditoPage() {
     }
     const totalEnCuotas = cuotaMensual * n;
     const valorTotal = pieMonto + totalEnCuotas;
-    const saldoPieAPagar = Math.max(pieMonto - reserva, 0);
+    const saldoPieAPagar = pieMonto;
 
     return { saldoEnCuotas, cuotaMensual, totalEnCuotas, valorTotal, saldoPieAPagar };
-  }, [precio, pieMonto, plazoMeses, reserva]);
+  }, [precio, pieMonto, plazoMeses]);
 
   // Cuota mensual estimada expresada también en UF
   const cuotaUF = valorUF > 0 ? resultado.cuotaMensual / valorUF : 0;
@@ -188,14 +158,7 @@ function SimuladorCreditoPage() {
   const [descargando, setDescargando] = useState(false);
   const [compartiendo, setCompartiendo] = useState(false);
 
-  const nombreArchivo = () =>
-    `cotizacion-${
-      [parcelaSeleccionada?.titulo, unidad]
-        .filter(Boolean)
-        .join("-")
-        .replace(/\s+/g, "-")
-        .toLowerCase() || "lauken"
-    }.png`;
+  const nombreArchivo = () => `cotizacion-lauken-${fecha}.png`;
 
   // Genera el PNG de la cotización (excluyendo los botones de acción)
   const generarImagen = () =>
@@ -226,12 +189,8 @@ function SimuladorCreditoPage() {
   const mensajeTexto = [
     "Hola, simulé el siguiente plan de pago en Lauken Inmobiliaria:",
     "",
-    parcelaSeleccionada ? `• Proyecto: ${parcelaSeleccionada.titulo}` : null,
-    unidad ? `• N° unidad/lote: ${unidad}` : null,
-    cliente ? `• Cliente: ${cliente}` : null,
     `• Precio de la parcela: ${formatCLP(precio)}`,
     `• Pie inicial (${Math.round(piePct)}%): ${formatCLP(pieMonto)}`,
-    `• Reserva: ${formatCLP(reserva)}`,
     `• Plazo: ${plazoMeses} cuotas mensuales`,
     "• Tasa: UF + 10% anual",
     `• Cuota mensual estimada: ${formatCLP(resultado.cuotaMensual)} (≈ ${formatUF(cuotaUF)})`,
@@ -304,108 +263,13 @@ function SimuladorCreditoPage() {
           </h1>
         </div>
         <p className="text-slate-500 text-sm md:text-base max-w-2xl mx-auto">
-          Completa los datos del proyecto y el plan de pago para ver tu cuota
-          mensual estimada.
+          Completa el plan de pago para ver tu cuota mensual estimada.
         </p>
       </div>
 
       <div className="max-w-5xl mx-auto px-4 md:px-6 grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-start">
         {/* Columna de entradas */}
         <div className="space-y-6 md:space-y-8">
-          {/* Tarjeta: Datos del proyecto */}
-          <div className="bg-white rounded-2xl shadow-lg border border-slate-100 p-6 md:p-8">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="w-10 h-10 rounded-lg bg-[#F0B94D]/15 flex items-center justify-center">
-                <Home className="w-5 h-5 text-[#F0B94D]" />
-              </span>
-              <div>
-                <h2 className="text-base font-bold text-slate-800">Datos del proyecto</h2>
-                <p className="text-xs text-slate-400">Información del inmueble y cliente</p>
-              </div>
-            </div>
-
-            {/* Proyecto */}
-            <label className="block mb-5">
-              <span className="text-xs font-semibold tracking-wide text-slate-500 uppercase flex items-center gap-1.5">
-                <MapPin className="w-3.5 h-3.5 text-[#F0B94D]" /> Proyecto
-              </span>
-              <select
-                value={parcelaId}
-                onChange={(e) => setParcelaId(e.target.value)}
-                className={`mt-1.5 ${inputBase}`}
-              >
-                <option value="">— Selecciona una parcela —</option>
-                {parcelas.map((p) => (
-                  <option key={p.id} value={p.id}>
-                    {p.titulo}
-                  </option>
-                ))}
-              </select>
-            </label>
-
-            {/* N° Unidad + Fecha */}
-            <div className="grid grid-cols-2 gap-4 mb-5">
-              <label className="block">
-                <span className="text-xs font-semibold tracking-wide text-slate-500 uppercase flex items-center gap-1.5">
-                  <Hash className="w-3.5 h-3.5 text-[#F0B94D]" /> N° Unidad
-                </span>
-                <input
-                  type="text"
-                  value={unidad}
-                  onChange={(e) => setUnidad(e.target.value)}
-                  placeholder="Lote 12"
-                  className={`mt-1.5 ${inputBase}`}
-                />
-              </label>
-              <label className="block">
-                <span className="text-xs font-semibold tracking-wide text-slate-500 uppercase flex items-center gap-1.5">
-                  <Calendar className="w-3.5 h-3.5 text-[#F0B94D]" /> Fecha
-                </span>
-                <input
-                  type="date"
-                  value={fecha}
-                  onChange={(e) => setFecha(e.target.value)}
-                  className={`mt-1.5 ${inputBase}`}
-                />
-              </label>
-            </div>
-
-            {/* Cliente */}
-            <label className="block mb-5">
-              <span className="text-xs font-semibold tracking-wide text-slate-500 uppercase flex items-center gap-1.5">
-                <User className="w-3.5 h-3.5 text-[#F0B94D]" /> Cliente
-              </span>
-              <input
-                type="text"
-                value={cliente}
-                onChange={(e) => setCliente(e.target.value)}
-                placeholder="Nombre del cliente"
-                className={`mt-1.5 ${inputBase}`}
-              />
-            </label>
-
-            {/* Reserva */}
-            <label className="block">
-              <span className="text-xs font-semibold tracking-wide text-slate-500 uppercase">
-                Reserva
-              </span>
-              <div className="mt-1.5 relative">
-                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">$</span>
-                <input
-                  type="text"
-                  inputMode="numeric"
-                  value={reserva ? reserva.toLocaleString("es-CL") : ""}
-                  onChange={(e) => setReserva(parseNumber(e.target.value))}
-                  placeholder="0"
-                  className={`${inputBase} pl-8 font-semibold`}
-                />
-              </div>
-              <span className="text-xs text-slate-400 mt-1.5 block">
-                Se descuenta del pie al momento de la firma.
-              </span>
-            </label>
-          </div>
-
           {/* Tarjeta: Plan de pago */}
           <div className="bg-white rounded-2xl shadow-lg border border-slate-100 p-6 md:p-8">
             <div className="flex items-center gap-3 mb-6">
@@ -417,7 +281,7 @@ function SimuladorCreditoPage() {
                 <p className="text-xs text-slate-400">Precio, pie y cuotas mensuales</p>
               </div>
 
-              {/* Valor UF de hoy (editable) */}
+              {/* Valor UF de hoy (no editable) */}
               <div className="ml-auto">
                 <span className="block text-[10px] font-semibold tracking-wide text-slate-400 uppercase text-right">
                   UF de hoy
@@ -426,11 +290,10 @@ function SimuladorCreditoPage() {
                   <span className="absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-400 text-sm">$</span>
                   <input
                     type="text"
-                    inputMode="numeric"
                     value={valorUF ? valorUF.toLocaleString("es-CL") : ""}
-                    onChange={(e) => setValorUF(parseNumber(e.target.value))}
+                    disabled
                     aria-label="Valor UF de hoy"
-                    className="w-28 pl-6 pr-2 py-1.5 rounded-lg border border-slate-200 focus:border-[#F0B94D] focus:ring-2 focus:ring-[#F0B94D]/30 outline-none text-slate-800 font-semibold text-sm text-right transition"
+                    className="w-28 pl-6 pr-2 py-1.5 rounded-lg border border-slate-200 bg-slate-100 text-slate-600 font-semibold text-sm text-right cursor-not-allowed"
                   />
                 </div>
               </div>
@@ -581,16 +444,6 @@ function SimuladorCreditoPage() {
             </span>
           </div>
 
-          {/* Parcela / unidad / cliente */}
-          {(parcelaSeleccionada || unidad || cliente) && (
-            <p className="text-sm text-[#F0B94D] font-medium mb-4 flex items-center gap-2">
-              <MapPin className="w-4 h-4" />
-              {[parcelaSeleccionada?.titulo, unidad ? `Unidad ${unidad}` : null, cliente]
-                .filter(Boolean)
-                .join(" · ")}
-            </p>
-          )}
-
           {/* Cuota mensual destacada */}
           <div className="bg-white/5 rounded-xl p-5 mb-4 border border-white/10">
             <p className="text-xs tracking-wide text-slate-300 uppercase">
@@ -646,10 +499,6 @@ function SimuladorCreditoPage() {
               <dd className="font-semibold">{hayDatos ? formatCLP(pieMonto) : "—"}</dd>
             </div>
             <div className="flex justify-between">
-              <dt className="text-slate-300">Reserva (descuento del pie)</dt>
-              <dd className="font-semibold">− {formatCLP(reserva)}</dd>
-            </div>
-            <div className="flex justify-between">
               <dt className="text-slate-300">Saldo del pie a pagar</dt>
               <dd className="font-semibold">{hayDatos ? formatCLP(resultado.saldoPieAPagar) : "—"}</dd>
             </div>
@@ -661,14 +510,6 @@ function SimuladorCreditoPage() {
 
           {/* Notas */}
           <div className="mt-5 space-y-3 text-xs text-slate-300/90">
-            <p>
-              Crédito reajustable en UF + 10% anual. Cuota calculada con la UF de hoy
-              ({formatCLP(valorUF)}); el valor en pesos se reajusta mensualmente según la UF.
-            </p>
-            <p>
-              La reserva de {formatCLP(reserva)} se descuenta del pie al momento de la
-              firma. Valores referenciales sujetos a condiciones comerciales vigentes.
-            </p>
             <p>
               Valores referenciales. Corresponde a una compraventa con precio pactado y
               facilidades de pago directas, no constituyendo un crédito ni operación
