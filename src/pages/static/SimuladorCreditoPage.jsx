@@ -142,9 +142,8 @@ function SimuladorCreditoPage() {
     }
     const totalEnCuotas = cuotaMensual * n;
     const valorTotal = pieMonto + totalEnCuotas;
-    const saldoPieAPagar = pieMonto;
 
-    return { saldoEnCuotas, cuotaMensual, totalEnCuotas, valorTotal, saldoPieAPagar };
+    return { saldoEnCuotas, cuotaMensual, totalEnCuotas, valorTotal };
   }, [precio, pieMonto, plazoMeses]);
 
   // Cuota mensual estimada expresada también en UF
@@ -497,10 +496,6 @@ function SimuladorCreditoPage() {
             <div className="flex justify-between">
               <dt className="text-slate-300">Pie ({Math.round(piePct)}%)</dt>
               <dd className="font-semibold">{hayDatos ? formatCLP(pieMonto) : "—"}</dd>
-            </div>
-            <div className="flex justify-between">
-              <dt className="text-slate-300">Saldo del pie a pagar</dt>
-              <dd className="font-semibold">{hayDatos ? formatCLP(resultado.saldoPieAPagar) : "—"}</dd>
             </div>
             <div className="flex justify-between">
               <dt className="text-slate-300">Saldo en cuotas</dt>

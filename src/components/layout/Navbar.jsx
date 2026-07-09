@@ -140,7 +140,7 @@ function Navbar() {
                     rounded-md
                     transition-all duration-200
                     ${item.destacado
-                      ? 'bg-[#F0B94D] text-black font-bold hover:bg-[#E0A93D]'
+                      ? 'bg-gradient-to-b from-[#f1db99] to-[#e3b558] text-black font-bold shadow-sm hover:brightness-105'
                       : isActive(item.path)
                       ? 'text-[#F0B94D] bg-amber-50'
                       : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50'
@@ -177,7 +177,7 @@ function Navbar() {
                     rounded-md mx-2 my-1
                     transition-all duration-200
                     ${item.destacado
-                      ? 'bg-[#F0B94D] text-black font-bold hover:bg-[#E0A93D]'
+                      ? 'bg-gradient-to-b from-[#f1db99] to-[#e3b558] text-black font-bold shadow-sm hover:brightness-105'
                       : isActive(item.path)
                       ? 'text-[#F0B94D] bg-amber-50'
                       : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50'
