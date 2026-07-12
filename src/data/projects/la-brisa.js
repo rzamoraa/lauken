@@ -24,7 +24,7 @@ const laBrisa = {
     logo: logo,
     precio: 'Próximamente',
     activo: true,    // activo: true, 
-    pronto: false,    // pronto: true, 
+    pronto: true,    // pronto: true, 
     vendido: false, // vendido: false, 
     franja: '', //franja: 'Próximamente', 
   },
