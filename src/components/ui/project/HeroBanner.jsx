@@ -20,7 +20,7 @@ function HeroBanner({
   return (
     <section
       id="hero"
-      className="relative min-h-[85vh] md:min-h-[90vh] flex items-end justify-center pb-12 md:pb-16 text-white overflow-hidden bg-slate-800"
+      className="relative min-h-[85vh] md:min-h-[90vh] flex items-end justify-center pt-24 md:pt-28 pb-12 md:pb-16 text-white overflow-hidden bg-slate-800"
     >
       {/* Video de fondo */}
       {video && (
@@ -44,7 +44,7 @@ function HeroBanner({
   <img
     src={logo}
     alt="Logo del proyecto"
-    className="w-40 md:w-64 h-auto mb-6"
+    className="w-40 md:w-64 h-auto max-h-[30vh] object-contain mb-6"
   />
 )}
         <div className="
