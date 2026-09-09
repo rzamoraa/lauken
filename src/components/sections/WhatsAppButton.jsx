@@ -21,23 +21,29 @@ const GOOGLE_ADS_CONVERSION = {
   currency: 'CLP',
 };
 
-const shouldTrackWhatsAppConversion = (pathname) => {
+const getCurrentProject = (pathname) => {
+  const projectId = pathname.replace(/^\/|\/$/g, '');
+  return getProjectById(projectId);
+};
+
+const shouldTrackWhatsAppConversion = (pathname, project) => {
   if (pathname === '/') {
     return true;
   }
-
-  const projectId = pathname.replace(/^\/|\/$/g, '');
-  const project = getProjectById(projectId);
 
   return Boolean(project?.card?.activo && !project?.card?.vendido);
 };
 
 function WhatsAppButton() {
   const location = useLocation();
-  const whatsappUrl = `https://wa.me/${WHATSAPP_CONFIG.number}?text=${encodeURIComponent(WHATSAPP_CONFIG.message)}`;
+  const project = getCurrentProject(location.pathname);
+  const message = project?.card?.titulo
+    ? `Hola, quiero más información sobre ${project.card.titulo}`
+    : WHATSAPP_CONFIG.message;
+  const whatsappUrl = `https://wa.me/${WHATSAPP_CONFIG.number}?text=${encodeURIComponent(message)}`;
 
   const handleClick = () => {
-    if (!shouldTrackWhatsAppConversion(location.pathname) || typeof window.gtag !== 'function') {
+    if (!shouldTrackWhatsAppConversion(location.pathname, project) || typeof window.gtag !== 'function') {
       return;
     }
 

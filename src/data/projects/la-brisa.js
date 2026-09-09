@@ -22,9 +22,9 @@ const laBrisa = {
     descripcion: 'Lago Rapel',
     imagen: bgCard,
     logo: logo,
-    precio: 'Próximamente',
+    precio: 'Desde $60.000.000',
     activo: true,    // activo: true, 
-    pronto: true,    // pronto: true, 
+    pronto: false,    // pronto: true, 
     vendido: false, // vendido: false, 
     franja: '', //franja: 'Próximamente', 
   },
@@ -36,7 +36,7 @@ const laBrisa = {
       brochurePdf: 'https://storage.googleapis.com/bucket-launken/costapulin/Lauken_CC3.pdf',
       showBrochureButton: true,
       precio: 'Parcelas desde $60.000.000',
-      texto1: 'Condominio de 34 parcelas urbanizadas con acceso a Lago Rapel',
+      texto1: '34 parcelas de 5.000 𝗺² con Rol propio',
       texto2: '',
     },
     
@@ -54,7 +54,8 @@ const laBrisa = {
     
     atributos: {
       tipo: 'image', // usa componente Atributosimagen
-      texto: 'Exclusivo proyecto de 34 parcelas de 5.000 m² en el sector San Rafael, Lago Rapel. Terrenos planos con espectaculares vistas al lago y la Cordillera de los Andes, en un entorno natural ideal para descansar, disfrutar de actividades al aire libre y vivir la experiencia única de la vida junto al lago.',
+      fullWidth: true,
+      texto: 'Exclusivo proyecto de 34 parcelas de 5.000 m² con terrenos planos, que ofrecen una vista panorámica al Lago Rapel. Vive rodeado de naturaleza, en un entorno ideal para descansar, practicar deportes y conectar con lo mejor de la vida junto al lago. Todo esto, en un valle privilegiado del sector San Rafael, Lago Rapel.',
       image: atributosImg,
       items: [], // No usa items porque es tipo 'image'
     },
