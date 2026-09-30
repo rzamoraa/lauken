@@ -20,7 +20,7 @@ const praderas = {
   page: {
     title: {
       logo: logo,
-      video: 'https://storage.googleapis.com/lauken/lauken-web/proyectos/videos/praderas/video-banner-praderas.mp4',
+      video: 'https://storage.googleapis.com/lauken_web/lauken-web/proyectos/videos/praderas/video-banner-praderas.mp4',
       brochurePdf: null,
       showBrochureButton: false,
       precio: 'Parcelas desde $44.900.000',

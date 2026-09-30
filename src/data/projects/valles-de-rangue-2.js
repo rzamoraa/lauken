@@ -37,7 +37,7 @@ const vallesDeRangue = {
     title: {
       logo: logo,
       //video: 'https://storage.googleapis.com/bucket-launken/videosproyectos/banner%20lomas%20de%20rangue%20.mp4',
-      video: 'https://storage.googleapis.com/lauken/lauken-web/proyectos/videos/valles-de-range-2/video-banner-valles-de-rangue-2-video%20.mp4',
+      video: 'https://storage.googleapis.com/lauken_web/lauken-web/proyectos/videos/valles-de-range-2/video-banner-valles-de-rangue-2-video%20.mp4',
       brochurePdf: 'https://storage.googleapis.com/lauken/lauken-web/Brochure/valles-de-rangue-2/BrochureVDR2_arreglo.pdf',
       showBrochureButton: true,
       precio: 'Parcelas desde $60.000.000',

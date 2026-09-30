@@ -32,7 +32,7 @@ const laBrisa = {
   page: {
     title: {
       logo: logo,
-      video: 'https://storage.googleapis.com/lauken/lauken-web/proyectos/videos/la-brisa/banner-video-la-brisa.mp4',
+      video: 'https://storage.googleapis.com/lauken_web/lauken-web/proyectos/videos/la-brisa/banner-video-la-brisa.mp4',
       brochurePdf: 'https://storage.googleapis.com/bucket-launken/costapulin/Lauken_CC3.pdf',
       showBrochureButton: true,
       precio: 'Parcelas desde $60.000.000',
