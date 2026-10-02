@@ -43,6 +43,8 @@ function ImageGallery({ images = [], title = "GALERÍA" }) {
               <img
                 src={image}
                 alt={`Galería imagen ${index + 1}`}
+                loading="lazy"
+                decoding="async"
                 className="
                   absolute inset-0 
                   w-full h-full 

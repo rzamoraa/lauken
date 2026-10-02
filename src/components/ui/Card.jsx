@@ -26,6 +26,8 @@ function Card({ titulo, descripcion, imagen, url, logo, logoSmall = false, activ
         <motion.img
           src={imagen}
           alt={titulo}
+          loading="lazy"
+          decoding="async"
           className={`absolute inset-0 h-full w-full object-cover ${activo ? '' : 'saturate-0 brightness-75'}`}
           animate={isHovered ? { scale: 1.08 } : { scale: 1 }}
           transition={{ duration: 0.5, ease: "easeOut" }}

@@ -39,6 +39,8 @@ function ImageShowcase() {
             <img
               alt={images[0].alt}
               src={images[0].src}
+              loading="lazy"
+              decoding="async"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
           </div>
@@ -50,6 +52,8 @@ function ImageShowcase() {
               <img
                 alt={images[1].alt}
                 src={images[1].src}
+                loading="lazy"
+                decoding="async"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
@@ -59,6 +63,8 @@ function ImageShowcase() {
               <img
                 alt={images[2].alt}
                 src={images[2].src}
+                loading="lazy"
+                decoding="async"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
