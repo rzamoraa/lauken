@@ -30,7 +30,7 @@ const praderas = {
   page: {
     title: {
       logo: logo,
-      video: 'https://storage.googleapis.com/lauken_web/lauken-web/proyectos/videos/praderas/video-banner-praderas.mp4',
+      video: 'https://storage.googleapis.com/lauken_web/lauken-web/proyectos/videos/praderas/BANNER%20PRADERAS%20v2.mp4',
       brochurePdf: null,
       showBrochureButton: false,
       precio: '76 parcelas desde $44.900.000',
