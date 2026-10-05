@@ -10,8 +10,7 @@ import g6 from '../../assets/projects/Praderas/galeria/6.jpg';
 import g7 from '../../assets/projects/Praderas/galeria/7.jpg';
 import g8 from '../../assets/projects/Praderas/galeria/8.jpg';
 import g9 from '../../assets/projects/Praderas/galeria/9.jpg';
-// Imagen de atributos pendiente: dejar el archivo en Praderas/ y descomentar.
-// import atributosImg from '../../assets/projects/Praderas/atributosPraderas.jpg';
+import atributosImg from '../../assets/projects/Praderas/atributosPraderas.jpg';
 
 const praderas = {
   id: 'praderas',
@@ -54,8 +53,9 @@ const praderas = {
 
     atributos: {
       tipo: 'image',
+      fullWidth: true,
       texto: 'Nuevo proyecto agroresidencial de 76 parcelas de 5.000 m² con terrenos planos, a minutos del Lago Rapel. Vive rodeado de naturaleza, en un entorno ideal para descansar, cultivar tu propio huerto y disfrutar de la vida de campo con acceso controlado, luz subterránea y factibilidad de agua por pozo profundo. Todo esto, a 10 minutos de Las Cabras y a solo dos horas de Santiago.',
-      image: null, // reemplazar por atributosImg al descomentar el import
+      image: atributosImg,
       items: [],
     },
 
