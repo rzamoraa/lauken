@@ -35,7 +35,7 @@ const praderas = {
       brochurePdf: null,
       showBrochureButton: false,
       precio: 'Parcelas desde $44.900.000',
-      texto1: '76 parcelas planas de 5.000 M2 con Rol propio',
+      texto1: '76 parcelas planas de 5.000 m2 y 10.000 m2 con Rol Propio',
       texto2: '',
     },
 
