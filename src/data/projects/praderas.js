@@ -33,8 +33,8 @@ const praderas = {
       video: 'https://storage.googleapis.com/lauken_web/lauken-web/proyectos/videos/praderas/video-banner-praderas.mp4',
       brochurePdf: null,
       showBrochureButton: false,
-      precio: 'Parcelas desde $44.900.000',
-      texto1: '76 parcelas planas de 5.000 m2 y 10.000 m2 con Rol Propio',
+      precio: '76 parcelas desde $44.900.000',
+      texto1: 'Terrenos de 5.000 m² y 10.000 m², con Rol Propio y a solo 10 minutos del Lago',
       texto2: '',
     },
 
