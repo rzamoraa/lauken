@@ -26,11 +26,11 @@ const vallesDeRangue = {
     imagen: bgCard,
     logo: logo,
     logoSmall: true,
-    precio: 'Desde $60.000.000',
-    activo: true,
+    precio: 'VENDIDO',
+    activo: false,
     pronto: false,
-    vendido: false,
-    franja: '', // Próximamente
+    vendido: true,
+    franja: '100% VENDIDO',
   },
   
   page: {

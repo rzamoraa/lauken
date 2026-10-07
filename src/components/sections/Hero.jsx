@@ -31,8 +31,8 @@ const SLIDES = [
     customLogo: logovallesderangue2,
     badge: "Nuevo Proyecto",
     href: "/valles-de-rangue-2",
-    ribbon: "Nuevo Proyecto",
-    ribbonTone: "yellow",
+    ribbon: "100% vendido",
+    ribbonTone: "red",
   },
 /*banner las palmas */
   {
