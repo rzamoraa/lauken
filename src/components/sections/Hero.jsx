@@ -9,6 +9,8 @@ import logosanrafael from "../../assets/icons/logosanrafel.svg";
 import logolaspalmas from "../../assets/icons/logolaspalmas.svg";
 import logovallesderangue from "../../assets/projects/valles-rangue/logo pag web LR.png";
 import logovallesderangue2 from "../../assets/projects/valles-rangue-2/valles de rangue 2 blanco logo.png";
+import logolabrisa from "../../assets/projects/brisas/logo pag web LB.png";
+import logopraderas from "../../assets/projects/Praderas/logo-praderas.png";
 
 /**
  * Hero - Componente de slider principal
@@ -22,6 +24,28 @@ const AUTOPLAY_INTERVAL = 18000;
 
 // Configuración de los slides
 const SLIDES = [
+  /* banner praderas */
+  {
+    type: "video",
+    src: "https://storage.googleapis.com/lauken_web/lauken-web/proyectos/videos/praderas/BANNER%20PRADERAS%20v2.mp4",
+    title: "76 parcelas desde $44.900.000",
+    description: "Terrenos de 5.000 m² y 10.000 m², con Rol Propio y a solo 10 minutos del Lago",
+    customLogo: logopraderas,
+    href: "/praderas",
+    ribbon: "Nuevo Proyecto",
+    ribbonTone: "yellow",
+  },
+  /* banner la brisa */
+  {
+    type: "video",
+    src: "https://storage.googleapis.com/lauken_web/lauken-web/proyectos/videos/la-brisa/banner-video-la-brisa.mp4",
+    title: "Desde $60.000.000",
+    description: "34 parcelas de 5.000 m² con Rol propio",
+    customLogo: logolabrisa,
+    href: "/la-brisa",
+    ribbon: "Nuevo Proyecto",
+    ribbonTone: "yellow",
+  },
   /* banner valles de rangue 2 */
   {
     type: "video",
