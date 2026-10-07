@@ -57,7 +57,7 @@ const SLIDES = [
     customLogo: logolaspalmas,
     //badge: "Proyecto Exclusivo",
     href: '/bahia-las-palmas',
-    ribbon: "Éxito de Ventas: 50% VENDIDO",  
+    ribbon: "Éxito de ventas",  
      ribbonTone: "green",
   },
   {
@@ -69,7 +69,7 @@ const SLIDES = [
     customLogo: logopulin,
     badge: "Proyecto Exclusivo",
     href: '/costa-pulin',
-    ribbon: "Éxito de Ventas, últimas unidades",
+    ribbon: "Éxito de ventas, últimas dos unidades",
     ribbonTone: "green",
   },
   {
@@ -81,7 +81,7 @@ const SLIDES = [
     customLogo: logopulin,
     badge: "¡OPORTUNIDAD ÚNICA!",
     href: '/costa-pulin',
-    ribbon: "Éxito de Ventas, últimas unidades",
+    ribbon: "Éxito de ventas, últimas dos unidades",
     ribbonTone: "green",
   },
   {
@@ -93,7 +93,7 @@ const SLIDES = [
     customLogo: logosanrafael,
     badge: "¡OPORTUNIDAD ÚNICA!",
     href: '/San-rafael',
-    ribbon: "Éxito de Ventas, últimas 4 unidades",
+    ribbon: "Éxito de ventas, últimas tres unidades",
     ribbonTone: "green",
   },
   {
@@ -105,7 +105,7 @@ const SLIDES = [
     customLogo: logosanrafael,
     badge: "¡OPORTUNIDAD ÚNICA!",
     href: '/San-rafael',
-    ribbon: "Éxito de Ventas, últimas 4 unidades",
+    ribbon: "Éxito de ventas, últimas tres unidades",
     ribbonTone: "green",
   }
 ];
