@@ -21,11 +21,11 @@ import praderas from './praderas';
 // Array de todos los proyectos - El orden aquí determina el orden de las cards
 const projects = [
   bahiaLasPalmas,
-  vallesDeRangue2,
-  costaPulin,
-  costaSanRafael,
   laBrisa,
   praderas,
+  costaPulin,
+  costaSanRafael,
+  vallesDeRangue2,
   vallesDeRangue,
   entreValles,
 ];
