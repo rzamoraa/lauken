@@ -15,7 +15,7 @@ import { getProjectCards } from '../../data/projects';
 
 // Proyectos disponibles para el select
 const proyectosDisponibles = getProjectCards()
-  .filter((project) => project.id !== 'entre-valles' && project.id !== 'valles-de-rangue')
+  .filter((project) => project.id !== 'entre-valles' && project.id !== 'valles-de-rangue' && project.id !== 'valles-de-rangue-2')
   .map((project) => ({
     value: project.titulo,
     label: project.titulo,
