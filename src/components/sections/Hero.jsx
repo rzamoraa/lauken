@@ -24,53 +24,7 @@ const AUTOPLAY_INTERVAL = 18000;
 
 // Configuración de los slides
 const SLIDES = [
-  /* banner praderas */
   {
-    type: "video",
-    src: "https://storage.googleapis.com/lauken_web/lauken-web/proyectos/videos/praderas/BANNER%20PRADERAS%20v2.mp4",
-    title: "76 parcelas desde $44.900.000",
-    description: "Terrenos de 5.000 m² y 10.000 m², con Rol Propio y a solo 10 minutos del Lago",
-    customLogo: logopraderas,
-    href: "/praderas",
-    ribbon: "Nuevo Proyecto",
-    ribbonTone: "yellow",
-  },
-  /* banner la brisa */
-  {
-    type: "video",
-    src: "https://storage.googleapis.com/lauken_web/lauken-web/proyectos/videos/la-brisa/banner-video-la-brisa.mp4",
-    title: "Desde $60.000.000",
-    description: "34 parcelas de 5.000 m² con Rol propio",
-    customLogo: logolabrisa,
-    href: "/la-brisa",
-    ribbon: "Nuevo Proyecto",
-    ribbonTone: "yellow",
-  },
-  /* banner valles de rangue 2 */
-  {
-    type: "video",
-    src: "https://storage.googleapis.com/lauken_web/lauken-web/proyectos/videos/valles-de-range-2/video-banner-valles-de-rangue-2-video%20.mp4",
-    title: "Desde $60.000.000",
-    description: "21 parcelas planas a orillas de Laguna de Aculeo",
-    customLogo: logovallesderangue2,
-    href: "/valles-de-rangue-2",
-    ribbon: "100% vendido",
-    ribbonTone: "red",
-  },
-/*banner las palmas */
-  {
-  type: "video",
-  //src: "https://storage.googleapis.com/bucket-launken/videosproyectos/banner%20lomas%20de%20rangue%20.mp4",
-  src: "https://storage.googleapis.com/lauken_web/lauken-web/proyectos/videos/valles-de-rangue/banner-vallesderangue.mp4",
-  title: "Desde $60.000.000",
-  description: "19 parcelas planas ubicadas en Laguna de Aculeo",
-  //description2: "descripcion2",
-  customLogo: logovallesderangue,
-  href: "/valles-de-rangue",
-  ribbon: "100% vendido",
-  ribbonTone: "red",
-},
-    {
     type: "video",
     src: "https://storage.googleapis.com/lauken_web/lauken-web/proyectos/videos/las-palmas/banner-laspalmas.mp4",
     title: "Sitios desde UF 1.500",
@@ -81,6 +35,26 @@ const SLIDES = [
     href: '/bahia-las-palmas',
     ribbon: "Éxito de ventas",  
      ribbonTone: "green",
+  },
+  {
+    type: "video",
+    src: "https://storage.googleapis.com/lauken_web/lauken-web/proyectos/videos/praderas/BANNER%20PRADERAS%20v2.mp4",
+    title: "76 parcelas desde $44.900.000",
+    description: "Terrenos de 5.000 m² y 10.000 m², con Rol Propio y a solo 10 minutos del Lago",
+    customLogo: logopraderas,
+    href: "/praderas",
+    ribbon: "Nuevo Proyecto",
+    ribbonTone: "yellow",
+  },
+  {
+    type: "video",
+    src: "https://storage.googleapis.com/lauken_web/lauken-web/proyectos/videos/la-brisa/banner-video-la-brisa.mp4",
+    title: "Desde $60.000.000",
+    description: "34 parcelas de 5.000 m² con Rol propio",
+    customLogo: logolabrisa,
+    href: "/la-brisa",
+    ribbon: "Nuevo Proyecto",
+    ribbonTone: "yellow",
   },
   {
     type: "video",
@@ -129,7 +103,7 @@ const SLIDES = [
     href: '/San-rafael',
     ribbon: "Éxito de ventas, últimas tres unidades",
     ribbonTone: "green",
-  }
+  },
 ];
 
 // Variantes de animación
