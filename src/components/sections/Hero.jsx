@@ -328,7 +328,8 @@ function Hero() {
       <img
         src={slide.customLogo}
         alt="Logo del proyecto"
-        className={slide.customLogo === logovallesderangue2 ? "w-52 md:w-72 h-auto" : slide.customLogo === logovallesderangue ? "w-48 md:w-64 h-auto" : slide.customLogo === logolaspalmas ? "w-40 md:w-64 h-auto" : "w-48 md:w-64 h-auto"}
+        // Praderas y La Brisa son mas altos que el resto: en movil se limitan por alto.
+        className={slide.customLogo === logopraderas || slide.customLogo === logolabrisa ? "w-48 md:w-64 h-auto max-h-28 md:max-h-none object-contain mb-6 md:mb-8" : slide.customLogo === logovallesderangue2 ? "w-52 md:w-72 h-auto" : slide.customLogo === logovallesderangue ? "w-48 md:w-64 h-auto" : slide.customLogo === logolaspalmas ? "w-40 md:w-64 h-auto" : "w-48 md:w-64 h-auto"}
       />
     </div>
   </motion.div>
