@@ -227,7 +227,7 @@ function Hero() {
     className="
       absolute right-0 z-[10] overflow-hidden pointer-events-none
       + top-[clamp(70px,12vw,220px)] md:top-24
-      w-[clamp(260px,38vw,460px)] h-[clamp(260px,38vw,460px)]
+      w-[clamp(330px,38vw,460px)] h-[clamp(330px,38vw,460px)]
       md:w-[clamp(520px,60vw,1200px)] md:h-[clamp(520px,60vw,1200px)]
     "
   >
@@ -236,7 +236,7 @@ function Hero() {
     absolute rotate-[40deg]
     ${ribbonToneClass}
     font-semibold uppercase shadow-lg text-center
-    ${isLongRibbon ? "tracking-wider" : "tracking-widest"}
+    ${isLongRibbon ? "tracking-normal md:tracking-wider" : "tracking-widest"}
     ${slide.ribbon?.includes('\n') ? "whitespace-pre-line leading-tight" : "whitespace-nowrap"}
     w-[clamp(260px,70vw,520px)] md:w-[clamp(420px,90vw,820px)]
     py-[clamp(6px,1vw,10px)] md:py-[clamp(8px,1.2vw,16px)]
