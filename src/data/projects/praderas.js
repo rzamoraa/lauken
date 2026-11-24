@@ -48,7 +48,7 @@ const praderas = {
     // Tour Virtual 360 (La Nube)
     webPreview: {
       enabled: true,
-      url: 'https://www.lanube360.com/praderas-lagorapel/',
+      url: 'https://inmobiliaria-lauken.tumasterplan.cl/praderas-lago-rapel/',
     },
 
     atributos: {
