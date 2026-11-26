@@ -49,7 +49,7 @@ const laBrisa = {
     
     webPreview: {
       enabled: true,
-      url: 'https://www.lanube360.com/brisassanrafael/',
+      url: 'https://inmobiliaria-lauken.tumasterplan.cl/brisas-san-rafael/',
     },
     
     atributos: {

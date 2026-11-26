@@ -54,7 +54,7 @@ const vallesDeRangue = {
     
     webPreview: {
       enabled: true,
-      url: 'https://www.lanube360.com/vallederangue/',
+      url: 'https://inmobiliaria-lauken.tumasterplan.cl/valle-de-rangue/',
     },
     
     atributos: {

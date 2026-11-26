@@ -57,7 +57,7 @@ const bahiaLasPalmas = {
     
     webPreview: {
       enabled: true,
-      url: 'https://www.lanube360.com/bahialaspalmas/',
+      url: 'https://inmobiliaria-lauken.tumasterplan.cl/bahia-las-palmas/',
     },
     
     atributos: {
